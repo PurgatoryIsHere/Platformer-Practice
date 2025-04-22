@@ -35,7 +35,6 @@
   },
   "name":"PlatformerPractice",
   "resources":[
-    {"id":{"name":"TestAgain","path":"objects/TestAgain/TestAgain.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
   ],
   "resourceType":"GMProject",
