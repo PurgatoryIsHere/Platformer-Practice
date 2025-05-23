@@ -16,5 +16,13 @@
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
   ],
-  "ResourceOrderSettings":[],
+  "ResourceOrderSettings":[
+    {"name":"FlagObject","order":2,"path":"objects/FlagObject/FlagObject.yy",},
+    {"name":"GroundObject","order":1,"path":"objects/GroundObject/GroundObject.yy",},
+    {"name":"SpikeObject","order":3,"path":"objects/SpikeObject/SpikeObject.yy",},
+    {"name":"Room2","order":1,"path":"rooms/Room2/Room2.yy",},
+    {"name":"GroundSprite","order":3,"path":"sprites/GroundSprite/GroundSprite.yy",},
+    {"name":"PlayerSprite","order":1,"path":"sprites/PlayerSprite/PlayerSprite.yy",},
+    {"name":"SpikeSprite","order":2,"path":"sprites/SpikeSprite/SpikeSprite.yy",},
+  ],
 }

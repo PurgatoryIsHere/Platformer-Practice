@@ -8,7 +8,7 @@
     "children":[],
     "name":"Default",
   },
-  "defaultScriptType":0,
+  "defaultScriptType":1,
   "Folders":[
     {"$GMFolder":"","%Name":"Animation Curves","folderPath":"folders/Animation Curves.yy","name":"Animation Curves","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Extensions","folderPath":"folders/Extensions.yy","name":"Extensions","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -35,12 +35,22 @@
   },
   "name":"PlatformerPractice",
   "resources":[
+    {"id":{"name":"FlagObject","path":"objects/FlagObject/FlagObject.yy",},},
+    {"id":{"name":"GroundObject","path":"objects/GroundObject/GroundObject.yy",},},
+    {"id":{"name":"PlayerObject","path":"objects/PlayerObject/PlayerObject.yy",},},
+    {"id":{"name":"SpikeObject","path":"objects/SpikeObject/SpikeObject.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
+    {"id":{"name":"FlagSprite","path":"sprites/FlagSprite/FlagSprite.yy",},},
+    {"id":{"name":"GroundSprite","path":"sprites/GroundSprite/GroundSprite.yy",},},
+    {"id":{"name":"PlayerSprite","path":"sprites/PlayerSprite/PlayerSprite.yy",},},
+    {"id":{"name":"SpikeSprite","path":"sprites/SpikeSprite/SpikeSprite.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
