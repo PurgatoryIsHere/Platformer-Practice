@@ -36,10 +36,15 @@ if dash_key_pressed && canDash{
 }
 
 if dash_timer > 0 {
-	
     var new_x = dir * dash_speed;
 	move_and_collide(new_x, y_speed, GroundObject)
     dash_timer -= 1;
+	
+	with(instance_create_depth(x, y, depth + 1, TrailObject)){
+		sprite_index = other.sprite_index
+		image_blend = c_fuchsia
+		image_alpha = 0.7
+	}
 }
 
 move_and_collide(x_speed, y_speed, GroundObject)
