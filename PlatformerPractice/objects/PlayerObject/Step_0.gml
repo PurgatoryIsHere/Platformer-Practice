@@ -73,6 +73,18 @@ if place_meeting(x, y+1, FlagObject) {
 	room_goto_next()
 }	
 
-if place_meeting(x, y+1, SpikeObject) {
-	room_restart()
+if place_meeting(x, y+1, SpikeObject) 
+{
+	global.lives -= 1
+	
+	if(global.lives == 0)
+	{
+		room = global.starting_room
+		global.lives = 3
+	}
+	
+	else
+	{
+		room_restart()
+	}
 }	
