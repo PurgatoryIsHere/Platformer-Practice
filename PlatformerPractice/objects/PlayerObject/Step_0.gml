@@ -20,15 +20,6 @@ if keyRight{
 	dir = 1
 }
 
-if place_meeting(x, y+1, GroundObject) {
-	y_speed = 0
-	
-	if keyboard_check_pressed(ord("W")) || keyboard_check_pressed(vk_up){
-		y_speed = -3.5
-		canDash = true
-	}
-}
-
 if dash_key_pressed && canDash{
 	canDash = false;
     dash_timer = 10; // Number of frames for the dash
@@ -37,15 +28,41 @@ if dash_key_pressed && canDash{
 
 if dash_timer > 0 {
     var new_x = dir * dash_speed;
-	move_and_collide(new_x, y_speed, GroundObject)
+	move_and_collide(new_x, -1.5, GroundObject)
     dash_timer -= 1;
 	
+	//Dash visualization
 	with(instance_create_depth(x, y, depth + 1, TrailObject)){
 		sprite_index = other.sprite_index
 		image_blend = c_fuchsia
 		image_alpha = 0.7
 	}
 }
+
+//Double Jump
+if((keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W"))) && jump_current > 0)
+{
+    y_speed = -2.5;
+    jump_current--;
+	canDash = true
+}
+
+if(place_meeting(x, y + y_speed, GroundObject))
+{
+    while(!place_meeting(x, y + sign(y_speed), GroundObject))
+    {
+        y += sign(y_speed);
+    }
+ 
+    if(y_speed > 0)
+    {
+        jump_current = jump_number;
+    }
+ 
+    y_speed = 0;
+}
+
+y += y_speed;
 
 move_and_collide(x_speed, y_speed, GroundObject)
 
