@@ -24,6 +24,7 @@
     {"name":"TrailObject","order":4,"path":"objects/TrailObject/TrailObject.yy",},
     {"name":"Room2","order":1,"path":"rooms/Room2/Room2.yy",},
     {"name":"Room3","order":2,"path":"rooms/Room3/Room3.yy",},
+    {"name":"Room4","order":3,"path":"rooms/Room4/Room4.yy",},
     {"name":"GroundSprite","order":3,"path":"sprites/GroundSprite/GroundSprite.yy",},
     {"name":"PlayerSprite","order":1,"path":"sprites/PlayerSprite/PlayerSprite.yy",},
     {"name":"SpikeSprite","order":2,"path":"sprites/SpikeSprite/SpikeSprite.yy",},
