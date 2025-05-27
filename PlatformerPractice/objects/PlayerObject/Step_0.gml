@@ -35,7 +35,7 @@ if(movement_locked_timer <= 0)
 		if(onWall != 0)
 		{
 			movement_locked_timer = 10;
-			wall_jump_timer = 7.5;
+			wall_jump_timer = 5;
 		}
 	
 		else
@@ -100,8 +100,8 @@ if(onWall != 0 && (holdingLeft || holdingRight))
 //Wall Jumping Animation (frame-by-frame)
 if(wall_jump_timer > 0)
 {
-	y_speed = -2.5;
-    x_speed = onWall * 5;
+	y_speed = -3;
+    x_speed = onWall * 6;
 }
 
 move_and_collide(x_speed, y_speed, GroundObject)
