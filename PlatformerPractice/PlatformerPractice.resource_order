@@ -26,6 +26,7 @@
     {"name":"Room2","order":1,"path":"rooms/Room2/Room2.yy",},
     {"name":"Room3","order":2,"path":"rooms/Room3/Room3.yy",},
     {"name":"Room4","order":3,"path":"rooms/Room4/Room4.yy",},
+    {"name":"Room5","order":4,"path":"rooms/Room5/Room5.yy",},
     {"name":"GrappleSprite","order":4,"path":"sprites/GrappleSprite/GrappleSprite.yy",},
     {"name":"GroundSprite","order":3,"path":"sprites/GroundSprite/GroundSprite.yy",},
     {"name":"PlayerSprite","order":1,"path":"sprites/PlayerSprite/PlayerSprite.yy",},

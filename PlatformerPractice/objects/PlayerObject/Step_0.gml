@@ -64,6 +64,59 @@ if(movement_locked_timer <= 0)
 	y += y_speed;
 }
 
+//"Grapple"
+// Find closest target object within range
+var detection_range = 150; // Adjust as needed
+var closest_target = instance_nearest(x, y, GrappleObject)
+
+// Check if target is in range
+if (closest_target != noone) {
+    var target_distance = point_distance(x, y, closest_target.x, closest_target.y)
+    
+    // Check if target is in range
+    if (target_distance <= detection_range) {
+        target_in_range = true;
+        target_x = closest_target.x
+        target_y = closest_target.y
+    } else {
+        target_in_range = false
+    }
+} else {
+    // No target exists
+    target_in_range = false
+}
+
+
+// Check for grapple input
+if (target_in_range && keyboard_check_pressed(ord("E")) && !grappling && grapple_cooldown == 0) {
+    grappling = true
+	grapple_cooldown = 30;
+}
+
+if (grapple_cooldown > 0) {
+    grapple_cooldown--;
+}
+
+// Handle grappling movement
+if (grappling) {
+    var dir_to_target = point_direction(x, y, target_x, target_y)
+    var dist_to_target = point_distance(x, y, target_x, target_y)
+    
+    if (dist_to_target > grapple_speed) {
+        // Move toward target
+        x_speed = lengthdir_x(grapple_speed, dir_to_target)
+        y_speed = lengthdir_y(grapple_speed, dir_to_target)
+    } else {
+        // Reached target
+        x = target_x
+        y = target_y
+        grappling = false
+		onGround = false
+		
+		y_speed = -2.5
+    }
+	
+}
 
 //Dashing
 if(keyboard_check_pressed(vk_space) && canDash)
