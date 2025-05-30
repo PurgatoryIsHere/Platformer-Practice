@@ -159,6 +159,20 @@ if(wall_jump_timer > 0)
 
 move_and_collide(x_speed, y_speed, GroundObject)
 
+//Ground Pound
+if !onGround && keyboard_check_pressed(ord("Q"))
+{
+	x_speed = 0
+	y_speed = 5
+	
+	with(instance_create_depth(x, y, depth + 1, TrailObject))
+	{
+		sprite_index = other.sprite_index
+		image_blend = c_fuchsia
+		image_alpha = 0.7
+	}
+
+}
 
 //Spike and Flag collision
 
