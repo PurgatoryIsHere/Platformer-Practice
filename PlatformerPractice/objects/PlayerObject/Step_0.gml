@@ -13,12 +13,12 @@ camera_set_view_pos(view_camera[0], cam_x, cam_y);
 y_speed += 0.2; //Gravity
 x_speed = 0; //Stationary Speed
 
-dir = (keyboard_check(ord("D")) || keyboard_check(vk_right)) - (keyboard_check(ord("A")) || keyboard_check(vk_left)); //Direction the player is facing
+dir = keyboard_check(ord("D")) - keyboard_check(ord("A")); //Direction the player is facing
 
 //onGround = place_meeting(x, y + 1, GroundObject);
 onWall = place_meeting(x - 0.075, y, GroundObject) - place_meeting(x + 0.075, y, GroundObject);
-var holdingLeft = (keyboard_check(ord("A")) || keyboard_check(vk_left));
-var holdingRight = (keyboard_check(ord("D")) || keyboard_check(vk_right));
+var holdingLeft = keyboard_check(ord("A"));
+var holdingRight = keyboard_check(ord("D"));
 
 dash_timer = max(dash_timer - 1, 0);
 movement_locked_timer = max(movement_locked_timer - 1, 0);
@@ -30,7 +30,7 @@ if(movement_locked_timer <= 0)
 	x_speed = dir * 2;
 	
 	//Jumping
-	if((keyboard_check_pressed(ord("W")) || keyboard_check_pressed(vk_up)) && jump_current > 0)
+	if(keyboard_check_pressed(ord("W")) && jump_current > 0)
 	{
 		if(onWall != 0)
 		{
@@ -160,7 +160,7 @@ if(wall_jump_timer > 0)
 move_and_collide(x_speed, y_speed, GroundObject)
 
 //Ground Pound
-if !onGround && keyboard_check_pressed(ord("Q"))
+if !onGround && keyboard_check_pressed(ord("S"))
 {
 	x_speed = 0
 	y_speed = 5
