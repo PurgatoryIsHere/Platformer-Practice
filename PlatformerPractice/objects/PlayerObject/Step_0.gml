@@ -87,12 +87,6 @@ if (closest_target != noone) {
 }
 
 
-// Check for grapple input
-if (target_in_range && keyboard_check_pressed(ord("E")) && !grappling && grapple_cooldown == 0) {
-    grappling = true
-	grapple_cooldown = 30;
-}
-
 if (grapple_cooldown > 0) {
     grapple_cooldown--;
 }
@@ -119,7 +113,11 @@ if (grappling) {
 }
 
 //Dashing
-if(keyboard_check_pressed(vk_space) && canDash)
+if (target_in_range && keyboard_check_pressed(vk_space) && !grappling && grapple_cooldown == 0) {
+    grappling = true
+	grapple_cooldown = 30;
+}
+else if(keyboard_check_pressed(vk_space) && canDash)
 {
 	canDash = false;
     dash_timer = 10; // Number of frames for the dash
