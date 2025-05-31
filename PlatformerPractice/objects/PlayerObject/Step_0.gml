@@ -30,7 +30,7 @@ if(movement_locked_timer <= 0)
 	x_speed = dir * 2;
 	
 	//Jumping
-	if(keyboard_check_pressed(ord("W")) && jump_current > 0 && global.doubleJumpUnlock)
+	if(keyboard_check_pressed(ord("W")) && jump_current > 0)
 	{
 		if(onWall != 0)
 		{
@@ -38,17 +38,18 @@ if(movement_locked_timer <= 0)
 			wall_jump_timer = 5;
 		}
 	
-		else
+		else if (global.doubleJumpUnlock)
 		{
 			y_speed = -2.5;
 			jump_current--;
 			canDash = true
 		}
-	}
-	else if (keyboard_check_pressed(ord("W")) && jump_current > 0){
-		y_speed = -2.5
-		jump_current = 0
-		canDash = true
+		else
+		{
+			y_speed = -2.5;
+			jump_current = 0;
+			canDash = true
+		}
 	}
 	
 	if(place_meeting(x, y + y_speed, GroundObject))
