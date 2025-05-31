@@ -30,7 +30,7 @@ if(movement_locked_timer <= 0)
 	x_speed = dir * 2;
 	
 	//Jumping
-	if(keyboard_check_pressed(ord("W")) && jump_current > 0)
+	if(keyboard_check_pressed(ord("W")) && jump_current > 0 && global.doubleJumpUnlock)
 	{
 		if(onWall != 0)
 		{
@@ -44,6 +44,11 @@ if(movement_locked_timer <= 0)
 			jump_current--;
 			canDash = true
 		}
+	}
+	else if (keyboard_check_pressed(ord("W")) && jump_current > 0){
+		y_speed = -2.5
+		jump_current = 0
+		canDash = true
 	}
 	
 	if(place_meeting(x, y + y_speed, GroundObject))
@@ -112,8 +117,8 @@ if (grappling) {
 	
 }
 
-//Dashing
-if (target_in_range && keyboard_check_pressed(vk_space) && !grappling && grapple_cooldown == 0) {
+//Dashing and Grappling
+if (target_in_range && keyboard_check_pressed(vk_space) && !grappling && grapple_cooldown == 0 && global.grappleUnlock) {
     grappling = true
 	grapple_cooldown = 30;
 }
@@ -158,7 +163,7 @@ if(wall_jump_timer > 0)
 move_and_collide(x_speed, y_speed, GroundObject)
 
 //Ground Pound
-if !onGround && keyboard_check_pressed(ord("S"))
+if (!onGround && keyboard_check_pressed(ord("S")) && global.groundPoundUnlock)
 {
 	x_speed = 0
 	y_speed = 5
