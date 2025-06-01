@@ -7,32 +7,35 @@ x_speed = 0
 y_speed = 0
 dir = 0
 
-//Dash
+// Dash
 canDash = false
 dash_timer = 0
 dash_speed = 0
 
-//Double Jump
-jump_number = 2; //How many jumps the player can make
-jump_current = 0; //How many jumps the player has remaining
+// Double Jump
+jump_number = 2 // How many jumps the player can make
+jump_current = 0 // How many jumps the player has remaining
 
-//Wall Jump
-onGround = 0;
+// Wall Jump
+onGround = 0
 onWall = 0
-movement_locked_timer = 0;
-wall_jump_timer = 0;
-last_wall = 0;
+movement_locked_timer = 0
+wall_jump_timer = 0
+last_wall = 0
 
-//Grapple
-grappling = false;
-grapple_speed = 10;
+// Grapple
+grappling = false
+grapple_speed = 10
 grapple_cooldown = 0
 
 target_in_range =  false
 target_x = 0
 target_y = 0
 
-//Ground Pound
-shake_fx = layer_get_fx("ShakeLayer");
-shake_magnitude = 0;
-shake_speed = 1;
+// Ground Pound
+shake_fx = layer_get_fx("ShakeLayer")
+shake_magnitude = 0
+shake_speed = 1
+
+// Invincibility Frames
+i_frame_timer = 0
