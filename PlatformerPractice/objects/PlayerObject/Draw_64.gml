@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description Initialize Health
 // You can write your code in this editor
 
 // Temporary Visualization, update once game is close to being done

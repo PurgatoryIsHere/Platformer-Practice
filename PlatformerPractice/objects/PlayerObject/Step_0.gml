@@ -1,4 +1,4 @@
-/// @description Movement
+/// @description All Player Actions
 // You can write your code in this editor
 
 // Camera Stuff
@@ -237,4 +237,4 @@ if place_meeting(x, y+1, SpikeObject)
 			global.player_health = 100
 		}
 	}
-}	
+}

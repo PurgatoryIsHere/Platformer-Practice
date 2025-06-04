@@ -32,10 +32,9 @@ target_in_range =  false
 target_x = 0
 target_y = 0
 
-// Ground Pound
-shake_fx = layer_get_fx("ShakeLayer")
-shake_magnitude = 0
-shake_speed = 1
-
 // Invincibility Frames
 i_frame_timer = 0
+
+//Pause Functionality
+paused = false;
+paused_surf = -1;
