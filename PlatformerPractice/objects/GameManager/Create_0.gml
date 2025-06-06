@@ -17,3 +17,9 @@ global.doubleJumpUnlock = false
 global.groundPoundUnlock = false
 global.grappleUnlock = false
 
+// Restore playing location after unpausing
+global.player_positionX = 0.0
+global.player_positionY = 0.0
+global.player_velocityX = 0.0
+global.player_velocityY = 0.0
+
