@@ -14,7 +14,7 @@ if (!paused)
     instance_deactivate_all(true);
     
     // Create the pause surface
-    paused_surf = surface_create(room_width, room_height);
+    paused_surf = surface_create(camera_width, camera_height);
     surface_set_target(paused_surf);
     draw_surface(application_surface, 0, 0);
     surface_reset_target();
