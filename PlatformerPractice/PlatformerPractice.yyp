@@ -42,6 +42,7 @@
     {"id":{"name":"GrappleUnlockObject","path":"objects/GrappleUnlockObject/GrappleUnlockObject.yy",},},
     {"id":{"name":"GroundObject","path":"objects/GroundObject/GroundObject.yy",},},
     {"id":{"name":"GroundPoundUnlockObject","path":"objects/GroundPoundUnlockObject/GroundPoundUnlockObject.yy",},},
+    {"id":{"name":"PauseObject","path":"objects/PauseObject/PauseObject.yy",},},
     {"id":{"name":"PlayerObject","path":"objects/PlayerObject/PlayerObject.yy",},},
     {"id":{"name":"SpikeObject","path":"objects/SpikeObject/SpikeObject.yy",},},
     {"id":{"name":"TrailObject","path":"objects/TrailObject/TrailObject.yy",},},

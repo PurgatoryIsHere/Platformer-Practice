@@ -17,3 +17,5 @@ global.doubleJumpUnlock = false
 global.groundPoundUnlock = false
 global.grappleUnlock = false
 
+// Pause Functionality
+global.gamePaused = false  

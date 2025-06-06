@@ -24,6 +24,7 @@
     {"name":"GrappleUnlockObject","order":9,"path":"objects/GrappleUnlockObject/GrappleUnlockObject.yy",},
     {"name":"GroundObject","order":1,"path":"objects/GroundObject/GroundObject.yy",},
     {"name":"GroundPoundUnlockObject","order":8,"path":"objects/GroundPoundUnlockObject/GroundPoundUnlockObject.yy",},
+    {"name":"PauseObject","order":10,"path":"objects/PauseObject/PauseObject.yy",},
     {"name":"SpikeObject","order":3,"path":"objects/SpikeObject/SpikeObject.yy",},
     {"name":"TrailObject","order":4,"path":"objects/TrailObject/TrailObject.yy",},
     {"name":"DashTest","order":2,"path":"rooms/DashTest/DashTest.yy",},
