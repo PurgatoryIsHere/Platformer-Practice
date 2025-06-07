@@ -15,7 +15,7 @@ x_speed = 0 // Stationary Speed
 
 dir = keyboard_check(ord("D")) - keyboard_check(ord("A")) // Direction the player is facing
 
-//onGround = place_meeting(x, y + 1, GroundObject);
+onGround = place_meeting(x, y + 1, GroundObject);
 onWall = place_meeting(x - 0.075, y, GroundObject) - place_meeting(x + 0.075, y, GroundObject)
 var holdingLeft = keyboard_check(ord("A"))
 var holdingRight = keyboard_check(ord("D"))
@@ -126,7 +126,6 @@ if (grappling)
         x = target_x
         y = target_y
         grappling = false
-		onGround = false
 		y_speed = -2.5
     }
 }
@@ -192,6 +191,12 @@ if (!onGround && keyboard_check_pressed(ord("S")) && global.groundPoundUnlock)
 		image_alpha = 0.7
 	}
 
+}
+
+if (onGround && groundPounding)
+{
+	//Make sure player stops ground pounding after hitting the ground
+	groundPounding = false	
 }
 
 // Invicibility Frames Visualization
