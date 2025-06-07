@@ -35,6 +35,7 @@
   },
   "name":"PlatformerPractice",
   "resources":[
+    {"id":{"name":"BreakableBlockObject","path":"objects/BreakableBlockObject/BreakableBlockObject.yy",},},
     {"id":{"name":"DoubleJumpUnlockObject","path":"objects/DoubleJumpUnlockObject/DoubleJumpUnlockObject.yy",},},
     {"id":{"name":"FlagObject","path":"objects/FlagObject/FlagObject.yy",},},
     {"id":{"name":"GameManager","path":"objects/GameManager/GameManager.yy",},},
@@ -51,6 +52,7 @@
     {"id":{"name":"StartRoom","path":"rooms/StartRoom/StartRoom.yy",},},
     {"id":{"name":"UnlockTest","path":"rooms/UnlockTest/UnlockTest.yy",},},
     {"id":{"name":"WallJumpTest","path":"rooms/WallJumpTest/WallJumpTest.yy",},},
+    {"id":{"name":"BreakableBlockSprite","path":"sprites/BreakableBlockSprite/BreakableBlockSprite.yy",},},
     {"id":{"name":"DoubleJumpUnlockSprite","path":"sprites/DoubleJumpUnlockSprite/DoubleJumpUnlockSprite.yy",},},
     {"id":{"name":"FlagSprite","path":"sprites/FlagSprite/FlagSprite.yy",},},
     {"id":{"name":"GrappleSprite","path":"sprites/GrappleSprite/GrappleSprite.yy",},},

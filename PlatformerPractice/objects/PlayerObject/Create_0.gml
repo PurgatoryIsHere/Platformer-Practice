@@ -32,6 +32,9 @@ target_in_range =  false
 target_x = 0
 target_y = 0
 
+//Ground Pound
+groundPounding = false
+
 // Invincibility Frames
 i_frame_timer = 0
 

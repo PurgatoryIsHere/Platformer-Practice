@@ -183,6 +183,7 @@ if (!onGround && keyboard_check_pressed(ord("S")) && global.groundPoundUnlock)
 {
 	x_speed = 0
 	y_speed = 5
+	groundPounding = true
 	
 	with(instance_create_depth(x, y, depth + 1, TrailObject))
 	{

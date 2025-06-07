@@ -17,6 +17,7 @@
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings":[
+    {"name":"BreakableBlockObject","order":10,"path":"objects/BreakableBlockObject/BreakableBlockObject.yy",},
     {"name":"DoubleJumpUnlockObject","order":7,"path":"objects/DoubleJumpUnlockObject/DoubleJumpUnlockObject.yy",},
     {"name":"FlagObject","order":2,"path":"objects/FlagObject/FlagObject.yy",},
     {"name":"GameManager","order":5,"path":"objects/GameManager/GameManager.yy",},
@@ -31,6 +32,7 @@
     {"name":"GrappleTest","order":4,"path":"rooms/GrappleTest/GrappleTest.yy",},
     {"name":"UnlockTest","order":5,"path":"rooms/UnlockTest/UnlockTest.yy",},
     {"name":"WallJumpTest","order":3,"path":"rooms/WallJumpTest/WallJumpTest.yy",},
+    {"name":"BreakableBlockSprite","order":8,"path":"sprites/BreakableBlockSprite/BreakableBlockSprite.yy",},
     {"name":"DoubleJumpUnlockSprite","order":5,"path":"sprites/DoubleJumpUnlockSprite/DoubleJumpUnlockSprite.yy",},
     {"name":"GrappleSprite","order":4,"path":"sprites/GrappleSprite/GrappleSprite.yy",},
     {"name":"GrappleUnlockSprite","order":7,"path":"sprites/GrappleUnlockSprite/GrappleUnlockSprite.yy",},
