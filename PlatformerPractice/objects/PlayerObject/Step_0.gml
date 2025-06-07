@@ -73,7 +73,7 @@ if(movement_locked_timer <= 0)
 
 // "Grapple"
 // Find closest target object within range
-var detection_range = 150; // Adjust as needed
+var detection_range = 100; // Adjust as needed
 var closest_target = instance_nearest(x, y, GrappleObject)
 
 // Check if target is in range
