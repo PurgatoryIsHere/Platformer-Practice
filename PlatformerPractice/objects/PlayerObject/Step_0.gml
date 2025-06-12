@@ -142,6 +142,7 @@ else if(keyboard_check_pressed(vk_space) && canDash)
 	canDash = false
     dash_timer = 10 // Number of frames for the dash
     dash_speed = 5
+	dashing = true
 }
 
 // Animation for dash (frame-by-frame)
@@ -157,6 +158,10 @@ if (dash_timer > 0)
 		image_blend = c_fuchsia
 		image_alpha = 0.7
 	}
+}
+else
+{
+	dashing = false
 }
 
 

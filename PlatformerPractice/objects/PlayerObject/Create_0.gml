@@ -11,6 +11,7 @@ dir = 0
 canDash = false
 dash_timer = 0
 dash_speed = 0
+dashing = false
 
 // Double Jump
 jump_number = 2 // How many jumps the player can make
