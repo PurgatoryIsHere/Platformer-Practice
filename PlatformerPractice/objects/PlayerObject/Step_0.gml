@@ -202,45 +202,43 @@ if (onGround && groundPounding)
 // Invicibility Frames Visualization
 if(i_frame_timer > 0)
 {
-	image_alpha = (i_frame_timer mod 4 < 2) ? 1 : 0.5;
+	image_alpha = 0.5 + 0.5 * sin(i_frame_timer * 0.5);
 }
 
-// Spike and Flag collision
+// Collision Events
 
+// Flag
 if place_meeting(x, y+1, FlagObject) 
 {
 	room_goto_next()
 }	
 
+// Spike
 if place_meeting(x, y+1, SpikeObject) 
 {
 	if(i_frame_timer == 0)
 	{
-		global.player_health -= 10
-		i_frame_timer = 24
+		TakeDamage(10);
+		i_frame_timer = 48
 	}
 	
 	if(global.player_health == 0)
 	{
-		global.lives -= 1
-		
-		if(global.lives == 0)
-		{
-			global.out_of_lives = true
-		}
-		
-		if(global.out_of_lives == true)
-		{
-			room = global.starting_room
-			global.lives = 3
-			global.out_of_lives = false
-			global.player_health = 100
-		}
-		
-		else
-		{
-			room_restart()
-			global.player_health = 100
-		}
+		LifeReduction();
+	}
+}
+
+// Ground Enemy
+if(place_meeting(x, y, GroundEnemyObject))
+{
+	if(i_frame_timer == 0)
+	{
+		TakeDamage(5);
+		i_frame_timer = 32
+	}
+	
+	if(global.player_health == 0)
+	{
+		LifeReduction();
 	}
 }

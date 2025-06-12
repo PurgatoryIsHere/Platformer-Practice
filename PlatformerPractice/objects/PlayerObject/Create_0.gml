@@ -44,3 +44,28 @@ paused_surf = -1;
 
 camera_width = camera_get_view_width(view_camera[0])
 camera_height = camera_get_view_height(view_camera[0])
+
+// Damage Functionality
+TakeDamage = function(damage)
+{
+	global.player_health -= damage;
+}
+
+LifeReduction = function()
+{
+	global.lives -= 1
+		
+	if(global.lives == 0)
+	{
+		room = global.starting_room
+		global.lives = 3
+		global.out_of_lives = false
+		global.player_health = 100
+	}
+		
+	else
+	{
+		room_restart()
+		global.player_health = 100
+	}
+}
