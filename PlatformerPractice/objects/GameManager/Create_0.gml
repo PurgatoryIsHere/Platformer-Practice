@@ -5,13 +5,14 @@
 persistent = true
 
 // Default font used in draw functions
-global.default_font = draw_get_font();
-global.default_halign = draw_get_halign();
-global.default_valign = draw_get_valign();
+global.default_font = draw_get_font()
+global.default_halign = draw_get_halign()
+global.default_valign = draw_get_valign()
 
 // Player lives and health
 global.lives = 3
 global.player_health = 100
+global.i_frame_timer = 0
 
 // The room the player will be returned to upon death
 global.starting_room = StartRoom
@@ -26,4 +27,13 @@ global.player_positionX = 0.0
 global.player_positionY = 0.0
 global.player_velocityX = 0.0
 global.player_velocityY = 0.0
+
+// Key Bind Settings
+global.rightBind = 0.0
+global.leftBind = 0.0
+global.jumpBind = 0.0
+global.dashBind = 0.0
+global.groundPoundBind = 0.0
+global.grappleBind = 0.0
+
 
