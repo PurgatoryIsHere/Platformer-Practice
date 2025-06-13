@@ -12,7 +12,6 @@ global.default_valign = draw_get_valign()
 // Player lives and health
 global.lives = 3
 global.player_health = 100
-global.i_frame_timer = 0
 
 // The room the player will be returned to upon death
 global.starting_room = StartRoom

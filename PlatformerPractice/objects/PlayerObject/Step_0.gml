@@ -23,7 +23,7 @@ var holdingRight = keyboard_check(ord("D"))
 dash_timer = max(dash_timer - 1, 0)
 movement_locked_timer = max(movement_locked_timer - 1, 0)
 wall_jump_timer = max(wall_jump_timer - 1, 0)
-global.i_frame_timer = max(global.i_frame_timer - 1, 0)
+i_frame_timer = max(i_frame_timer - 1, 0)
 
 if(movement_locked_timer <= 0)
 {
@@ -205,9 +205,9 @@ if (onGround && groundPounding)
 }
 
 // Invicibility Frames Visualization
-if(global.i_frame_timer > 0)
+if(i_frame_timer > 0)
 {
-	image_alpha = 0.5 + 0.5 * sin(global.i_frame_timer * 0.5);
+	image_alpha = 0.5 + 0.5 * sin(i_frame_timer * 0.5);
 }
 
 // Collision Events
@@ -215,10 +215,10 @@ if(global.i_frame_timer > 0)
 // Ground Enemy
 if(place_meeting(x, y, GroundEnemyObject))
 {
-	if(global.i_frame_timer == 0)
+	if(i_frame_timer == 0)
 	{
 		TakeDamage(5);
-		global.i_frame_timer = 32
+		i_frame_timer = 32
 	}
 	
 	if(global.player_health == 0)

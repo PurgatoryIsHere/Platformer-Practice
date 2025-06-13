@@ -36,6 +36,9 @@ target_y = 0
 //Ground Pound
 groundPounding = false
 
+// Invincibility Frames
+i_frame_timer = 0
+
 //Pause Functionality
 paused = false;
 paused_surf = -1;
