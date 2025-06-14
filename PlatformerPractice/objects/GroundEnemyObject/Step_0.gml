@@ -2,7 +2,7 @@
 // You can write your code in this editor
 image_xscale = dir / 2
 
-if place_free(x + dir, y) && !place_free(x + dir, y + 1)
+if place_free(x + dir, y) && !place_free(x + (dir * sprite_width), y + 9)
 {
 	hspeed = dir * 1
 }
