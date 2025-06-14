@@ -136,8 +136,14 @@ if (target_in_range && keyboard_check_pressed(vk_space) && !grappling && grapple
     grappling = true
 	grapple_cooldown = 30
 }
-
-else if(keyboard_check_pressed(vk_space) && canDash)
+else if(keyboard_check_pressed(vk_space) && onGround && (dir != 0))	
+{
+	dash_timer = 10
+	dash_speed = 5
+	dashing = true
+	ground_dash = true
+}
+else if(keyboard_check_pressed(vk_space) && canDash && !onGround)
 {
 	canDash = false
     dash_timer = 10 // Number of frames for the dash
@@ -148,8 +154,17 @@ else if(keyboard_check_pressed(vk_space) && canDash)
 // Animation for dash (frame-by-frame)
 if (dash_timer > 0) 
 {
-    var new_x = dir * dash_speed
-	move_and_collide(new_x, -1.5, GroundObject)
+	var new_x = dir * dash_speed
+	
+	if(ground_dash)
+	{
+		move_and_collide(new_x, 0, GroundObject)
+	
+	}
+    else
+	{
+		move_and_collide(new_x, -1.5, GroundObject)
+	}
 	
 	// Dash visualization
 	with(instance_create_depth(x, y, depth + 1, TrailObject))
@@ -162,6 +177,7 @@ if (dash_timer > 0)
 else
 {
 	dashing = false
+	ground_dash = false
 }
 
 
@@ -208,6 +224,10 @@ if (onGround && groundPounding)
 if(i_frame_timer > 0)
 {
 	image_alpha = 0.5 + 0.5 * sin(i_frame_timer * 0.5);
+}
+else
+{
+	image_alpha = 1	
 }
 
 // Collision Events
