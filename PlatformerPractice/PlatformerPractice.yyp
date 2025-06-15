@@ -37,6 +37,7 @@
   "resources":[
     {"id":{"name":"MainMenuFont","path":"fonts/MainMenuFont/MainMenuFont.yy",},},
     {"id":{"name":"BreakableBlockObject","path":"objects/BreakableBlockObject/BreakableBlockObject.yy",},},
+    {"id":{"name":"DashBreakBlockObject","path":"objects/DashBreakBlockObject/DashBreakBlockObject.yy",},},
     {"id":{"name":"DoubleJumpUnlockObject","path":"objects/DoubleJumpUnlockObject/DoubleJumpUnlockObject.yy",},},
     {"id":{"name":"FlagObject","path":"objects/FlagObject/FlagObject.yy",},},
     {"id":{"name":"FlightGrappleEnemyObject","path":"objects/FlightGrappleEnemyObject/FlightGrappleEnemyObject.yy",},},
@@ -59,10 +60,12 @@
     {"id":{"name":"GrappleTest","path":"rooms/GrappleTest/GrappleTest.yy",},},
     {"id":{"name":"MainMenu","path":"rooms/MainMenu/MainMenu.yy",},},
     {"id":{"name":"StartRoom","path":"rooms/StartRoom/StartRoom.yy",},},
+    {"id":{"name":"Tutorial","path":"rooms/Tutorial/Tutorial.yy",},},
     {"id":{"name":"UnlockTest","path":"rooms/UnlockTest/UnlockTest.yy",},},
     {"id":{"name":"WallJumpTest","path":"rooms/WallJumpTest/WallJumpTest.yy",},},
     {"id":{"name":"BreakableBlockSprite","path":"sprites/BreakableBlockSprite/BreakableBlockSprite.yy",},},
     {"id":{"name":"ButtonSprite","path":"sprites/ButtonSprite/ButtonSprite.yy",},},
+    {"id":{"name":"DashBreakBlockSprite","path":"sprites/DashBreakBlockSprite/DashBreakBlockSprite.yy",},},
     {"id":{"name":"DoubleJumpUnlockSprite","path":"sprites/DoubleJumpUnlockSprite/DoubleJumpUnlockSprite.yy",},},
     {"id":{"name":"FlagSprite","path":"sprites/FlagSprite/FlagSprite.yy",},},
     {"id":{"name":"FlightGrappleEnemySprite","path":"sprites/FlightGrappleEnemySprite/FlightGrappleEnemySprite.yy",},},
@@ -79,6 +82,7 @@
   "RoomOrderNodes":[
     {"roomId":{"name":"MainMenu","path":"rooms/MainMenu/MainMenu.yy",},},
     {"roomId":{"name":"StartRoom","path":"rooms/StartRoom/StartRoom.yy",},},
+    {"roomId":{"name":"Tutorial","path":"rooms/Tutorial/Tutorial.yy",},},
     {"roomId":{"name":"EnemyTest","path":"rooms/EnemyTest/EnemyTest.yy",},},
     {"roomId":{"name":"UnlockTest","path":"rooms/UnlockTest/UnlockTest.yy",},},
     {"roomId":{"name":"DoubleJumpTest","path":"rooms/DoubleJumpTest/DoubleJumpTest.yy",},},

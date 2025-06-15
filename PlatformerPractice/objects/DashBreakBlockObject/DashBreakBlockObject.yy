@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"BreakableBlockObject",
+  "%Name":"DashBreakBlockObject",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"BreakableBlockObject",
+  "name":"DashBreakBlockObject",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":true,
   "spriteId":{
-    "name":"BreakableBlockSprite",
-    "path":"sprites/BreakableBlockSprite/BreakableBlockSprite.yy",
+    "name":"DashBreakBlockSprite",
+    "path":"sprites/DashBreakBlockSprite/DashBreakBlockSprite.yy",
   },
   "spriteMaskId":null,
   "visible":true,

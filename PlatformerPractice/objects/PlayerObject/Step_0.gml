@@ -134,7 +134,7 @@ if (grappling)
 if (target_in_range && keyboard_check_pressed(vk_space) && !grappling && grapple_cooldown == 0 && global.grappleUnlock)
 {
     grappling = true
-	grapple_cooldown = 30
+	grapple_cooldown = 20
 }
 else if(keyboard_check_pressed(vk_space) && onGround && (dir != 0))	
 {
@@ -142,6 +142,8 @@ else if(keyboard_check_pressed(vk_space) && onGround && (dir != 0))
 	dash_speed = 5
 	dashing = true
 	ground_dash = true
+	
+	i_frame_timer = 32
 }
 else if(keyboard_check_pressed(vk_space) && canDash && !onGround)
 {
