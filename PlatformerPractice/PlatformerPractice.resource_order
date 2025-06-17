@@ -28,6 +28,7 @@
     {"name":"GroundEnemyObject","order":16,"path":"objects/GroundEnemyObject/GroundEnemyObject.yy",},
     {"name":"GroundObject","order":1,"path":"objects/GroundObject/GroundObject.yy",},
     {"name":"GroundPoundUnlockObject","order":8,"path":"objects/GroundPoundUnlockObject/GroundPoundUnlockObject.yy",},
+    {"name":"MenuController","order":18,"path":"objects/MenuController/MenuController.yy",},
     {"name":"OptionsButtonObject","order":14,"path":"objects/OptionsButtonObject/OptionsButtonObject.yy",},
     {"name":"ParentButtonObject","order":12,"path":"objects/ParentButtonObject/ParentButtonObject.yy",},
     {"name":"PlayButtonObject","order":13,"path":"objects/PlayButtonObject/PlayButtonObject.yy",},

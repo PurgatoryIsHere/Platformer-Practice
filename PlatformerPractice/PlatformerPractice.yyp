@@ -47,6 +47,7 @@
     {"id":{"name":"GroundEnemyObject","path":"objects/GroundEnemyObject/GroundEnemyObject.yy",},},
     {"id":{"name":"GroundObject","path":"objects/GroundObject/GroundObject.yy",},},
     {"id":{"name":"GroundPoundUnlockObject","path":"objects/GroundPoundUnlockObject/GroundPoundUnlockObject.yy",},},
+    {"id":{"name":"MenuController","path":"objects/MenuController/MenuController.yy",},},
     {"id":{"name":"OptionsButtonObject","path":"objects/OptionsButtonObject/OptionsButtonObject.yy",},},
     {"id":{"name":"ParentButtonObject","path":"objects/ParentButtonObject/ParentButtonObject.yy",},},
     {"id":{"name":"PlayButtonObject","path":"objects/PlayButtonObject/PlayButtonObject.yy",},},
