@@ -15,7 +15,7 @@ else if(onGround && (dir != 0) && dash_cooldown == 0)
 	ground_dash = true
 	
 	i_frame_timer = 32
-	dash_cooldown = 60
+	dash_cooldown = 40
 }
 
 else if(canDash && !onGround)

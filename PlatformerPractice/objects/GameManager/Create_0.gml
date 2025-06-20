@@ -35,4 +35,5 @@ global.dashBind = 0.0
 global.groundPoundBind = 0.0
 global.grappleBind = 0.0
 
-
+//Check if boss is on level
+global.isBossAlive = false

@@ -34,7 +34,7 @@ if(_select)
 		
 			if(index == 0)
 			{
-				room_goto(UnlockTest);
+				room_goto(Tutorial);
 			}
 	
 			else if(index == 1)

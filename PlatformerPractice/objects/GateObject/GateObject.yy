@@ -1,13 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"CollapsibleGroundObject",
+  "%Name":"GateObject",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"CollapsibleGroundObject",
+  "name":"GateObject",
   "overriddenProperties":[],
   "parent":{
     "name":"TileObjects",
@@ -35,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":true,
   "spriteId":{
-    "name":"CollapsibleBlockSprite",
-    "path":"sprites/CollapsibleBlockSprite/CollapsibleBlockSprite.yy",
+    "name":"GateSprite",
+    "path":"sprites/GateSprite/GateSprite.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
-dir = 1;
 
-global.isBossAlive = true
+if global.isBossAlive
+{
+	instance_destroy(self)	
+}

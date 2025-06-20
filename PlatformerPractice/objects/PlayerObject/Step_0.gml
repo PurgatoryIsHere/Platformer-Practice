@@ -152,7 +152,6 @@ if (closest_target != noone)
         target_in_range = false
     }
 }
-
 else 
 {
     // No target exists
