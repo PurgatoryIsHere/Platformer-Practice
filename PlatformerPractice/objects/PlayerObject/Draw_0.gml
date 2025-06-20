@@ -1,4 +1,4 @@
-/// @description 
+/// @description Display Grapple "Lock-on" Line
 // You can write your code in this editor
 draw_self()
 

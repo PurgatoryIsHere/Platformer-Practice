@@ -62,6 +62,7 @@
     {"id":{"name":"PlayButtonObject","path":"objects/PlayButtonObject/PlayButtonObject.yy",},},
     {"id":{"name":"PlayerObject","path":"objects/PlayerObject/PlayerObject.yy",},},
     {"id":{"name":"QuitButtonObject","path":"objects/QuitButtonObject/QuitButtonObject.yy",},},
+    {"id":{"name":"RespawnManager","path":"objects/RespawnManager/RespawnManager.yy",},},
     {"id":{"name":"S_GroundEnemyObject","path":"objects/S_GroundEnemyObject/S_GroundEnemyObject.yy",},},
     {"id":{"name":"SpikeObject","path":"objects/SpikeObject/SpikeObject.yy",},},
     {"id":{"name":"TrailObject","path":"objects/TrailObject/TrailObject.yy",},},

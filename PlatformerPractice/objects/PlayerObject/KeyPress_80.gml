@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description Pause Mechanics
 // You can write your code in this editor
 if (!paused) 
 {

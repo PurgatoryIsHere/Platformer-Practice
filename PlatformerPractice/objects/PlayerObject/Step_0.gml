@@ -1,7 +1,7 @@
-/// @description All Player Actions
+/// @description Player Actions
 // You can write your code in this editor
 
-// Camera Stuff
+// Ensure camera remains centered on player
 var cam_x = x - (camera_get_view_width(view_camera[0]) / 2)
 var cam_y = camera_get_view_y(view_camera[0])
 
@@ -17,17 +17,24 @@ dir = keyboard_check(ord("D")) - keyboard_check(ord("A")) // Direction the playe
 
 onGround = place_meeting(x, y + 1, GroundObject);
 onWall = place_meeting(x - 0.075, y, GroundObject) - place_meeting(x + 0.075, y, GroundObject)
+
 var holdingLeft = keyboard_check(ord("A"))
 var holdingRight = keyboard_check(ord("D"))
 
+// Reduce timers and/or cooldowns, frame-by-frame
 dash_timer = max(dash_timer - 1, 0)
 movement_locked_timer = max(movement_locked_timer - 1, 0)
 wall_jump_timer = max(wall_jump_timer - 1, 0)
 i_frame_timer = max(i_frame_timer - 1, 0)
 
+grapple_cooldown = max(grapple_cooldown - 1, 0)
+dash_cooldown = max(dash_cooldown - 1, 0)
+
+
+// No player movement input will be registered if timer is greater than zero
 if(movement_locked_timer <= 0)
 {
-	// Movement
+	// Horizontal Movement
 	x_speed = dir * 2
 	
 	// Jumping
@@ -45,6 +52,7 @@ if(movement_locked_timer <= 0)
 			jump_current--
 			canDash = true
 		}
+		
 		else
 		{
 			y_speed = -2.5
@@ -71,7 +79,57 @@ if(movement_locked_timer <= 0)
 	y += y_speed
 }
 
-// "Grapple"
+
+//Handle movement for dashing
+if (dash_timer > 0) 
+{
+	var new_x = dir * dash_speed
+	
+	if(ground_dash)
+	{
+		move_and_collide(new_x, 0, GroundObject)
+	
+	}
+	
+    else
+	{
+		move_and_collide(new_x, -1.5, GroundObject)
+	}
+	
+	// Dash visualization
+	with(instance_create_depth(x, y, depth + 1, TrailObject))
+	{
+		sprite_index = other.sprite_index
+		image_blend = c_fuchsia
+		image_alpha = 0.7
+	}
+}
+
+else
+{
+	dashing = false
+	ground_dash = false
+}
+
+
+// Wall Jumping
+if(onWall != 0 && (holdingLeft || holdingRight))
+{
+	image_xscale = onWall
+	y_speed = 0.25
+	jump_current = jump_number
+}
+
+// Handle movement for wall-jumping
+if(wall_jump_timer > 0)
+{
+	y_speed = -3
+    x_speed = onWall * 6
+}
+
+
+// Grappling
+
 // Find closest target object within range
 var detection_range = 100; // Adjust as needed
 var closest_target = instance_nearest(x, y, GrappleObject)
@@ -102,12 +160,7 @@ else
 }
 
 
-if (grapple_cooldown > 0) 
-{
-    grapple_cooldown--
-}
-
-// Handle grappling movement
+// Handle movement for grappling
 if (grappling) 
 {
     var dir_to_target = point_direction(x, y, target_x, target_y)
@@ -130,77 +183,6 @@ if (grappling)
     }
 }
 
-// Dashing and Grappling
-if (target_in_range && keyboard_check_pressed(vk_space) && !grappling && grapple_cooldown == 0 && global.grappleUnlock)
-{
-    grappling = true
-	grapple_cooldown = 20
-}
-else if(keyboard_check_pressed(vk_space) && onGround && (dir != 0))	
-{
-	dash_timer = 10
-	dash_speed = 5
-	dashing = true
-	ground_dash = true
-	
-	i_frame_timer = 32
-}
-
-else if(keyboard_check_pressed(vk_space) && canDash && !onGround)
-{
-	canDash = false
-    dash_timer = 10 // Number of frames for the dash
-    dash_speed = 5
-	dashing = true
-}
-
-// Animation for dash (frame-by-frame)
-if (dash_timer > 0) 
-{
-	var new_x = dir * dash_speed
-	
-	if(ground_dash)
-	{
-		move_and_collide(new_x, 0, GroundObject)
-	
-	}
-	
-    else
-	{
-		move_and_collide(new_x, -1.5, GroundObject)
-	}
-	
-	// Dash visualization
-	with(instance_create_depth(x, y, depth + 1, TrailObject))
-	{
-		sprite_index = other.sprite_index
-		image_blend = c_fuchsia
-		image_alpha = 0.7
-	}
-}
-else
-{
-	dashing = false
-	ground_dash = false
-}
-
-
-// Wall Jumping
-if(onWall != 0 && (holdingLeft || holdingRight))
-{
-	image_xscale = onWall
-	y_speed = 0.25
-	jump_current = jump_number
-}
-
-// Wall Jumping Animation (frame-by-frame)
-if(wall_jump_timer > 0)
-{
-	y_speed = -3
-    x_speed = onWall * 6
-}
-
-move_and_collide(x_speed, y_speed, GroundObject)
 
 // Ground Pound
 if (!onGround && keyboard_check_pressed(ord("S")) && global.groundPoundUnlock)
@@ -215,7 +197,6 @@ if (!onGround && keyboard_check_pressed(ord("S")) && global.groundPoundUnlock)
 		image_blend = c_fuchsia
 		image_alpha = 0.7
 	}
-
 }
 
 if (onGround && groundPounding)
@@ -224,29 +205,17 @@ if (onGround && groundPounding)
 	groundPounding = false	
 }
 
-// Invicibility Frames Visualization
+// Visualization for Invicibility Frames
 if(i_frame_timer > 0)
 {
 	image_alpha = 0.5 + 0.5 * sin(i_frame_timer * 0.5);
 }
+
 else
 {
 	image_alpha = 1	
 }
 
-// Collision Events
 
-// Ground Enemy
-if(place_meeting(x, y, M_GroundEnemyObject))
-{
-	if(i_frame_timer == 0)
-	{
-		TakeDamage(5);
-		i_frame_timer = 32
-	}
-	
-	if(global.player_health == 0)
-	{
-		LifeReduction();
-	}
-}
+// Handle standard movement
+move_and_collide(x_speed, y_speed, GroundObject)

@@ -1,4 +1,4 @@
-/// @description Initialize Health
+/// @description Diplay Health and Lives
 // You can write your code in this editor
 
 draw_set_font(global.default_font);

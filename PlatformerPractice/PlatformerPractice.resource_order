@@ -38,6 +38,7 @@
     {"name":"OptionsButtonObject","order":1,"path":"objects/OptionsButtonObject/OptionsButtonObject.yy",},
     {"name":"PlayButtonObject","order":2,"path":"objects/PlayButtonObject/PlayButtonObject.yy",},
     {"name":"QuitButtonObject","order":3,"path":"objects/QuitButtonObject/QuitButtonObject.yy",},
+    {"name":"RespawnManager","order":20,"path":"objects/RespawnManager/RespawnManager.yy",},
     {"name":"S_GroundEnemyObject","order":2,"path":"objects/S_GroundEnemyObject/S_GroundEnemyObject.yy",},
     {"name":"SpikeObject","order":4,"path":"objects/SpikeObject/SpikeObject.yy",},
     {"name":"TrailObject","order":3,"path":"objects/TrailObject/TrailObject.yy",},
