@@ -8,7 +8,7 @@ y_speed = 0
 dir = 0
 
 // Dash
-canDash = false
+canDash = true
 dash_timer = 0
 dash_speed = 0
 dashing = false

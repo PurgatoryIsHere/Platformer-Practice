@@ -8,8 +8,8 @@
   "name":"FlagObject",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"InteractiveObjects",
+    "path":"folders/Objects/InteractiveObjects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

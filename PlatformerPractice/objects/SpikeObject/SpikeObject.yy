@@ -8,8 +8,8 @@
   "name":"SpikeObject",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"TileObjects",
+    "path":"folders/Objects/TileObjects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

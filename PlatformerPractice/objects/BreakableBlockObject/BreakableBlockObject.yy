@@ -8,8 +8,8 @@
   "name":"BreakableBlockObject",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"TileObjects",
+    "path":"folders/Objects/TileObjects.yy",
   },
   "parentObjectId":{
     "name":"GroundObject",

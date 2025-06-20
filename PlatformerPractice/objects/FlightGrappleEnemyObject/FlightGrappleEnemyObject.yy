@@ -8,8 +8,8 @@
   "name":"FlightGrappleEnemyObject",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"EnemyObjects",
+    "path":"folders/Objects/EnemyObjects.yy",
   },
   "parentObjectId":{
     "name":"GrappleObject",

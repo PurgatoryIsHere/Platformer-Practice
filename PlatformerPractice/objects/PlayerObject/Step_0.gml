@@ -145,6 +145,7 @@ else if(keyboard_check_pressed(vk_space) && onGround && (dir != 0))
 	
 	i_frame_timer = 32
 }
+
 else if(keyboard_check_pressed(vk_space) && canDash && !onGround)
 {
 	canDash = false
@@ -163,6 +164,7 @@ if (dash_timer > 0)
 		move_and_collide(new_x, 0, GroundObject)
 	
 	}
+	
     else
 	{
 		move_and_collide(new_x, -1.5, GroundObject)
@@ -235,7 +237,7 @@ else
 // Collision Events
 
 // Ground Enemy
-if(place_meeting(x, y, GroundEnemyObject))
+if(place_meeting(x, y, M_GroundEnemyObject))
 {
 	if(i_frame_timer == 0)
 	{

@@ -12,8 +12,8 @@
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"ParentButtonObject","path":"objects/ParentButtonObject/ParentButtonObject.yy",},"propertyId":{"name":"button_text","path":"objects/ParentButtonObject/ParentButtonObject.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Options",},
   ],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"ButtonObjects",
+    "path":"folders/Objects/ButtonObjects.yy",
   },
   "parentObjectId":{
     "name":"ParentButtonObject",
