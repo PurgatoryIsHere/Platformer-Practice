@@ -138,9 +138,24 @@ var closest_target = instance_nearest(x, y, GrappleObject)
 if (closest_target != noone) 
 {
     var target_distance = point_distance(x, y, closest_target.x, closest_target.y)
+	
+    var collision_list = ds_list_create();
+    var collisions = collision_line_list(x, y, closest_target.x, closest_target.y, all, false, true, collision_list, false);
     
+    var line_blocked = false;
+    for (var i = 0; i < collisions; i++) {
+        var obj = collision_list[| i];
+        // Only count it as blocking if it's not the player or the target
+        if (obj != self && obj != closest_target) {
+            line_blocked = true;
+            break;
+        }
+    }
+    
+    ds_list_destroy(collision_list);
+	
     // Check if target is in range
-    if (target_distance <= detection_range)
+    if (target_distance <= detection_range && !line_blocked)
 	{
         target_in_range = true
         target_x = closest_target.x
