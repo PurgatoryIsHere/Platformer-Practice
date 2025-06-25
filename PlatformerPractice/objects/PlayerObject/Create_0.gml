@@ -9,8 +9,7 @@ dir = 0
 
 
 // Double Jump
-jump_number = 2 // How many jumps the player can make
-jump_current = 0 // How many jumps the player has remaining
+jump_counter = 0 // How many jumps the player has performed
 
 
 // Dash
@@ -28,6 +27,8 @@ onWall = 0
 movement_locked_timer = 0
 wall_jump_timer = 0
 last_wall = 0
+wall_jump_x_speed = 0
+wall_jumping = false
 
 
 // Grapple

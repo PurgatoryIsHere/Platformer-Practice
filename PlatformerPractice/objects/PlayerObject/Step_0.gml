@@ -18,6 +18,16 @@ dir = keyboard_check(ord("D")) - keyboard_check(ord("A")) // Direction the playe
 onGround = place_meeting(x, y + 1, GroundObject);
 onWall = place_meeting(x - 0.075, y, GroundObject) - place_meeting(x + 0.075, y, GroundObject)
 
+if(onWall == 1)
+{
+	wall_jump_x_speed = 8;
+}
+	
+else if(onWall == -1)
+{
+	wall_jump_x_speed = -8;
+}
+
 var holdingLeft = keyboard_check(ord("A"))
 var holdingRight = keyboard_check(ord("D"))
 
@@ -38,25 +48,24 @@ if(movement_locked_timer <= 0)
 	x_speed = dir * 2
 	
 	// Jumping
-	if(keyboard_check_pressed(ord("W")) && jump_current > 0)
+	if(keyboard_check_pressed(ord("W")) && jump_counter < 2)
 	{
 		if(onWall != 0)
 		{
-			movement_locked_timer = 10
-			wall_jump_timer = 5
+			wall_jump_timer = 5;
 		}
 	
 		else if (global.doubleJumpUnlock)
 		{
 			y_speed = -2.5
-			jump_current--
+			jump_counter += 1
 			canDash = true
 		}
 		
 		else
 		{
 			y_speed = -2.5
-			jump_current = 0
+			jump_counter = 2
 			canDash = true
 		}
 	}
@@ -70,7 +79,7 @@ if(movement_locked_timer <= 0)
  
 		if(y_speed > 0)
 		{
-			jump_current = jump_number
+			jump_counter = 0
 		}
  
 		y_speed = 0
@@ -113,18 +122,20 @@ else
 
 
 // Wall Jumping
-if(onWall != 0 && (holdingLeft || holdingRight))
+if(onWall != 0 && !place_meeting(x, y + sprite_height, GroundObject))
 {
 	image_xscale = onWall
 	y_speed = 0.25
-	jump_current = jump_number
+	jump_counter = 0
 }
 
 // Handle movement for wall-jumping
 if(wall_jump_timer > 0)
 {
-	y_speed = -3
-    x_speed = onWall * 6
+	last_wall = onWall;
+	
+	y_speed -= 0.80;
+	x_speed = wall_jump_x_speed
 }
 
 

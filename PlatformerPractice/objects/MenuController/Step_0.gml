@@ -34,7 +34,7 @@ if(_select)
 		
 			if(index == 0)
 			{
-				room_goto(EnemyTest);
+				room_goto(Area1);
 			}
 	
 			else if(index == 1)
