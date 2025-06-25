@@ -32,6 +32,11 @@ if (closest_target != noone)
         target_x = closest_target.x
         target_y = closest_target.y
     } 
+	else
+	{
+		sees_player = false
+		sprite_index = FreeFlyEnemyIdleSprite
+	}
 }
 
 if sees_player
@@ -50,7 +55,7 @@ if sees_player
 		if(PlayerObject.i_frame_timer == 0)
 		{
 			PlayerObject.TakeDamage(5);
-			PlayerObject.i_frame_timer = 32
+			PlayerObject.i_frame_timer = 48
 		}
 	
 		if(global.player_health == 0)

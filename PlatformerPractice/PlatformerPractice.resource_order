@@ -25,6 +25,7 @@
   ],
   "ResourceOrderSettings":[
     {"name":"BreakableBlockObject","order":1,"path":"objects/BreakableBlockObject/BreakableBlockObject.yy",},
+    {"name":"CheckpointObject","order":5,"path":"objects/CheckpointObject/CheckpointObject.yy",},
     {"name":"CollapsibleGroundObject","order":2,"path":"objects/CollapsibleGroundObject/CollapsibleGroundObject.yy",},
     {"name":"DashBreakBlockObject","order":3,"path":"objects/DashBreakBlockObject/DashBreakBlockObject.yy",},
     {"name":"DoubleJumpUnlockObject","order":1,"path":"objects/DoubleJumpUnlockObject/DoubleJumpUnlockObject.yy",},
@@ -54,6 +55,8 @@
     {"name":"UnlockTest","order":5,"path":"rooms/UnlockTest/UnlockTest.yy",},
     {"name":"WallJumpTest","order":3,"path":"rooms/WallJumpTest/WallJumpTest.yy",},
     {"name":"ButtonSprite","order":10,"path":"sprites/ButtonSprite/ButtonSprite.yy",},
+    {"name":"CheckpointActiveSprite","order":5,"path":"sprites/CheckpointActiveSprite/CheckpointActiveSprite.yy",},
+    {"name":"CheckpointInactiveSprite","order":6,"path":"sprites/CheckpointInactiveSprite/CheckpointInactiveSprite.yy",},
     {"name":"CollapsibleBlockSprite","order":4,"path":"sprites/CollapsibleBlockSprite/CollapsibleBlockSprite.yy",},
     {"name":"DashBreakBlockSprite","order":1,"path":"sprites/DashBreakBlockSprite/DashBreakBlockSprite.yy",},
     {"name":"FlagSprite","order":1,"path":"sprites/FlagSprite/FlagSprite.yy",},
