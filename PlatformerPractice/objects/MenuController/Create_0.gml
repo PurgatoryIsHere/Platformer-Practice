@@ -1,7 +1,10 @@
 /// @description Controls menu events
 // You can write your code in this editor
 
+window_set_size(1280, 720)
+window_center()
 window_set_cursor(cr_none); // Hides mouse
+
 
 menu[0, 0] = PlayButtonObject;
 menu[0, 1] = OptionsButtonObject;

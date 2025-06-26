@@ -1,6 +1,6 @@
 /// @description Mechanics and animation for collapse
 // You can write your code in this editor
-if(place_meeting(x, y - 1, PlayerObject))
+if(place_meeting(x, y - 1, PlayerObject) && !alarm_triggered)
 {
 	alarm_triggered = true;
     alarm[0] = 60; // Delay before destruction

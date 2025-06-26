@@ -15,8 +15,8 @@ x_speed = 0 // Stationary Speed
 
 dir = keyboard_check(ord("D")) - keyboard_check(ord("A")) // Direction the player is facing
 
-onGround = place_meeting(x, y + 1, GroundObject);
-onWall = place_meeting(x - 0.075, y, GroundObject) - place_meeting(x + 0.075, y, GroundObject)
+onGround = place_meeting(x, y + sprite_height, GroundObject);
+onWall = place_meeting(x - 1.5, y, GroundObject) - place_meeting(x + 1.5, y, GroundObject)
 
 if(onWall == 1)
 {
@@ -28,12 +28,16 @@ else if(onWall == -1)
 	wall_jump_x_speed = -8;
 }
 
+else if(onWall == 0)
+{
+	last_wall = 0;
+}
+
 var holdingLeft = keyboard_check(ord("A"))
 var holdingRight = keyboard_check(ord("D"))
 
 // Reduce timers and/or cooldowns, frame-by-frame
 dash_timer = max(dash_timer - 1, 0)
-movement_locked_timer = max(movement_locked_timer - 1, 0)
 wall_jump_timer = max(wall_jump_timer - 1, 0)
 i_frame_timer = max(i_frame_timer - 1, 0)
 
@@ -41,52 +45,60 @@ grapple_cooldown = max(grapple_cooldown - 1, 0)
 dash_cooldown = max(dash_cooldown - 1, 0)
 
 
-// No player movement input will be registered if timer is greater than zero
-if(movement_locked_timer <= 0)
+// Horizontal Movement
+x_speed = dir * 2
+	
+// Jumping
+if(keyboard_check_pressed(ord("W")) && jump_counter < 2)
 {
-	// Horizontal Movement
-	x_speed = dir * 2
-	
-	// Jumping
-	if(keyboard_check_pressed(ord("W")) && jump_counter < 2)
+	if(onWall != 0 && !onGround)
 	{
-		if(onWall != 0)
+		if(onWall != 0 && last_wall != onWall)
 		{
+			wall_jump_timer = 0;
 			wall_jump_timer = 5;
-		}
-	
-		else if (global.doubleJumpUnlock)
-		{
-			y_speed = -2.5
-			jump_counter += 1
-			canDash = true
+			last_wall = onWall;
 		}
 		
-		else
+		if(wall_jump_timer == 5)
 		{
-			y_speed = -2.5
-			jump_counter = 2
-			canDash = true
+			y_speed = -2.8;
 		}
 	}
 	
-	if(place_meeting(x, y + y_speed, GroundObject))
+	else if (global.doubleJumpUnlock)
 	{
-		while(!place_meeting(x, y + sign(y_speed), GroundObject))
-		{
-			y += sign(y_speed)
-		}
- 
-		if(y_speed > 0)
-		{
-			jump_counter = 0
-		}
- 
-		y_speed = 0
+		y_speed = -2.5
+		jump_counter += 1
+		canDash = true
 	}
-
-	y += y_speed
+		
+	else
+	{
+		y_speed = -2.5
+		jump_counter = 2
+		canDash = true
+	}
 }
+	
+if(place_meeting(x, y + y_speed, GroundObject))
+{
+	while(!place_meeting(x, y + sign(y_speed), GroundObject))
+	{
+		y += sign(y_speed)
+	}
+ 
+	if(y_speed > 0)
+	{
+		jump_counter = 0
+	}
+ 
+	y_speed = 0
+	wall_jump_timer = 0;
+	last_wall = 0;
+}
+
+y += y_speed
 
 
 //Handle movement for dashing
@@ -122,20 +134,21 @@ else
 
 
 // Wall Jumping
-if(onWall != 0 && !place_meeting(x, y + sprite_height, GroundObject))
+if(onWall != 0 && !onGround)
 {
-	image_xscale = onWall
-	y_speed = 0.25
-	jump_counter = 0
+	y_speed = min(y_speed, 0.25);
+	jump_counter = 0;
 }
 
 // Handle movement for wall-jumping
 if(wall_jump_timer > 0)
+{	
+	x_speed = wall_jump_x_speed;
+}
+
+else
 {
-	last_wall = onWall;
-	
-	y_speed -= 0.80;
-	x_speed = wall_jump_x_speed
+	x_speed = dir * 2;
 }
 
 
