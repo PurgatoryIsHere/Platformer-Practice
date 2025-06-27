@@ -22,11 +22,9 @@ dash_cooldown = 0
 // Wall Jump
 onGround = 0
 onWall = 0
-movement_locked_timer = 0
 wall_jump_timer = 0
 last_wall = 0
 wall_jump_x_speed = 0
-wall_jumping = false
 
 
 // Grapple
@@ -65,8 +63,7 @@ LifeReduction = function()
 	{
 		room = global.starting_room
 		global.lives = 3
-		global.out_of_lives = false
-		global.player_health = 100
+		global.player_health = global.player_max_health;
 	}
 		
 	else
@@ -79,6 +76,6 @@ LifeReduction = function()
 			ini_close();
 		}
 		
-		global.player_health = 100
+		global.player_health = global.player_max_health;
 	}
 }

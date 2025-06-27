@@ -1,5 +1,3 @@
-/// @description Insert description here
-// You can write your code in this editor
 /// @description Basic boss mechanics
 // You can write your code in this editor
 
@@ -7,9 +5,9 @@ global.isBossAlive = true; // variable to unlock gate for the player once false
 boss_health = 100; // Health for boss; can be changed for each boss
 boss_i_frame_timer = 0; // I-frames the boss gets upon taking damage
 
-dir = 1; // Starting Direction; can be changed depending on where boss will spawn
+dir = 0; // Starting Direction; can be changed depending on where boss will spawn
 
-drops_ability = true; // Whether or not the boss drops an ability for the player
+drops_ability = false; // Whether or not the boss drops an ability for the player
 
 TakeDamage = function(damage) // Basic damage calculation; aspects can be changed for each boss
 {
@@ -32,5 +30,5 @@ TakeDamage = function(damage) // Basic damage calculation; aspects can be change
 DropAbility = function() // Spawns the ability that a boss would drop upon defeat
 {
 	// Have a place in the boss arena that the ability will spawn at; likely the center of the arena will do
-	instance_create_layer(319, 623, "Instances", DoubleJumpUnlockObject); // Change x and y to the specified coordinates
+	instance_create_layer(x, y, "Instances", object_index); // Change x and y to the specified coordinates
 }

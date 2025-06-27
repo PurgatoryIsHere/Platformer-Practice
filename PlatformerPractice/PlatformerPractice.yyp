@@ -44,6 +44,7 @@
   "resources":[
     {"id":{"name":"MainMenuFont","path":"fonts/MainMenuFont/MainMenuFont.yy",},},
     {"id":{"name":"Area1_BossObject","path":"objects/Area1_BossObject/Area1_BossObject.yy",},},
+    {"id":{"name":"AreaBossParentObject","path":"objects/AreaBossParentObject/AreaBossParentObject.yy",},},
     {"id":{"name":"BreakableBlockObject","path":"objects/BreakableBlockObject/BreakableBlockObject.yy",},},
     {"id":{"name":"CheckpointObject","path":"objects/CheckpointObject/CheckpointObject.yy",},},
     {"id":{"name":"CollapsibleGroundObject","path":"objects/CollapsibleGroundObject/CollapsibleGroundObject.yy",},},
@@ -58,6 +59,7 @@
     {"id":{"name":"GrappleUnlockObject","path":"objects/GrappleUnlockObject/GrappleUnlockObject.yy",},},
     {"id":{"name":"GroundObject","path":"objects/GroundObject/GroundObject.yy",},},
     {"id":{"name":"GroundPoundUnlockObject","path":"objects/GroundPoundUnlockObject/GroundPoundUnlockObject.yy",},},
+    {"id":{"name":"HeartPieceObject","path":"objects/HeartPieceObject/HeartPieceObject.yy",},},
     {"id":{"name":"M_GroundEnemyObject","path":"objects/M_GroundEnemyObject/M_GroundEnemyObject.yy",},},
     {"id":{"name":"MenuController","path":"objects/MenuController/MenuController.yy",},},
     {"id":{"name":"OptionsButtonObject","path":"objects/OptionsButtonObject/OptionsButtonObject.yy",},},
@@ -97,6 +99,7 @@
     {"id":{"name":"GroundEnemySprite","path":"sprites/GroundEnemySprite/GroundEnemySprite.yy",},},
     {"id":{"name":"GroundPoundUnlockSprite","path":"sprites/GroundPoundUnlockSprite/GroundPoundUnlockSprite.yy",},},
     {"id":{"name":"GroundSprite","path":"sprites/GroundSprite/GroundSprite.yy",},},
+    {"id":{"name":"HeartPieceSprite","path":"sprites/HeartPieceSprite/HeartPieceSprite.yy",},},
     {"id":{"name":"PlayerSprite","path":"sprites/PlayerSprite/PlayerSprite.yy",},},
     {"id":{"name":"SpikeSprite","path":"sprites/SpikeSprite/SpikeSprite.yy",},},
   ],

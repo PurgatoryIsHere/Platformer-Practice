@@ -3,5 +3,6 @@
 if place_meeting(x, y - 1, PlayerObject) 
 {
 	room_goto_next()
-	global.player_health = 100 
+	global.player_health = global.player_max_health;
+	global.heart_pieces_collected = 0;
 }

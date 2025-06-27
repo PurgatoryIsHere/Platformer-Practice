@@ -11,7 +11,10 @@ global.default_valign = draw_get_valign()
 
 // Player lives and health
 global.lives = 3
+global.player_max_health = 100;
 global.player_health = 100
+global.heart_pieces_collected = 0;
+global.all_heart_pieces_collected = false;
 
 // The room the player will be returned to upon death
 global.starting_room = StartRoom
