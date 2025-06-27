@@ -3,6 +3,5 @@
 
 if((PlayerObject.dashing) && (place_meeting(x + 1, y, PlayerObject) || place_meeting(x - 1, y, PlayerObject)))
 {
-	instance_destroy(self)	
-	PlayerObject.dashing = false;
+	instance_destroy(self);
 }
