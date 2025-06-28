@@ -40,3 +40,5 @@ global.grappleBind = 0.0
 
 //Check if boss is on level
 global.isBossAlive = false
+
+randomize()

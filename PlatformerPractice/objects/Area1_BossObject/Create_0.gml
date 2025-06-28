@@ -11,6 +11,11 @@ dir = 1; // Starting Direction; can be changed depending on where boss will spaw
 
 drops_ability = true; // Whether or not the boss drops an ability for the player
 
+move_timer = 0
+jump = false
+doubleJump = false
+groundPound = false
+
 TakeDamage = function(damage) // Basic damage calculation; aspects can be changed for each boss
 {
 	boss_health -= damage;
