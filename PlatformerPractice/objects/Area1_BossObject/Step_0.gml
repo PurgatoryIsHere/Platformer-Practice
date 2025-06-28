@@ -14,6 +14,22 @@ else
 	dir *= -1
 }
 
+// Damaging the player
+if(place_meeting(x, y, PlayerObject) && !PlayerObject.dashing && !PlayerObject.groundPounding)
+{
+	if(PlayerObject.i_frame_timer == 0)
+	{
+		PlayerObject.TakeDamage(15);
+		PlayerObject.i_frame_timer = 32
+	}
+	
+	if(global.player_health == 0)
+	{
+		PlayerObject.LifeReduction();
+	}
+}
+
+// Taking damage from player
 if(place_meeting(x, y, PlayerObject) && (PlayerObject.groundPounding || PlayerObject.dashing))
 {
 	if(boss_i_frame_timer == 0)
@@ -22,6 +38,7 @@ if(place_meeting(x, y, PlayerObject) && (PlayerObject.groundPounding || PlayerOb
 	}
 }
 
+// I-frames visualization (after being damaged by player)
 if(boss_i_frame_timer > 0)
 {
 	image_alpha = 0.5 + 0.5 * sin(boss_i_frame_timer * 0.5);
