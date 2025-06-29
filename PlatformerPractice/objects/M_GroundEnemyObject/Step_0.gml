@@ -28,7 +28,7 @@ if(place_meeting(x, y, PlayerObject) && !PlayerObject.dashing && !PlayerObject.g
 }
 
 // Damaged by the player
-if(place_meeting(x, y, PlayerObject) && (PlayerObject.groundPounding || PlayerObject.dashing))
+if(place_meeting(x, y - 1, PlayerObject) && (PlayerObject.groundPounding || PlayerObject.dashing))
 {
 	instance_destroy(self)
 }

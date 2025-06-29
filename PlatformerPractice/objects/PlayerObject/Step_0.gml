@@ -134,7 +134,7 @@ else
 
 
 // Wall Jumping
-if(onWall != 0 && !onGround)
+if(onWall != 0 && !onGround && !groundPounding)
 {
 	y_speed = min(y_speed, 0.25);
 	jump_counter = 0;
