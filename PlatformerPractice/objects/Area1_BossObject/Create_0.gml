@@ -8,12 +8,11 @@ boss_health = 100; // Health for boss; can be changed for each boss
 boss_i_frame_timer = 0; // I-frames the boss gets upon taking damage
 
 dir = 1; // Starting Direction; can be changed depending on where boss will spawn
-x_speed = 0;
 y_speed = 0;
 
 drops_ability = true; // Whether or not the boss drops an ability for the player
 
-alarm[0] = 60 * 5; // Chooses a random attack action after 5 seconds.
+alarm[0] = 60 * 4; // Chooses a random attack action after 5 seconds.
 
 move_timer = 0
 jump = false
