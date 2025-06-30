@@ -25,6 +25,7 @@
   ],
   "ResourceOrderSettings":[
     {"name":"AreaBossParentObject","order":5,"path":"objects/AreaBossParentObject/AreaBossParentObject.yy",},
+    {"name":"BottomlessPitObject","order":6,"path":"objects/BottomlessPitObject/BottomlessPitObject.yy",},
     {"name":"BreakableBlockObject","order":1,"path":"objects/BreakableBlockObject/BreakableBlockObject.yy",},
     {"name":"CheckpointObject","order":5,"path":"objects/CheckpointObject/CheckpointObject.yy",},
     {"name":"CollapsibleGroundObject","order":2,"path":"objects/CollapsibleGroundObject/CollapsibleGroundObject.yy",},
@@ -57,6 +58,7 @@
     {"name":"Tutorial","order":8,"path":"rooms/Tutorial/Tutorial.yy",},
     {"name":"UnlockTest","order":5,"path":"rooms/UnlockTest/UnlockTest.yy",},
     {"name":"WallJumpTest","order":3,"path":"rooms/WallJumpTest/WallJumpTest.yy",},
+    {"name":"BottomlessPitSprite","order":6,"path":"sprites/BottomlessPitSprite/BottomlessPitSprite.yy",},
     {"name":"ButtonSprite","order":10,"path":"sprites/ButtonSprite/ButtonSprite.yy",},
     {"name":"CheckpointActiveSprite","order":5,"path":"sprites/CheckpointActiveSprite/CheckpointActiveSprite.yy",},
     {"name":"CheckpointInactiveSprite","order":6,"path":"sprites/CheckpointInactiveSprite/CheckpointInactiveSprite.yy",},

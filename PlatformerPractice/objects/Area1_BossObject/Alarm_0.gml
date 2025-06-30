@@ -1,7 +1,8 @@
 /// @description Randomly select move
 // You can write your code in this editor
 
-var move_type = irandom(2)
+//var move_type = irandom(2)
+var move_type = 2;
 
 if (move_type = 0) 
 {

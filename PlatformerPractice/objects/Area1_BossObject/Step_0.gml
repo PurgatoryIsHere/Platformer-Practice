@@ -100,10 +100,18 @@ else if(groundPound)
 		x_speed = 0;
 		y_speed = 10;
 		
-		if point_distance(x, y, PlayerObject.x, PlayerObject.y) && place_meeting(x, y + sprite_height, GroundObject)
+		if(point_distance(x, y + 1, PlayerObject.x, PlayerObject.y) < 80) && PlayerObject.onGround && place_meeting(x, y + sprite_height, GroundObject)
+
 		{
 			PlayerObject.TakeDamage(20);
 			
+			groundPound = false;
+			has_pounded = false;
+			move_timer = 0;
+		}
+		
+		else if(place_meeting(x, y + sprite_height, GroundObject))
+		{
 			groundPound = false;
 			has_pounded = false;
 			move_timer = 0;
