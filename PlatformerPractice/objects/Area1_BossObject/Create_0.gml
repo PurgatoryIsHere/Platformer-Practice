@@ -44,3 +44,33 @@ DropAbility = function() // Spawns the ability that a boss would drop upon defea
 	// Have a place in the boss arena that the ability will spawn at; likely the center of the arena will do
 	instance_create_layer(319, 623, "Instances", DoubleJumpUnlockObject); // Change x and y to the specified coordinates
 }
+
+function boss_move_and_collide(hsp, vsp, obj) 
+{
+    var steps = ceil(max(abs(hsp), abs(vsp)));
+    var step_x = hsp / steps;
+    var step_y = vsp / steps;
+
+    for (var i = 0; i < steps; i++)
+	{
+        if (place_free(x + step_x, y))
+		{
+			x += step_x;
+		}
+		
+        else 
+		{
+			hspeed = 0;
+		}
+
+        if (place_free(x, y + step_y))
+		{
+			y += step_y;
+		}
+		
+        else 
+		{
+			y_speed = 0;
+		}
+    }
+}
