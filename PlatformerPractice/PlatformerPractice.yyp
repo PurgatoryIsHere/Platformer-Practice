@@ -75,6 +75,7 @@
     {"id":{"name":"SpikeObject","path":"objects/SpikeObject/SpikeObject.yy",},},
     {"id":{"name":"TrailObject","path":"objects/TrailObject/TrailObject.yy",},},
     {"id":{"name":"Area1","path":"rooms/Area1/Area1.yy",},},
+    {"id":{"name":"Area2","path":"rooms/Area2/Area2.yy",},},
     {"id":{"name":"Area3","path":"rooms/Area3/Area3.yy",},},
     {"id":{"name":"DashTest","path":"rooms/DashTest/DashTest.yy",},},
     {"id":{"name":"DoubleJumpTest","path":"rooms/DoubleJumpTest/DoubleJumpTest.yy",},},
@@ -123,6 +124,7 @@
     {"roomId":{"name":"DashTest","path":"rooms/DashTest/DashTest.yy",},},
     {"roomId":{"name":"WallJumpTest","path":"rooms/WallJumpTest/WallJumpTest.yy",},},
     {"roomId":{"name":"GrappleTest","path":"rooms/GrappleTest/GrappleTest.yy",},},
+    {"roomId":{"name":"Area2","path":"rooms/Area2/Area2.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

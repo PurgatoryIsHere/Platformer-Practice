@@ -51,6 +51,7 @@
     {"name":"SpikeObject","order":4,"path":"objects/SpikeObject/SpikeObject.yy",},
     {"name":"TrailObject","order":3,"path":"objects/TrailObject/TrailObject.yy",},
     {"name":"Area1","order":9,"path":"rooms/Area1/Area1.yy",},
+    {"name":"Area2","order":11,"path":"rooms/Area2/Area2.yy",},
     {"name":"Area3","order":10,"path":"rooms/Area3/Area3.yy",},
     {"name":"DashTest","order":2,"path":"rooms/DashTest/DashTest.yy",},
     {"name":"DoubleJumpTest","order":1,"path":"rooms/DoubleJumpTest/DoubleJumpTest.yy",},
