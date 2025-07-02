@@ -5,7 +5,9 @@ if(place_meeting(x, y, PlayerObject))
 	global.heart_pieces_collected += 1;
 	instance_destroy(self);
 	
-	if(global.heart_pieces_collected == 2 && !global.all_heart_pieces_collected)
+	var required = global.heart_pieces_to_collect[room];
+	
+	if(global.heart_pieces_collected == required && !global.all_heart_pieces_collected)
 	{
 		global.all_heart_pieces_collected = true;
 		global.player_max_health += 10;

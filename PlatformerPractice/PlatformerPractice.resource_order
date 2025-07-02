@@ -24,6 +24,7 @@
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings":[
+    {"name":"Area3_BossObject","order":6,"path":"objects/Area3_BossObject/Area3_BossObject.yy",},
     {"name":"AreaBossParentObject","order":5,"path":"objects/AreaBossParentObject/AreaBossParentObject.yy",},
     {"name":"BottomlessPitObject","order":6,"path":"objects/BottomlessPitObject/BottomlessPitObject.yy",},
     {"name":"BreakableBlockObject","order":1,"path":"objects/BreakableBlockObject/BreakableBlockObject.yy",},
@@ -50,6 +51,7 @@
     {"name":"SpikeObject","order":4,"path":"objects/SpikeObject/SpikeObject.yy",},
     {"name":"TrailObject","order":3,"path":"objects/TrailObject/TrailObject.yy",},
     {"name":"Area1","order":9,"path":"rooms/Area1/Area1.yy",},
+    {"name":"Area3","order":10,"path":"rooms/Area3/Area3.yy",},
     {"name":"DashTest","order":2,"path":"rooms/DashTest/DashTest.yy",},
     {"name":"DoubleJumpTest","order":1,"path":"rooms/DoubleJumpTest/DoubleJumpTest.yy",},
     {"name":"EnemyTest","order":7,"path":"rooms/EnemyTest/EnemyTest.yy",},

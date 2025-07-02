@@ -44,6 +44,7 @@
   "resources":[
     {"id":{"name":"MainMenuFont","path":"fonts/MainMenuFont/MainMenuFont.yy",},},
     {"id":{"name":"Area1_BossObject","path":"objects/Area1_BossObject/Area1_BossObject.yy",},},
+    {"id":{"name":"Area3_BossObject","path":"objects/Area3_BossObject/Area3_BossObject.yy",},},
     {"id":{"name":"AreaBossParentObject","path":"objects/AreaBossParentObject/AreaBossParentObject.yy",},},
     {"id":{"name":"BottomlessPitObject","path":"objects/BottomlessPitObject/BottomlessPitObject.yy",},},
     {"id":{"name":"BreakableBlockObject","path":"objects/BreakableBlockObject/BreakableBlockObject.yy",},},
@@ -74,6 +75,7 @@
     {"id":{"name":"SpikeObject","path":"objects/SpikeObject/SpikeObject.yy",},},
     {"id":{"name":"TrailObject","path":"objects/TrailObject/TrailObject.yy",},},
     {"id":{"name":"Area1","path":"rooms/Area1/Area1.yy",},},
+    {"id":{"name":"Area3","path":"rooms/Area3/Area3.yy",},},
     {"id":{"name":"DashTest","path":"rooms/DashTest/DashTest.yy",},},
     {"id":{"name":"DoubleJumpTest","path":"rooms/DoubleJumpTest/DoubleJumpTest.yy",},},
     {"id":{"name":"EnemyTest","path":"rooms/EnemyTest/EnemyTest.yy",},},
@@ -112,6 +114,7 @@
   "RoomOrderNodes":[
     {"roomId":{"name":"MainMenu","path":"rooms/MainMenu/MainMenu.yy",},},
     {"roomId":{"name":"Area1","path":"rooms/Area1/Area1.yy",},},
+    {"roomId":{"name":"Area3","path":"rooms/Area3/Area3.yy",},},
     {"roomId":{"name":"StartRoom","path":"rooms/StartRoom/StartRoom.yy",},},
     {"roomId":{"name":"Tutorial","path":"rooms/Tutorial/Tutorial.yy",},},
     {"roomId":{"name":"EnemyTest","path":"rooms/EnemyTest/EnemyTest.yy",},},

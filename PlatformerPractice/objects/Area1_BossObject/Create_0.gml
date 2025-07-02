@@ -10,7 +10,7 @@ boss_i_frame_timer = 0; // I-frames the boss gets upon taking damage
 dir = 1; // Starting Direction; can be changed depending on where boss will spawn
 y_speed = 0;
 
-drops_ability = true; // Whether or not the boss drops an ability for the player
+global.drops_ability = true; // Whether or not the boss drops an ability for the player
 
 alarm[0] = 60 * 4; // Chooses a random attack action after 5 seconds.
 
@@ -30,7 +30,7 @@ TakeDamage = function(damage) // Basic damage calculation; aspects can be change
 		global.isBossAlive = false; // Unlocks gate
 		instance_destroy(self);
 		
-		if(drops_ability)
+		if(global.drops_ability)
 		{
 			DropAbility();
 		}
