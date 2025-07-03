@@ -254,6 +254,6 @@ else
 	image_alpha = 1	
 }
 
-
 // Handle standard movement
 move_and_collide(x_speed, y_speed, GroundObject)
+ 

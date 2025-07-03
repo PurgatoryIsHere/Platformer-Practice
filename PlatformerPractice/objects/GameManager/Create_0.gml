@@ -15,7 +15,7 @@ global.player_max_health = 100;
 global.player_health = 100
 global.heart_pieces_collected = 0;
 global.all_heart_pieces_collected = false;
-global.heart_pieces_to_collect = [0, 2, 0, 3, 0, 0, 0, 0]
+global.heart_pieces_to_collect = [0, 2, 2, 3, 0, 0, 0, 0]
 
 // The room the player will be returned to upon death
 global.starting_room = StartRoom

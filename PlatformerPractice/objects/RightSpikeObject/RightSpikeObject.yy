@@ -1,15 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"GroundObject",
+  "%Name":"RightSpikeObject",
   "eventList":[],
   "managed":true,
-  "name":"GroundObject",
+  "name":"RightSpikeObject",
   "overriddenProperties":[],
   "parent":{
     "name":"TileObjects",
     "path":"folders/Objects/TileObjects.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"SpikeObject",
+    "path":"objects/SpikeObject/SpikeObject.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -28,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"GroundSprite",
-    "path":"sprites/GroundSprite/GroundSprite.yy",
+    "name":"RightSpikeSprite",
+    "path":"sprites/RightSpikeSprite/RightSpikeSprite.yy",
   },
   "spriteMaskId":null,
   "visible":true,
