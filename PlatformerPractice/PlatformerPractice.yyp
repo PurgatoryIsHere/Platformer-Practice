@@ -110,7 +110,8 @@
     {"id":{"name":"GroundPoundUnlockSprite","path":"sprites/GroundPoundUnlockSprite/GroundPoundUnlockSprite.yy",},},
     {"id":{"name":"GroundSprite","path":"sprites/GroundSprite/GroundSprite.yy",},},
     {"id":{"name":"HealthRestoreSprite","path":"sprites/HealthRestoreSprite/HealthRestoreSprite.yy",},},
-    {"id":{"name":"HeartPieceSprite","path":"sprites/HeartPieceSprite/HeartPieceSprite.yy",},},
+    {"id":{"name":"HeartPieceSprite_Active","path":"sprites/HeartPieceSprite_Active/HeartPieceSprite_Active.yy",},},
+    {"id":{"name":"HeartPieceSprite_Inactive","path":"sprites/HeartPieceSprite_Inactive/HeartPieceSprite_Inactive.yy",},},
     {"id":{"name":"LeftSpikeSprite","path":"sprites/LeftSpikeSprite/LeftSpikeSprite.yy",},},
     {"id":{"name":"PlayerSprite","path":"sprites/PlayerSprite/PlayerSprite.yy",},},
     {"id":{"name":"RightSpikeSprite","path":"sprites/RightSpikeSprite/RightSpikeSprite.yy",},},
@@ -123,6 +124,7 @@
   "RoomOrderNodes":[
     {"roomId":{"name":"MainMenu","path":"rooms/MainMenu/MainMenu.yy",},},
     {"roomId":{"name":"Area1","path":"rooms/Area1/Area1.yy",},},
+    {"roomId":{"name":"Area2","path":"rooms/Area2/Area2.yy",},},
     {"roomId":{"name":"Area3","path":"rooms/Area3/Area3.yy",},},
     {"roomId":{"name":"StartRoom","path":"rooms/StartRoom/StartRoom.yy",},},
     {"roomId":{"name":"Tutorial","path":"rooms/Tutorial/Tutorial.yy",},},
@@ -132,7 +134,6 @@
     {"roomId":{"name":"DashTest","path":"rooms/DashTest/DashTest.yy",},},
     {"roomId":{"name":"WallJumpTest","path":"rooms/WallJumpTest/WallJumpTest.yy",},},
     {"roomId":{"name":"GrappleTest","path":"rooms/GrappleTest/GrappleTest.yy",},},
-    {"roomId":{"name":"Area2","path":"rooms/Area2/Area2.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

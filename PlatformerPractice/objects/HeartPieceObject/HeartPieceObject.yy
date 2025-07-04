@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"HeartPieceSprite",
-    "path":"sprites/HeartPieceSprite/HeartPieceSprite.yy",
+    "name":"HeartPieceSprite_Active",
+    "path":"sprites/HeartPieceSprite_Active/HeartPieceSprite_Active.yy",
   },
   "spriteMaskId":null,
   "visible":true,
