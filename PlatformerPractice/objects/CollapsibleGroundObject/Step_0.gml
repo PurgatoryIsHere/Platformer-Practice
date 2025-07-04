@@ -7,15 +7,4 @@ if(place_meeting(x, y - 1, PlayerObject) && !alarm_triggered)
     shake_time = 60;
 }
 
-// Visualization of collapsing tile(s)
-if(shake_time > 0)
-{
-    shake_time--;
-	
-	x = x_origin;
-	y = y_origin;
-	
-    x += random_range(-shake_magnitude, shake_magnitude);
-    y += random_range(-shake_magnitude, shake_magnitude);
-}
-
+shake_time = max(shake_time - 1, 0);
