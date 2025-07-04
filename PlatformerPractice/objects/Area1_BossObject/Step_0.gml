@@ -3,7 +3,6 @@
 
 y_speed += 0.2;
 boss_i_frame_timer = max(boss_i_frame_timer - 1, 0);
-image_xscale = dir * 1.5;
 
 // Damaging the player
 if(place_meeting(x, y, PlayerObject) && !PlayerObject.dashing && !PlayerObject.groundPounding)
@@ -43,6 +42,22 @@ else
 // Move timer countdown
 move_timer = max(move_timer - 1, 0);
 
+//Movement Logic
+if (jump || doubleJump || groundPound)
+{
+	hspeed = dir
+}
+else if place_free(x + dir, y) && !place_free(x + (dir * 24), y + 9)
+{
+	hspeed = dir
+}
+
+else if place_meeting(x, y + 1, GroundObject)
+{
+	image_xscale = dir * -1.5;
+	dir *= -1
+}
+
 // Special move logic
 if(jump) 
 {
@@ -71,6 +86,7 @@ else if(doubleJump)
 
 else if(groundPound) 
 {
+	
     if(move_timer == 0) 
 	{
         move_timer = 60;
@@ -96,25 +112,6 @@ else if(groundPound)
             move_timer = 0;
         }
     }
-}
-
-
-if place_free(x + dir, y) && !place_free(x + (dir * 24), y + 9)
-{
-	hspeed = dir
-}
-
-else
-{
-	image_xscale = dir * 1.5;
-	dir *= -1
-}
-
-if(!place_free(x + hspeed, y)) 
-{
-    image_xscale = dir * 1.5;
-    dir *= -1;   // Reverse direction
-	hspeed = dir
 }
 
 // Apply movement with collision
