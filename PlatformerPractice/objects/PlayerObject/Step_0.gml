@@ -83,19 +83,48 @@ if(keyboard_check_pressed(ord("W")) && jump_counter < 2)
 	
 if(place_meeting(x, y + y_speed, GroundObject))
 {
-	while(!place_meeting(x, y + sign(y_speed), GroundObject))
-	{
-		y += sign(y_speed)
-	}
- 
-	if(y_speed > 0)
-	{
-		jump_counter = 0
-	}
- 
-	y_speed = 0
-	wall_jump_timer = 0;
-	last_wall = 0;
+    // Check if we're colliding with a jumpthrough platform
+    var jumpthrough = instance_place(x, y + y_speed, ShelfObject);
+    
+    if (jumpthrough != noone) 
+    {
+        // Only collide if player is above the platform and falling down
+        if (y < jumpthrough.y && y_speed > 0) 
+        {
+            // Normal collision - land on top
+            while(!place_meeting(x, y + sign(y_speed), GroundObject))
+            {
+                y += sign(y_speed)
+            }
+            
+            if(y_speed > 0)
+            {
+                jump_counter = 0
+            }
+            
+            y_speed = 0
+            wall_jump_timer = 0;
+            last_wall = 0;
+        }
+        // If player is below or jumping up, don't collide - let them pass through
+    }
+    else
+    {
+        // Normal ground collision for regular GroundObjects
+        while(!place_meeting(x, y + sign(y_speed), GroundObject))
+        {
+            y += sign(y_speed)
+        }
+        
+        if(y_speed > 0)
+        {
+            jump_counter = 0
+        }
+        
+        y_speed = 0
+        wall_jump_timer = 0;
+        last_wall = 0;
+    }
 }
 
 y += y_speed
