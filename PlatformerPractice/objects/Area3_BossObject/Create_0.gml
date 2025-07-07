@@ -5,7 +5,7 @@ global.isBossAlive = true; // variable to unlock gate for the player once false
 boss_health = 100; // Health for boss; can be changed for each boss
 boss_i_frame_timer = 0; // I-frames the boss gets upon taking damage
 
-dir = 0; // Starting Direction; can be changed depending on where boss will spawn
+dir = 1; // Starting Direction; can be changed depending on where boss will spawn
 
 global.drops_ability = true; // Whether or not the boss drops an ability for the player
 
@@ -30,7 +30,7 @@ TakeDamage = function(damage) // Basic damage calculation; aspects can be change
 DropAbility = function() // Spawns the ability that a boss would drop upon defeat
 {
 	// Have a place in the boss arena that the ability will spawn at; likely the center of the arena will do
-	instance_create_layer(288, 928, "Instances", GroundPoundUnlockObject); // Change x and y to the specified coordinates
+	instance_create_layer(320, 928, "Instances", GroundPoundUnlockObject); // Change x and y to the specified coordinates
 }
 
 function boss_move_and_collide(hsp, vsp, obj) 
