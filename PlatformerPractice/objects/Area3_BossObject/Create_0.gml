@@ -62,3 +62,54 @@ function boss_move_and_collide(hsp, vsp, obj)
 		}
     }
 }
+
+// Unique Boss Mechanics
+Pillar_Drop_1 = function()
+{
+	instance_create_layer(112, 864, "Instances", WarningObject);
+	instance_create_layer(192, 864, "Instances", WarningObject);
+	instance_create_layer(400, 864, "Instances", WarningObject);
+	instance_create_layer(480, 864, "Instances", WarningObject);
+	
+	alarm[0] = 60;
+}
+
+Pillar_Drop_2 = function()
+{
+	instance_create_layer(96, 864, "Instances", WarningObject);
+	instance_create_layer(176, 864, "Instances", WarningObject);
+	instance_create_layer(256, 864, "Instances", WarningObject);
+	instance_create_layer(336, 864, "Instances", WarningObject);
+	instance_create_layer(416, 864, "Instances", WarningObject);
+	instance_create_layer(496, 864, "Instances", WarningObject);
+	
+	alarm[0] = 60;
+}
+
+Pillar_Drop_3 = function()
+{
+	instance_create_layer(64, 864, "Instances", WarningObject);
+	instance_create_layer(96, 864, "Instances", WarningObject);
+	instance_create_layer(128, 864, "Instances", WarningObject);
+	instance_create_layer(160, 864, "Instances", WarningObject);
+	instance_create_layer(192, 864, "Instances", WarningObject);
+	instance_create_layer(224, 864, "Instances", WarningObject);
+	instance_create_layer(256, 864, "Instances", WarningObject);
+	
+	instance_create_layer(336, 864, "Instances", WarningObject);
+	instance_create_layer(368, 864, "Instances", WarningObject);
+	instance_create_layer(400, 864, "Instances", WarningObject);
+	instance_create_layer(432, 864, "Instances", WarningObject);
+	instance_create_layer(464, 864, "Instances", WarningObject);
+	instance_create_layer(496, 864, "Instances", WarningObject);
+	instance_create_layer(528, 864, "Instances", WarningObject);
+	
+	alarm[0] = 60;
+}
+
+//Pillar_Drop_3()
+
+Spawn_Wave = function()
+{
+	
+}

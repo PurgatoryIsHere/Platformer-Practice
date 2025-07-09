@@ -25,5 +25,4 @@ else
 	image_alpha = 1	;
 }
 
-
 boss_move_and_collide(hspeed, vspeed, GroundObject);
