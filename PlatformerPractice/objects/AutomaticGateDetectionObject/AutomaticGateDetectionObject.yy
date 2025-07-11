@@ -32,9 +32,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"BottomlessPitSprite",
-    "path":"sprites/BottomlessPitSprite/BottomlessPitSprite.yy",
+    "name":"AutomaticGateDetectionSprite",
+    "path":"sprites/AutomaticGateDetectionSprite/AutomaticGateDetectionSprite.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description Check if detector is triggered
 // You can write your code in this editor
 
 if(!activated && collision_rectangle(x - 6, y - 8, x + 6, y + 8, PlayerObject, false, true))

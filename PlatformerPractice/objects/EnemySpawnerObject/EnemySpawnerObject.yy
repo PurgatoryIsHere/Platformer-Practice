@@ -1,16 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"BottomlessPitObject",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"EnemySpawnerObject",
+  "eventList":[],
   "managed":true,
-  "name":"BottomlessPitObject",
+  "name":"EnemySpawnerObject",
   "overriddenProperties":[],
   "parent":{
-    "name":"TileObjects",
-    "path":"folders/Objects/TileObjects.yy",
+    "name":"EnemyObjects",
+    "path":"folders/Objects/EnemyObjects.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -31,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"BottomlessPitSprite",
-    "path":"sprites/BottomlessPitSprite/BottomlessPitSprite.yy",
+    "name":"EnemySpawnerSprite",
+    "path":"sprites/EnemySpawnerSprite/EnemySpawnerSprite.yy",
   },
   "spriteMaskId":null,
   "visible":false,

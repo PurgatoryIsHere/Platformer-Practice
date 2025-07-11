@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description Close gate once triggered
 // You can write your code in this editor
 	
 var loc_tag = tag;
