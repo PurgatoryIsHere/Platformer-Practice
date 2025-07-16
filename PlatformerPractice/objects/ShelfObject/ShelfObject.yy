@@ -9,10 +9,7 @@
     "name":"TileObjects",
     "path":"folders/Objects/TileObjects.yy",
   },
-  "parentObjectId":{
-    "name":"GroundObject",
-    "path":"objects/GroundObject/GroundObject.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
