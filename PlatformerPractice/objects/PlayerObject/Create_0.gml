@@ -53,6 +53,11 @@ camera_height = camera_get_view_height(view_camera[0])
 TakeDamage = function(damage)
 {
 	global.player_health -= damage;
+	
+	if(global.player_health <= 0)
+	{
+		LifeReduction();
+	}
 }
 
 LifeReduction = function()

@@ -13,8 +13,20 @@ TakeDamage = function(damage) // Basic damage calculation; aspects can be change
 {
 	boss_health -= damage;
 	
-	if(boss_health == 0)
+	if(boss_health <= 0)
 	{
+		with(Area3_BossMinionObject)
+		{
+			instance_destroy(self)
+		}
+		
+		with(CollapsibleGroundObject)
+		{
+			self.alarm_triggered = true;
+			self.alarm[0] = 30;
+			self.shake_time = 30;
+		}
+		
 		global.isBossAlive = false; // Unlocks gate
 		instance_destroy(self);
 		
@@ -22,6 +34,54 @@ TakeDamage = function(damage) // Basic damage calculation; aspects can be change
 		{
 			DropAbility();
 		}
+	}
+	
+	else if(boss_health <= 28)
+	{
+		//push player off platform
+		phase = 3;
+		
+		with(Area3_BossMinionObject)
+		{
+			instance_destroy(self)
+		}
+		
+		with(CollapsibleGroundObject)
+		{
+			self.alarm_triggered = true;
+			self.alarm[0] = 30;
+			self.shake_time = 30;
+		}
+		
+		wave_spawned = false;
+		wave_respawning = true;
+		pillars_dropped = false;
+		
+		alarm[1] = 60;
+	}
+	
+	else if(boss_health <= 64)
+	{
+		//push player off platform
+		phase = 2;
+		
+		with(Area3_BossMinionObject)
+		{
+			instance_destroy(self)
+		}
+		
+		with(CollapsibleGroundObject)
+		{
+			self.alarm_triggered = true;
+			self.alarm[0] = 30;
+			self.shake_time = 30;
+		}
+		
+		wave_spawned = false;
+		wave_respawning = true;
+		pillars_dropped = false;
+		
+		alarm[1] = 60;
 	}
 	
 	boss_i_frame_timer = 32; // Standard amount of i-frames; can be changed for each boss
@@ -64,6 +124,22 @@ function boss_move_and_collide(hsp, vsp, obj)
 }
 
 // Unique Boss Mechanics
+boss_battle_active = false;
+phase = 0;
+wave_spawned = false;
+wave_respawning = false;
+pillars_dropped = false;
+pillar_timer = 0;
+pillar_timeout = 600; // time before pillars start collapsing
+
+Spawn_Wave = function(enemy_count)
+{
+	for (var i = 0; i < enemy_count; i++)
+    {
+        instance_create_layer(irandom_range(96, 560), 944, "Instances", Area3_BossMinionObject);
+    }
+}
+
 Pillar_Drop_1 = function()
 {
 	instance_create_layer(112, 864, "Instances", WarningObject);
@@ -71,7 +147,7 @@ Pillar_Drop_1 = function()
 	instance_create_layer(400, 864, "Instances", WarningObject);
 	instance_create_layer(480, 864, "Instances", WarningObject);
 	
-	alarm[0] = 60;
+	alarm[0] = 90;
 }
 
 Pillar_Drop_2 = function()
@@ -83,7 +159,7 @@ Pillar_Drop_2 = function()
 	instance_create_layer(416, 864, "Instances", WarningObject);
 	instance_create_layer(496, 864, "Instances", WarningObject);
 	
-	alarm[0] = 60;
+	alarm[0] = 90;
 }
 
 Pillar_Drop_3 = function()
@@ -104,12 +180,12 @@ Pillar_Drop_3 = function()
 	instance_create_layer(496, 864, "Instances", WarningObject);
 	instance_create_layer(528, 864, "Instances", WarningObject);
 	
-	alarm[0] = 60;
+	alarm[0] = 120;
 }
 
 //Pillar_Drop_3()
 
-Spawn_Wave = function()
+GroundPoundAOE = function()
 {
-	
+	PlayerObject.TakeDamage(25);
 }

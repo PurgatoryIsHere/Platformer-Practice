@@ -1,5 +1,23 @@
-/// @description Damage calculation
+/// @description Movement & Damage
 // You can write your code in this editor
+
+if(instance_exists(PlayerObject))
+{
+	if(PlayerObject.x < x)
+	{
+		dir = -1;
+	}
+	
+	else
+	{
+		dir = 1;
+	}
+}
+
+if place_free(x + dir, y) && !place_free(x + (dir * 16), y + 9)
+{
+	hspeed = dir * 1
+}
 
 // Damaging the player
 if(place_meeting(x, y, PlayerObject) && !PlayerObject.dashing && !PlayerObject.groundPounding)

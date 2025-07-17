@@ -26,6 +26,7 @@
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings":[
+    {"name":"Area3_BossMinionObject","order":8,"path":"objects/Area3_BossMinionObject/Area3_BossMinionObject.yy",},
     {"name":"Area3_BossObject","order":6,"path":"objects/Area3_BossObject/Area3_BossObject.yy",},
     {"name":"AreaBossParentObject","order":5,"path":"objects/AreaBossParentObject/AreaBossParentObject.yy",},
     {"name":"AutomaticGateDetectionObject","order":12,"path":"objects/AutomaticGateDetectionObject/AutomaticGateDetectionObject.yy",},
@@ -71,6 +72,7 @@
     {"name":"Tutorial","order":8,"path":"rooms/Tutorial/Tutorial.yy",},
     {"name":"UnlockTest","order":5,"path":"rooms/UnlockTest/UnlockTest.yy",},
     {"name":"WallJumpTest","order":3,"path":"rooms/WallJumpTest/WallJumpTest.yy",},
+    {"name":"Area3_BossMinionSprite","order":5,"path":"sprites/Area3_BossMinionSprite/Area3_BossMinionSprite.yy",},
     {"name":"AutomaticGateDetectionSprite","order":12,"path":"sprites/AutomaticGateDetectionSprite/AutomaticGateDetectionSprite.yy",},
     {"name":"AutomaticGateSprite","order":11,"path":"sprites/AutomaticGateSprite/AutomaticGateSprite.yy",},
     {"name":"BottomlessPitSprite","order":6,"path":"sprites/BottomlessPitSprite/BottomlessPitSprite.yy",},

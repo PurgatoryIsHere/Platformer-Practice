@@ -46,6 +46,7 @@
   "resources":[
     {"id":{"name":"MainMenuFont","path":"fonts/MainMenuFont/MainMenuFont.yy",},},
     {"id":{"name":"Area1_BossObject","path":"objects/Area1_BossObject/Area1_BossObject.yy",},},
+    {"id":{"name":"Area3_BossMinionObject","path":"objects/Area3_BossMinionObject/Area3_BossMinionObject.yy",},},
     {"id":{"name":"Area3_BossObject","path":"objects/Area3_BossObject/Area3_BossObject.yy",},},
     {"id":{"name":"AreaBossParentObject","path":"objects/AreaBossParentObject/AreaBossParentObject.yy",},},
     {"id":{"name":"AutomaticGateDetectionObject","path":"objects/AutomaticGateDetectionObject/AutomaticGateDetectionObject.yy",},},
@@ -98,6 +99,7 @@
     {"id":{"name":"UnlockTest","path":"rooms/UnlockTest/UnlockTest.yy",},},
     {"id":{"name":"WallJumpTest","path":"rooms/WallJumpTest/WallJumpTest.yy",},},
     {"id":{"name":"collapse_tile","path":"scripts/collapse_tile/collapse_tile.yy",},},
+    {"id":{"name":"Area3_BossMinionSprite","path":"sprites/Area3_BossMinionSprite/Area3_BossMinionSprite.yy",},},
     {"id":{"name":"AutomaticGateDetectionSprite","path":"sprites/AutomaticGateDetectionSprite/AutomaticGateDetectionSprite.yy",},},
     {"id":{"name":"AutomaticGateSprite","path":"sprites/AutomaticGateSprite/AutomaticGateSprite.yy",},},
     {"id":{"name":"BottomlessPitSprite","path":"sprites/BottomlessPitSprite/BottomlessPitSprite.yy",},},

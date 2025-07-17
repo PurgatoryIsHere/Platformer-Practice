@@ -1,23 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"Area3_BossObject",
+  "%Name":"Area3_BossMinionObject",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":1,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"Area3_BossObject",
+  "name":"Area3_BossMinionObject",
   "overriddenProperties":[],
   "parent":{
     "name":"EnemyObjects",
     "path":"folders/Objects/EnemyObjects.yy",
   },
-  "parentObjectId":{
-    "name":"AreaBossParentObject",
-    "path":"objects/AreaBossParentObject/AreaBossParentObject.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -36,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"GroundEnemySprite",
-    "path":"sprites/GroundEnemySprite/GroundEnemySprite.yy",
+    "name":"Area3_BossMinionSprite",
+    "path":"sprites/Area3_BossMinionSprite/Area3_BossMinionSprite.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -57,11 +57,6 @@ if sees_player
 			PlayerObject.TakeDamage(5);
 			PlayerObject.i_frame_timer = 48
 		}
-	
-		if(global.player_health == 0)
-		{
-			PlayerObject.LifeReduction();
-		}
 	}
 
 	// Damaged by the player

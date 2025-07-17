@@ -20,11 +20,6 @@ if(place_meeting(x, y, PlayerObject) && !PlayerObject.dashing && !PlayerObject.g
 		PlayerObject.TakeDamage(5);
 		PlayerObject.i_frame_timer = 32
 	}
-	
-	if(global.player_health == 0)
-	{
-		PlayerObject.LifeReduction();
-	}
 }
 
 // Damaged by the player

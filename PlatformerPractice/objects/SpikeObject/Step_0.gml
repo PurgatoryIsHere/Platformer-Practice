@@ -7,9 +7,4 @@ if place_meeting(x, y, PlayerObject)
 		PlayerObject.TakeDamage(10);
 		PlayerObject.i_frame_timer = 48
 	}
-	
-	if(global.player_health == 0)
-	{
-		PlayerObject.LifeReduction();
-	}
 }
