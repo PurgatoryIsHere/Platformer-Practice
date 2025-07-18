@@ -17,7 +17,7 @@ if(_move != 0)
 	
 	if(sub_menu == 1)
 	{
-		if(index < 0)
+		if(index < 1)
 		{
 			index = _size - 1; // At start, so loop to last menu option
 		}
