@@ -15,14 +15,30 @@ if(_move != 0)
 	// Clamp values (ensure selection cycles through menu options)
 	var _size = array_length(menu[sub_menu]);
 	
-	if(index < 0)
+	if(sub_menu == 1)
 	{
-		index = _size - 1; // At start, so loop to last menu option
+		if(index < 0)
+		{
+			index = _size - 1; // At start, so loop to last menu option
+		}
+	
+		else if(index > _size - 1)
+		{
+			index = 1; // At end, so loop to first menu option
+		}
 	}
 	
-	else if(index > _size - 1)
+	else
 	{
-		index = 0; // At end, so loop to first menu option
+		if(index < 0)
+		{
+			index = _size - 1; // At start, so loop to last menu option
+		}
+	
+		else if(index > _size - 1)
+		{
+			index = 0; // At end, so loop to first menu option
+		}
 	}
 }
 
@@ -34,14 +50,17 @@ if(_select)
 		
 			if(index == 0)
 			{
-				room_goto(Area5);
+				//room_goto(Area5);
+
+				sub_menu = 1;
+				layer_set_visible("MainMenu", false)
+				index = 1;
+
 			}
 	
 			else if(index == 1)
 			{
-				sub_menu = 1;
-				layer_set_visible("MainMenu", false)
-				index = 0;
+				
 			}
 	
 			else if(index == 2)
@@ -53,16 +72,14 @@ if(_select)
 			
 		case 1:
 		
-			if(index == 0)
+			if(index == 1)
 			{
-				
+				room_goto(StartRoom);
 			}
 			
-			else if(index = 1)
+			else if(index == 2)
 			{
-				sub_menu = 0;
-				layer_set_visible("MainMenu", true);
-				index = 1;
+				room_goto(Area3);
 			}
 			
 		break;
