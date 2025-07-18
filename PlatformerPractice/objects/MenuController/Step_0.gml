@@ -34,7 +34,7 @@ if(_select)
 		
 			if(index == 0)
 			{
-				room_goto(Area3);
+				room_goto(Area5);
 			}
 	
 			else if(index == 1)
