@@ -15,7 +15,7 @@ x_speed = 0 // Stationary Speed
 
 dir = keyboard_check(ord("D")) - keyboard_check(ord("A")) // Direction the player is facing
 
-onGround = place_meeting(x, y + sprite_height, GroundObject) || place_meeting(x, y + 1, ShelfObject);
+onGround = place_meeting(x, y + sprite_height, GroundObject) || place_meeting(x, y + y_speed, ShelfObject);
 onWall = place_meeting(x - 1.5, y, GroundObject) - place_meeting(x + 1.5, y, GroundObject)
 
 if(onWall == 1)
@@ -89,19 +89,16 @@ if(place_meeting(x, y + y_speed, GroundObject) || place_meeting(x, y + y_speed, 
     if (jumpthrough != noone)
     {
         // Only collide if player is above the platform and falling down
-        if (y < jumpthrough.y && y_speed > 0)
+        if (y < jumpthrough.y && y_speed > 0 && !groundPounding)
         {
             // Normal collision - land on top
             while(!place_meeting(x, y + sign(y_speed), ShelfObject))
             {
                 y += sign(y_speed)
+				vspeed = 0
             }
-            
-            if(y_speed > 0)
-            {
-                jump_counter = 0
-            }
-            
+			
+            jump_counter = 0
             y_speed = 0
             wall_jump_timer = 0;
             last_wall = 0;
