@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 global.isBossAlive = true; // variable to unlock gate for the player once false
-boss_health = 100; // Health for boss; can be changed for each boss
+boss_health = 90; // Health for boss; can be changed for each boss
 boss_i_frame_timer = 0; // I-frames the boss gets upon taking damage
 
 dir = 1; // Starting Direction; can be changed depending on where boss will spawn
@@ -36,7 +36,7 @@ TakeDamage = function(damage) // Basic damage calculation; aspects can be change
 		}
 	}
 	
-	else if(boss_health <= 28)
+	else if(boss_health <= 30 && phase == 2)
 	{
 		//push player off platform
 		phase = 3;
@@ -60,7 +60,7 @@ TakeDamage = function(damage) // Basic damage calculation; aspects can be change
 		alarm[1] = 60;
 	}
 	
-	else if(boss_health <= 64)
+	else if(boss_health <= 60 && phase == 1)
 	{
 		//push player off platform
 		phase = 2;

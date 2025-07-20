@@ -58,11 +58,10 @@ if sees_player
 			PlayerObject.i_frame_timer = 48
 		}
 	}
+}
 
-	// Damaged by the player
-	if(place_meeting(x, y, PlayerObject) && (PlayerObject.groundPounding || PlayerObject.dashing))
-	{
-		instance_destroy(self)
-	}
-
+// Damaged by the player
+if(place_meeting(x, y, PlayerObject) && (PlayerObject.groundPounding || PlayerObject.dashing))
+{
+	instance_destroy(self)
 }

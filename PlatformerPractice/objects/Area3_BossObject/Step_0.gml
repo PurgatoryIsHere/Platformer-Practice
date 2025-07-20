@@ -92,7 +92,7 @@ if(place_meeting(x, y, PlayerObject) && (PlayerObject.groundPounding || PlayerOb
 {
 	if(boss_i_frame_timer == 0)
 	{
-		TakeDamage(12);
+		TakeDamage(10);
 	}
 }
 
