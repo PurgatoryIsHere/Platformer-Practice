@@ -79,7 +79,7 @@ if(_select)
 			
 			else if(index == 2)
 			{
-				room_goto(Area2);
+				room_goto(Area5);
 			}
 			
 		break;
