@@ -32,5 +32,5 @@
     "path":"sprites/CannonTargetSprite/CannonTargetSprite.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }
