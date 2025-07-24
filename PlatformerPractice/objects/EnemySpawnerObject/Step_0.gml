@@ -8,21 +8,25 @@ if(place_meeting(x, y, PlayerObject) && !activated)
 
 if(activated)
 {
-	if(!wave_spawned)
+	// Spawn wave
+	if(!wave_spawned && (current_wave < num_waves))
 	{
-		if(current_area == 3 && tag == "heart_piece_combat")
-		{
-			enemy_count = 3;
-		}
-		
-		Spawn_Wave(560, 768, 112);
+		Spawn_Wave(spawn_x_min, spawn_x_max, spawn_y);
 	}
 	
-	if(has_condition)
+	// Check if all enemies in the wave have been defeated
+    if (!instance_exists(Area3_BossMinionObject) && wave_spawned)
+    {
+        current_wave += 1;
+        wave_spawned = false;
+    }
+	
+	// Area 3 enemy spawner condition
+	if(current_area == 3 && tag == "heart_piece_combat")
 	{
 		condition_unmet = instance_exists(Area3_BossMinionObject);
 		
-		if(!condition_unmet && current_area == 3 && tag == "heart_piece_combat")
+		if(!condition_unmet)
 		{
 			instance_create_layer(672, 80, "Instances", HeartPieceObject);
 			
@@ -36,4 +40,6 @@ if(activated)
 			instance_destroy(self);
 		}
 	}
+	
+	// Area 4 enemy spawner conditions
 }
