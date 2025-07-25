@@ -28,6 +28,7 @@
   "ResourceOrderSettings":[
     {"name":"Area3_BossObject","order":6,"path":"objects/Area3_BossObject/Area3_BossObject.yy",},
     {"name":"Area5_BossObject","order":9,"path":"objects/Area5_BossObject/Area5_BossObject.yy",},
+    {"name":"Area5_BossProjectileObject","order":10,"path":"objects/Area5_BossProjectileObject/Area5_BossProjectileObject.yy",},
     {"name":"AreaBossParentObject","order":5,"path":"objects/AreaBossParentObject/AreaBossParentObject.yy",},
     {"name":"AutomaticGateDetectionObject","order":12,"path":"objects/AutomaticGateDetectionObject/AutomaticGateDetectionObject.yy",},
     {"name":"AutomaticGateObject","order":11,"path":"objects/AutomaticGateObject/AutomaticGateObject.yy",},
@@ -80,6 +81,7 @@
     {"name":"UnlockTest","order":5,"path":"rooms/UnlockTest/UnlockTest.yy",},
     {"name":"WallJumpTest","order":3,"path":"rooms/WallJumpTest/WallJumpTest.yy",},
     {"name":"Area3_BossMinionSprite","order":5,"path":"sprites/Area3_BossMinionSprite/Area3_BossMinionSprite.yy",},
+    {"name":"Area5_BossProjectileSprite","order":12,"path":"sprites/Area5_BossProjectileSprite/Area5_BossProjectileSprite.yy",},
     {"name":"AutomaticGateDetectionSprite","order":12,"path":"sprites/AutomaticGateDetectionSprite/AutomaticGateDetectionSprite.yy",},
     {"name":"AutomaticGateSprite","order":11,"path":"sprites/AutomaticGateSprite/AutomaticGateSprite.yy",},
     {"name":"BottomlessPitSprite","order":6,"path":"sprites/BottomlessPitSprite/BottomlessPitSprite.yy",},
