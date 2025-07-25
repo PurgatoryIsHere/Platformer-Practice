@@ -15,7 +15,7 @@ TakeDamage = function(damage) // Basic damage calculation; aspects can be change
 	
 	if(boss_health <= 0)
 	{
-		with(Area3_BossMinionObject)
+		with(SpawnableEnemyParentObject)
 		{
 			instance_destroy(self)
 		}
@@ -41,7 +41,7 @@ TakeDamage = function(damage) // Basic damage calculation; aspects can be change
 		//push player off platform
 		phase = 3;
 		
-		with(Area3_BossMinionObject)
+		with(SpawnableEnemyParentObject)
 		{
 			instance_destroy(self)
 		}
@@ -65,7 +65,7 @@ TakeDamage = function(damage) // Basic damage calculation; aspects can be change
 		//push player off platform
 		phase = 2;
 		
-		with(Area3_BossMinionObject)
+		with(SpawnableEnemyParentObject)
 		{
 			instance_destroy(self)
 		}
@@ -136,7 +136,7 @@ Spawn_Wave = function(enemy_count)
 {
 	for (var i = 0; i < enemy_count; i++)
     {
-        instance_create_layer(irandom_range(96, 560), 944, "Instances", Area3_BossMinionObject);
+        instance_create_layer(irandom_range(96, 560), 944, "Instances", ES_GroundEnemyObject);
     }
 }
 

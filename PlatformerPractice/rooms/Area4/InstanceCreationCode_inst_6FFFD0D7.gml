@@ -1,10 +1,9 @@
 current_area = 4;
 tag = "layer_1"
 
-num_waves = 2;
+num_waves = 1;
 waves = [
-	[Area3_BossMinionObject, Area3_BossMinionObject, Area3_BossMinionObject],
-	[Area3_BossMinionObject, Area3_BossMinionObject, Area3_BossMinionObject]
+	[ES_GroundEnemyObject, ES_GroundEnemyObject, ES_GroundEnemyObject]
 	];
 	
 spawn_x_min = 32;

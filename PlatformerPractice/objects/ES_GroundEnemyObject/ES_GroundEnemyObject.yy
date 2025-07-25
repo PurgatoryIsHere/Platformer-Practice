@@ -1,18 +1,21 @@
 {
   "$GMObject":"",
-  "%Name":"Area3_BossMinionObject",
+  "%Name":"ES_GroundEnemyObject",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"Area3_BossMinionObject",
+  "name":"ES_GroundEnemyObject",
   "overriddenProperties":[],
   "parent":{
     "name":"EnemyObjects",
     "path":"folders/Objects/EnemyObjects.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"SpawnableEnemyParentObject",
+    "path":"objects/SpawnableEnemyParentObject/SpawnableEnemyParentObject.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

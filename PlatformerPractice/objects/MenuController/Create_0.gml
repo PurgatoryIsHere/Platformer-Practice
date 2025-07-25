@@ -10,9 +10,15 @@ menu[0, 0] = PlayButtonObject;
 menu[0, 1] = HelpButtonObject;
 menu[0, 2] = QuitButtonObject;
 
+/*
 menu[1, 0] = "Would you like to play a tutorial?";
 menu[1, 1] = "Yes";
 menu[1, 2] = "No";
+*/
+
+menu[1, 0] = "Which area?";
+menu[1, 1] = "Area 4";
+menu[1, 2] = "Area 5";
 
 index = 0;
 sub_menu = 0;
