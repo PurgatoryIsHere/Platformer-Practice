@@ -90,6 +90,29 @@ if(activated)
 					instance_destroy(self);
 				}
 			}
+			
+			else if(tag == "layer_3")
+			{
+				condition_unmet = instance_exists(SpawnableEnemyParentObject);
+			
+				if(!condition_unmet)
+				{
+					var auto_gate1 = instance_position(448, 720, AutomaticGateObject);
+					var auto_gate2 = instance_position(464, 720, AutomaticGateObject);
+					var auto_gate3 = instance_position(480, 720, AutomaticGateObject);
+				
+					instance_destroy(auto_gate1);
+					instance_destroy(auto_gate2);
+					instance_destroy(auto_gate3);
+					
+					instance_create_layer(384, 816, "Instances", ShelfObject);
+					instance_create_layer(400, 816, "Instances", ShelfObject);
+					instance_create_layer(448, 784, "Instances", ShelfObject);
+					instance_create_layer(464, 784, "Instances", ShelfObject);
+				
+					instance_destroy(self);
+				}
+			}
 		}
 	}
 }
