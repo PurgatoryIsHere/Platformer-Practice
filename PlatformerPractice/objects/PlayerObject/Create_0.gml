@@ -39,6 +39,9 @@ target_y = 0
 //Ground Pound
 groundPounding = false
 
+//Check if being fired from cannon
+beingFired = false
+
 // Invincibility Frames
 i_frame_timer = 0
 

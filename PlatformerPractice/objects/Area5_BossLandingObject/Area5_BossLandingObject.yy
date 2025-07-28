@@ -1,13 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"Area5_BossObject",
+  "%Name":"Area5_BossLandingObject",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"Area5_BossObject",
+  "name":"Area5_BossLandingObject",
   "overriddenProperties":[],
   "parent":{
     "name":"EnemyObjects",
@@ -32,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"FlightGrappleEnemySprite",
-    "path":"sprites/FlightGrappleEnemySprite/FlightGrappleEnemySprite.yy",
+    "name":"Area5_BossLandingSprite",
+    "path":"sprites/Area5_BossLandingSprite/Area5_BossLandingSprite.yy",
   },
   "spriteMaskId":null,
   "visible":true,

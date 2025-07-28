@@ -8,5 +8,8 @@ rotation_speed = 2;
 
 launch_speed = 8;
 
+launch_x = 0;
+launch_y = 0;
+
 fired = false;
 player_loaded = false;

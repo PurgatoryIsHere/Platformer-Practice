@@ -2,7 +2,11 @@
 // You can write your code in this editor
 
 //if PlayerObject touches cannon and we haven't fired yet
-if target != noone && place_meeting(x, y, PlayerObject) && !fired
+if (!instance_exists(target))
+{
+	solid = true	
+}
+else if target != noone && place_meeting(x, y, PlayerObject) && !fired
 {
     //lock player to cannon position and stop all movement
     with (PlayerObject) {
@@ -27,15 +31,19 @@ if target != noone && place_meeting(x, y, PlayerObject) && !fired
         image_angle = target_angle;
       
         // Add 90 degrees to compensate for sprite orientation
+		PlayerObject.beingFired = true;
         fired = true;
         player_loaded = false;
 		
-		var launch_x = lengthdir_x(launch_speed, image_angle);
-		var launch_y = lengthdir_y(launch_speed, image_angle);
-
-		PlayerObject.hspeed = launch_x
-		PlayerObject.y_speed = launch_y
+		launch_x = lengthdir_x(launch_speed, image_angle);
+		launch_y = lengthdir_y(launch_speed, image_angle);
 	}
+}
+
+if (point_distance(PlayerObject.x, PlayerObject.y, target.x, target.y) > 2  && fired)
+{
+	PlayerObject.hspeed = launch_x;
+	PlayerObject.y_speed = launch_y;
 }
 
 //reset when player is no longer touching cannon
@@ -54,5 +62,6 @@ if !place_meeting(x, y, PlayerObject) {
 //make sure Player stops moving once they hit the ground
 if (PlayerObject.onGround)
 {
-	PlayerObject.hspeed = 0
+	PlayerObject.beingFired = false;
+	PlayerObject.hspeed = 0;
 }
