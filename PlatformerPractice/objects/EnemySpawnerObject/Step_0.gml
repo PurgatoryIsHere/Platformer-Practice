@@ -113,6 +113,24 @@ if(activated)
 					instance_destroy(self);
 				}
 			}
+			
+			else if(tag == "layer_5")
+			{
+				condition_unmet = instance_exists(SpawnableEnemyParentObject);
+			
+				if(!condition_unmet)
+				{
+					var auto_gate1 = instance_position(496, 1280, AutomaticGateObject);
+					var auto_gate2 = instance_position(496, 1296, AutomaticGateObject);
+					var auto_gate3 = instance_position(496, 1312, AutomaticGateObject);
+				
+					instance_destroy(auto_gate1);
+					instance_destroy(auto_gate2);
+					instance_destroy(auto_gate3);
+				
+					instance_destroy(self);
+				}
+			}
 		}
 	}
 }
