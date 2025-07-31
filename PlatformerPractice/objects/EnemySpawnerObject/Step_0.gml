@@ -114,6 +114,22 @@ if(activated)
 				}
 			}
 			
+			else if(tag == "layer_4")
+			{
+				condition_unmet = instance_exists(SpawnableEnemyParentObject);
+			
+				if(!condition_unmet)
+				{
+					var auto_gate1 = instance_position(352, 1184, AutomaticGateObject);
+					var auto_gate2 = instance_position(352, 1200, AutomaticGateObject);
+				
+					instance_destroy(auto_gate1);
+					instance_destroy(auto_gate2);
+				
+					instance_destroy(self);
+				}
+			}
+			
 			else if(tag == "layer_5")
 			{
 				condition_unmet = instance_exists(SpawnableEnemyParentObject);
