@@ -9,9 +9,9 @@ camera_set_view_pos(view_camera[0], cam_x, cam_y)
 
 
 // Player Functionality
-
-y_speed += 0.2 // Gravity
-x_speed = 0 // Stationary Speed
+if (!beingFired) {
+    y_speed += 0.2 // Gravity
+}
 
 dir = keyboard_check(ord("D")) - keyboard_check(ord("A")) // Direction the player is facing
 
@@ -45,8 +45,10 @@ grapple_cooldown = max(grapple_cooldown - 1, 0)
 dash_cooldown = max(dash_cooldown - 1, 0)
 
 
-// Horizontal Movement
-x_speed = dir * 2
+if (!beingFired) 
+{
+    x_speed = dir * 2
+}
 	
 // Jumping
 if(keyboard_check_pressed(ord("W")) && jump_counter < 2)
@@ -168,14 +170,15 @@ if(onWall != 0 && !onGround && !groundPounding)
 }
 
 // Handle movement for wall-jumping
-if(wall_jump_timer > 0)
-{	
-	x_speed = wall_jump_x_speed;
-}
-
-else
-{
-	x_speed = dir * 2;
+if (!beingFired) {
+    if(wall_jump_timer > 0)
+    {	
+        x_speed = wall_jump_x_speed;
+    }
+    else
+    {
+        x_speed = dir * 2;
+    }
 }
 
 
@@ -279,6 +282,30 @@ if(i_frame_timer > 0)
 else
 {
 	image_alpha = 1	
+}
+
+// Handle direct flight to target
+if (beingFired) {
+    // Calculate how far we've traveled this frame
+    var frame_distance = sqrt(x_speed * x_speed + y_speed * y_speed);
+    flight_traveled += frame_distance;
+    
+    // Check if we've reached the target distance
+    if (flight_traveled >= flight_distance) {
+        // We've reached the target, turn gravity back on
+        beingFired = false;
+        show_debug_message("Reached target distance, enabling gravity");
+        
+        // Optional: Give a small downward boost when gravity kicks in
+        y_speed = 1;
+    }
+    
+    // Also stop if we hit something during flight
+    if (place_meeting(x + sign(x_speed), y, GroundObject) || 
+        place_meeting(x, y + sign(y_speed), GroundObject)) {
+        beingFired = false;
+        show_debug_message("Hit obstacle during flight");
+    }
 }
 
 // Handle standard movement

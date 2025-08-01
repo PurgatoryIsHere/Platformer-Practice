@@ -42,6 +42,11 @@ groundPounding = false
 //Check if being fired from cannon
 beingFired = false
 
+flight_target_x = 0;
+flight_target_y = 0;
+flight_distance = 0;
+flight_traveled = 0;
+
 // Invincibility Frames
 i_frame_timer = 0
 
