@@ -1,22 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"Area5_BossObject",
+  "%Name":"KeyObject",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"Area5_BossObject",
+  "name":"KeyObject",
   "overriddenProperties":[],
   "parent":{
-    "name":"EnemyObjects",
-    "path":"folders/Objects/EnemyObjects.yy",
+    "name":"InteractiveObjects",
+    "path":"folders/Objects/InteractiveObjects.yy",
   },
-  "parentObjectId":{
-    "name":"AreaBossParentObject",
-    "path":"objects/AreaBossParentObject/AreaBossParentObject.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -35,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"FlightGrappleEnemySprite",
-    "path":"sprites/FlightGrappleEnemySprite/FlightGrappleEnemySprite.yy",
+    "name":"KeySprite_Active",
+    "path":"sprites/KeySprite_Active/KeySprite_Active.yy",
   },
   "spriteMaskId":null,
   "visible":true,
