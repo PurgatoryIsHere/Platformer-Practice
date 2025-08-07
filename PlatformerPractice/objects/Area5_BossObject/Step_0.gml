@@ -11,9 +11,10 @@ if (place_meeting(x, y, PlayerObject) && PlayerObject.beingFired)
 	show_debug_message(next_site.phase)
 	
 	//if this was the last phase, die
-	if(next_site.phase + 1 != phase)
+	if(next_site.phase != phase)
 	{
-		instance_destroy(self)	
+		instance_destroy(self)
+		instance_create_layer(x, y, "Instances", GrappleUnlockObject);
 	}
 }
 

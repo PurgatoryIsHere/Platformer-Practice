@@ -35,5 +35,5 @@
     "path":"sprites/Area5_BossLandingSprite/Area5_BossLandingSprite.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }
