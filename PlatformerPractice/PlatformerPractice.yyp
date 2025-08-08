@@ -50,6 +50,8 @@
     {"id":{"name":"Area5_BossLandingObject","path":"objects/Area5_BossLandingObject/Area5_BossLandingObject.yy",},},
     {"id":{"name":"Area5_BossObject","path":"objects/Area5_BossObject/Area5_BossObject.yy",},},
     {"id":{"name":"Area5_BossProjectileObject","path":"objects/Area5_BossProjectileObject/Area5_BossProjectileObject.yy",},},
+    {"id":{"name":"Area5_GateObject","path":"objects/Area5_GateObject/Area5_GateObject.yy",},},
+    {"id":{"name":"Area5_PhaseGateObject","path":"objects/Area5_PhaseGateObject/Area5_PhaseGateObject.yy",},},
     {"id":{"name":"AreaBossParentObject","path":"objects/AreaBossParentObject/AreaBossParentObject.yy",},},
     {"id":{"name":"AutomaticGateDetectionObject","path":"objects/AutomaticGateDetectionObject/AutomaticGateDetectionObject.yy",},},
     {"id":{"name":"AutomaticGateObject","path":"objects/AutomaticGateObject/AutomaticGateObject.yy",},},
