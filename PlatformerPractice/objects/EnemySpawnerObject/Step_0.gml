@@ -37,14 +37,11 @@ if(activated)
 					if(!condition_unmet)
 					{
 						instance_create_layer(672, 80, "Instances", HeartPieceObject);
+						
+						auto_gates = [instance_position(816, 80, AutomaticGateObject), instance_position(816, 96, AutomaticGateObject)];
 			
-						var auto_gate1 = instance_position(816, 80, AutomaticGateObject);
-						var auto_gate2 = instance_position(816, 96, AutomaticGateObject);
+						Open_Gates();
 			
-						instance_destroy(auto_gate1);
-						instance_destroy(auto_gate2);
-			
-						activated = false;
 						instance_destroy(self);
 					}
 				}
@@ -59,11 +56,9 @@ if(activated)
 			
 					if(!condition_unmet)
 					{
-						var auto_gate1 = instance_position(432, 176, AutomaticGateObject);
-						var auto_gate2 = instance_position(448, 176, AutomaticGateObject);
-				
-						instance_destroy(auto_gate1);
-						instance_destroy(auto_gate2);
+						auto_gates = [instance_position(432, 176, AutomaticGateObject), instance_position(448, 176, AutomaticGateObject)];
+						
+						Open_Gates();
 				
 						instance_create_layer(432, 176, "Instances", BreakableBlockObject);
 						instance_create_layer(448, 176, "Instances", BreakableBlockObject);
@@ -78,11 +73,9 @@ if(activated)
 			
 					if(!condition_unmet)
 					{
-						var auto_gate1 = instance_position(240, 288, AutomaticGateObject);
-						var auto_gate2 = instance_position(256, 288, AutomaticGateObject);
-				
-						instance_destroy(auto_gate1);
-						instance_destroy(auto_gate2);
+						auto_gates = [instance_position(240, 288, AutomaticGateObject), instance_position(256, 288, AutomaticGateObject)];
+						
+						Open_Gates();
 				
 						instance_create_layer(240, 288, "Instances", BreakableBlockObject);
 						instance_create_layer(256, 288, "Instances", BreakableBlockObject);
@@ -97,13 +90,11 @@ if(activated)
 			
 					if(!condition_unmet)
 					{
-						var auto_gate1 = instance_position(448, 720, AutomaticGateObject);
-						var auto_gate2 = instance_position(464, 720, AutomaticGateObject);
-						var auto_gate3 = instance_position(480, 720, AutomaticGateObject);
-				
-						instance_destroy(auto_gate1);
-						instance_destroy(auto_gate2);
-						instance_destroy(auto_gate3);
+						auto_gates = [
+						instance_position(448, 720, AutomaticGateObject), instance_position(464, 720, AutomaticGateObject),
+						instance_position(480, 720, AutomaticGateObject)];
+						
+						Open_Gates();
 					
 						instance_create_layer(384, 816, "Instances", ShelfObject);
 						instance_create_layer(400, 816, "Instances", ShelfObject);
@@ -120,11 +111,9 @@ if(activated)
 			
 					if(!condition_unmet)
 					{
-						var auto_gate1 = instance_position(352, 1184, AutomaticGateObject);
-						var auto_gate2 = instance_position(352, 1200, AutomaticGateObject);
-				
-						instance_destroy(auto_gate1);
-						instance_destroy(auto_gate2);
+						auto_gates = [instance_position(352, 1184, AutomaticGateObject), instance_position(352, 1200, AutomaticGateObject)];
+						
+						Open_Gates();
 				
 						instance_destroy(self);
 					}
@@ -136,13 +125,11 @@ if(activated)
 			
 					if(!condition_unmet)
 					{
-						var auto_gate1 = instance_position(496, 1280, AutomaticGateObject);
-						var auto_gate2 = instance_position(496, 1296, AutomaticGateObject);
-						var auto_gate3 = instance_position(496, 1312, AutomaticGateObject);
-				
-						instance_destroy(auto_gate1);
-						instance_destroy(auto_gate2);
-						instance_destroy(auto_gate3);
+						auto_gates = [
+						instance_position(496, 1280, AutomaticGateObject), instance_position(496, 1296, AutomaticGateObject),
+						instance_position(496, 1312, AutomaticGateObject)];
+						
+						Open_Gates();
 				
 						instance_destroy(self);
 					}
@@ -150,19 +137,21 @@ if(activated)
 				
 			case 6:
 			
-				if(tag == "heart_piece_1")
+				if(tag == "key_piece_1")
 				{
 					condition_unmet = instance_exists(SpawnableEnemyParentObject);
 					
 					if(!condition_unmet)
 					{
-						instance_create_layer(48, 128, "Instances", HeartPieceObject);
+						instance_create_layer(1440, 768, "Instances", KeyPieceObject);
 						
-						var auto_gate1 = instance_position(112, 128, AutomaticGateObject);
-						var auto_gate2 = instance_position(112, 144, AutomaticGateObject);
+						auto_gates = [
+						instance_position(1344, 768, AutomaticGateObject), instance_position(1344, 784, AutomaticGateObject),
+						instance_position(1408, 672, AutomaticGateObject), instance_position(1424, 672, AutomaticGateObject),
+						instance_position(1440, 672, AutomaticGateObject), instance_position(1456, 672, AutomaticGateObject),
+						instance_position(1536, 768, AutomaticGateObject), instance_position(1536, 784, AutomaticGateObject)];
 						
-						instance_destroy(auto_gate1);
-						instance_destroy(auto_gate2);
+						Open_Gates();
 						
 						instance_destroy(self);
 					}

@@ -58,7 +58,7 @@
     {"name":"HelpButtonObject","order":1,"path":"objects/HelpButtonObject/HelpButtonObject.yy",},
     {"name":"HiddenWallObject","order":13,"path":"objects/HiddenWallObject/HiddenWallObject.yy",},
     {"name":"KeyObject","order":11,"path":"objects/KeyObject/KeyObject.yy",},
-    {"name":"KeyPieceSprite","order":12,"path":"objects/KeyPieceSprite/KeyPieceSprite.yy",},
+    {"name":"KeyPieceObject","order":12,"path":"objects/KeyPieceObject/KeyPieceObject.yy",},
     {"name":"LeftSpikeObject","order":8,"path":"objects/LeftSpikeObject/LeftSpikeObject.yy",},
     {"name":"M_GroundEnemyObject","order":1,"path":"objects/M_GroundEnemyObject/M_GroundEnemyObject.yy",},
     {"name":"MenuController","order":13,"path":"objects/MenuController/MenuController.yy",},

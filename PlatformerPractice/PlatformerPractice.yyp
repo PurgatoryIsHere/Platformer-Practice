@@ -80,7 +80,7 @@
     {"id":{"name":"HelpButtonObject","path":"objects/HelpButtonObject/HelpButtonObject.yy",},},
     {"id":{"name":"HiddenWallObject","path":"objects/HiddenWallObject/HiddenWallObject.yy",},},
     {"id":{"name":"KeyObject","path":"objects/KeyObject/KeyObject.yy",},},
-    {"id":{"name":"KeyPieceSprite","path":"objects/KeyPieceSprite/KeyPieceSprite.yy",},},
+    {"id":{"name":"KeyPieceObject","path":"objects/KeyPieceObject/KeyPieceObject.yy",},},
     {"id":{"name":"LeftSpikeObject","path":"objects/LeftSpikeObject/LeftSpikeObject.yy",},},
     {"id":{"name":"M_GroundEnemyObject","path":"objects/M_GroundEnemyObject/M_GroundEnemyObject.yy",},},
     {"id":{"name":"MenuController","path":"objects/MenuController/MenuController.yy",},},

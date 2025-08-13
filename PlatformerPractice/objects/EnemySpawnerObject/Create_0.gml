@@ -9,6 +9,8 @@ num_waves = 0;
 current_wave = 0;
 waves = [];
 
+auto_gates = [];
+
 Spawn_Wave = function(spawn_x_min, spawn_x_max, spawn_y)
 {	
 	for (var i = 0; i < array_length(waves[current_wave]); i++)
@@ -27,4 +29,13 @@ Spawn_Wave = function(spawn_x_min, spawn_x_max, spawn_y)
     }
 	
 	wave_spawned = true;
+}
+
+Open_Gates = function()
+{
+	for(var i = 0; i < array_length(auto_gates); i++)
+	{
+		var auto_gate = auto_gates[i];
+		instance_destroy(auto_gate);
+	}
 }
