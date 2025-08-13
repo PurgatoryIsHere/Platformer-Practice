@@ -135,6 +135,7 @@ if(activated)
 					}
 				}
 				
+			//Area 6
 			case 6:
 			
 				if(tag == "key_piece_1")
@@ -156,6 +157,30 @@ if(activated)
 						instance_destroy(self);
 					}
 				}
+				
+			//Area 7
+			case 7:
+			
+				if(tag == "heart_piece_1")
+					{
+						condition_unmet = instance_exists(SpawnableEnemyParentObject);
+					
+						if(!condition_unmet)
+						{
+							instance_create_layer(1936, 144, "Instances", HeartPieceObject);
+						
+							auto_gates = [
+							instance_position(1760, 112, AutomaticGateObject), 
+							instance_position(1760, 128, AutomaticGateObject),
+							instance_position(1760, 144, AutomaticGateObject)
+							];
+						
+							Open_Gates();
+						
+							instance_destroy(self);
+						}
+					}
+			
 		}
 	}
 }

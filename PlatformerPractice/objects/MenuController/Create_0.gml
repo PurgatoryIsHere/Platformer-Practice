@@ -18,7 +18,7 @@ menu[1, 2] = "No";
 
 menu[1, 0] = "Which area?";
 menu[1, 1] = "Area 6";
-menu[1, 2] = "Area 5";
+menu[1, 2] = "Area 7";
 
 index = 0;
 sub_menu = 0;
