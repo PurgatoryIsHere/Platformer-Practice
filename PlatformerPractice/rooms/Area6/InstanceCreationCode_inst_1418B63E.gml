@@ -1,0 +1,1 @@
+target = instance_position(2400, 400, CannonTargetObject);
