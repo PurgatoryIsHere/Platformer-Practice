@@ -23,4 +23,13 @@ for (var i = 0; i < array_length(neighbors); i++)
     }
 }
 
+var respawn_data = {
+		timer: 180,
+		object_index: object_index,
+		x: x,
+		y: y
+	};
+	
+	array_push(global.respawn_queue, respawn_data);
+
 instance_destroy(); // Bye-bye tile!
