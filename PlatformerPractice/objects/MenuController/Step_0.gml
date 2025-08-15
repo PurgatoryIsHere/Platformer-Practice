@@ -74,10 +74,35 @@ if(_select)
 		
 			if(index == 1)
 			{
-				room_goto(Area6);
+				room_goto(Area1);
 			}
 			
 			else if(index == 2)
+			{
+				room_goto(Area2);
+			}
+			
+			else if(index == 3)
+			{
+				room_goto(Area3);
+			}
+			
+			else if(index == 4)
+			{
+				room_goto(Area4);
+			}
+			
+			else if(index == 5)
+			{
+				room_goto(Area5);
+			}
+			
+			else if(index == 6)
+			{
+				room_goto(Area6);
+			}
+			
+			else if(index == 7)
 			{
 				room_goto(Area7);
 			}
