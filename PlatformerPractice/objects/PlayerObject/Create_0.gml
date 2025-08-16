@@ -4,7 +4,7 @@
 x_speed = 0
 y_speed = 0
 dir = 0
-
+input_enabled = true;
 
 // Double Jump
 jump_counter = 0 // How many jumps the player has performed
