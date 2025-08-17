@@ -55,5 +55,10 @@ if(fading_in)
     }
 }
 
+if(PlayerObject.beingFired && instance_place(x, y, PlayerObject))
+{
+	PlayerObject.beingFired = false;
+}
+
 
 
