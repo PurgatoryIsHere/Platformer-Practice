@@ -10,8 +10,8 @@
   "name":"ES_FreeFlyEnemyObject",
   "overriddenProperties":[],
   "parent":{
-    "name":"EnemyObjects",
-    "path":"folders/Objects/EnemyObjects.yy",
+    "name":"EnemySpawning",
+    "path":"folders/Objects/EnemyObjects/EnemySpawning.yy",
   },
   "parentObjectId":{
     "name":"SpawnableEnemyParentObject",

@@ -1,0 +1,1 @@
+tag = "miniboss_area3";

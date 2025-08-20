@@ -5,7 +5,7 @@ boss_i_frame_timer = max(boss_i_frame_timer - 1, 0);
 
 if(!boss_battle_active)
 {
-	var nearest_agd = instance_nearest(336, 944, AutomaticGateDetectionObject);
+	var nearest_agd = instance_nearest(3104, 368, AutomaticGateDetectionObject);
 
 	if(nearest_agd.activated && !boss_battle_active)
 	{
@@ -45,11 +45,11 @@ else if(boss_battle_active)
 		
 			if(!wave_spawned && !wave_respawning)
 			{
-				Spawn_Wave(4);
+				Spawn_Wave(6);
 				wave_spawned = true;
 			}
 			
-			else if(wave_spawned && !instance_exists(ES_GroundEnemyObject) && !pillars_dropped)
+			else if(wave_spawned && !instance_exists(SpawnableEnemyParentObject) && !pillars_dropped)
 			{
 				Pillar_Drop_1();
 				pillars_dropped = true;
@@ -59,27 +59,13 @@ else if(boss_battle_active)
 		
 			if(!wave_spawned && !wave_respawning)
 			{
-				Spawn_Wave(6);
-				wave_spawned = true;
-			}
-			
-			else if(wave_spawned && !instance_exists(ES_GroundEnemyObject) && !pillars_dropped)
-			{
-				Pillar_Drop_2();
-				pillars_dropped = true;
-			}
-			
-		case 3:
-		
-			if(!wave_spawned && !wave_respawning)
-			{
 				Spawn_Wave(8);
 				wave_spawned = true;
 			}
 			
-			else if(wave_spawned && !instance_exists(ES_GroundEnemyObject) && !pillars_dropped)
+			else if(wave_spawned && !instance_exists(SpawnableEnemyParentObject) && !pillars_dropped)
 			{
-				Pillar_Drop_3();
+				Pillar_Drop_2();
 				pillars_dropped = true;
 			}
 	}

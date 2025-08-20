@@ -15,7 +15,7 @@ if(phase == 1)
     {
         for (var j = 0; j < array_length(pillar_y); j++)
         {
-            instance_create_layer(pillar_x[i], pillar_y[j], "Instances", CollapsibleGroundObject);
+            instance_create_layer(pillar_x[i], pillar_y[j], "Instances", PillarObject);
         }
     }
 }
@@ -29,7 +29,7 @@ else if(phase == 2)
     {
         for (var j = 0; j < array_length(pillar_y); j++)
         {
-            instance_create_layer(pillar_x[i], pillar_y[j], "Instances", CollapsibleGroundObject);
+            instance_create_layer(pillar_x[i], pillar_y[j], "Instances", PillarObject);
         }
     }
 }
@@ -43,7 +43,7 @@ else if(phase = 3)
     {
         for (var j = 0; j < array_length(pillar_y); j++)
         {
-            instance_create_layer(pillar_x[i], pillar_y[j], "Instances", CollapsibleGroundObject);
+            instance_create_layer(pillar_x[i], pillar_y[j], "Instances", PillarObject);
         }
     }
 }

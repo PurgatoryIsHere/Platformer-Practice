@@ -9,8 +9,8 @@
   "name":"Area5_BossLandingObject",
   "overriddenProperties":[],
   "parent":{
-    "name":"EnemyObjects",
-    "path":"folders/Objects/EnemyObjects.yy",
+    "name":"AreaBosses",
+    "path":"folders/Objects/EnemyObjects/AreaBosses.yy",
   },
   "parentObjectId":null,
   "persistent":false,

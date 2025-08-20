@@ -20,7 +20,7 @@ TakeDamage = function(damage) // Basic damage calculation; aspects can be change
 			instance_destroy(self)
 		}
 		
-		with(CollapsibleGroundObject)
+		with(PillarObject)
 		{
 			self.alarm_triggered = true;
 			self.alarm[0] = 30;
@@ -46,7 +46,7 @@ TakeDamage = function(damage) // Basic damage calculation; aspects can be change
 			instance_destroy(self)
 		}
 		
-		with(CollapsibleGroundObject)
+		with(PillarObject)
 		{
 			self.alarm_triggered = true;
 			self.alarm[0] = 30;
@@ -70,7 +70,7 @@ TakeDamage = function(damage) // Basic damage calculation; aspects can be change
 			instance_destroy(self)
 		}
 		
-		with(CollapsibleGroundObject)
+		with(PillarObject)
 		{
 			self.alarm_triggered = true;
 			self.alarm[0] = 30;
@@ -136,7 +136,7 @@ Spawn_Wave = function(enemy_count)
 {
 	for (var i = 0; i < enemy_count; i++)
     {
-        instance_create_layer(irandom_range(96, 560), 944, "Instances", ES_GroundEnemyObject);
+		instance_create_layer(irandom_range(96, 560), 944, "Instances", ES_GroundEnemyObject);
     }
 }
 
@@ -158,6 +158,7 @@ Pillar_Drop_2 = function()
 	instance_create_layer(336, 864, "Instances", WarningObject);
 	instance_create_layer(416, 864, "Instances", WarningObject);
 	instance_create_layer(496, 864, "Instances", WarningObject);
+
 	
 	alarm[0] = 90;
 }
