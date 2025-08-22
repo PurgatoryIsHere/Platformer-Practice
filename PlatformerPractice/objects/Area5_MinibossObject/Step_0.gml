@@ -1,4 +1,4 @@
-/// @description Check if being hit
+/// @description Insert description here
 // You can write your code in this editor
 
 if (place_meeting(x, y, PlayerObject) && PlayerObject.beingFired)
@@ -11,10 +11,9 @@ if (place_meeting(x, y, PlayerObject) && PlayerObject.beingFired)
 	show_debug_message(next_site.phase)
 	
 	//if this was the last phase, die
-	if(phase >= 8)
+	if(phase >= 4)
 	{
 		instance_destroy(self)
-		DropAbility()
 	}
 }
 
