@@ -1,0 +1,1 @@
+target = instance_nearest(x, y, Area5_MinibossObject)
