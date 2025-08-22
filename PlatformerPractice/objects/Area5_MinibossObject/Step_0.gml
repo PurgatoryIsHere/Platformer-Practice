@@ -14,6 +14,7 @@ if (place_meeting(x, y, PlayerObject) && PlayerObject.beingFired)
 	if(phase >= 4)
 	{
 		instance_destroy(self)
+		DropKeyPiece()
 	}
 }
 
