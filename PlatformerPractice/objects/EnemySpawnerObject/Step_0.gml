@@ -162,25 +162,41 @@ if(activated)
 			case 7:
 			
 				if(tag == "heart_piece_1")
-					{
-						condition_unmet = instance_exists(SpawnableEnemyParentObject);
+				{
+					condition_unmet = instance_exists(SpawnableEnemyParentObject);
 					
-						if(!condition_unmet)
-						{
-							instance_create_layer(1936, 144, "Instances", HeartPieceObject);
+					if(!condition_unmet)
+					{
+						instance_create_layer(1936, 144, "Instances", HeartPieceObject);
 						
-							auto_gates = [
-							instance_position(1760, 112, AutomaticGateObject), 
-							instance_position(1760, 128, AutomaticGateObject),
-							instance_position(1760, 144, AutomaticGateObject)
-							];
+						auto_gates = [
+						instance_position(1760, 112, AutomaticGateObject), 
+						instance_position(1760, 128, AutomaticGateObject),
+						instance_position(1760, 144, AutomaticGateObject)];
 						
-							Open_Gates();
+						Open_Gates();
 						
-							instance_destroy(self);
-						}
+						instance_destroy(self);
 					}
-			
+				}
+				
+				else if(tag == "heart_piece_2")
+				{
+					condition_unmet = instance_exists(SpawnableEnemyParentObject);
+					
+					if(!condition_unmet)
+					{	
+						auto_gates = [instance_position(3232, 704, AutomaticGateObject), instance_position(3248, 704, AutomaticGateObject)];
+						
+						Open_Gates();
+						
+						instance_create_layer(3232, 688, "Instances", ShelfObject);
+						instance_create_layer(3232, 736, "Instances", ShelfObject);
+						instance_create_layer(3232, 784, "Instances", ShelfObject);
+						
+						instance_destroy(self);
+					}
+				}
 		}
 	}
 }

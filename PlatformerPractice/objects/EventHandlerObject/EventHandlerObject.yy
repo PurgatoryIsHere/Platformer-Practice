@@ -35,5 +35,5 @@
     "path":"sprites/EventHandlerSprite/EventHandlerSprite.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

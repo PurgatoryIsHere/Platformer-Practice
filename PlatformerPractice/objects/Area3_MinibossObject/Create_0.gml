@@ -33,6 +33,11 @@ TakeDamage = function(damage) // Basic damage calculation; aspects can be change
 		DropKeyPiece();
 		OpenGates();
 		
+		instance_destroy(instance_position(3376, 384, GroundObject));
+		instance_destroy(instance_position(3392, 384, GroundObject));
+		instance_create_layer(3376, 384, "Instances", BreakableBlockObject);
+		instance_create_layer(3392, 384, "Instances", BreakableBlockObject);
+		
 		instance_destroy(self);
 	}
 	
@@ -66,8 +71,7 @@ TakeDamage = function(damage) // Basic damage calculation; aspects can be change
 
 DropKeyPiece = function() // Spawns a keypiece
 {
-	// Have a place in the boss arena that the ability will spawn at; likely the center of the arena will do
-	instance_create_layer(3104, 352, "Instances", KeyPieceObject); // Change x and y to the specified coordinates
+	instance_create_layer(3104, 352, "Instances", KeyPieceObject);
 }
 
 function boss_move_and_collide(hsp, vsp, obj) 
