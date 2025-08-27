@@ -156,7 +156,12 @@ GroundPoundAOE = function()
 
 OpenGates = function()
 {
-	var gates = [instance_position(2784, 304, AutomaticGateObject), instance_position(2784, 320, AutomaticGateObject), instance_position(2784, 336, AutomaticGateObject)];
+	var gates = [
+	instance_position(2784, 304, AutomaticGateObject), instance_position(2784, 320, AutomaticGateObject), 
+	instance_position(2784, 336, AutomaticGateObject), instance_position(2736, 288, AutomaticGateObject),
+	instance_position(2752, 288, AutomaticGateObject), instance_position(2768, 288, AutomaticGateObject).
+	instance_position(2368, 112, AutomaticGateObject), instance_position(2368, 128, AutomaticGateObject),
+	instance_position(2368, 144, AutomaticGateObject)];
 	
 	for(var i = 0; i < array_length(gates); i++)
 	{

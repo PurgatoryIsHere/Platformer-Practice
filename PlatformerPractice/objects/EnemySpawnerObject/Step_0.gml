@@ -180,6 +180,29 @@ if(activated)
 					}
 				}
 				
+				else if(tag == "area_3_section_arena")
+				{
+					condition_unmet = instance_exists(SpawnableEnemyParentObject);
+					
+					if(!condition_unmet)
+					{	
+						auto_gates = [
+						instance_position(2208, 688, AutomaticGateObject), instance_position(2224, 688, AutomaticGateObject),
+						instance_position(2368, 640, AutomaticGateObject), instance_position(2368, 656, AutomaticGateObject),
+						instance_position(2368, 672, AutomaticGateObject)];
+						
+						Open_Gates();
+						
+						instance_create_layer(2208, 688, "Instances", BreakableBlockObject);
+						instance_create_layer(2224, 688, "Instances", BreakableBlockObject);
+						instance_create_layer(2368, 640, "Instances", DashBreakBlockObject);
+						instance_create_layer(2368, 656, "Instances", DashBreakBlockObject);
+						instance_create_layer(2368, 672, "Instances", DashBreakBlockObject);
+						
+						instance_destroy(self);
+					}
+				}
+				
 				else if(tag == "heart_piece_2")
 				{
 					condition_unmet = instance_exists(SpawnableEnemyParentObject);
