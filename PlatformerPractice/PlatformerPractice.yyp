@@ -49,6 +49,7 @@
   "resources":[
     {"id":{"name":"MainMenuFont","path":"fonts/MainMenuFont/MainMenuFont.yy",},},
     {"id":{"name":"Area1_BossObject","path":"objects/Area1_BossObject/Area1_BossObject.yy",},},
+    {"id":{"name":"Area1_MinibossObject","path":"objects/Area1_MinibossObject/Area1_MinibossObject.yy",},},
     {"id":{"name":"Area3_BossObject","path":"objects/Area3_BossObject/Area3_BossObject.yy",},},
     {"id":{"name":"Area3_MinibossObject","path":"objects/Area3_MinibossObject/Area3_MinibossObject.yy",},},
     {"id":{"name":"Area5_BossLandingObject","path":"objects/Area5_BossLandingObject/Area5_BossLandingObject.yy",},},

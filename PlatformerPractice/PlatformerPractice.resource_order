@@ -29,6 +29,7 @@
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings":[
+    {"name":"Area1_MinibossObject","order":3,"path":"objects/Area1_MinibossObject/Area1_MinibossObject.yy",},
     {"name":"Area3_BossObject","order":1,"path":"objects/Area3_BossObject/Area3_BossObject.yy",},
     {"name":"Area5_BossLandingObject","order":3,"path":"objects/Area5_BossLandingObject/Area5_BossLandingObject.yy",},
     {"name":"Area5_BossObject","order":2,"path":"objects/Area5_BossObject/Area5_BossObject.yy",},
