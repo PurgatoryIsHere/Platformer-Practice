@@ -161,7 +161,23 @@ if(activated)
 			//Area 7
 			case 7:
 			
-				if(tag == "heart_piece_1")
+				if(tag == "area_1_section_arena")
+				{
+					condition_unmet = instance_exists(SpawnableEnemyParentObject);
+					
+					if(!condition_unmet)
+					{	
+						auto_gates = [
+						instance_position(1344, 432, AutomaticGateObject), instance_position(1344, 448, AutomaticGateObject),
+						instance_position(1344, 464, AutomaticGateObject)];
+						
+						Open_Gates();
+						
+						instance_destroy(self);
+					}
+				}
+				
+				else if(tag == "heart_piece_1")
 				{
 					condition_unmet = instance_exists(SpawnableEnemyParentObject);
 					

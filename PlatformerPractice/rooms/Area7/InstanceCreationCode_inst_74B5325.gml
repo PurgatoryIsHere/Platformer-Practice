@@ -1,1 +1,1 @@
-tag = "area1_subsection_enemy_gauntlet_entrance";
+tag = "area_1_section_gauntlet_entrance";
