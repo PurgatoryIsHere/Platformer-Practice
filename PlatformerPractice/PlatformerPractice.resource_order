@@ -90,6 +90,7 @@
     {"name":"Area5","order":13,"path":"rooms/Area5/Area5.yy",},
     {"name":"Area6","order":14,"path":"rooms/Area6/Area6.yy",},
     {"name":"Area7","order":15,"path":"rooms/Area7/Area7.yy",},
+    {"name":"Area8","order":16,"path":"rooms/Area8/Area8.yy",},
     {"name":"DashTest","order":2,"path":"rooms/DashTest/DashTest.yy",},
     {"name":"DoubleJumpTest","order":1,"path":"rooms/DoubleJumpTest/DoubleJumpTest.yy",},
     {"name":"EnemyTest","order":7,"path":"rooms/EnemyTest/EnemyTest.yy",},
