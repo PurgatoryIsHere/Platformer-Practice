@@ -31,17 +31,14 @@ global.player_positionY = 0.0
 global.player_velocityX = 0.0
 global.player_velocityY = 0.0
 
-// Key Bind Settings
-global.rightBind = 0.0
-global.leftBind = 0.0
-global.jumpBind = 0.0
-global.dashBind = 0.0
-global.groundPoundBind = 0.0
-global.grappleBind = 0.0
-
 //Check if boss is on level
 global.isBossAlive = false
 global.drops_ability = false;
 global.ability_collected = false;
+
+//Interactions for Area8
+global.returning_from_8_1 = false;
+global.area8_1_returnX = 688;
+global.area8_1_returnY = 736;
 
 randomize()

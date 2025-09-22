@@ -107,6 +107,21 @@ if(_select)
 				room_goto(Area7);
 			}
 			
+			else if(index == 8)
+			{
+				room_goto(Area8);
+			}
+			
+			else if(index == 9)
+			{
+				room_goto(Area8_1);
+			}
+			
+			else if(index == 10)
+			{
+				room_goto(Area8_2);
+			}
+			
 		break;
 			
 	}
