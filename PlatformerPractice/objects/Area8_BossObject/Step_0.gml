@@ -233,7 +233,12 @@ switch (boss_phase)
 	
 	//Area 5 Boss Stuff
 	case 3:
-        continue
+		if (place_meeting(x, y, PlayerObject) && PlayerObject.beingFired)
+		{
+			//move to next phase
+			PlayerObject.beingFired = false
+			PhaseOneDamage(30)
+		}
     break;
 	
 	case 4:

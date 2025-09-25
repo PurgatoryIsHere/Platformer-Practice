@@ -13,6 +13,15 @@ if (boss_phase == 1)
 {
 	alarm[0] = 60 * 4	
 }
+else if (boss_phase == 3)
+{
+	alarm[3] = 60 * 3	
+}
+else
+{
+	alarm[0] = -1
+	alarm[3] = -1
+}
 
 move_timer = 0
 jump = false
@@ -24,17 +33,6 @@ has_pounded = false;
 PhaseOneDamage = function(damage) // Basic damage calculation; aspects can be changed for each boss
 {
 	boss_health -= damage;
-	
-	if(boss_health == 0)
-	{
-		global.isBossAlive = false; // Unlocks gate
-		instance_destroy(self);
-		
-		if(global.drops_ability)
-		{
-			DropAbility();
-		}
-	}
 	
 	boss_i_frame_timer = 32; // Standard amount of i-frames; can be changed for each boss
 }
