@@ -242,13 +242,13 @@ switch (boss_phase)
     break;
 	
 	case 4:
-        continue
+        
     break;
     
     // more cases (with breaks)
 
     default:
-        continue;
+        
 }
 
 // Apply movement with collision
