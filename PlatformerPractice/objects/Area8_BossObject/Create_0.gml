@@ -7,16 +7,20 @@ boss_health = 100; // Health for boss; can be changed for each boss
 boss_i_frame_timer = 0; // I-frames the boss gets upon taking damage
 
 
-//Area 1 Boss Creation Stuff
+//Area 1 Boss Mimic
+dir = 1;
+y_speed = 0;
 
 if (boss_phase == 1)
 {
 	alarm[0] = 60 * 4	
 }
+
 else if (boss_phase == 3)
 {
 	alarm[3] = 60 * 3	
 }
+
 else
 {
 	alarm[0] = -1
@@ -38,9 +42,8 @@ PhaseOneDamage = function(damage) // Basic damage calculation; aspects can be ch
 }
 
 
-//Area 3 Boss Stuff
+//Area 3 Boss Mimic
 
-//Area 3 Damage
 PhaseTwoDamage = function(damage) // Basic damage calculation; aspects can be changed for each boss
 {
 	boss_health -= damage;
@@ -61,38 +64,9 @@ PhaseTwoDamage = function(damage) // Basic damage calculation; aspects can be ch
 		
 		global.isBossAlive = false; // Unlocks gate
 		instance_destroy(self);
-		
-		if(global.drops_ability)
-		{
-			DropAbility();
-		}
 	}
 	
-	else if(boss_health <= 30 && phase == 2)
-	{
-		//push player off platform
-		phase = 3;
-		
-		with(SpawnableEnemyParentObject)
-		{
-			instance_destroy(self)
-		}
-		
-		with(PillarObject)
-		{
-			self.alarm_triggered = true;
-			self.alarm[1] = 30;
-			self.shake_time = 30;
-		}
-		
-		wave_spawned = false;
-		wave_respawning = true;
-		pillars_dropped = false;
-		
-		alarm[2] = 60;
-	}
-	
-	else if(boss_health <= 60 && phase == 1)
+	else if(boss_health <= 50 && phase == 1)
 	{
 		//push player off platform
 		phase = 2;
@@ -154,33 +128,41 @@ Pillar_Drop_2 = function()
 	instance_create_layer(496, 864, "Instances", WarningObject);
 
 	
-	alarm[1] = 90;
-}
-
-Pillar_Drop_3 = function()
-{
-	instance_create_layer(64, 864, "Instances", WarningObject);
-	instance_create_layer(96, 864, "Instances", WarningObject);
-	instance_create_layer(128, 864, "Instances", WarningObject);
-	instance_create_layer(160, 864, "Instances", WarningObject);
-	instance_create_layer(192, 864, "Instances", WarningObject);
-	instance_create_layer(224, 864, "Instances", WarningObject);
-	instance_create_layer(256, 864, "Instances", WarningObject);
-	
-	instance_create_layer(336, 864, "Instances", WarningObject);
-	instance_create_layer(368, 864, "Instances", WarningObject);
-	instance_create_layer(400, 864, "Instances", WarningObject);
-	instance_create_layer(432, 864, "Instances", WarningObject);
-	instance_create_layer(464, 864, "Instances", WarningObject);
-	instance_create_layer(496, 864, "Instances", WarningObject);
-	instance_create_layer(528, 864, "Instances", WarningObject);
-	
 	alarm[1] = 120;
 }
 
-//Pillar_Drop_3()
 
 GroundPoundAOE = function()
 {
 	PlayerObject.PhaseTwoDamage(25);
+}
+
+function boss_move_and_collide(hsp, vsp, obj) 
+{
+    var steps = ceil(max(abs(hsp), abs(vsp)));
+    var step_x = hsp / steps;
+    var step_y = vsp / steps;
+
+    for (var i = 0; i < steps; i++)
+	{
+        if (place_free(x + step_x, y))
+		{
+			x += step_x;
+		}
+		
+        else 
+		{
+			hspeed = 0;
+		}
+
+        if (place_free(x, y + step_y))
+		{
+			y += step_y;
+		}
+		
+        else 
+		{
+			y_speed = 0;
+		}
+    }
 }

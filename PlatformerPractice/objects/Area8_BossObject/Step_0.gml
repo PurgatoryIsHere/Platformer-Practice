@@ -26,9 +26,9 @@ if (boss_phase != 1)
 
 switch (boss_phase)
 {
-	
 	//Area 1 Boss Mimic
     case 1:
+	
         y_speed += 0.2;
 
 		// Damaging the player
@@ -36,8 +36,8 @@ switch (boss_phase)
 		{
 			if(PlayerObject.i_frame_timer == 0)
 			{
-				PlayerObject.PhaseOneDamage(15);
-				PlayerObject.i_frame_timer = 32
+				PlayerObject.TakeDamage(15);
+				PlayerObject.i_frame_timer = 32;
 			}
 		}
 
@@ -50,17 +50,6 @@ switch (boss_phase)
 			}
 		}
 
-		// I-frames visualization (after being damaged by player)
-		if(boss_i_frame_timer > 0)
-		{
-			image_alpha = 0.5 + 0.5 * sin(boss_i_frame_timer * 0.5);
-		}	
-
-		else
-		{
-			image_alpha = 1	
-		}
-
 		// Move timer countdown
 		move_timer = max(move_timer - 1, 0);
 
@@ -69,6 +58,7 @@ switch (boss_phase)
 		{
 			hspeed = dir
 		}
+		
 		else if place_free(x + dir, y) && !place_free(x + (dir * 24), y + 9)
 		{
 			hspeed = dir
@@ -123,7 +113,7 @@ switch (boss_phase)
 				// Check for ground pound impact
 				if(point_distance(x, y + 1, PlayerObject.x, PlayerObject.y) < 80 && PlayerObject.onGround && place_meeting(x, y + sprite_height, GroundObject)) 
 				{
-					PlayerObject.PhaseOneDamage(20);
+					PlayerObject.TakeDamage(20);
 				}
         
 				// End ground pound when hitting ground
@@ -135,6 +125,7 @@ switch (boss_phase)
 				}
 			}
 		}
+		
     break;
 
 
@@ -169,7 +160,7 @@ switch (boss_phase)
 		
 				if(!wave_spawned && !wave_respawning)
 				{
-					Spawn_Wave(4);
+					Spawn_Wave(6);
 					wave_spawned = true;
 				}
 			
@@ -183,27 +174,13 @@ switch (boss_phase)
 		
 				if(!wave_spawned && !wave_respawning)
 				{
-					Spawn_Wave(6);
+					Spawn_Wave(12);
 					wave_spawned = true;
 				}
 			
 				else if(wave_spawned && !instance_exists(ES_GroundEnemyObject) && !pillars_dropped)
 				{
 					Pillar_Drop_2();
-					pillars_dropped = true;
-				}
-			
-			case 3:
-		
-				if(!wave_spawned && !wave_respawning)
-				{
-					Spawn_Wave(8);
-					wave_spawned = true;
-				}
-			
-				else if(wave_spawned && !instance_exists(ES_GroundEnemyObject) && !pillars_dropped)
-				{
-					Pillar_Drop_3();
 					pillars_dropped = true;
 				}
 		}
@@ -217,22 +194,12 @@ switch (boss_phase)
 			}
 		}
 
-
-		// Invicibility frames
-		if(boss_i_frame_timer > 0)
-		{
-			image_alpha = 0.5 + 0.5 * sin(boss_i_frame_timer * 0.5);
-		}
-
-		else
-		{
-			image_alpha = 1	;
-		}
     break;
 	
 	
 	//Area 5 Boss Stuff
 	case 3:
+	
 		if (place_meeting(x, y, PlayerObject) && PlayerObject.beingFired)
 		{
 			//move to next phase
@@ -249,6 +216,17 @@ switch (boss_phase)
 
     default:
         
+}
+
+// Invicibility frames
+if(boss_i_frame_timer > 0)
+{
+	image_alpha = 0.5 + 0.5 * sin(boss_i_frame_timer * 0.5);
+}
+
+else
+{
+	image_alpha = 1	;
 }
 
 // Apply movement with collision

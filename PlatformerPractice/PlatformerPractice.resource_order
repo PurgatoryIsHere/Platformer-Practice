@@ -55,6 +55,7 @@
     {"name":"ES_GroundEnemyObject","order":2,"path":"objects/ES_GroundEnemyObject/ES_GroundEnemyObject.yy",},
     {"name":"EventHandlerObject","order":16,"path":"objects/EventHandlerObject/EventHandlerObject.yy",},
     {"name":"FlagObject_From_8_1","order":19,"path":"objects/FlagObject_From_8_1/FlagObject_From_8_1.yy",},
+    {"name":"FlagObject_From_8_2","order":20,"path":"objects/FlagObject_From_8_2/FlagObject_From_8_2.yy",},
     {"name":"FlagObject_To_8_1","order":17,"path":"objects/FlagObject_To_8_1/FlagObject_To_8_1.yy",},
     {"name":"FlagObject_To_8_2","order":18,"path":"objects/FlagObject_To_8_2/FlagObject_To_8_2.yy",},
     {"name":"FlightGrappleEnemyObject","order":3,"path":"objects/FlightGrappleEnemyObject/FlightGrappleEnemyObject.yy",},

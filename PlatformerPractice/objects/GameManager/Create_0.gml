@@ -38,7 +38,8 @@ global.ability_collected = false;
 
 //Interactions for Area8
 global.returning_from_8_1 = false;
-global.area8_1_returnX = 688;
-global.area8_1_returnY = 736;
+global.returning_from_8_2 = false;
+global.area8_returnX = 0;
+global.area8_returnY = 0;
 
 randomize()
