@@ -16,10 +16,15 @@ if (boss_health <= 0)
 	boss_health = 100
 }
 
-//Atop Area 1 Boss timer if not in Area 1 Boss boss_phase
+//Stop Area 1 Boss timer if not in Area 1 Boss boss_phase
 if (boss_phase != 1)
 {
 	alarm[0] = -1	
+}
+
+else if (boss_phase != 3)
+{
+	alarm[3] = -1
 }
 
 //may have to teleport boss to each boss_phase
@@ -30,6 +35,8 @@ switch (boss_phase)
     case 1:
 	
         y_speed += 0.2;
+		
+		alarm[0] = 60 * 3
 
 		// Damaging the player
 		if(place_meeting(x, y, PlayerObject) && !PlayerObject.dashing && !PlayerObject.groundPounding)
@@ -66,7 +73,7 @@ switch (boss_phase)
 
 		else if place_meeting(x, y + 1, GroundObject)
 		{
-			image_xscale = dir * -1.5;
+			image_xscale = dir * -2;
 			dir *= -1
 		}
 
@@ -200,6 +207,8 @@ switch (boss_phase)
 	//Area 5 Boss Stuff
 	case 3:
 	
+		alarm[3] = 60 * 2
+	
 		if (place_meeting(x, y, PlayerObject) && PlayerObject.beingFired)
 		{
 			//move to next phase
@@ -207,12 +216,6 @@ switch (boss_phase)
 			PhaseOneDamage(30)
 		}
     break;
-	
-	case 4:
-        
-    break;
-    
-    // more cases (with breaks)
 
     default:
         

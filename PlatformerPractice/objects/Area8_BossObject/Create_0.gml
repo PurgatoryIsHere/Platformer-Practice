@@ -1,7 +1,7 @@
 /// @description Initialize Variables
 // You can write your code in this editor
 
-boss_phase = 1;
+boss_phase = 3;
 
 boss_health = 100; // Health for boss; can be changed for each boss
 boss_i_frame_timer = 0; // I-frames the boss gets upon taking damage
@@ -10,22 +10,6 @@ boss_i_frame_timer = 0; // I-frames the boss gets upon taking damage
 //Area 1 Boss Mimic
 dir = 1;
 y_speed = 0;
-
-if (boss_phase == 1)
-{
-	alarm[0] = 60 * 4	
-}
-
-else if (boss_phase == 3)
-{
-	alarm[3] = 60 * 3	
-}
-
-else
-{
-	alarm[0] = -1
-	alarm[3] = -1
-}
 
 move_timer = 0
 jump = false

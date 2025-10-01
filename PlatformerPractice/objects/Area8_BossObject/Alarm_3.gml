@@ -8,7 +8,7 @@ var target_distance = point_distance(x, y, target.x, target.y)
 
 if (target_distance <= detection_range)
 {
-	with (instance_create_layer(x, y, "Instances", Area5_BossProjectileObject))
+	with (instance_create_layer(x, y, "Instances", Area8_BossProjectileObject))
 	{
 		direction = point_direction(x, y, target.x, target.y);
 	}
