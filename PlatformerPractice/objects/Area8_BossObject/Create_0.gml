@@ -6,6 +6,10 @@ boss_phase = 1;
 boss_health = 100; // Health for boss; can be changed for each boss
 boss_i_frame_timer = 0; // I-frames the boss gets upon taking damage
 
+
+alarm_zero_started = false
+alarm_three_started = false
+
 /* Function to help with teleporting the boss to the correct location depending on phase
 	or handling anything else relating to a specific phase */
 PhaseSwitch = function()

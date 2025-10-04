@@ -4,7 +4,7 @@
 boss_i_frame_timer = max(boss_i_frame_timer - 1, 0);
 
 //destroy boss after all boss_phases are done
-if (boss_phase > 4)
+if (boss_phase >= 4)
 {
 	instance_destroy(self)	
 }
@@ -17,14 +17,13 @@ if (boss_health <= 0)
 }
 
 //Stop Area 1 Boss timer if not in Area 1 Boss boss_phase
-if (boss_phase != 1)
+if(boss_phase != 1)
 {
 	alarm[0] = -1	
 }
-
-else if (boss_phase != 3)
+else if(boss_phase != 3)
 {
-	alarm[3] = -1
+	alarm[3] = -1	
 }
 
 //may have to teleport boss to each boss_phase
@@ -36,7 +35,11 @@ switch (boss_phase)
 	
         y_speed += 0.2;
 		
-		alarm[0] = 60 * 3
+		if (alarm_zero_started = false)
+		{
+			alarm[0] = 60 * 3
+			alarm_zero_started = true
+		}
 
 		// Damaging the player
 		if(place_meeting(x, y, PlayerObject) && !PlayerObject.dashing && !PlayerObject.groundPounding)
@@ -66,7 +69,7 @@ switch (boss_phase)
 			hspeed = dir
 		}
 		
-		else if place_free(x + dir, y) && !place_free(x + (dir * 24), y + 9)
+		else if place_free(x + dir, y) && !place_free(x + dir, y + 9)
 		{
 			hspeed = dir
 		}
@@ -208,7 +211,11 @@ switch (boss_phase)
 	//Area 5 Boss Stuff
 	case 3:
 	
-		alarm[3] = 60 * 2
+		if (alarm_three_started = false)
+		{
+			alarm[3] = 60 * 2
+			alarm_three_started = true
+		}
 	
 		if (place_meeting(x, y, PlayerObject) && PlayerObject.beingFired)
 		{
@@ -216,10 +223,7 @@ switch (boss_phase)
 			PlayerObject.beingFired = false
 			PhaseOneDamage(30)
 		}
-    break;
-
-    default:
-        
+    break;   
 }
 
 // Invicibility frames

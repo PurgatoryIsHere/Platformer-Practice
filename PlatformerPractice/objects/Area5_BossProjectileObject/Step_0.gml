@@ -1,4 +1,4 @@
-/// @description Projectile Logic
+ /// @description Projectile Logic
 // You can write your code in this editor
 
 if ((distance_to_object(Area5_BossObject) <= 750) ||  (place_meeting(x, y, PlayerObject) && (PlayerObject.dashing || PlayerObject.beingFired)) || CannonObject.player_loaded)
