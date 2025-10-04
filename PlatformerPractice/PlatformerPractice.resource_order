@@ -52,6 +52,7 @@
     {"name":"CollapsibleGroundObject","order":2,"path":"objects/CollapsibleGroundObject/CollapsibleGroundObject.yy",},
     {"name":"DashBreakBlockObject","order":3,"path":"objects/DashBreakBlockObject/DashBreakBlockObject.yy",},
     {"name":"DoubleJumpUnlockObject","order":1,"path":"objects/DoubleJumpUnlockObject/DoubleJumpUnlockObject.yy",},
+    {"name":"EnemyParentObject","order":6,"path":"objects/EnemyParentObject/EnemyParentObject.yy",},
     {"name":"ES_FreeFlyEnemyObject","order":1,"path":"objects/ES_FreeFlyEnemyObject/ES_FreeFlyEnemyObject.yy",},
     {"name":"ES_GroundEnemyObject","order":2,"path":"objects/ES_GroundEnemyObject/ES_GroundEnemyObject.yy",},
     {"name":"EventHandlerObject","order":16,"path":"objects/EventHandlerObject/EventHandlerObject.yy",},
