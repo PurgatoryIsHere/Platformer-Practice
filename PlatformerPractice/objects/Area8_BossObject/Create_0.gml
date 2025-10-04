@@ -1,11 +1,40 @@
 /// @description Initialize Variables
 // You can write your code in this editor
 
-boss_phase = 3;
+boss_phase = 1;
 
 boss_health = 100; // Health for boss; can be changed for each boss
 boss_i_frame_timer = 0; // I-frames the boss gets upon taking damage
 
+/* Function to help with teleporting the boss to the correct location depending on phase
+	or handling anything else relating to a specific phase */
+PhaseSwitch = function()
+{
+	if(boss_phase == 2)
+	{
+		var x_locations = [272, 288, 304, 320, 336, 352, 368, 384, 400, 416];
+		
+		for(var i = 0; i < array_length(x_locations); i ++)
+		{
+			instance_create_layer(x_locations[i], 864, "Instances", BreakableBlockObject);
+		}
+		
+		x = 320;
+		y = 800;
+		
+		wave = 1;
+	}
+	
+	else if(boss_phase == 3)
+	{
+		
+	}
+	
+	else if(boss_phase == 4)
+	{
+		
+	}
+}
 
 //Area 1 Boss Mimic
 dir = 1;
@@ -50,10 +79,10 @@ PhaseTwoDamage = function(damage) // Basic damage calculation; aspects can be ch
 		instance_destroy(self);
 	}
 	
-	else if(boss_health <= 50 && phase == 1)
+	else if(boss_health <= 50 && wave == 1)
 	{
 		//push player off platform
-		phase = 2;
+		wave = 2;
 		
 		with(SpawnableEnemyParentObject)
 		{
@@ -77,7 +106,7 @@ PhaseTwoDamage = function(damage) // Basic damage calculation; aspects can be ch
 	boss_i_frame_timer = 32; // Standard amount of i-frames; can be changed for each boss
 }
 
-phase = 0;
+wave = 0;
 wave_spawned = false;
 wave_respawning = false;
 pillars_dropped = false;

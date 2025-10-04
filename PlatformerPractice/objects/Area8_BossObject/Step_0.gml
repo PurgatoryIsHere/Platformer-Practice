@@ -9,7 +9,7 @@ if (boss_phase > 4)
 	instance_destroy(self)	
 }
 
-//reset boss helath and go to next boss_phase
+//reset boss health and go to next boss_phase
 if (boss_health <= 0)
 {
 	boss_phase += 1
@@ -138,6 +138,7 @@ switch (boss_phase)
 
 	//Area 3 Boss Stuff
     case 2:
+	
         if(pillars_dropped)
 		{
 			pillar_timer += 1;
@@ -161,7 +162,7 @@ switch (boss_phase)
 			}
 		}
 	
-		switch(phase)
+		switch(wave)
 		{
 			case 1:
 		

@@ -7,13 +7,14 @@ var cam_y = camera_get_view_y(view_camera[0])
 
 camera_set_view_pos(view_camera[0], cam_x, cam_y)
 
+if (!beingFired) 
+{
+	y_speed += 0.2 // Gravity
+}
+
 if(input_enabled)
 {
 	// Player Functionality
-	if (!beingFired) 
-	{
-		y_speed += 0.2 // Gravity
-	}
 
 	dir = keyboard_check(ord("D")) - keyboard_check(ord("A")) // Direction the player is facing
 
@@ -318,8 +319,8 @@ if(input_enabled)
 			show_debug_message("Hit obstacle during flight");
 		}
 	}
-
-	// Handle standard movement
-	move_and_collide(x_speed, y_speed, GroundObject)
 }
+
+// Handle standard movement
+move_and_collide(x_speed, y_speed, GroundObject)
  
