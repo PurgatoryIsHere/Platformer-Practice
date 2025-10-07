@@ -138,7 +138,7 @@ Spawn_Wave = function(enemy_type, enemy_count)
 	
 	if(enemy_object == ES_FreeFlyEnemyObject)
 	{
-		spawn_y += 48;
+		spawn_y -= 48;
 	}
 	
 	for (var i = 0; i < enemy_count; i++)
