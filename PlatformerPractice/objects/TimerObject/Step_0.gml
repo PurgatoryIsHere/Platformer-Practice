@@ -30,6 +30,11 @@ else if(type = "enemy")
 	}
 }
 
+if(timer_going)
+{
+	time_remaining = alarm[1] / room_speed;
+}
+
 // Screen white-out effects
 if(fading_out) 
 {

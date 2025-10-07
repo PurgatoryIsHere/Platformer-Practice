@@ -14,6 +14,7 @@ if (boss_health <= 0)
 {
 	boss_phase += 1
 	boss_health = 100
+	PhaseSwitch();
 }
 
 //Stop Area 1 Boss timer if not in Area 1 Boss boss_phase
@@ -171,11 +172,15 @@ switch (boss_phase)
 		
 				if(!wave_spawned && !wave_respawning)
 				{
-					Spawn_Wave(6);
+					var ground_count = irandom_range(5, 8);
+					
+					Spawn_Wave("ground", ground_count);
+					Spawn_Wave("flying", 12 - ground_count);
+					
 					wave_spawned = true;
 				}
 			
-				else if(wave_spawned && !instance_exists(ES_GroundEnemyObject) && !pillars_dropped)
+				else if(wave_spawned && !instance_exists(SpawnableEnemyParentObject) && !pillars_dropped)
 				{
 					Pillar_Drop_1();
 					pillars_dropped = true;
@@ -185,7 +190,10 @@ switch (boss_phase)
 		
 				if(!wave_spawned && !wave_respawning)
 				{
-					Spawn_Wave(12);
+					var ground_count = irandom_range(12, 15);
+					
+					Spawn_Wave("ground", ground_count);
+					Spawn_Wave("flying", 20 - ground_count);
 					wave_spawned = true;
 				}
 			

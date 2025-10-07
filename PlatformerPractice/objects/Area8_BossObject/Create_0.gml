@@ -3,7 +3,7 @@
 
 boss_phase = 1;
 
-boss_health = 100; // Health for boss; can be changed for each boss
+boss_health = 10; // Health for boss; can be changed for each boss
 boss_i_frame_timer = 0; // I-frames the boss gets upon taking damage
 
 
@@ -117,11 +117,33 @@ pillars_dropped = false;
 pillar_timer = 0;
 pillar_timeout = 600; // time before pillars start collapsing
 
-Spawn_Wave = function(enemy_count)
+Spawn_Wave = function(enemy_type, enemy_count)
 {
+	var enemy_object;
+	
+	switch(enemy_type)
+    {
+        case "ground":
+		
+            enemy_object = ES_GroundEnemyObject;
+            break;
+
+        case "flying":
+		
+            enemy_object = ES_FreeFlyEnemyObject;
+            break;
+    }
+	
+	var spawn_y = 1136;
+	
+	if(enemy_object == ES_FreeFlyEnemyObject)
+	{
+		spawn_y += 48;
+	}
+	
 	for (var i = 0; i < enemy_count; i++)
     {
-		instance_create_layer(irandom_range(96, 560), 944, "Instances", ES_GroundEnemyObject);
+		instance_create_layer(irandom_range(112, 584), spawn_y, "Instances", enemy_object);
     }
 }
 
