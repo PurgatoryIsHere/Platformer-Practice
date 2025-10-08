@@ -137,6 +137,23 @@ switch (boss_phase)
 			}
 		}
 		
+		else if(dash)
+		{
+			if(move_timer == 0 && has_dashed = false) 
+			{
+				move_timer = 15;
+				has_dashed = true;
+			}
+			
+			else if(move_timer == 0 && has_dashed = true) 
+			{
+				has_dashed = false;
+				dash = false;
+			}
+			
+			hspeed = dir * 5
+		}
+		
     break;
 
 

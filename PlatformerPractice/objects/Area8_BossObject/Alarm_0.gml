@@ -1,7 +1,7 @@
 /// @description Area 1 Boss Alarm
 // You can write your code in this editor
 
-var move_type = irandom(2);
+var move_type = 3;
 
 if (move_type = 0) 
 {
@@ -17,5 +17,9 @@ else if (move_type = 2)
 {
 	groundPound = true;
 }
+else if (move_type = 3) 
+{
+	dash = true;
+}
 
-alarm[0] = 60 * 4;
+alarm[0] = 60 * 3;

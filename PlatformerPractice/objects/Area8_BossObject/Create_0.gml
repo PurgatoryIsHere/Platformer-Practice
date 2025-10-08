@@ -3,7 +3,7 @@
 
 boss_phase = 1;
 
-boss_health = 10; // Health for boss; can be changed for each boss
+boss_health = 100; // Health for boss; can be changed for each boss
 boss_i_frame_timer = 0; // I-frames the boss gets upon taking damage
 
 
@@ -50,6 +50,8 @@ jump_count = 0;
 doubleJump = false
 groundPound = false
 has_pounded = false;
+dash = false;
+has_dashed = false
 
 PhaseOneDamage = function(damage) // Basic damage calculation; aspects can be changed for each boss
 {
