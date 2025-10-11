@@ -65,7 +65,7 @@ switch (boss_phase)
 		move_timer = max(move_timer - 1, 0);
 
 		//Movement Logic
-		if (jump || doubleJump || groundPound)
+		if (jump || doubleJump || groundPound || shoot)
 		{
 			hspeed = dir
 		}
@@ -151,7 +151,29 @@ switch (boss_phase)
 				dash = false;
 			}
 			
+			if place_meeting(x + 17, y, GroundObject) || place_meeting(x - 17, y, GroundObject)
+			{
+				image_xscale = dir * -2;
+				dir *= -1
+			}
+			
 			hspeed = dir * 5
+		}
+		
+		else if (shoot)
+		{
+			for (var i = 0; i < bullet_count; i++) 
+			{
+				var _direction = ((360 / bullet_count) * i) + 5;
+    
+				var _bullet = instance_create_layer(x, y, "Instances", Area8_BossProjectileObject);
+    
+				_bullet.direction = _direction;
+			}
+			
+			alarm[4] = 20
+			
+			shoot = false
 		}
 		
     break;
@@ -236,12 +258,39 @@ switch (boss_phase)
 	//Area 5 Boss Stuff
 	case 3:
 	
+		//Gravity
+		y_speed += 0.2;
+	
 		if (alarm_three_started = false)
 		{
-			alarm[3] = 60 * 2
+			alarm[3] = 60 * 1
 			alarm_three_started = true
 		}
+		
+		//Change direction on wall collision
+		if place_free(x + dir, y) && !place_free(x + dir, y + 9)
+		{
+			hspeed = dir
+		}
+
+		else if place_meeting(x, y + 1, GroundObject)
+		{
+			image_xscale = dir * -2;
+			dir *= -1
+		}
 	
+	
+		//Damage player on collision
+		if(place_meeting(x, y, PlayerObject) && !PlayerObject.beingFired)
+		{
+			if(PlayerObject.i_frame_timer == 0)
+			{
+				PlayerObject.TakeDamage(15);
+				PlayerObject.i_frame_timer = 32;
+			}
+		}
+	
+		//Damage Boss on collision with fired player
 		if (place_meeting(x, y, PlayerObject) && PlayerObject.beingFired)
 		{
 			//move to next phase

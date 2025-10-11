@@ -52,6 +52,9 @@ groundPound = false
 has_pounded = false;
 dash = false;
 has_dashed = false
+shoot = false
+bullet_count = 12
+bullet_wave = 1
 
 PhaseOneDamage = function(damage) // Basic damage calculation; aspects can be changed for each boss
 {

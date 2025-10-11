@@ -16,4 +16,4 @@ if (target_distance <= detection_range)
 
 show_debug_message("Shoot projectile")
 
-alarm[3] = 60 * 2
+alarm[3] = 60 * 1
