@@ -1,7 +1,8 @@
+
 /// @description Initialize Variables
 // You can write your code in this editor
 
-boss_phase = 1;
+boss_phase = 2;
 
 boss_health = 100; // Health for boss; can be changed for each boss
 boss_i_frame_timer = 0; // I-frames the boss gets upon taking damage
@@ -80,7 +81,7 @@ PhaseTwoDamage = function(damage) // Basic damage calculation; aspects can be ch
 		with(PillarObject)
 		{
 			self.alarm_triggered = true;
-			self.alarm[1] = 30;
+			self.alarm[0] = 30;
 			self.shake_time = 30;
 		}
 		
@@ -115,7 +116,7 @@ PhaseTwoDamage = function(damage) // Basic damage calculation; aspects can be ch
 	boss_i_frame_timer = 32; // Standard amount of i-frames; can be changed for each boss
 }
 
-wave = 0;
+wave = 1;
 wave_spawned = false;
 wave_respawning = false;
 pillars_dropped = false;
@@ -154,10 +155,12 @@ Spawn_Wave = function(enemy_type, enemy_count)
 
 Pillar_Drop_1 = function()
 {
-	instance_create_layer(112, 864, "Instances", WarningObject);
-	instance_create_layer(192, 864, "Instances", WarningObject);
-	instance_create_layer(400, 864, "Instances", WarningObject);
-	instance_create_layer(480, 864, "Instances", WarningObject);
+	instance_create_layer(16, 1056, "Instances", WarningObject);
+	instance_create_layer(96, 1056, "Instances", WarningObject);
+	instance_create_layer(176, 1056, "Instances", WarningObject);
+	instance_create_layer(464, 1056, "Instances", WarningObject);
+	instance_create_layer(544, 1056, "Instances", WarningObject);
+	instance_create_layer(624, 1056, "Instances", WarningObject);
 	
 	alarm[1] = 90;
 }
@@ -178,7 +181,7 @@ Pillar_Drop_2 = function()
 
 GroundPoundAOE = function()
 {
-	PlayerObject.PhaseTwoDamage(25);
+	PhaseTwoDamage(25);
 }
 
 function boss_move_and_collide(hsp, vsp, obj) 

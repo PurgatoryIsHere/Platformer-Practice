@@ -191,7 +191,7 @@ switch (boss_phase)
 				with(PillarObject)
 				{
 					self.alarm_triggered = true;
-					self.alarm[1] = 30;
+					self.alarm[0] = 30;
 					self.shake_time = 30;
 				}
 			
