@@ -236,7 +236,7 @@ switch (boss_phase)
 					wave_spawned = true;
 				}
 			
-				else if(wave_spawned && !instance_exists(ES_GroundEnemyObject) && !pillars_dropped)
+				else if(wave_spawned && !instance_exists(SpawnableEnemyParentObject) && !pillars_dropped)
 				{
 					Pillar_Drop_2();
 					pillars_dropped = true;

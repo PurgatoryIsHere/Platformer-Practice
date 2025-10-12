@@ -75,7 +75,12 @@ PhaseTwoDamage = function(damage) // Basic damage calculation; aspects can be ch
 	{
 		with(SpawnableEnemyParentObject)
 		{
-			instance_destroy(self)
+			instance_destroy(self);
+		}
+		
+		with(EnemyParentObject)
+		{
+			instance_destroy(self);
 		}
 		
 		with(PillarObject)
@@ -83,6 +88,11 @@ PhaseTwoDamage = function(damage) // Basic damage calculation; aspects can be ch
 			self.alarm_triggered = true;
 			self.alarm[0] = 30;
 			self.shake_time = 30;
+		}
+		
+		with(DashBreakBlockObject)
+		{
+			instance_destroy(self);
 		}
 		
 		global.isBossAlive = false; // Unlocks gate
@@ -96,21 +106,27 @@ PhaseTwoDamage = function(damage) // Basic damage calculation; aspects can be ch
 		
 		with(SpawnableEnemyParentObject)
 		{
-			instance_destroy(self)
+			instance_destroy(self);
+		}
+		
+		with(EnemyParentObject)
+		{
+			instance_destroy(self);
 		}
 		
 		with(PillarObject)
 		{
 			self.alarm_triggered = true;
-			self.alarm[1] = 30;
+			self.alarm[0] = 30;
 			self.shake_time = 30;
 		}
 		
 		wave_spawned = false;
 		wave_respawning = true;
 		pillars_dropped = false;
+		pillar_timer = 0;
 		
-		alarm[2] = 60;
+		alarm[2] = 90;
 	}
 	
 	boss_i_frame_timer = 32; // Standard amount of i-frames; can be changed for each boss
@@ -167,13 +183,12 @@ Pillar_Drop_1 = function()
 
 Pillar_Drop_2 = function()
 {
-	instance_create_layer(96, 864, "Instances", WarningObject);
-	instance_create_layer(176, 864, "Instances", WarningObject);
-	instance_create_layer(256, 864, "Instances", WarningObject);
-	instance_create_layer(336, 864, "Instances", WarningObject);
-	instance_create_layer(416, 864, "Instances", WarningObject);
-	instance_create_layer(496, 864, "Instances", WarningObject);
-
+	instance_create_layer(16, 1056, "Instances", WarningObject);
+	instance_create_layer(96, 1056, "Instances", WarningObject);
+	instance_create_layer(176, 1056, "Instances", WarningObject);
+	instance_create_layer(464, 1056, "Instances", WarningObject);
+	instance_create_layer(544, 1056, "Instances", WarningObject);
+	instance_create_layer(624, 1056, "Instances", WarningObject);
 	
 	alarm[1] = 120;
 }
