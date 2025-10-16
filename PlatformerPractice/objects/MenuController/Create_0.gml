@@ -22,6 +22,7 @@ menu[1][7] = "Area 7";
 menu[1][8] = "Area 8";
 menu[1][9] = "Area 8.1";
 menu[1][10] = "Area 8.2";
+menu[1][11] = "Area 8.3";
 
 index = 0;
 sub_menu = 0;

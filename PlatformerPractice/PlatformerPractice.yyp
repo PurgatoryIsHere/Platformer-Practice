@@ -62,6 +62,8 @@
     {"id":{"name":"Area7_PhaseGateObject","path":"objects/Area7_PhaseGateObject/Area7_PhaseGateObject.yy",},},
     {"id":{"name":"Area8_BossObject","path":"objects/Area8_BossObject/Area8_BossObject.yy",},},
     {"id":{"name":"Area8_BossProjectileObject","path":"objects/Area8_BossProjectileObject/Area8_BossProjectileObject.yy",},},
+    {"id":{"name":"Area8_Phase4BossObject","path":"objects/Area8_Phase4BossObject/Area8_Phase4BossObject.yy",},},
+    {"id":{"name":"Area8_Phase4BossProjectileObject","path":"objects/Area8_Phase4BossProjectileObject/Area8_Phase4BossProjectileObject.yy",},},
     {"id":{"name":"AreaBossParentObject","path":"objects/AreaBossParentObject/AreaBossParentObject.yy",},},
     {"id":{"name":"AutomaticGateDetectionObject","path":"objects/AutomaticGateDetectionObject/AutomaticGateDetectionObject.yy",},},
     {"id":{"name":"AutomaticGateObject","path":"objects/AutomaticGateObject/AutomaticGateObject.yy",},},
