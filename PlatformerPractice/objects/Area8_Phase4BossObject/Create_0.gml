@@ -19,3 +19,40 @@ chunk_direction = -45;
 
 // Start the first alarm
 alarm[0] = 30;
+
+phase = 1;
+shield_cores = 1;
+shield_active = true;
+
+PhaseChange = function()
+{
+	switch(phase)
+	{
+		case 1:
+		
+			phase = 2;
+			shield_cores = 2;
+			break;
+			
+		case 2:
+		
+			phase = 3;
+			shield_cores = 3;
+			break;
+	}	
+}
+
+CoreDestruction = function()
+{
+	shield_cores -= 1;
+	
+	if(shield_cores == 0)
+	{
+		shield_active = false;
+		
+		with(TimerGateObject)
+		{
+			instance_destroy(self);
+		}
+	}
+}

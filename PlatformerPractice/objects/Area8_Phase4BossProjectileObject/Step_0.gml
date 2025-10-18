@@ -7,6 +7,6 @@ if ((distance_to_object(Area8_Phase4BossObject) > 750) ||  (place_meeting(x, y, 
 }
 else if (place_meeting(x, y, PlayerObject))
 {
-	PlayerObject.TakeDamage(10);
+	PlayerObject.TakeDamage(5);
 	instance_destroy(self);
 }
