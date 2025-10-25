@@ -104,6 +104,7 @@
     {"name":"Area8_2","order":18,"path":"rooms/Area8_2/Area8_2.yy",},
     {"name":"Area8_3_1","order":19,"path":"rooms/Area8_3_1/Area8_3_1.yy",},
     {"name":"Area8_3_2","order":20,"path":"rooms/Area8_3_2/Area8_3_2.yy",},
+    {"name":"Area8_3_3","order":21,"path":"rooms/Area8_3_3/Area8_3_3.yy",},
     {"name":"Area8","order":16,"path":"rooms/Area8/Area8.yy",},
     {"name":"DashTest","order":2,"path":"rooms/DashTest/DashTest.yy",},
     {"name":"DoubleJumpTest","order":1,"path":"rooms/DoubleJumpTest/DoubleJumpTest.yy",},

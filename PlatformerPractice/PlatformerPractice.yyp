@@ -131,6 +131,7 @@
     {"id":{"name":"Area8_2","path":"rooms/Area8_2/Area8_2.yy",},},
     {"id":{"name":"Area8_3_1","path":"rooms/Area8_3_1/Area8_3_1.yy",},},
     {"id":{"name":"Area8_3_2","path":"rooms/Area8_3_2/Area8_3_2.yy",},},
+    {"id":{"name":"Area8_3_3","path":"rooms/Area8_3_3/Area8_3_3.yy",},},
     {"id":{"name":"Area8","path":"rooms/Area8/Area8.yy",},},
     {"id":{"name":"DashTest","path":"rooms/DashTest/DashTest.yy",},},
     {"id":{"name":"DoubleJumpTest","path":"rooms/DoubleJumpTest/DoubleJumpTest.yy",},},
@@ -212,6 +213,7 @@
     {"roomId":{"name":"Area8_2","path":"rooms/Area8_2/Area8_2.yy",},},
     {"roomId":{"name":"Area8_3_1","path":"rooms/Area8_3_1/Area8_3_1.yy",},},
     {"roomId":{"name":"Area8_3_2","path":"rooms/Area8_3_2/Area8_3_2.yy",},},
+    {"roomId":{"name":"Area8_3_3","path":"rooms/Area8_3_3/Area8_3_3.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

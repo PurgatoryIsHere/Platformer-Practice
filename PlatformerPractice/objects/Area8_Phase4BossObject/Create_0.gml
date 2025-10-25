@@ -63,6 +63,24 @@ CoreDestruction = function()
 	}
 }
 
+TakeDamage = function(current_phase)
+{
+	if(current_phase == 1)
+	{
+		TakeDamage_Phase1();
+	}
+	
+	else if(current_phase == 2)
+	{
+		TakeDamage_Phase2();
+	}
+	
+	else if(current_phase == 3)
+	{
+		TakeDamage_Phase3();
+	}
+}
+
 TakeDamage_Phase1 = function()
 {
 	boss_health -= 30;
