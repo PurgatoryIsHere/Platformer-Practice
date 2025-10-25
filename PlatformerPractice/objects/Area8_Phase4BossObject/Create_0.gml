@@ -1,6 +1,8 @@
 /// @description Initialize variables
 // You can write your code in this editor
 
+boss_health = 90
+;
 randomise()
 pattern = 0;
 
@@ -31,13 +33,17 @@ PhaseChange = function()
 		case 1:
 		
 			phase = 2;
+			boss_health = 90;
 			shield_cores = 2;
+			shield_active = true;
 			break;
 			
 		case 2:
 		
 			phase = 3;
+			boss_health = 90;
 			shield_cores = 3;
+			shield_active = true;
 			break;
 	}	
 }
@@ -54,5 +60,56 @@ CoreDestruction = function()
 		{
 			instance_destroy(self);
 		}
+	}
+}
+
+TakeDamage_Phase1 = function()
+{
+	boss_health -= 30;
+	
+	if(boss_health == 0)
+	{
+		PhaseChange();
+	}
+}
+
+TakeDamage_Phase2 = function()
+{
+	boss_health -= 15;
+	
+	if(boss_health == 0)
+	{
+		PhaseChange();
+	}
+	
+	else if(boss_health == 45)
+	{
+		// Push player back, reactivate shield, regenerate cores
+		shield_cores = 2;
+		shield_active = true;
+	}
+}
+
+TakeDamage_Phase3 = function()
+{
+	boss_health -= 10;
+	
+	if(boss_health == 0)
+	{
+		// Trigger death animation
+	}
+	
+	else if(boss_health == 30)
+	{
+		// Push player back, reactivate shield, regenerate cores
+		shield_cores = 3;
+		shield_active = true;
+	}
+	
+	else if(boss_health == 60)
+	{
+		// Push player back, reactivate shield, regenerate cores
+		shield_cores = 3;
+		shield_active = true;
 	}
 }
