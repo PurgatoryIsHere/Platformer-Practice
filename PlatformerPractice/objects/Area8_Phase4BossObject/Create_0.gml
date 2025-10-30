@@ -22,7 +22,9 @@ chunk_direction = -45;
 // Start the first alarm
 alarm[0] = 30;
 
-phase = 1;
+y_speed = 0;
+
+phase = 3;
 shield_cores = 1;
 shield_active = true;
 

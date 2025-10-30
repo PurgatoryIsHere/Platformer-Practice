@@ -132,6 +132,11 @@ if(_select)
 				room_goto(Area8_3_2);
 			}
 			
+			else if(index == 13)
+			{
+				room_goto(Area8_3_3);
+			}
+			
 		break;
 			
 	}
