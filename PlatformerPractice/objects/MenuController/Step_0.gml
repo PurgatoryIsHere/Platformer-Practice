@@ -104,7 +104,7 @@ if(_select)
 			
 			else if(index == 7)
 			{
-				room_goto(Area7_2);
+				room_goto(Area7_3);
 			}
 			
 			else if(index == 8)

@@ -1,6 +1,6 @@
 TriggerEvent = function()
 {
-	inst = instance_position(864, 848, AutomaticGateObject)
+	inst = instance_position(864, 80, AutomaticGateObject)
 	
 	if(instance_exists(inst))
 	{
