@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"FlightGrappleEnemySprite",
   "bboxMode":0,
   "bbox_bottom":30,
@@ -12,12 +12,12 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"f39dce54-17d1-49c8-b1e4-396854577c23","name":"f39dce54-17d1-49c8-b1e4-396854577c23","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"10469850-a841-4e64-8c1e-6df68617c1c7","name":"10469850-a841-4e64-8c1e-6df68617c1c7","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"5a722833-30e6-4706-956e-fd6594a67edf","name":"5a722833-30e6-4706-956e-fd6594a67edf","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"22778d7c-3de6-4a05-af69-24d52e9df3fd","name":"22778d7c-3de6-4a05-af69-24d52e9df3fd","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"20f8ce30-8d86-4c7d-bf45-034f43fa4888","name":"20f8ce30-8d86-4c7d-bf45-034f43fa4888","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"2b6e98e5-1a02-4c16-9284-b96c86f88f43","name":"2b6e98e5-1a02-4c16-9284-b96c86f88f43","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"f39dce54-17d1-49c8-b1e4-396854577c23","name":"f39dce54-17d1-49c8-b1e4-396854577c23","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"10469850-a841-4e64-8c1e-6df68617c1c7","name":"10469850-a841-4e64-8c1e-6df68617c1c7","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"5a722833-30e6-4706-956e-fd6594a67edf","name":"5a722833-30e6-4706-956e-fd6594a67edf","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"22778d7c-3de6-4a05-af69-24d52e9df3fd","name":"22778d7c-3de6-4a05-af69-24d52e9df3fd","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"20f8ce30-8d86-4c7d-bf45-034f43fa4888","name":"20f8ce30-8d86-4c7d-bf45-034f43fa4888","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"2b6e98e5-1a02-4c16-9284-b96c86f88f43","name":"2b6e98e5-1a02-4c16-9284-b96c86f88f43","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -75,24 +75,12 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f39dce54-17d1-49c8-b1e4-396854577c23","path":"sprites/FlightGrappleEnemySprite/FlightGrappleEnemySprite.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"7bd391cf-f87b-4033-8ee3-6b328973b256","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"10469850-a841-4e64-8c1e-6df68617c1c7","path":"sprites/FlightGrappleEnemySprite/FlightGrappleEnemySprite.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"0dc74605-20cd-42f9-8395-3b8c82dd3b78","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"5a722833-30e6-4706-956e-fd6594a67edf","path":"sprites/FlightGrappleEnemySprite/FlightGrappleEnemySprite.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"fac45964-548d-4620-b97b-ee1f672b8648","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"22778d7c-3de6-4a05-af69-24d52e9df3fd","path":"sprites/FlightGrappleEnemySprite/FlightGrappleEnemySprite.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"783444c0-2892-4bc1-ab4c-8575eac7bc18","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"20f8ce30-8d86-4c7d-bf45-034f43fa4888","path":"sprites/FlightGrappleEnemySprite/FlightGrappleEnemySprite.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"9dc0a056-5561-4f6f-9ce5-7ed523215618","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2b6e98e5-1a02-4c16-9284-b96c86f88f43","path":"sprites/FlightGrappleEnemySprite/FlightGrappleEnemySprite.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"a7b80350-82a3-41a5-89bf-2510653bec52","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"f39dce54-17d1-49c8-b1e4-396854577c23","path":"sprites/FlightGrappleEnemySprite/FlightGrappleEnemySprite.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"7bd391cf-f87b-4033-8ee3-6b328973b256","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"10469850-a841-4e64-8c1e-6df68617c1c7","path":"sprites/FlightGrappleEnemySprite/FlightGrappleEnemySprite.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"0dc74605-20cd-42f9-8395-3b8c82dd3b78","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"5a722833-30e6-4706-956e-fd6594a67edf","path":"sprites/FlightGrappleEnemySprite/FlightGrappleEnemySprite.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"fac45964-548d-4620-b97b-ee1f672b8648","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"22778d7c-3de6-4a05-af69-24d52e9df3fd","path":"sprites/FlightGrappleEnemySprite/FlightGrappleEnemySprite.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"783444c0-2892-4bc1-ab4c-8575eac7bc18","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"20f8ce30-8d86-4c7d-bf45-034f43fa4888","path":"sprites/FlightGrappleEnemySprite/FlightGrappleEnemySprite.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"9dc0a056-5561-4f6f-9ce5-7ed523215618","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"2b6e98e5-1a02-4c16-9284-b96c86f88f43","path":"sprites/FlightGrappleEnemySprite/FlightGrappleEnemySprite.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"a7b80350-82a3-41a5-89bf-2510653bec52","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
