@@ -1,0 +1,1 @@
+key = "area3_entrance";

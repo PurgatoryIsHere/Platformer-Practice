@@ -1,0 +1,1 @@
+key = "area1_exit";

@@ -9,15 +9,20 @@ if(fading_out)
 	{
         fade_alpha = 1;
         fading_out = false;
+		
+		var dest = portal_data[? teleport_key];
+		var dest_ex = dest[? "ex"];
 
-        // Teleport
-        player.x = other_side.x;
-        player.y = other_side.y;
-        activated = false;
-        other_side.activated = false;
-        alarm[0] = 180;
+		var dest_room = dest_ex[? "room"];
+		var dest_x = dest_ex[? "x"];
+		var dest_y = dest_ex[? "y"];
 
-        fading_in = true;
+		global.teleport_x = dest_x;
+		global.teleport_y = dest_y;
+		global.screen_faded = true;
+		room_goto(dest_room);
+
+		fading_in = true;
     }
 }
 
@@ -31,11 +36,8 @@ if(fading_in)
         fade_alpha = 0;
         fading_in = false;
 		
-		PlayerObject.input_enabled = true;
+		global.screen_faded = false;
 		
-		if(disappear)
-		{
-			alarm[1] = 30;
-		}
+		PlayerObject.input_enabled = true;
     }
 }
