@@ -220,13 +220,13 @@ if(activated)
 					
 					if(!condition_unmet)
 					{	
-						auto_gates = [instance_position(3232, 704, AutomaticGateObject), instance_position(3248, 704, AutomaticGateObject)];
+						auto_gates = [instance_position(1168, 704, AutomaticGateObject), instance_position(1184, 704, AutomaticGateObject)];
 						
 						Open_Gates();
 						
-						instance_create_layer(3232, 688, "Instances", ShelfObject);
-						instance_create_layer(3232, 736, "Instances", ShelfObject);
-						instance_create_layer(3232, 784, "Instances", ShelfObject);
+						instance_create_layer(1168, 688, "Instances", ShelfObject);
+						instance_create_layer(1168, 736, "Instances", ShelfObject);
+						instance_create_layer(1168, 784, "Instances", ShelfObject);
 						
 						instance_destroy(self);
 					}

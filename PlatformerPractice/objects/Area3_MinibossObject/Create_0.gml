@@ -33,10 +33,10 @@ TakeDamage = function(damage) // Basic damage calculation; aspects can be change
 		DropKeyPiece();
 		OpenGates();
 		
-		instance_destroy(instance_position(3376, 384, GroundObject));
-		instance_destroy(instance_position(3392, 384, GroundObject));
-		instance_create_layer(3376, 384, "Instances", BreakableBlockObject);
-		instance_create_layer(3392, 384, "Instances", BreakableBlockObject);
+		instance_destroy(instance_position(1312, 384, GroundObject));
+		instance_destroy(instance_position(1328, 384, GroundObject));
+		instance_create_layer(1312, 384, "Instances", BreakableBlockObject);
+		instance_create_layer(1328, 384, "Instances", BreakableBlockObject);
 		
 		instance_destroy(self);
 	}
@@ -71,7 +71,7 @@ TakeDamage = function(damage) // Basic damage calculation; aspects can be change
 
 DropKeyPiece = function() // Spawns a keypiece
 {
-	instance_create_layer(3104, 352, "Instances", KeyPieceObject);
+	instance_create_layer(1040, 352, "Instances", Area7_KeyPieceObject);
 }
 
 function boss_move_and_collide(hsp, vsp, obj) 
@@ -117,34 +117,35 @@ Spawn_Wave = function(enemy_count)
 {
 	for (var i = 0; i < enemy_count; i++)
     {	
-		instance_create_layer(irandom_range(2880, 3312), 384, "Instances", ES_GroundEnemyObject);
+		instance_create_layer(irandom_range(816, 1248), 384, "Instances", ES_GroundEnemyObject);
     }
 }
 
 Pillar_Drop_1 = function()
 {
-	instance_create_layer(2864, 304, "Instances", WarningObject);
-	instance_create_layer(2944, 304, "Instances", WarningObject);
-	instance_create_layer(3216, 304, "Instances", WarningObject);
-	instance_create_layer(3296, 304, "Instances", WarningObject);
+	instance_create_layer(800, 304, "Instances", WarningObject);
+	instance_create_layer(880, 304, "Instances", WarningObject);
+	instance_create_layer(1152, 304, "Instances", WarningObject);
+	instance_create_layer(1232, 304, "Instances", WarningObject);
 	
 	alarm[0] = 90;
 }
 
 Pillar_Drop_2 = function()
 {
-	instance_create_layer(2832, 304, "Instances", WarningObject);
-	instance_create_layer(2864, 304, "Instances", WarningObject);
-	instance_create_layer(2896, 304, "Instances", WarningObject);
-	instance_create_layer(2976, 304, "Instances", WarningObject);
-	instance_create_layer(3008, 304, "Instances", WarningObject);
-	instance_create_layer(3040, 304, "Instances", WarningObject);
-	instance_create_layer(3104, 304, "Instances", WarningObject);
-	instance_create_layer(3136, 304, "Instances", WarningObject);
-	instance_create_layer(3168, 304, "Instances", WarningObject);
-	instance_create_layer(3248, 304, "Instances", WarningObject);
-	instance_create_layer(3280, 304, "Instances", WarningObject);
-	instance_create_layer(3312, 304, "Instances", WarningObject);
+	instance_create_layer(768, 304, "Instances", WarningObject);
+	instance_create_layer(800, 304, "Instances", WarningObject);
+	instance_create_layer(832, 304, "Instances", WarningObject);
+	instance_create_layer(912, 304, "Instances", WarningObject);
+	instance_create_layer(944, 304, "Instances", WarningObject);
+	instance_create_layer(976, 304, "Instances", WarningObject);
+	instance_create_layer(1040, 304, "Instances", WarningObject);
+	instance_create_layer(1072, 304, "Instances", WarningObject);
+	instance_create_layer(1104, 304, "Instances", WarningObject);
+	instance_create_layer(1184, 304, "Instances", WarningObject);
+	instance_create_layer(1216, 304, "Instances", WarningObject);
+	instance_create_layer(1248, 304, "Instances", WarningObject);
+
 	
 	alarm[0] = 120;
 }
@@ -157,11 +158,11 @@ GroundPoundAOE = function()
 OpenGates = function()
 {
 	var gates = [
-	instance_position(2784, 304, AutomaticGateObject), instance_position(2784, 320, AutomaticGateObject), 
-	instance_position(2784, 336, AutomaticGateObject), instance_position(2736, 288, AutomaticGateObject),
-	instance_position(2752, 288, AutomaticGateObject), instance_position(2768, 288, AutomaticGateObject),
-	instance_position(2368, 112, AutomaticGateObject), instance_position(2368, 128, AutomaticGateObject),
-	instance_position(2368, 144, AutomaticGateObject)];
+	instance_position(720, 304, AutomaticGateObject), instance_position(720, 320, AutomaticGateObject), 
+	instance_position(720, 336, AutomaticGateObject), instance_position(672, 288, AutomaticGateObject),
+	instance_position(688, 288, AutomaticGateObject), instance_position(704, 288, AutomaticGateObject),
+	instance_position(304, 112, AutomaticGateObject), instance_position(304, 128, AutomaticGateObject),
+	instance_position(304, 144, AutomaticGateObject)];
 	
 	for(var i = 0; i < array_length(gates); i++)
 	{

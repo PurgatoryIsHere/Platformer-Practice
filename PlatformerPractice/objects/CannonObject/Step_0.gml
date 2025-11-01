@@ -16,7 +16,8 @@ else if target != noone && place_meeting(x, y, PlayerObject) && !fired
         PlayerObject.y_speed = 0;
         gravity = 0; // disable gravity while in cannon
     }
-
+	
+	PlayerObject.depth = depth + 1;
     player_loaded = true;
 
     //turn cannon towards target

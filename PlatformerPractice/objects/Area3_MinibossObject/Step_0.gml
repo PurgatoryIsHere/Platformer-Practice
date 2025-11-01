@@ -5,7 +5,7 @@ boss_i_frame_timer = max(boss_i_frame_timer - 1, 0);
 
 if(!boss_battle_active)
 {
-	var nearest_agd = instance_nearest(3104, 368, AutomaticGateDetectionObject);
+	var nearest_agd = instance_nearest(1040, 368, AutomaticGateDetectionObject);
 
 	if(nearest_agd.activated && !boss_battle_active)
 	{
