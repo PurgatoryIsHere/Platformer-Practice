@@ -1,8 +1,8 @@
 /// @description Initialize variables
 // You can write your code in this editor
 
-boss_health = 90
-;
+boss_health = 90;
+
 randomise()
 pattern = 0;
 
@@ -24,7 +24,7 @@ alarm[0] = 30;
 
 y_speed = 0;
 
-phase = 3;
+phase = 1;
 shield_cores = 1;
 shield_active = true;
 

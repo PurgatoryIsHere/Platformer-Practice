@@ -12,19 +12,23 @@ if(place_meeting(x, y, PlayerObject) && !shield_active && (PlayerObject.groundPo
 
 if (phase == 3)
 {
-	y_speed += 0.2
-	
-	player_dir = point_direction(x, y, PlayerObject.x, PlayerObject.y)
-	
-	if ((player_dir >= 0 && player_dir <= 89) || (player_dir >= 270 && player_dir <= 359))
+	y_speed += 0/2
+
+	if (instance_exists(PlayerObject))
 	{
-		hspeed = 2
-	}
-	else if (player_dir >= 90 && player_dir <= 269)
-	{
-		hspeed = -2
+		var dist = PlayerObject.x - x
+		
+		var pull = 40
+		
+		hspeed += dist / pull;
+		
+		hspeed *= 4
+		
+		hspeed = clamp(hspeed, -4, 4)
 	}
 	
-	// Apply movement with collision
-	boss_move_and_collide(hspeed, y_speed, GroundObject);
+	if (place_meeting(x + hspeed, y, GroundObject))
+	{
+		hspeed *= -1
+	}
 }
