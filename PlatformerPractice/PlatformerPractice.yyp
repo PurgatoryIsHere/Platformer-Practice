@@ -2,7 +2,7 @@
   "$GMProject":"v1",
   "%Name":"PlatformerPractice",
   "AudioGroups":[
-    {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMAudioGroup":"v1","%Name":"audiogroup_default","exportDir":"","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
   ],
   "configs":{
     "children":[],
@@ -43,7 +43,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.13.1.193",
+    "IDEVersion":"2024.14.0.207",
   },
   "name":"PlatformerPractice",
   "resources":[
@@ -59,7 +59,10 @@
     {"id":{"name":"Area5_MinibossObject","path":"objects/Area5_MinibossObject/Area5_MinibossObject.yy",},},
     {"id":{"name":"Area5_PhaseGateObject","path":"objects/Area5_PhaseGateObject/Area5_PhaseGateObject.yy",},},
     {"id":{"name":"Area7_BossProjectileObject","path":"objects/Area7_BossProjectileObject/Area7_BossProjectileObject.yy",},},
+    {"id":{"name":"Area7_GateObject","path":"objects/Area7_GateObject/Area7_GateObject.yy",},},
     {"id":{"name":"Area7_PhaseGateObject","path":"objects/Area7_PhaseGateObject/Area7_PhaseGateObject.yy",},},
+    {"id":{"name":"Area7_PortalController","path":"objects/Area7_PortalController/Area7_PortalController.yy",},},
+    {"id":{"name":"Area7_PortalObject","path":"objects/Area7_PortalObject/Area7_PortalObject.yy",},},
     {"id":{"name":"Area8_BossObject","path":"objects/Area8_BossObject/Area8_BossObject.yy",},},
     {"id":{"name":"Area8_BossProjectileObject","path":"objects/Area8_BossProjectileObject/Area8_BossProjectileObject.yy",},},
     {"id":{"name":"Area8_Phase4BossObject","path":"objects/Area8_Phase4BossObject/Area8_Phase4BossObject.yy",},},
@@ -126,6 +129,9 @@
     {"id":{"name":"Area4","path":"rooms/Area4/Area4.yy",},},
     {"id":{"name":"Area5","path":"rooms/Area5/Area5.yy",},},
     {"id":{"name":"Area6","path":"rooms/Area6/Area6.yy",},},
+    {"id":{"name":"Area7_1","path":"rooms/Area7_1/Area7_1.yy",},},
+    {"id":{"name":"Area7_2","path":"rooms/Area7_2/Area7_2.yy",},},
+    {"id":{"name":"Area7_3","path":"rooms/Area7_3/Area7_3.yy",},},
     {"id":{"name":"Area7","path":"rooms/Area7/Area7.yy",},},
     {"id":{"name":"Area8_1","path":"rooms/Area8_1/Area8_1.yy",},},
     {"id":{"name":"Area8_2","path":"rooms/Area8_2/Area8_2.yy",},},
@@ -214,6 +220,9 @@
     {"roomId":{"name":"Area8_3_1","path":"rooms/Area8_3_1/Area8_3_1.yy",},},
     {"roomId":{"name":"Area8_3_2","path":"rooms/Area8_3_2/Area8_3_2.yy",},},
     {"roomId":{"name":"Area8_3_3","path":"rooms/Area8_3_3/Area8_3_3.yy",},},
+    {"roomId":{"name":"Area7_1","path":"rooms/Area7_1/Area7_1.yy",},},
+    {"roomId":{"name":"Area7_2","path":"rooms/Area7_2/Area7_2.yy",},},
+    {"roomId":{"name":"Area7_3","path":"rooms/Area7_3/Area7_3.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

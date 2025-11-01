@@ -1,4 +1,4 @@
-other_side = instance_nearest(240, 720, PortalObject);
+other_side = instance_nearest(240, 240, PortalObject);
 
 if(other_side == id)
 {
