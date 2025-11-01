@@ -36,6 +36,9 @@ global.isBossAlive = false
 global.drops_ability = false;
 global.ability_collected = false;
 
+//Interactions for Area7
+global.area7_key_pieces_collected = 0;
+
 //Interactions for Area8
 global.returning_from_8_1 = false;
 global.returning_from_8_2 = false;

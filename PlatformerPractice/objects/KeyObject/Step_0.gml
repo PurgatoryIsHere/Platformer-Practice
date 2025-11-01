@@ -1,7 +1,7 @@
 /// @description Key Spawn Conditions
 // You can write your code in this editor
 
-if(key_pieces_collected == key_pieces_to_collect)
+if(key_pieces_collected == key_pieces_to_collect || global.area7_key_pieces_collected == key_pieces_to_collect)
 {
 	sprite_index = KeySprite_Active;
 	key_spawned = true;

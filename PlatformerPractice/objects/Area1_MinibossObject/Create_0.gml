@@ -1,5 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
+
 /// @description Basic boss mechanics
 // You can write your code in this editor
 
@@ -9,8 +8,6 @@ boss_i_frame_timer = 0; // I-frames the boss gets upon taking damage
 
 dir = 1; // Starting Direction; can be changed depending on where boss will spawn
 y_speed = 0;
-
-global.drops_ability = false; // Whether or not the boss drops an ability for the player
 
 alarm[0] = 60 * 4; // Chooses a random attack action after 5 seconds.
 
@@ -29,12 +26,14 @@ TakeDamage = function(damage) // Basic damage calculation; aspects can be change
 	{
 		global.isBossAlive = false;
 		
-		var tiles_to_destroy = [instance_position(64, 320, GroundObject), instance_position(80, 320, GroundObject), instance_position(96, 320, GroundObject)];
+		var tiles_to_destroy = [instance_position(64, 320.099, GroundObject), instance_position(80, 320.099, GroundObject), instance_position(96, 320.099, GroundObject)];
 		
 		for(var i = 0; i < array_length(tiles_to_destroy); i++)
 		{
 			instance_destroy(tiles_to_destroy[i]);
 		}
+		
+		instance_create_layer(112, 288, "Instances", Area7_KeyPieceObject);
 		
 		instance_destroy(self);
 	}

@@ -1,4 +1,4 @@
-EventTrigger = function()
+TriggerEvent = function()
 {
 	var tiles_to_destroy = [instance_position(656, 192.099, GroundObject), instance_position(672, 192.099, GroundObject),
 	instance_position(656, 208.099, GroundObject), instance_position(672, 208.099, GroundObject)];

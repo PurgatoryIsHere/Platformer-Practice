@@ -6,6 +6,6 @@ waves = [
 	[ES_GroundEnemyObject, ES_GroundEnemyObject, ES_FreeFlyEnemyObject],
 	[ES_GroundEnemyObject, ES_FreeFlyEnemyObject, ES_FreeFlyEnemyObject, ES_FreeFlyEnemyObject, ES_FreeFlyEnemyObject]];
 	
-spawn_x_min = 2128;
-spawn_x_max = 2336;
+spawn_x_min = 56;
+spawn_x_max = 272;
 spawn_y = 688;

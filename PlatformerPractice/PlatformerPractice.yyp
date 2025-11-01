@@ -60,6 +60,8 @@
     {"id":{"name":"Area5_PhaseGateObject","path":"objects/Area5_PhaseGateObject/Area5_PhaseGateObject.yy",},},
     {"id":{"name":"Area7_BossProjectileObject","path":"objects/Area7_BossProjectileObject/Area7_BossProjectileObject.yy",},},
     {"id":{"name":"Area7_GateObject","path":"objects/Area7_GateObject/Area7_GateObject.yy",},},
+    {"id":{"name":"Area7_HeartPieceObject","path":"objects/Area7_HeartPieceObject/Area7_HeartPieceObject.yy",},},
+    {"id":{"name":"Area7_KeyPieceObject","path":"objects/Area7_KeyPieceObject/Area7_KeyPieceObject.yy",},},
     {"id":{"name":"Area7_PhaseGateObject","path":"objects/Area7_PhaseGateObject/Area7_PhaseGateObject.yy",},},
     {"id":{"name":"Area7_PortalController","path":"objects/Area7_PortalController/Area7_PortalController.yy",},},
     {"id":{"name":"Area7_PortalObject","path":"objects/Area7_PortalObject/Area7_PortalObject.yy",},},

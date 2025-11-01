@@ -39,6 +39,8 @@
     {"name":"Area5_PhaseGateObject","order":13,"path":"objects/Area5_PhaseGateObject/Area5_PhaseGateObject.yy",},
     {"name":"Area7_BossProjectileObject","order":2,"path":"objects/Area7_BossProjectileObject/Area7_BossProjectileObject.yy",},
     {"name":"Area7_GateObject","order":18,"path":"objects/Area7_GateObject/Area7_GateObject.yy",},
+    {"name":"Area7_HeartPieceObject","order":24,"path":"objects/Area7_HeartPieceObject/Area7_HeartPieceObject.yy",},
+    {"name":"Area7_KeyPieceObject","order":23,"path":"objects/Area7_KeyPieceObject/Area7_KeyPieceObject.yy",},
     {"name":"Area7_PhaseGateObject","order":16,"path":"objects/Area7_PhaseGateObject/Area7_PhaseGateObject.yy",},
     {"name":"Area7_PortalController","order":22,"path":"objects/Area7_PortalController/Area7_PortalController.yy",},
     {"name":"Area7_PortalObject","order":22,"path":"objects/Area7_PortalObject/Area7_PortalObject.yy",},

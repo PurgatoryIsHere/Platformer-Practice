@@ -168,8 +168,8 @@ if(activated)
 					if(!condition_unmet)
 					{	
 						auto_gates = [
-						instance_position(1344, 432, AutomaticGateObject), instance_position(1344, 448, AutomaticGateObject),
-						instance_position(1344, 464, AutomaticGateObject)];
+						instance_position(1344, 432.099, AutomaticGateObject), instance_position(1344, 448.099, AutomaticGateObject),
+						instance_position(1344, 464.099, AutomaticGateObject)];
 						
 						Open_Gates();
 						
@@ -183,12 +183,12 @@ if(activated)
 					
 					if(!condition_unmet)
 					{
-						instance_create_layer(1936, 144, "Instances", HeartPieceObject);
+						instance_create_layer(1920, 128, "Instances", Area7_HeartPieceObject);
 						
 						auto_gates = [
-						instance_position(1760, 112, AutomaticGateObject), 
-						instance_position(1760, 128, AutomaticGateObject),
-						instance_position(1760, 144, AutomaticGateObject)];
+						instance_position(1760, 112.099, AutomaticGateObject), 
+						instance_position(1760, 128.099, AutomaticGateObject),
+						instance_position(1760, 144.099, AutomaticGateObject)];
 						
 						Open_Gates();
 						
@@ -203,12 +203,12 @@ if(activated)
 					if(!condition_unmet)
 					{	
 						auto_gates = [
-						instance_position(2208, 688, AutomaticGateObject), instance_position(2224, 688, AutomaticGateObject)];
+						instance_position(144, 688, AutomaticGateObject), instance_position(160, 688, AutomaticGateObject)];
 						
 						Open_Gates();
 						
-						instance_create_layer(2208, 688, "Instances", BreakableBlockObject);
-						instance_create_layer(2224, 688, "Instances", BreakableBlockObject);
+						instance_create_layer(144, 688, "Instances", BreakableBlockObject);
+						instance_create_layer(160, 688, "Instances", BreakableBlockObject);
 						
 						instance_destroy(self);
 					}
