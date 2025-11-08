@@ -1,9 +1,13 @@
 TriggerEvent = function()
 {
-	inst = instance_position(864, 80, AutomaticGateObject)
+	var tiles_to_destroy = [instance_position(864, 48, AutomaticGateObject),
+	instance_position(864, 64, AutomaticGateObject), instance_position(864, 80, AutomaticGateObject)];
 	
-	if(instance_exists(inst))
+	for(var i = 0; i < array_length(tiles_to_destroy); i++)
 	{
-		instance_destroy(inst)
+		instance_destroy(tiles_to_destroy[i]);
 	}
+	
+	instance_deactivate_object(TimerObject);
+	instance_destroy(self);
 }

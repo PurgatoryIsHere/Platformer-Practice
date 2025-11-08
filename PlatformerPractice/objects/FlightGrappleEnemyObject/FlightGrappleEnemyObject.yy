@@ -13,8 +13,8 @@
     "path":"folders/Objects/EnemyObjects.yy",
   },
   "parentObjectId":{
-    "name":"EnemyParentObject",
-    "path":"objects/EnemyParentObject/EnemyParentObject.yy",
+    "name":"GrappleObject",
+    "path":"objects/GrappleObject/GrappleObject.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

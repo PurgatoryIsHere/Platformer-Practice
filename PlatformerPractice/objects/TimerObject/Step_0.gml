@@ -32,7 +32,15 @@ else if(type = "enemy")
 
 if(timer_going)
 {
-	time_remaining = alarm[1] / room_speed;
+	if(type = "")
+	{
+		time_remaining = alarm[0] / room_speed;
+	}
+	
+	else if(type = "enemy")
+	{
+		time_remaining = alarm[1] / room_speed;
+	}
 }
 
 // Screen white-out effects
