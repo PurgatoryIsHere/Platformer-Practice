@@ -1,1 +1,1 @@
-target = instance_position(368, 336, CannonObject);
+target = instance_position(368, 336, O_Cannon);

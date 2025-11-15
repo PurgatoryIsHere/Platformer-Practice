@@ -1,1 +1,1 @@
-target = instance_nearest(640, 320, CannonTargetObject);
+target = instance_nearest(640, 320, O_CannonTarget);

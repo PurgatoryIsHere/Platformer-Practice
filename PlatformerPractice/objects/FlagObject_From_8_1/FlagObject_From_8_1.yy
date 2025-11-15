@@ -8,8 +8,8 @@
   "name":"FlagObject_From_8_1",
   "overriddenProperties":[],
   "parent":{
-    "name":"InteractiveObjects",
-    "path":"folders/Objects/InteractiveObjects.yy",
+    "name":"Flags",
+    "path":"folders/Objects/InteractiveObjects/Flags.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"FlagSprite",
-    "path":"sprites/FlagSprite/FlagSprite.yy",
+    "name":"S_Flag",
+    "path":"sprites/S_Flag/S_Flag.yy",
   },
   "spriteMaskId":null,
   "visible":true,

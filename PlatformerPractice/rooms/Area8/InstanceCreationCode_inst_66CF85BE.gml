@@ -1,4 +1,4 @@
 TriggerEvent = function()
 {
-	PlayerObject.input_enabled = true;
+	O_Player.input_enabled = true;
 }

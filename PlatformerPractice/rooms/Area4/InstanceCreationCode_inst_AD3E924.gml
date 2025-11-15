@@ -3,9 +3,9 @@ tag = "layer_5"
 
 num_waves = 3;
 waves = [
-	[ES_GroundEnemyObject, ES_GroundEnemyObject, ES_FreeFlyEnemyObject],
-	[ES_GroundEnemyObject, ES_GroundEnemyObject, ES_GroundEnemyObject, ES_FreeFlyEnemyObject, ES_FreeFlyEnemyObject],
-	[ES_GroundEnemyObject, ES_GroundEnemyObject, ES_FreeFlyEnemyObject]
+	[O_GroundEnemy_ES, O_GroundEnemy_ES, O_FlyingEnemy_ES],
+	[O_GroundEnemy_ES, O_GroundEnemy_ES, O_GroundEnemy_ES, O_FlyingEnemy_ES, O_FlyingEnemy_ES],
+	[O_GroundEnemy_ES, O_GroundEnemy_ES, O_FlyingEnemy_ES]
 	];
 	
 spawn_x_min = 40;

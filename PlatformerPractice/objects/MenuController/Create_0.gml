@@ -6,9 +6,9 @@ window_center();
 window_set_cursor(cr_none);
 
 // Main menu
-menu[0][0] = PlayButtonObject;
-menu[0][1] = HelpButtonObject;
-menu[0][2] = QuitButtonObject;
+menu[0][0] = O_PlayButton;
+menu[0][1] = O_HelpButton;
+menu[0][2] = O_QuitButton;
 
 // Area selection menu - using a different structure
 menu[1][0] = "Which area?"; // Title (non-selectable)

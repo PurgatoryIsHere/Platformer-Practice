@@ -1,1 +1,1 @@
-target = instance_nearest(x, y, HeartPieceObject)
+target = instance_nearest(x, y, O_HeartPiece)

@@ -1,6 +1,6 @@
 TriggerEvent = function()
 {	
-	with(PillarObject)
+	with(O_Pillar)
 	{
 		alarm_triggered = true;
 		alarm[0] = 30; // Delay before destruction

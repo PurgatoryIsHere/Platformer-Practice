@@ -1,1 +1,1 @@
-target = instance_nearest(x, y, Area5_BossObject)
+target = instance_nearest(x, y, O_A5Boss)

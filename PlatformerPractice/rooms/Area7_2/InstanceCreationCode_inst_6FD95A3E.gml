@@ -3,8 +3,8 @@ tag = "area_3_section_arena";
 
 num_waves = 2;
 waves = [
-	[ES_GroundEnemyObject, ES_GroundEnemyObject, ES_FreeFlyEnemyObject],
-	[ES_GroundEnemyObject, ES_FreeFlyEnemyObject, ES_FreeFlyEnemyObject, ES_FreeFlyEnemyObject, ES_FreeFlyEnemyObject]];
+	[O_GroundEnemy_ES, O_GroundEnemy_ES, O_FlyingEnemy_ES],
+	[O_GroundEnemy_ES, O_FlyingEnemy_ES, O_FlyingEnemy_ES, O_FlyingEnemy_ES, O_FlyingEnemy_ES]];
 	
 spawn_x_min = 56;
 spawn_x_max = 272;
