@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"GroundSprite",
-    "path":"sprites/GroundSprite/GroundSprite.yy",
+    "name":"TopGroundSprite",
+    "path":"sprites/TopGroundSprite/TopGroundSprite.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -123,6 +123,7 @@
     {"name":"UnlockTest","order":5,"path":"rooms/UnlockTest/UnlockTest.yy",},
     {"name":"WallJumpTest","order":3,"path":"rooms/WallJumpTest/WallJumpTest.yy",},
     {"name":"Area3_BossMinionSprite","order":5,"path":"sprites/Area3_BossMinionSprite/Area3_BossMinionSprite.yy",},
+    {"name":"Area3BossSprite","order":8,"path":"sprites/Area3BossSprite/Area3BossSprite.yy",},
     {"name":"Area5_BossLandingSprite","order":6,"path":"sprites/Area5_BossLandingSprite/Area5_BossLandingSprite.yy",},
     {"name":"Area5_BossProjectileSprite","order":12,"path":"sprites/Area5_BossProjectileSprite/Area5_BossProjectileSprite.yy",},
     {"name":"Area8_BossSprite","order":7,"path":"sprites/Area8_BossSprite/Area8_BossSprite.yy",},
@@ -162,6 +163,7 @@
     {"name":"TimerGateSprite","order":14,"path":"sprites/TimerGateSprite/TimerGateSprite.yy",},
     {"name":"TimerOffSprite","order":16,"path":"sprites/TimerOffSprite/TimerOffSprite.yy",},
     {"name":"TimerOnSprite","order":17,"path":"sprites/TimerOnSprite/TimerOnSprite.yy",},
+    {"name":"TopGroundSprite","order":15,"path":"sprites/TopGroundSprite/TopGroundSprite.yy",},
     {"name":"TopSpikeSprite","order":10,"path":"sprites/TopSpikeSprite/TopSpikeSprite.yy",},
   ],
 }

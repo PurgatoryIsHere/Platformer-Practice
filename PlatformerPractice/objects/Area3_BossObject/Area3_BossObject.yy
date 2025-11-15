@@ -36,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"GroundEnemySprite",
-    "path":"sprites/GroundEnemySprite/GroundEnemySprite.yy",
+    "name":"Area3BossSprite",
+    "path":"sprites/Area3BossSprite/Area3BossSprite.yy",
   },
   "spriteMaskId":null,
   "visible":true,
