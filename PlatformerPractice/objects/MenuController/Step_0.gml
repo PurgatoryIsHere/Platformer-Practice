@@ -28,6 +28,11 @@ if(_move != 0)
 		}
 	}
 	
+	else if(sub_menu == 2)
+	{
+		index = 7;
+	}
+	
 	else
 	{
 		if(index < 0)
@@ -50,9 +55,7 @@ if(_select)
 		
 			if(index == 0)
 			{
-				//room_goto(Area5);
-
-				sub_menu = 1;
+				sub_menu = 1; // Go to Play menu
 				layer_set_visible("MainMenu", false)
 				index = 1;
 
@@ -60,7 +63,9 @@ if(_select)
 	
 			else if(index == 1)
 			{
-				
+				sub_menu = 2; // Go to Controls menu
+				layer_set_visible("MainMenu", false);
+				index = 7;
 			}
 	
 			else if(index == 2)
@@ -71,6 +76,17 @@ if(_select)
 		break;
 			
 		case 1:
+		
+			/*
+			if(index == 1)
+			{
+				room_goto(Tutorial);
+			}
+			
+			else if(index == 2)
+			{
+				room_goto(Area1);
+			}*/
 		
 			if(index == 1)
 			{
@@ -138,6 +154,16 @@ if(_select)
 			}
 			
 		break;
+		
+		case 2:
+		
+			if(index == 7)
+			{
+				sub_menu = 0;
+				layer_set_visible("MainMenu", true);
+				index = 0;
+			}
 			
+		break;
 	}
 }

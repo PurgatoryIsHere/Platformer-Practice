@@ -34,3 +34,22 @@ if(sub_menu == 1)
         draw_text(_x, _y, menu[sub_menu][i]);
     }
 }
+
+if(sub_menu == 2)
+{
+    draw_set_colour(c_white);
+    draw_text(room_width / 2, room_height * .2, menu[2][0]); // Title
+    
+    var _start_y = room_height * .35;
+    var _gap_y = 50;
+    
+    for(var i = 1; i < array_length(menu[2]); ++i)
+    {
+        var _y = _start_y + (i-1) * _gap_y;
+        
+        draw_set_colour(c_white);
+        if(i == index) draw_set_colour(c_teal);
+        
+        draw_text(room_width / 2, _y, menu[2][i]);
+    }
+}
