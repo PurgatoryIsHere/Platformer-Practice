@@ -165,5 +165,6 @@
     {"name":"S_TimerGate","order":3,"path":"sprites/S_TimerGate/S_TimerGate.yy",},
     {"name":"S_TopGround","order":15,"path":"sprites/S_TopGround/S_TopGround.yy",},
     {"name":"S_TopSpike","order":3,"path":"sprites/S_TopSpike/S_TopSpike.yy",},
+    {"name":"Sprite48","order":10,"path":"sprites/Sprite48/Sprite48.yy",},
   ],
 }

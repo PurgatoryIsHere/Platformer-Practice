@@ -49,7 +49,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.0.207",
+    "IDEVersion":"2024.14.1.210",
   },
   "name":"PlatformerPractice",
   "resources":[
@@ -204,6 +204,7 @@
     {"id":{"name":"S_TopGround","path":"sprites/S_TopGround/S_TopGround.yy",},},
     {"id":{"name":"S_TopSpike","path":"sprites/S_TopSpike/S_TopSpike.yy",},},
     {"id":{"name":"S_Warning","path":"sprites/S_Warning/S_Warning.yy",},},
+    {"id":{"name":"Sprite48","path":"sprites/Sprite48/Sprite48.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
