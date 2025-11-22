@@ -160,6 +160,7 @@
     {"id":{"name":"S_A1Boss","path":"sprites/S_A1Boss/S_A1Boss.yy",},},
     {"id":{"name":"S_A3Boss","path":"sprites/S_A3Boss/S_A3Boss.yy",},},
     {"id":{"name":"S_A3BossMinion","path":"sprites/S_A3BossMinion/S_A3BossMinion.yy",},},
+    {"id":{"name":"S_A5Boss","path":"sprites/S_A5Boss/S_A5Boss.yy",},},
     {"id":{"name":"S_A5BossLanding","path":"sprites/S_A5BossLanding/S_A5BossLanding.yy",},},
     {"id":{"name":"S_A5BossProjectile","path":"sprites/S_A5BossProjectile/S_A5BossProjectile.yy",},},
     {"id":{"name":"S_A8Boss","path":"sprites/S_A8Boss/S_A8Boss.yy",},},
