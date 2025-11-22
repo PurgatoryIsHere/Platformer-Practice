@@ -51,5 +51,12 @@ if(sub_menu == 2)
         if(i == index) draw_set_colour(c_teal);
         
         draw_text(room_width / 2, _y, menu[2][i]);
+		
+		if(waiting_for_input)
+		{
+			draw_set_colour(c_white);
+			draw_text_transformed(room_width / 2, room_height * 0.9, "Press a key to rebind...", 0.8, 0.8, 0);
+		}
+
     }
 }

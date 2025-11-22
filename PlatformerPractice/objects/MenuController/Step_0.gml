@@ -7,7 +7,7 @@ var _select = keyboard_check_pressed(vk_enter);
 
 var _move = _down - _up;
 
-if(_move != 0)
+if(_move != 0 && !waiting_for_input)
 {
 	// Move the index
 	index += _move;
@@ -15,7 +15,7 @@ if(_move != 0)
 	// Clamp values (ensure selection cycles through menu options)
 	var _size = array_length(menu[sub_menu]);
 	
-	if(sub_menu == 1)
+	if(sub_menu == 1 || sub_menu == 2)
 	{
 		if(index < 1)
 		{
@@ -26,11 +26,6 @@ if(_move != 0)
 		{
 			index = 1; // At end, so loop to first menu option
 		}
-	}
-	
-	else if(sub_menu == 2)
-	{
-		index = 7;
 	}
 	
 	else
@@ -65,7 +60,7 @@ if(_select)
 			{
 				sub_menu = 2; // Go to Controls menu
 				layer_set_visible("MainMenu", false);
-				index = 7;
+				index = 1;
 			}
 	
 			else if(index == 2)
@@ -157,13 +152,76 @@ if(_select)
 		
 		case 2:
 		
-			if(index == 7)
+			if(!waiting_for_input)
 			{
-				sub_menu = 0;
-				layer_set_visible("MainMenu", true);
-				index = 0;
+				if(index >= 1 || index <= 6)
+				{
+					waiting_for_input = true;
+					locked_index = index;
+				}
+		
+				if(index == 7)
+				{
+					sub_menu = 0;
+					layer_set_visible("MainMenu", true);
+					index = 1;
+				}
 			}
 			
 		break;
 	}
 }
+
+// Step event
+if(waiting_for_input)
+{
+    var new_keybind = keyboard_lastkey;
+
+    // Ignore Enter (since it was the selection key)
+    if(new_keybind != vk_enter)
+    {
+        switch(locked_index)
+        {
+            case 1: 
+			
+                global.left_key = new_keybind;
+                menu[2][1] = "Move Left: " + keycode_to_string(new_keybind);
+            break;
+			
+			case 2: 
+			
+                global.right_key = new_keybind;
+                menu[2][2] = "Move Right: " + keycode_to_string(new_keybind);
+            break;
+			
+			case 3: 
+			
+                global.jump_key = new_keybind;
+                menu[2][3] = "Jump: " + keycode_to_string(new_keybind);
+            break;
+			
+			case 4: 
+			
+                global.dash_key = new_keybind;
+                menu[2][4] = "Dash: " + keycode_to_string(new_keybind);
+            break;
+			
+			case 5: 
+			
+                global.gp_key = new_keybind;
+                menu[2][5] = "Ground Pound: " + keycode_to_string(new_keybind);
+				
+            break;
+			
+			case 6: 
+	
+                global.grapple_key = new_keybind;
+                menu[2][6] = "Grapple: " + keycode_to_string(new_keybind);
+				
+            break;
+        }
+		
+        waiting_for_input = false;
+    }
+}
+

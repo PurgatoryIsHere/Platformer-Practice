@@ -15,8 +15,11 @@ if (!beingFired)
 if(input_enabled)
 {
 	// Player Functionality
+	
+	var left = keyboard_check(global.left_key);
+	var right = keyboard_check(global.right_key);
 
-	dir = keyboard_check(ord("D")) - keyboard_check(ord("A")) // Direction the player is facing
+	dir = right - left; // Direction the player is facing
 
 	onGround = place_meeting(x, y + sprite_height, O_Ground) || place_meeting(x, y + y_speed, O_Shelf);
 	onWall = place_meeting(x - 1.5, y, O_Ground) - place_meeting(x + 1.5, y, O_Ground)
@@ -54,7 +57,7 @@ if(input_enabled)
 	}
 	
 	// Jumping
-	if(keyboard_check_pressed(ord("W")) && jump_counter < 2)
+	if(keyboard_check_pressed(global.jump_key) && jump_counter < 2)
 	{
 		if(onWall != 0 && !onGround)
 		{
@@ -134,38 +137,6 @@ if(input_enabled)
 	y += y_speed
 
 
-	// Handle movement for dashing
-	if (dash_timer > 0) 
-	{
-		var new_x = dir * dash_speed
-	
-		if(ground_dash)
-		{
-			move_and_collide(new_x, 0, O_Ground)
-	
-		}
-	
-		else
-		{
-			move_and_collide(new_x, -1.5, O_Ground)
-		}
-	
-		// Dash visualization
-		with(instance_create_depth(x, y, depth + 1, O_Trail))
-		{
-			sprite_index = other.sprite_index
-			image_blend = c_fuchsia
-			image_alpha = 0.7
-		}
-	}
-
-	else
-	{
-		dashing = false
-		ground_dash = false
-	}
-
-
 	// Wall Jumping
 	if(onWall != 0 && !onGround && !groundPounding)
 	{
@@ -235,7 +206,12 @@ if(input_enabled)
 		// No target exists
 		target_in_range = false
 	}
-
+	
+	if (target_in_range && keyboard_check_pressed(global.grapple_key) && !grappling && grapple_cooldown == 0 && global.grappleUnlock)
+	{
+		grappling = true
+		grapple_cooldown = 15
+	}
 
 	// Handle movement for grappling
 	if (grappling) 
@@ -259,10 +235,66 @@ if(input_enabled)
 			y_speed = -2.5
 		}
 	}
+	
+	// Dashing
+	
+	if(keyboard_check_pressed(global.dash_key) && !grappling)
+	{
+		if(onGround && (dir != 0) && dash_cooldown == 0)	
+		{
+			dash_timer = 10
+			dash_speed = 5
+			dashing = true
+			ground_dash = true
+	
+			i_frame_timer = 32
+			dash_cooldown = 40
+		}
+
+		else if(canDash && !onGround)
+		{
+			canDash = false
+			dash_timer = 10 // Number of frames for the dash
+			dash_speed = 5
+			dashing = true
+		}
+	}
+
+
+	// Handle movement for dashing
+	if (dash_timer > 0) 
+	{
+		var new_x = dir * dash_speed
+	
+		if(ground_dash)
+		{
+			move_and_collide(new_x, 0, O_Ground)
+	
+		}
+	
+		else
+		{
+			move_and_collide(new_x, -1.5, O_Ground)
+		}
+	
+		// Dash visualization
+		with(instance_create_depth(x, y, depth + 1, O_Trail))
+		{
+			sprite_index = other.sprite_index
+			image_blend = c_fuchsia
+			image_alpha = 0.7
+		}
+	}
+
+	else
+	{
+		dashing = false
+		ground_dash = false
+	}
 
 
 	// Ground Pound
-	if(!onGround && keyboard_check_pressed(ord("S")) && global.groundPoundUnlock)
+	if(!onGround && keyboard_check_pressed(global.gp_key) && global.groundPoundUnlock)
 	{
 		x_speed = 0
 		y_speed = 5

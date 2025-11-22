@@ -45,4 +45,12 @@ global.returning_from_8_2 = false;
 global.area8_returnX = 0;
 global.area8_returnY = 0;
 
+// Keybinds
+global.left_key = ord("A");
+global.right_key = ord("D");
+global.jump_key = ord("W");
+global.dash_key = vk_space;
+global.gp_key = ord("S");
+global.grapple_key = vk_space;
+
 randomize()
