@@ -157,6 +157,7 @@
     {"id":{"name":"UnlockTest","path":"rooms/UnlockTest/UnlockTest.yy",},},
     {"id":{"name":"WallJumpTest","path":"rooms/WallJumpTest/WallJumpTest.yy",},},
     {"id":{"name":"collapse_tile","path":"scripts/collapse_tile/collapse_tile.yy",},},
+    {"id":{"name":"S_A1Boss","path":"sprites/S_A1Boss/S_A1Boss.yy",},},
     {"id":{"name":"S_A3Boss","path":"sprites/S_A3Boss/S_A3Boss.yy",},},
     {"id":{"name":"S_A3BossMinion","path":"sprites/S_A3BossMinion/S_A3BossMinion.yy",},},
     {"id":{"name":"S_A5BossLanding","path":"sprites/S_A5BossLanding/S_A5BossLanding.yy",},},

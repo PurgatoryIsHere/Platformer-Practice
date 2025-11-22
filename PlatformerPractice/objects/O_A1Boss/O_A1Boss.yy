@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"S_GroundEnemy",
-    "path":"sprites/S_GroundEnemy/S_GroundEnemy.yy",
+    "name":"S_A1Boss",
+    "path":"sprites/S_A1Boss/S_A1Boss.yy",
   },
   "spriteMaskId":null,
   "visible":true,

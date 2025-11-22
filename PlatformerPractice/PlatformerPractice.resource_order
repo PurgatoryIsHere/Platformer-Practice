@@ -124,6 +124,7 @@
     {"name":"Tutorial","order":8,"path":"rooms/Tutorial/Tutorial.yy",},
     {"name":"UnlockTest","order":5,"path":"rooms/UnlockTest/UnlockTest.yy",},
     {"name":"WallJumpTest","order":3,"path":"rooms/WallJumpTest/WallJumpTest.yy",},
+    {"name":"S_A1Boss","order":11,"path":"sprites/S_A1Boss/S_A1Boss.yy",},
     {"name":"S_A3Boss","order":8,"path":"sprites/S_A3Boss/S_A3Boss.yy",},
     {"name":"S_A3BossMinion","order":5,"path":"sprites/S_A3BossMinion/S_A3BossMinion.yy",},
     {"name":"S_A5BossLanding","order":6,"path":"sprites/S_A5BossLanding/S_A5BossLanding.yy",},
