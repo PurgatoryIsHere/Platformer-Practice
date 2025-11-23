@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"S_A3BossMinion",
-    "path":"sprites/S_A3BossMinion/S_A3BossMinion.yy",
+    "name":"S_GroundEnemy",
+    "path":"sprites/S_GroundEnemy/S_GroundEnemy.yy",
   },
   "spriteMaskId":null,
   "visible":true,
