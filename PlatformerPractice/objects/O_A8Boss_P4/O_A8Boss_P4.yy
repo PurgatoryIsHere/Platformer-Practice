@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"S_A8Boss",
-    "path":"sprites/S_A8Boss/S_A8Boss.yy",
+    "name":"S_A8BossPhase4",
+    "path":"sprites/S_A8BossPhase4/S_A8BossPhase4.yy",
   },
   "spriteMaskId":null,
   "visible":true,

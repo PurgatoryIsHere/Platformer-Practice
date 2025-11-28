@@ -164,6 +164,7 @@
     {"id":{"name":"S_A5BossLanding","path":"sprites/S_A5BossLanding/S_A5BossLanding.yy",},},
     {"id":{"name":"S_A5BossProjectile","path":"sprites/S_A5BossProjectile/S_A5BossProjectile.yy",},},
     {"id":{"name":"S_A8Boss","path":"sprites/S_A8Boss/S_A8Boss.yy",},},
+    {"id":{"name":"S_A8BossPhase4","path":"sprites/S_A8BossPhase4/S_A8BossPhase4.yy",},},
     {"id":{"name":"S_AutoGate","path":"sprites/S_AutoGate/S_AutoGate.yy",},},
     {"id":{"name":"S_AutoGateDetection","path":"sprites/S_AutoGateDetection/S_AutoGateDetection.yy",},},
     {"id":{"name":"S_BottomlessPit","path":"sprites/S_BottomlessPit/S_BottomlessPit.yy",},},
