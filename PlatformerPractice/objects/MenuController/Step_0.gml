@@ -154,7 +154,7 @@ if(_select)
 		
 			if(!waiting_for_input)
 			{
-				if(index >= 1 || index <= 6)
+				if(index >= 1 && index <= 6)
 				{
 					waiting_for_input = true;
 					locked_index = index;
