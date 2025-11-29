@@ -50,10 +50,6 @@ flight_traveled = 0;
 // Invincibility Frames
 i_frame_timer = 0
 
-//Pause Functionality
-paused = false;
-paused_surf = -1;
-
 camera_width = camera_get_view_width(view_camera[0])
 camera_height = camera_get_view_height(view_camera[0])
 

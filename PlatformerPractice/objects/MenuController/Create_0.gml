@@ -41,7 +41,8 @@ menu[2][3] = "Jump: W";
 menu[2][4] = "Dash: Space";
 menu[2][5] = "Ground Pound: S";
 menu[2][6] = "Grapple: Space";
-menu[2][7] = "Back to Main Menu";
+menu[2][7] = "Pause: Backspace";
+menu[2][8] = "Back to Main Menu";
 
 index = 0;
 sub_menu = 0;

@@ -160,7 +160,7 @@ if(_select)
 					locked_index = index;
 				}
 		
-				if(index == 7)
+				if(index == 8)
 				{
 					sub_menu = 0;
 					layer_set_visible("MainMenu", true);

@@ -86,6 +86,7 @@
     {"name":"O_HiddenWall","order":13,"path":"objects/O_HiddenWall/O_HiddenWall.yy",},
     {"name":"O_Key","order":6,"path":"objects/O_Key/O_Key.yy",},
     {"name":"O_KeyPiece","order":7,"path":"objects/O_KeyPiece/O_KeyPiece.yy",},
+    {"name":"O_Pause","order":23,"path":"objects/O_Pause/O_Pause.yy",},
     {"name":"O_Pillar","order":15,"path":"objects/O_Pillar/O_Pillar.yy",},
     {"name":"O_PlayButton","order":2,"path":"objects/O_PlayButton/O_PlayButton.yy",},
     {"name":"O_Portal","order":9,"path":"objects/O_Portal/O_Portal.yy",},

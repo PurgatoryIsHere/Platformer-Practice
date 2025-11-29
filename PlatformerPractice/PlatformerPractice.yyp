@@ -49,7 +49,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.1.210",
+    "IDEVersion":"2024.14.0.207",
   },
   "name":"PlatformerPractice",
   "resources":[
@@ -115,6 +115,7 @@
     {"id":{"name":"O_Key","path":"objects/O_Key/O_Key.yy",},},
     {"id":{"name":"O_KeyPiece","path":"objects/O_KeyPiece/O_KeyPiece.yy",},},
     {"id":{"name":"O_LeftSpike","path":"objects/O_LeftSpike/O_LeftSpike.yy",},},
+    {"id":{"name":"O_Pause","path":"objects/O_Pause/O_Pause.yy",},},
     {"id":{"name":"O_Pillar","path":"objects/O_Pillar/O_Pillar.yy",},},
     {"id":{"name":"O_PlayButton","path":"objects/O_PlayButton/O_PlayButton.yy",},},
     {"id":{"name":"O_Player","path":"objects/O_Player/O_Player.yy",},},

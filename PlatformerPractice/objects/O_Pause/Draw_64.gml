@@ -1,0 +1,60 @@
+/// @description Pause Screen Text
+// You can write your code in this editor
+
+draw_set_font(global.default_font);
+draw_set_halign(fa_center);
+draw_set_valign(fa_middle);
+
+if(pause && surface_exists(pause_surf)) 
+{
+    var gui_w = display_get_gui_width();
+    var gui_h = display_get_gui_height();
+
+    // Draw frozen screen
+    draw_surface(pause_surf, 0, 0);
+
+    // Dim overlay
+    draw_set_alpha(0.5);
+    draw_rectangle_colour(0, 0, gui_w, gui_h, c_black, c_black, c_black, c_black, false);
+    draw_set_alpha(1);
+
+    // Menu content
+    var lines = [
+        "PAUSED",
+        "Heart pieces collected: " + string(global.heart_pieces_collected) + "/" + string(global.heart_pieces_to_collect[room]),
+        "Press R to Restart",
+        "Press Q to Return to Menu"
+    ];
+
+    var title_scale = 2;   // bigger for "PAUSED"
+    var text_scale  = 1.5; // slightly larger than default
+    var line_spacing = 50; // vertical spacing between lines
+
+    // Calculate total block height
+    var total_height = (title_scale * 16) + (array_length(lines) - 1) * line_spacing;
+    var start_y = (gui_h / 2) - (total_height / 2);
+
+    // Draw each line
+    for(var i = 0; i < array_length(lines); i++) 
+	{
+        var y_pos = start_y + i * line_spacing;
+		
+        if(i == 0) 
+		{
+            // PAUSED
+            draw_text_transformed_colour(gui_w / 2, y_pos, lines[i], title_scale, title_scale, 0, c_aqua, c_aqua, c_aqua, c_aqua, 1);
+        } 
+		
+		else 
+		{
+            // Other lines
+            draw_text_transformed(gui_w / 2, y_pos, lines[i], text_scale, text_scale, 0);
+        }
+    }
+
+    // Reset alignment
+    draw_set_halign(global.default_halign);
+    draw_set_valign(global.default_valign);
+}
+
+
