@@ -178,7 +178,7 @@ if(waiting_for_input)
     var new_keybind = keyboard_lastkey;
 
     // Ignore Enter (since it was the selection key)
-    if(new_keybind != vk_enter)
+    if(new_keybind != vk_enter && new_keybind != ord("R") && new_keybind != ord("r") && new_keybind != vk_backspace)
     {
         switch(locked_index)
         {
