@@ -41,7 +41,7 @@ if(input_enabled)
 
 	var holdingLeft = keyboard_check(ord("A"))
 	var holdingRight = keyboard_check(ord("D"))
-
+	 
 	// Reduce timers and/or cooldowns, frame-by-frame
 	dash_timer = max(dash_timer - 1, 0)
 	wall_jump_timer = max(wall_jump_timer - 1, 0)
@@ -59,10 +59,12 @@ if(input_enabled)
 	// Jumping
 	if(keyboard_check_pressed(global.jump_key) && jump_counter < 2)
 	{
+		sprite_index = S_PlayerJump
+		
 		if(onWall != 0 && !onGround)
 		{
 			if(onWall != 0 && last_wall != onWall)
-			{
+			{	
 				wall_jump_timer = 0;
 				wall_jump_timer = 5;
 				last_wall = onWall;
@@ -76,7 +78,7 @@ if(input_enabled)
 	
 		else if (global.doubleJumpUnlock)
 		{
-			y_speed = -2.5
+			y_speed =  -2.5
 			jump_counter += 1
 			canDash = true
 		}
@@ -209,6 +211,7 @@ if(input_enabled)
 	
 	if (target_in_range && keyboard_check_pressed(global.grapple_key) && !grappling && grapple_cooldown == 0 && global.grappleUnlock)
 	{
+		sprite_index = S_PlayerGrapple
 		grappling = true
 		grapple_cooldown = 15
 	}
@@ -224,6 +227,8 @@ if(input_enabled)
 			// Move toward target
 			x_speed = lengthdir_x(grapple_speed, dir_to_target)
 			y_speed = lengthdir_y(grapple_speed, dir_to_target)
+			
+			sprite_index = S_PlayerGrappling
 		} 
 	
 		else
@@ -240,6 +245,8 @@ if(input_enabled)
 	
 	if(keyboard_check_pressed(global.dash_key) && !grappling)
 	{
+		sprite_index = S_PlayerDash
+		
 		if(onGround && (dir != 0) && dash_cooldown == 0)	
 		{
 			dash_timer = 10
@@ -280,7 +287,7 @@ if(input_enabled)
 		// Dash visualization
 		with(instance_create_depth(x, y, depth + 1, O_Trail))
 		{
-			sprite_index = other.sprite_index
+			sprite_index = S_PlayerDashing
 			image_blend = c_fuchsia
 			image_alpha = 0.7
 		}
@@ -296,13 +303,15 @@ if(input_enabled)
 	// Ground Pound
 	if(!onGround && keyboard_check_pressed(global.gp_key) && global.groundPoundUnlock)
 	{
+		sprite_index = S_PlayerGroundPound
+		
 		x_speed = 0
 		y_speed = 5
 		groundPounding = true
 	
 		with(instance_create_depth(x, y, depth + 1, O_Trail))
 		{
-			sprite_index = other.sprite_index
+			sprite_index = S_PlayerGroundPoundFall
 			image_blend = c_fuchsia
 			image_alpha = 0.7
 		}
@@ -356,3 +365,43 @@ if(input_enabled)
 // Handle standard movement
 move_and_collide(x_speed, y_speed, O_Ground)
  
+//Sprite Logic
+if (dashing || grappling || groundPounding)
+{
+    // Keep the special move sprite, exit sprite logic
+}
+//Ground Pounding
+else if (groundPounding)
+{
+	sprite_index = S_PlayerGroundPoundFall	
+}
+//Dashing
+else if (dashing)
+{
+	sprite_index = S_PlayerDashing	
+}
+//Wall slide (when on wall, in air, and falling)
+else if (onWall != 0 && !place_meeting(x, y + 1, O_Ground) && y_speed > 0)
+{
+    sprite_index = S_PlayerOnWall
+}
+//Falling
+else if (place_empty(x, y + 1, O_Ground) && y_speed > 0)
+{
+    sprite_index = S_PlayerMidairFalling
+}
+//Rising/jumping
+else if (place_empty(x, y + 1, O_Ground) && y_speed < 0)
+{
+    sprite_index = S_PlayerMidairRising
+}
+//Running
+else if (place_meeting(x, y + 1, O_Ground) && x_speed != 0)
+{
+    sprite_index = S_PlayerRun
+}
+//Idle
+else
+{
+    sprite_index = S_Player	
+}

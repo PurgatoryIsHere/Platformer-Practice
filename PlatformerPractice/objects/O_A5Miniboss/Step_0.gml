@@ -1,4 +1,4 @@
-/// @description Insert description here
+  /// @description Insert description here
 // You can write your code in this editor
 
 if (place_meeting(x, y, O_Player) && O_Player.beingFired)
@@ -18,7 +18,7 @@ if (place_meeting(x, y, O_Player) && O_Player.beingFired)
 	}
 }
 
-if (point_distance(x, y, next_site.x, next_site.y) > 2)
+if (point_distance(x, y, next_site.x, next_site.y) > 2 )
 {
 	direction = point_direction(x, y, next_site.x, next_site.y)
 	speed = 2

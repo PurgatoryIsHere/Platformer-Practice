@@ -3,7 +3,7 @@
 
 alarm[0] =  60 * 3;
 
-phase = 1
+phase = 1 
 
 next_site = 0
 

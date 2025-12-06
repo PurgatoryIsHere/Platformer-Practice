@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"S_GrappleEnemy",
-    "path":"sprites/S_GrappleEnemy/S_GrappleEnemy.yy",
+    "name":"S_A5Boss",
+    "path":"sprites/S_A5Boss/S_A5Boss.yy",
   },
   "spriteMaskId":null,
   "visible":true,
