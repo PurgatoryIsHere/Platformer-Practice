@@ -89,8 +89,8 @@ if(input_enabled)
 		last_wall = 0;
 	}
 
-	var holdingLeft = keyboard_check(ord("A"))
-	var holdingRight = keyboard_check(ord("D"))
+	var holdingLeft = keyboard_check(global.left_key)
+	var holdingRight = keyboard_check(global.right_key)
 	 
 	// Reduce timers and/or cooldowns, frame-by-frame
 	dash_timer = max(dash_timer - 1, 0)
@@ -287,27 +287,23 @@ if(input_enabled)
 	
 	// Dashing
 	
-	if(keyboard_check_pressed(global.dash_key) && !grappling)
+	if(keyboard_check_pressed(global.dash_key) && !grappling && dash_cooldown == 0)
 	{
-		sprite_index = S_PlayerDash
-		
-		if(onGround && (dir != 0) && dash_cooldown == 0)	
-		{
-			dash_timer = 10
-			dash_speed = 5
-			dashing = true
-			ground_dash = true
-	
-			i_frame_timer = 32
-			dash_cooldown = 40
-		}
+		sprite_index = S_PlayerDash;
+		dash_timer = 10;
+		dash_speed = 5;
+		dashing = true;
+		i_frame_timer = 32;
+		dash_cooldown = 40;
 
-		else if(canDash && !onGround)
+		if (onGround && dir != 0)
 		{
-			canDash = false
-			dash_timer = 10 // Number of frames for the dash
-			dash_speed = 5
-			dashing = true
+			ground_dash = true;
+		}
+		
+		else if (!onGround)
+		{
+			ground_dash = false;
 		}
 	}
 
