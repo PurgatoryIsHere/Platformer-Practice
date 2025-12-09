@@ -1,4 +1,4 @@
-/// @description Player Actions
+ /// @description Player Actions
 // You can write your code in this editor
 
 // Ensure camera remains centered on player
@@ -12,6 +12,56 @@ if (!beingFired)
 	y_speed += 0.2 // Gravity
 }
 
+if(place_meeting(x, y, O_Ground)) {
+	for(var i = 0; i < 1000; ++i) {
+		//Right
+		if(!place_meeting(x + i, y, O_Ground)) {
+			x += i;
+			break;
+		}
+		//Left
+		if(!place_meeting(x - i, y, O_Ground)) {
+			x -= i;
+			break;
+		}
+		//Up
+		if(!place_meeting(x, y - i, O_Ground)) {
+			y -= i;
+			break;
+		}
+		//Down
+		if(!place_meeting(x, y + i, O_Ground)) {
+			y += i;
+			break;
+		}
+		//Top Right
+		if(!place_meeting(x + i, y - i, O_Ground)) {
+			x += i;
+			y -= i;
+			break;
+		}
+		//Top Left
+		if(!place_meeting(x - i, y - i, O_Ground)) {
+			x -= i;
+			y -= i;
+			break;
+		}
+		//Bottom Right
+		if(!place_meeting(x + i, y + i, O_Ground)) {
+			x += i;
+			y += i;
+			break;
+		}
+		//Bottom Left
+		if(!place_meeting(x - i, y + i, O_Ground)) {
+			x -= i;
+			y += i;
+			break;
+		}
+	}
+}
+
+
 if(input_enabled)
 {
 	// Player Functionality
@@ -21,7 +71,7 @@ if(input_enabled)
 
 	dir = right - left; // Direction the player is facing
 
-	onGround = place_meeting(x, y + sprite_height, O_Ground) || place_meeting(x, y + y_speed, O_Shelf);
+	onGround = place_meeting(x, y + bbox_bottom, O_Ground) || place_meeting(x, y + y_speed, O_Shelf);
 	onWall = place_meeting(x - 1.5, y, O_Ground) - place_meeting(x + 1.5, y, O_Ground)
 
 	if(onWall == 1)
@@ -50,9 +100,7 @@ if(input_enabled)
 	grapple_cooldown = max(grapple_cooldown - 1, 0)
 	dash_cooldown = max(dash_cooldown - 1, 0)
 
-
-	if(!beingFired) 
-	{
+ 
 		x_speed = dir * 2
 	}
 	
@@ -105,7 +153,6 @@ if(input_enabled)
 				while(!place_meeting(x, y + sign(y_speed), O_Shelf))
 				{
 					y += sign(y_speed)
-					vspeed = 0
 				}
 			
 				jump_counter = 0
@@ -131,13 +178,10 @@ if(input_enabled)
 			}
         
 			y_speed = 0
-			wall_jump_timer = 0;
+			wall_jump_timer = 0; 
 			last_wall = 0;
 		}
 	}
-
-	y += y_speed
-
 
 	// Wall Jumping
 	if(onWall != 0 && !onGround && !groundPounding)
@@ -360,7 +404,7 @@ if(input_enabled)
 			show_debug_message("Hit obstacle during flight");
 		}
 	}
-}
+
 
 // Handle standard movement
 move_and_collide(x_speed, y_speed, O_Ground)
@@ -383,7 +427,14 @@ else if (dashing)
 //Wall slide (when on wall, in air, and falling)
 else if (onWall != 0 && !place_meeting(x, y + 1, O_Ground) && y_speed > 0)
 {
-    sprite_index = S_PlayerOnWall
+    if (onWall > 0)
+	{
+		sprite_index = S_PlayerOnWallLeft
+	}
+	else if (onWall < 0)
+	{
+		sprite_index = S_PlayerOnWallRight
+	}
 }
 //Falling
 else if (place_empty(x, y + 1, O_Ground) && y_speed > 0)
