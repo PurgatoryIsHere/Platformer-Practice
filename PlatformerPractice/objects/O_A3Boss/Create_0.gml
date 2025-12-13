@@ -9,6 +9,10 @@ dir = 1; // Starting Direction; can be changed depending on where boss will spaw
 
 global.drops_ability = true; // Whether or not the boss drops an ability for the player
 
+ground_pounding = false;
+destroy_platform_triggered = false;
+respawn_platform_triggered = false;
+
 TakeDamage = function(damage) // Basic damage calculation; aspects can be changed for each boss
 {
 	boss_health -= damage;
@@ -189,4 +193,32 @@ Pillar_Drop_3 = function()
 GroundPoundAOE = function()
 {
 	O_Player.TakeDamage(25);
+}
+
+DestroyPlatform = function()
+{
+	var starting_x = 224;
+	
+	while(starting_x <= 416)
+    {
+		var tile = instance_position(starting_x, 688, O_BreakableBlock);
+		instance_destroy(tile);
+		
+		starting_x += 16;
+    }
+	
+	destroy_platform_triggered = true;
+}
+
+RespawnPlatform = function()
+{
+	var starting_x = 224;
+	
+	while(starting_x <= 416)
+    {
+		instance_create_layer(starting_x, 688, "Instances", O_BreakableBlock);
+		starting_x += 16;
+    }
+	
+	respawn_platform_triggered = true;
 }

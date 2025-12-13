@@ -29,7 +29,8 @@ else if(boss_battle_active)
 				self.shake_time = 30;
 			}
 			
-			GroundPoundAOE();
+			ground_pounding = true;
+			vspeed = -1;
 			pillar_timer = 0;
 			wave_spawned = false;
 			wave_respawning = true;
@@ -108,4 +109,43 @@ else
 	image_alpha = 1	;
 }
 
-boss_move_and_collide(hspeed, vspeed, O_Ground);
+// Ground pound movement
+if (ground_pounding)
+{
+    if (!destroy_platform_triggered)
+    {
+        DestroyPlatform();
+        destroy_platform_triggered = true; // only once
+    }
+
+    // Apply gravity
+    vspeed += 0.5;
+    y += vspeed;
+
+    // Check for ground, but skip breakable blocks
+    var hit = instance_place(x, y + 5, O_Ground);
+	if (hit != noone && hit.object_index != O_BreakableBlock)
+	{
+		// Snap to ground
+		while (!place_meeting(x, y, O_Ground)) y += 1;
+
+		vspeed = 0;
+		ground_pounding = false;
+
+		GroundPoundAOE();
+
+		if (!respawn_platform_triggered)
+		{
+			RespawnPlatform();
+			x = 328;
+			y = 688;
+			respawn_platform_triggered = true;
+		}
+	}
+}
+
+else
+{
+    // normal movement/collision
+    boss_move_and_collide(hspeed, vspeed, O_Ground);
+}
