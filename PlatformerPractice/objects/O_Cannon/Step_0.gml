@@ -6,13 +6,13 @@ if (!instance_exists(target))
 {
     solid = true    
 }
-else if target != noone && place_meeting(x, y, O_Player) && !fired
+else if (target != noone && place_meeting(x, y, O_Player) && !fired)
 {
     //lock player to cannon position and stop all movement
     with (O_Player) {
         x = other.x;
         y = other.y;
-        O_Player.x_speed = 0;
+        O_Player.x_speed = 0; 
         O_Player.y_speed = 0;
         gravity = 0; // disable gravity while in cannon
     }

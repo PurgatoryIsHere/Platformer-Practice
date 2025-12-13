@@ -1,17 +1,25 @@
-/// @description Fire Projectile at Player
+ /// @description Fire Projectile at Player
 // You can write your code in this editor
-
 var target = instance_nearest(x, y, O_Player);
 
-var detection_range = 500;
-var target_distance = point_distance(x, y, target.x, target.y)
-
-if (target_distance <= detection_range)
+if (target != noone) // Check if player exists
 {
-	with (instance_create_layer(x, y, "Instances", O_A5BossProjectile))
-	{
-		direction = point_direction(x, y, target.x, target.y);
-	}
+    var detection_range = 500;
+    var target_distance = point_distance(x, y, target.x, target.y);
+    
+    if (target_distance <= detection_range)
+    {
+        // Store target coordinates before creating projectile
+        var target_x = target.x;
+        var target_y = target.y;
+        var boss_x = x;
+        var boss_y = y;
+        
+        with (instance_create_layer(boss_x, boss_y, "Instances", O_A5BossProjectile))
+        {
+            direction = point_direction(x, y, target_x, target_y);
+        }
+    }
 }
 
 alarm[0] = 60 * 2;

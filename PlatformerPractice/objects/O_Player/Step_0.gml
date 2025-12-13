@@ -126,14 +126,14 @@ if(input_enabled)
 	
 		else if (global.doubleJumpUnlock)
 		{
-			y_speed =  -2.5
+			y_speed =  -3.5
 			jump_counter += 1
 			canDash = true
 		}
 		
 		else
 		{
-			y_speed = -2.5
+			y_speed = -3.5
 			jump_counter = 2
 			canDash = true
 		}
