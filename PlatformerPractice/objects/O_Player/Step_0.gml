@@ -446,6 +446,7 @@ else if (place_empty(x, y + 1, O_Ground) && y_speed < 0)
 else if (place_meeting(x, y + 1, O_Ground) && x_speed != 0)
 {
     sprite_index = S_PlayerRun
+	image_xscale = dir / 2
 }
 //Idle
 else

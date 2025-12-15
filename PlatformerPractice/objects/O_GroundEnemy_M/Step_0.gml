@@ -1,6 +1,5 @@
 /// @description Insert description here
 // You can write your code in this editor
-image_xscale = dir / 2
 
 if place_free(x + dir, y) && !place_free(x + (dir * 16), y + 9)
 {
