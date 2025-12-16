@@ -37,6 +37,7 @@
   ],
   "ResourceOrderSettings":[
     {"name":"A7PortalController","order":22,"path":"objects/A7PortalController/A7PortalController.yy",},
+    {"name":"BGMController","order":24,"path":"objects/BGMController/BGMController.yy",},
     {"name":"FlagObject_From_8_1","order":1,"path":"objects/FlagObject_From_8_1/FlagObject_From_8_1.yy",},
     {"name":"FlagObject_From_8_2","order":2,"path":"objects/FlagObject_From_8_2/FlagObject_From_8_2.yy",},
     {"name":"FlagObject_To_8_1","order":3,"path":"objects/FlagObject_To_8_1/FlagObject_To_8_1.yy",},
@@ -126,6 +127,7 @@
     {"name":"Tutorial","order":8,"path":"rooms/Tutorial/Tutorial.yy",},
     {"name":"UnlockTest","order":5,"path":"rooms/UnlockTest/UnlockTest.yy",},
     {"name":"WallJumpTest","order":3,"path":"rooms/WallJumpTest/WallJumpTest.yy",},
+    {"name":"Sketchbook_2024_10_26","order":1,"path":"sounds/Sketchbook_2024_10_26/Sketchbook_2024_10_26.yy",},
     {"name":"S_A1Boss","order":11,"path":"sprites/S_A1Boss/S_A1Boss.yy",},
     {"name":"S_A3Boss","order":8,"path":"sprites/S_A3Boss/S_A3Boss.yy",},
     {"name":"S_A3BossMinion","order":5,"path":"sprites/S_A3BossMinion/S_A3BossMinion.yy",},
