@@ -423,14 +423,7 @@ else if (dashing)
 //Wall slide (when on wall, in air, and falling)
 else if (onWall != 0 && !place_meeting(x, y + 1, O_Ground) && y_speed > 0)
 {
-    if (onWall > 0)
-	{
-		sprite_index = S_PlayerOnWallLeft
-	}
-	else if (onWall < 0)
-	{
-		sprite_index = S_PlayerOnWallRight
-	}
+	sprite_index = S_PlayerOnWallRight
 }
 //Falling
 else if (place_empty(x, y + 1, O_Ground) && y_speed > 0)
@@ -443,10 +436,14 @@ else if (place_empty(x, y + 1, O_Ground) && y_speed < 0)
     sprite_index = S_PlayerMidairRising
 }
 //Running
-else if (place_meeting(x, y + 1, O_Ground) && x_speed != 0)
+else if (place_meeting(x, y + 1, O_Ground) && dir != 0)
 {
     sprite_index = S_PlayerRun
-	image_xscale = dir / 2
+	
+	if(dir != 0)
+	{
+		image_xscale = sign(dir) / 2
+	}
 }
 //Idle
 else
