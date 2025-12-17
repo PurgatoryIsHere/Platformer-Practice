@@ -21,22 +21,13 @@ else if(boss_battle_active)
 		pillar_timer += 1;
 		
 		if(pillar_timer > pillar_timeout)
-		{
-			with(O_Pillar)
-			{
-				self.alarm_triggered = true;
-				self.alarm[0] = 30;
-				self.shake_time = 30;
-			}
-			
+		{	
 			ground_pounding = true;
-			vspeed = -1;
+			vspeed = -2;
 			pillar_timer = 0;
 			wave_spawned = false;
 			wave_respawning = true;
 			pillars_dropped = false;
-			
-			alarm[1] = 90;
 		}
 	}
 	
@@ -56,6 +47,8 @@ else if(boss_battle_active)
 				pillars_dropped = true;
 			}
 			
+		break;
+			
 		case 2:
 		
 			if(!wave_spawned && !wave_respawning)
@@ -70,6 +63,8 @@ else if(boss_battle_active)
 				pillars_dropped = true;
 			}
 			
+		break;
+		
 		case 3:
 		
 			if(!wave_spawned && !wave_respawning)
@@ -83,6 +78,8 @@ else if(boss_battle_active)
 				Pillar_Drop_3();
 				pillars_dropped = true;
 			}
+			
+		break;
 	}
 }
 
@@ -110,12 +107,11 @@ else
 }
 
 // Ground pound movement
-if (ground_pounding)
+if(ground_pounding)
 {
-    if (!destroy_platform_triggered)
+    if(!destroy_platform_triggered)
     {
         DestroyPlatform();
-        destroy_platform_triggered = true; // only once
     }
 
     // Apply gravity
@@ -124,9 +120,10 @@ if (ground_pounding)
 
     // Check for ground, but skip breakable blocks
     var hit = instance_place(x, y + 5, O_Ground);
-	if (hit != noone && hit.object_index != O_BreakableBlock)
+	
+	// On ground pound impact
+	if (hit != noone && hit.object_index != O_BreakableBlock && hit.object_index != O_Pillar)
 	{
-		// Snap to ground
 		while (!place_meeting(x, y, O_Ground)) y += 1;
 
 		vspeed = 0;
@@ -134,15 +131,37 @@ if (ground_pounding)
 
 		GroundPoundAOE();
 
-		if (!respawn_platform_triggered)
+		// Pillars shake & disappear
+		with(O_Pillar)
 		{
-			RespawnPlatform();
-			x = 328;
-			y = 688;
-			respawn_platform_triggered = true;
+			self.alarm_triggered = true;
+			self.alarm[0] = 30;
+			self.shake_time = 30;
+		}
+
+		if(!respawn_platform_triggered)
+		{
+			alarm[2] = 30;
 		}
 	}
 }
+
+if(jumping)
+{
+    y -= 8;
+
+    if (y <= 688) // reached home position
+    {
+        y = 688;
+        vspeed = 0;
+		jumping = false;
+
+        RespawnPlatform();
+		respawn_platform_triggered = false;
+		alarm[1] = 60;
+    }
+}
+
 
 else
 {

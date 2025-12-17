@@ -9,10 +9,6 @@ dir = 1; // Starting Direction; can be changed depending on where boss will spaw
 
 global.drops_ability = true; // Whether or not the boss drops an ability for the player
 
-ground_pounding = false;
-destroy_platform_triggered = false;
-respawn_platform_triggered = false;
-
 TakeDamage = function(damage) // Basic damage calculation; aspects can be changed for each boss
 {
 	boss_health -= damage;
@@ -43,6 +39,15 @@ TakeDamage = function(damage) // Basic damage calculation; aspects can be change
 	else if(boss_health <= 30 && phase == 2)
 	{
 		//push player off platform
+		with (O_Player)
+		{
+			if (x > 208 && x < 432)
+			{
+				hspeed = (x < other.x) ? -4 : 4;
+				alarm[0] = 60;
+			}
+		}
+		
 		phase = 3;
 		
 		with(O_SpawnableEnemyParent)
@@ -60,6 +65,7 @@ TakeDamage = function(damage) // Basic damage calculation; aspects can be change
 		wave_spawned = false;
 		wave_respawning = true;
 		pillars_dropped = false;
+		pillar_timer = 0;
 		
 		alarm[1] = 60;
 	}
@@ -67,6 +73,15 @@ TakeDamage = function(damage) // Basic damage calculation; aspects can be change
 	else if(boss_health <= 60 && phase == 1)
 	{
 		//push player off platform
+		with (O_Player)
+		{
+			if (x > 208 && x < 432)
+			{
+				hspeed = (x < other.x) ? -4 : 4;
+				alarm[0] = 60;
+			}
+		}
+
 		phase = 2;
 		
 		with(O_SpawnableEnemyParent)
@@ -84,6 +99,7 @@ TakeDamage = function(damage) // Basic damage calculation; aspects can be change
 		wave_spawned = false;
 		wave_respawning = true;
 		pillars_dropped = false;
+		pillar_timer = 0;
 		
 		alarm[1] = 60;
 	}
@@ -135,6 +151,10 @@ wave_respawning = false;
 pillars_dropped = false;
 pillar_timer = 0;
 pillar_timeout = 600; // time before pillars start collapsing
+ground_pounding = false;
+destroy_platform_triggered = false;
+respawn_platform_triggered = false;
+jumping = false;
 
 Spawn_Wave = function(enemy_count)
 {
@@ -187,8 +207,6 @@ Pillar_Drop_3 = function()
 	
 	alarm[0] = 120;
 }
-
-//Pillar_Drop_3()
 
 GroundPoundAOE = function()
 {

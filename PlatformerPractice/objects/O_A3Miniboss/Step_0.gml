@@ -21,21 +21,13 @@ else if(boss_battle_active)
 		pillar_timer += 1;
 		
 		if(pillar_timer > pillar_timeout)
-		{
-			with(O_Pillar)
-			{
-				self.alarm_triggered = true;
-				self.alarm[0] = 30;
-				self.shake_time = 30;
-			}
-			
+		{	
 			GroundPoundAOE();
+			vspeed = -2;
 			pillar_timer = 0;
 			wave_spawned = false;
 			wave_respawning = true;
 			pillars_dropped = false;
-			
-			alarm[1] = 90;
 		}
 	}
 	
@@ -94,4 +86,65 @@ else
 	image_alpha = 1	;
 }
 
-boss_move_and_collide(hspeed, vspeed, O_Ground);
+// Ground pound movement
+if(ground_pounding)
+{
+    if(!destroy_platform_triggered)
+    {
+        DestroyPlatform();
+    }
+
+    // Apply gravity
+    vspeed += 0.5;
+    y += vspeed;
+
+    // Check for ground, but skip breakable blocks
+    var hit = instance_place(x, y + 5, O_Ground);
+	
+	// On ground pound impact
+	if (hit != noone && hit.object_index != O_BreakableBlock && hit.object_index != O_Pillar)
+	{
+		while (!place_meeting(x, y, O_Ground)) y += 1;
+
+		vspeed = 0;
+		ground_pounding = false;
+
+		GroundPoundAOE();
+
+		// Pillars shake & disappear
+		with(O_Pillar)
+		{
+			self.alarm_triggered = true;
+			self.alarm[0] = 30;
+			self.shake_time = 30;
+		}
+
+		if(!respawn_platform_triggered)
+		{
+			alarm[2] = 30;
+		}
+	}
+}
+
+if(jumping)
+{
+    y -= 8;
+
+    if (y <= 112) // reached home position
+    {
+        y = 112;
+        vspeed = 0;
+		jumping = false;
+
+        RespawnPlatform();
+		respawn_platform_triggered = false;
+		alarm[1] = 60;
+    }
+}
+
+
+else
+{
+    // normal movement/collision
+    boss_move_and_collide(hspeed, vspeed, O_Ground);
+}

@@ -44,6 +44,15 @@ TakeDamage = function(damage) // Basic damage calculation; aspects can be change
 	else if(boss_health <= 30 && phase == 1)
 	{
 		//push player off platform
+		with (O_Player)
+		{
+			if (x > 960 && x < 1104)
+			{
+				hspeed = (x < other.x) ? -4 : 4;
+				alarm[0] = 60;
+			}
+		}
+		
 		phase = 2;
 		
 		with(O_SpawnableEnemyParent)
@@ -112,6 +121,10 @@ wave_respawning = false;
 pillars_dropped = false;
 pillar_timer = 0;
 pillar_timeout = 600; // time before pillars start collapsing
+ground_pounding = false;
+destroy_platform_triggered = false;
+respawn_platform_triggered = false;
+jumping = false;
 
 Spawn_Wave = function(enemy_count)
 {
@@ -153,6 +166,34 @@ Pillar_Drop_2 = function()
 GroundPoundAOE = function()
 {
 	O_Player.TakeDamage(25);
+}
+
+DestroyPlatform = function()
+{
+	var starting_x = 976;
+	
+	while(starting_x <= 1088)
+    {
+		var tile = instance_position(starting_x, 112, O_BreakableBlock);
+		instance_destroy(tile);
+		
+		starting_x += 16;
+    }
+	
+	destroy_platform_triggered = true;
+}
+
+RespawnPlatform = function()
+{
+	var starting_x = 976;
+	
+	while(starting_x <= 1088)
+    {
+		instance_create_layer(starting_x, 112, "Instances", O_BreakableBlock);
+		starting_x += 16;
+    }
+	
+	respawn_platform_triggered = true;
 }
 
 OpenGates = function()
