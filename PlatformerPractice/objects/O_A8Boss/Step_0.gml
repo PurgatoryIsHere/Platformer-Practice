@@ -1,4 +1,4 @@
-/// @description Move to different areas
+ /// @description Move to different areas
 // You can write your code in this editor
 
 boss_i_frame_timer = max(boss_i_frame_timer - 1, 0);

@@ -1,4 +1,4 @@
-/// @description Initialize variables
+ /// @description Initialize variables
 // You can write your code in this editor
 
 boss_health = 90;
@@ -57,11 +57,6 @@ CoreDestruction = function()
 	if(shield_cores == 0)
 	{
 		shield_active = false;
-		
-		with(O_TimerGate)
-		{
-			instance_destroy(self);
-		}
 	}
 }
 

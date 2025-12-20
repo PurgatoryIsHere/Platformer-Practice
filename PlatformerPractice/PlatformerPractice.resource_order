@@ -136,6 +136,8 @@
     {"name":"S_A5BossProjectile","order":9,"path":"sprites/S_A5BossProjectile/S_A5BossProjectile.yy",},
     {"name":"S_A8Boss","order":7,"path":"sprites/S_A8Boss/S_A8Boss.yy",},
     {"name":"S_A8BossPhase4","order":13,"path":"sprites/S_A8BossPhase4/S_A8BossPhase4.yy",},
+    {"name":"S_A8BossPhase4Shielded","order":10,"path":"sprites/S_A8BossPhase4Shielded/S_A8BossPhase4Shielded.yy",},
+    {"name":"S_A8BossSheilded","order":15,"path":"sprites/S_A8BossSheilded/S_A8BossSheilded.yy",},
     {"name":"S_AutoGate","order":1,"path":"sprites/S_AutoGate/S_AutoGate.yy",},
     {"name":"S_BottomlessPit","order":6,"path":"sprites/S_BottomlessPit/S_BottomlessPit.yy",},
     {"name":"S_Button","order":10,"path":"sprites/S_Button/S_Button.yy",},
@@ -184,6 +186,5 @@
     {"name":"S_TimerGate","order":3,"path":"sprites/S_TimerGate/S_TimerGate.yy",},
     {"name":"S_TopGround","order":15,"path":"sprites/S_TopGround/S_TopGround.yy",},
     {"name":"S_TopSpike","order":3,"path":"sprites/S_TopSpike/S_TopSpike.yy",},
-    {"name":"Sprite48","order":10,"path":"sprites/Sprite48/Sprite48.yy",},
   ],
 }

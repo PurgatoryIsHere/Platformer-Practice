@@ -1,4 +1,4 @@
-  /// @description Damage Handling
+    /// @description Damage Handling
 // You can write your code in this editor
 
 // Taking damage from player
@@ -12,6 +12,15 @@ if(place_meeting(x, y, O_Player) && !shield_active && (O_Player.groundPounding |
 
 if (phase == 3)
 {
+	if (shield_active)
+	{
+		sprite_index = S_A8BossPhase4Shielded	
+	}
+	else if (!shield_active)
+	{
+		sprite_index = S_A8BossPhase4
+	}
+	
 	y_speed += 0/2
 
 	if (instance_exists(O_Player))
@@ -31,4 +40,12 @@ if (phase == 3)
 	{
 		hspeed *= -1
 	}
+}
+else if (shield_active)
+{
+	sprite_index = S_A8BossSheilded	
+}
+else if (!shield_active)
+{
+	sprite_index = S_A8Boss	
 }
