@@ -390,7 +390,9 @@ if(input_enabled)
 			show_debug_message("Reached target distance, enabling gravity");
         
 			// Optional: Give a small downward boost when gravity kicks in
+			input_enabled = true;
 			y_speed = 1;
+			x_speed = 0;
 		}
     
 		// Also stop if we hit something during flight
