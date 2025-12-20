@@ -3,10 +3,10 @@
 
 if(!activated)
 {
-	var x1 = x - O_Player.sprite_width / 8;
-    var y1 = y - O_Player.sprite_height / 8;
-    var x2 = x + O_Player.sprite_width / 8;
-    var y2 = y + O_Player.sprite_height / 8;
+	var x1 = x - sprite_width;
+    var y1 = y - sprite_height;
+    var x2 = x + sprite_width;
+    var y2 = y + sprite_height;
 	
 	if(collision_rectangle(x1, y1, x2, y2, O_Player, false, true)) 
 	{
