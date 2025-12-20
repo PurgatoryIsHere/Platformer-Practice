@@ -1,1 +1,1 @@
-target = instance_position(1456, 112, O_CannonTarget);
+target = instance_position(1552, 176, O_CannonTarget);

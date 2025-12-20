@@ -14,6 +14,7 @@ else if (target != noone && place_meeting(x, y, O_Player) && !fired)
         y = other.y;
         O_Player.x_speed = 0; 
         O_Player.y_speed = 0;
+		O_Player.input_enabled = false;
         gravity = 0; // disable gravity while in cannon
     }
 	
@@ -60,14 +61,12 @@ else if (target != noone && place_meeting(x, y, O_Player) && !fired)
 		O_Player.beingFired = true;
 		fired = true;
 		player_loaded = false;
+		
+		O_Player.x_speed = launch_x;
+		O_Player.y_speed = launch_y;
 	}
 }
 
-if (fired && O_Player.beingFired) {
-    // Keep the player moving at consistent speed
-    O_Player.x_speed = launch_x;
-    O_Player.y_speed = launch_y;
-}
 //reset when player is no longer touching cannon
 if !place_meeting(x, y, O_Player) {
     fired = false;
@@ -80,9 +79,17 @@ if !place_meeting(x, y, O_Player) {
          image_angle += sign(angle_diff) * rotation_speed;
     }
 }
+
+var x1 = O_Player.x - O_Player.sprite_width * 0.6;
+var y1 = O_Player.y - O_Player.sprite_height * 0.6;
+var x2 = O_Player.x + O_Player.sprite_width * 0.6;
+var y2 = O_Player.y + O_Player.sprite_height * 0.6;
+
 //make sure Player stops moving once they hit the ground
-if (O_Player.onGround)
+if (O_Player.beingFired && collision_rectangle(x1, y1, x2, y2, O_Ground, false, true))
 {
     O_Player.beingFired = false;
     O_Player.x_speed = 0;
+	O_Player.y_speed = 0;
+	O_Player.input_enabled = true;
 }
