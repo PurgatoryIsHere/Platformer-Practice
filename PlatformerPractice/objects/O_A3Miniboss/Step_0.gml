@@ -22,7 +22,7 @@ else if(boss_battle_active)
 		
 		if(pillar_timer > pillar_timeout)
 		{	
-			GroundPoundAOE();
+			ground_pounding = true;
 			vspeed = -2;
 			pillar_timer = 0;
 			wave_spawned = false;

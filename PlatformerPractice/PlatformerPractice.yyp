@@ -66,6 +66,7 @@
     {"id":{"name":"O_A1Boss","path":"objects/O_A1Boss/O_A1Boss.yy",},},
     {"id":{"name":"O_A1Miniboss","path":"objects/O_A1Miniboss/O_A1Miniboss.yy",},},
     {"id":{"name":"O_A3Boss","path":"objects/O_A3Boss/O_A3Boss.yy",},},
+    {"id":{"name":"O_A3Gate","path":"objects/O_A3Gate/O_A3Gate.yy",},},
     {"id":{"name":"O_A3Miniboss","path":"objects/O_A3Miniboss/O_A3Miniboss.yy",},},
     {"id":{"name":"O_A5Boss","path":"objects/O_A5Boss/O_A5Boss.yy",},},
     {"id":{"name":"O_A5BossLanding","path":"objects/O_A5BossLanding/O_A5BossLanding.yy",},},

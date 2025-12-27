@@ -67,7 +67,7 @@ TakeDamage = function(damage) // Basic damage calculation; aspects can be change
 		pillars_dropped = false;
 		pillar_timer = 0;
 		
-		alarm[1] = 60;
+		alarm[1] = 110;
 	}
 	
 	else if(boss_health <= 60 && phase == 1)
@@ -101,7 +101,7 @@ TakeDamage = function(damage) // Basic damage calculation; aspects can be change
 		pillars_dropped = false;
 		pillar_timer = 0;
 		
-		alarm[1] = 60;
+		alarm[1] = 110;
 	}
 	
 	boss_i_frame_timer = 32; // Standard amount of i-frames; can be changed for each boss

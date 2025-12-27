@@ -46,6 +46,7 @@
     {"name":"MenuController","order":13,"path":"objects/MenuController/MenuController.yy",},
     {"name":"O_A1Miniboss","order":3,"path":"objects/O_A1Miniboss/O_A1Miniboss.yy",},
     {"name":"O_A3Boss","order":1,"path":"objects/O_A3Boss/O_A3Boss.yy",},
+    {"name":"O_A3Gate","order":6,"path":"objects/O_A3Gate/O_A3Gate.yy",},
     {"name":"O_A5Boss","order":2,"path":"objects/O_A5Boss/O_A5Boss.yy",},
     {"name":"O_A5BossLanding","order":3,"path":"objects/O_A5BossLanding/O_A5BossLanding.yy",},
     {"name":"O_A5BossProjectile","order":7,"path":"objects/O_A5BossProjectile/O_A5BossProjectile.yy",},
