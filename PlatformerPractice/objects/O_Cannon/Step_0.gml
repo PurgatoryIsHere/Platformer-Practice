@@ -1,4 +1,4 @@
-/// @description Launch player
+ /// @description Launch player
 // You can write your code in this editor
 
 //if PlayerObject touches cannon and we haven't fired yet
@@ -44,8 +44,7 @@ else if (target != noone && place_meeting(x, y, O_Player) && !fired)
 			target_offset_y = height_ratio * -160; // Adjust this multiplier as needed
 		}
     
-		var adjusted_target_y = target.y + target_offset_y;
-		var direct_angle = point_direction(x, y, target.x, adjusted_target_y);
+		var direct_angle = point_direction(x, y, target.x, target.y);
     
 		O_Player.flight_target_x = target.x;
 		O_Player.flight_target_y = target.y;
@@ -58,7 +57,7 @@ else if (target != noone && place_meeting(x, y, O_Player) && !fired)
     
 		show_debug_message("Height diff: " + string(height_difference) + " Smooth offset: " + string(target_offset_y));
     
-		O_Player.beingFired = true;
+		O_Player.beingFired = true; 
 		fired = true;
 		player_loaded = false;
 		

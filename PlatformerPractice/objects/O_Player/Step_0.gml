@@ -11,9 +11,10 @@ camera_set_view_pos(view_camera[0], cam_x, cam_y)
 if (!beingFired) 
 {
 	y_speed += 0.2 // Gravity
+	input_enabled = true;
 }
 
-if(place_meeting(x, y, O_Ground)) {
+if(place_meeting(x, y, O_Ground) && !place_meeting(x, y, O_Shelf)) {
 	for(var i = 0; i < 1000; ++i) {
 		//Right
 		if(!place_meeting(x + i, y, O_Ground)) {
@@ -60,6 +61,28 @@ if(place_meeting(x, y, O_Ground)) {
 			break;
 		}
 	}
+}
+
+// Horizontal collision with shelves
+if(place_meeting(x + x_speed, y, O_Shelf))
+{
+    // Player is colliding horizontally with a shelf
+    var shelf = instance_place(x + x_speed, y, O_Shelf);
+    
+    if (shelf != noone)
+    {
+        // Check if player is mostly beside the shelf (not coming from below)
+        // If player's center is below the shelf's top, they're hitting from the side
+        if (y > shelf.bbox_top)
+        {
+            // Stop horizontal movement - treat like a wall
+            while(!place_meeting(x + sign(x_speed), y, O_Shelf))
+            {
+                x += sign(x_speed);
+            }
+            x_speed = 0;
+        }
+    }
 }
 
 
@@ -447,7 +470,7 @@ else if (place_meeting(x, y + 1, O_Ground) && dir != 0)
 	{
 		image_xscale = sign(dir) / 2
 	}
-}
+} 
 //Idle
 else
 {
