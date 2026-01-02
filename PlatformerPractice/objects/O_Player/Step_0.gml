@@ -1,4 +1,4 @@
- /// @description Player Actions
+  /// @description Player Actions
 // You can write your code in this editor
 
 // Ensure camera remains centered on player
@@ -14,7 +14,7 @@ if (!beingFired)
 	input_enabled = true;
 }
 
-if(place_meeting(x, y, O_Ground) && !place_meeting(x, y, O_Shelf)) {
+if(place_meeting(x, y, O_Ground)) {
 	for(var i = 0; i < 1000; ++i) {
 		//Right
 		if(!place_meeting(x + i, y, O_Ground)) {
@@ -63,29 +63,6 @@ if(place_meeting(x, y, O_Ground) && !place_meeting(x, y, O_Shelf)) {
 	}
 }
 
-// Horizontal collision with shelves
-if(place_meeting(x + x_speed, y, O_Shelf))
-{
-    // Player is colliding horizontally with a shelf
-    var shelf = instance_place(x + x_speed, y, O_Shelf);
-    
-    if (shelf != noone)
-    {
-        // Check if player is mostly beside the shelf (not coming from below)
-        // If player's center is below the shelf's top, they're hitting from the side
-        if (y > shelf.bbox_top)
-        {
-            // Stop horizontal movement - treat like a wall
-            while(!place_meeting(x + sign(x_speed), y, O_Shelf))
-            {
-                x += sign(x_speed);
-            }
-            x_speed = 0;
-        }
-    }
-}
-
-
 if(input_enabled)
 {
 	// Player Functionality
@@ -95,7 +72,7 @@ if(input_enabled)
 
 	dir = right - left; // Direction the player is facing
 
-	onGround = place_meeting(x, y + bbox_bottom, O_Ground) || place_meeting(x, y + y_speed, O_Shelf);
+	onGround = place_meeting(x, y + bbox_bottom, O_Ground);
 	onWall = place_meeting(x - 1.5, y, O_Ground) - place_meeting(x + 1.5, y, O_Ground)
 
 	if(onWall == 1)
@@ -163,48 +140,22 @@ if(input_enabled)
 		}
 	}
 	
-	if(place_meeting(x, y + y_speed, O_Ground) || place_meeting(x, y + y_speed, O_Shelf))
+	if(place_meeting(x, y + y_speed, O_Ground))
 	{
-		// Check if we're colliding with a jumpthrough platform
-		var jumpthrough = instance_place(x, y + y_speed, O_Shelf);
-    
-		if (jumpthrough != noone)
+		// Normal ground collision for regular GroundObjects
+		while(!place_meeting(x, y + sign(y_speed), O_Ground))
 		{
-			// Only collide if player is above the platform and falling down
-			if (y < jumpthrough.y && y_speed > 0 && !groundPounding)
-			{
-				// Normal collision - land on top
-				while(!place_meeting(x, y + sign(y_speed), O_Shelf))
-				{
-					y += sign(y_speed)
-				}
-			
-				jump_counter = 0
-				y_speed = 0
-				wall_jump_timer = 0;
-				last_wall = 0;
-			}
-		
-			// If player is below or jumping up, don't collide - let them pass through
+			y += sign(y_speed)
 		}
-	
-		else
+        
+		if(y_speed > 0)
 		{
-			// Normal ground collision for regular GroundObjects
-			while(!place_meeting(x, y + sign(y_speed), O_Ground))
-			{
-				y += sign(y_speed)
-			}
-        
-			if(y_speed > 0)
-			{
-				jump_counter = 0
-			}
-        
-			y_speed = 0
-			wall_jump_timer = 0; 
-			last_wall = 0;
+			jump_counter = 0
 		}
+        
+		y_speed = 0
+		wall_jump_timer = 0; 
+		last_wall = 0;
 	}
 
 	// Wall Jumping

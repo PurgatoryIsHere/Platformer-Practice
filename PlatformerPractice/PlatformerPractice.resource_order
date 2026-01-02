@@ -97,6 +97,7 @@
     {"name":"O_RightSpike","order":1,"path":"objects/O_RightSpike/O_RightSpike.yy",},
     {"name":"O_Shelf","order":7,"path":"objects/O_Shelf/O_Shelf.yy",},
     {"name":"O_ShieldCore","order":12,"path":"objects/O_ShieldCore/O_ShieldCore.yy",},
+    {"name":"O_SolidShelf","order":21,"path":"objects/O_SolidShelf/O_SolidShelf.yy",},
     {"name":"O_SpawnableEnemyParent","order":3,"path":"objects/O_SpawnableEnemyParent/O_SpawnableEnemyParent.yy",},
     {"name":"O_Spike","order":2,"path":"objects/O_Spike/O_Spike.yy",},
     {"name":"O_Timer","order":10,"path":"objects/O_Timer/O_Timer.yy",},

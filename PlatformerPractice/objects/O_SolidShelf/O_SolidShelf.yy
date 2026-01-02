@@ -1,17 +1,22 @@
 {
   "$GMObject":"",
-  "%Name":"O_Ground",
+  "%Name":"O_SolidShelf",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"O_Ground",
+  "name":"O_SolidShelf",
   "overriddenProperties":[],
   "parent":{
     "name":"TileObjects",
     "path":"folders/Objects/TileObjects.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"O_Ground",
+    "path":"objects/O_Ground/O_Ground.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"S_TopGround",
-    "path":"sprites/S_TopGround/S_TopGround.yy",
+    "name":"S_Shelf",
+    "path":"sprites/S_Shelf/S_Shelf.yy",
   },
   "spriteMaskId":null,
   "visible":true,
