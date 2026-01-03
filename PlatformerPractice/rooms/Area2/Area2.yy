@@ -421,7 +421,6 @@
     {"name":"inst_DDB44EC","path":"rooms/Area2/Area2.yy",},
     {"name":"inst_49DDC4A0","path":"rooms/Area2/Area2.yy",},
     {"name":"inst_36CFB1FC","path":"rooms/Area2/Area2.yy",},
-    {"name":"inst_430CFA0D","path":"rooms/Area2/Area2.yy",},
     {"name":"inst_C829CCB","path":"rooms/Area2/Area2.yy",},
     {"name":"inst_483B1669","path":"rooms/Area2/Area2.yy",},
     {"name":"inst_D1BCFE7","path":"rooms/Area2/Area2.yy",},
@@ -1275,6 +1274,7 @@
     {"name":"inst_27C6F925","path":"rooms/Area2/Area2.yy",},
     {"name":"inst_510AD84A","path":"rooms/Area2/Area2.yy",},
     {"name":"inst_3CE31BED","path":"rooms/Area2/Area2.yy",},
+    {"name":"inst_430CFA0D","path":"rooms/Area2/Area2.yy",},
   ],
   "isDnd":false,
   "layers":[

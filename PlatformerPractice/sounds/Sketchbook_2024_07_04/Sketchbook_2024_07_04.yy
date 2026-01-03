@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"Sketchbook_2024_07_04",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":58.666668,
+  "exportDir":"",
+  "name":"Sketchbook_2024_07_04",
+  "parent":{
+    "name":"Sounds",
+    "path":"folders/Sounds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"Sketchbook_2024_07_04.ogg",
+  "volume":1.0,
+}

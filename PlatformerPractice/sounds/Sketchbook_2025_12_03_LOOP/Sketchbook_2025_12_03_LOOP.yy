@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"Sketchbook_2025_12_03_LOOP",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":44.021748,
+  "exportDir":"",
+  "name":"Sketchbook_2025_12_03_LOOP",
+  "parent":{
+    "name":"Sounds",
+    "path":"folders/Sounds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"Sketchbook_2025_12_03_LOOP.ogg",
+  "volume":1.0,
+}

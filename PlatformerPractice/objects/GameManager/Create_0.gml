@@ -17,19 +17,10 @@ global.heart_pieces_collected = 0;
 global.all_heart_pieces_collected = false;
 global.heart_pieces_to_collect = [0, 2, 3, 3, 2, 3, 3, 3]
 
-// The room the player will be returned to upon death
-global.starting_room = StartRoom
-
 // Ability Unlocks
 global.doubleJumpUnlock = false
 global.groundPoundUnlock = false
 global.grappleUnlock = false
-
-// Restore player location after unpausing
-global.player_positionX = 0.0
-global.player_positionY = 0.0
-global.player_velocityX = 0.0
-global.player_velocityY = 0.0
 
 //Check if boss is on level
 global.isBossAlive = false

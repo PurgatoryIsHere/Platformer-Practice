@@ -391,15 +391,6 @@ if(input_enabled)
 
 // Handle standard movement
 move_and_collide(x_speed, y_speed, O_Ground)
- 
- // Wall jump sprite lock
-if (is_wall_jumping)
-{
-    sprite_index = S_PlayerJump;
-}
-
-else
-{
 
 //Sprite Logic
 if (dashing || grappling || groundPounding)
@@ -445,5 +436,4 @@ else if (place_meeting(x, y + 1, O_Ground) && dir != 0)
 else
 {
     sprite_index = S_Player	
-}
 }
