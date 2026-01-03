@@ -26,6 +26,9 @@ wall_jump_timer = 0
 last_wall = 0
 wall_jump_x_speed = 0
 
+is_wall_jumping = false;
+wall_jump_time = 0;
+
 
 // Grapple
 grappling = false

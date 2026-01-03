@@ -5,6 +5,11 @@ var player = instance_place(x, y, O_Player);
 
 if (player != noone && instance_exists(other_side) && activated && !fading_out && !fading_in) 
 {
+	if(player.beingFired)
+	{
+		player.beingFired = false;
+	}
+
 	fading_out = true;
 	
 	with(O_Player)
@@ -53,11 +58,6 @@ if(fading_in)
 			alarm[1] = 30;
 		}
     }
-}
-
-if(O_Player.beingFired && instance_place(x, y, O_Player))
-{
-	O_Player.beingFired = false;
 }
 
 

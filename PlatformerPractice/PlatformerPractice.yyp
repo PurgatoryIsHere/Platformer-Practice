@@ -64,6 +64,7 @@
     {"id":{"name":"GameManager","path":"objects/GameManager/GameManager.yy",},},
     {"id":{"name":"MenuController","path":"objects/MenuController/MenuController.yy",},},
     {"id":{"name":"O_A1Boss","path":"objects/O_A1Boss/O_A1Boss.yy",},},
+    {"id":{"name":"O_A1Gate","path":"objects/O_A1Gate/O_A1Gate.yy",},},
     {"id":{"name":"O_A1Miniboss","path":"objects/O_A1Miniboss/O_A1Miniboss.yy",},},
     {"id":{"name":"O_A3Boss","path":"objects/O_A3Boss/O_A3Boss.yy",},},
     {"id":{"name":"O_A3Gate","path":"objects/O_A3Gate/O_A3Gate.yy",},},

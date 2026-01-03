@@ -110,20 +110,22 @@ if(input_enabled)
 	{
 		sprite_index = S_PlayerJump
 		
-		if(onWall != 0 && !onGround)
+		// WALL JUMP
+		if (onWall != 0 && !onGround)
 		{
-			if(onWall != 0 && last_wall != onWall)
-			{	
-				wall_jump_timer = 0;
-				wall_jump_timer = 5;
-				last_wall = onWall;
-			}
-		
-			if(wall_jump_timer == 5)
+			if (last_wall != onWall)  // prevents repeated jumps on same wall
 			{
-				y_speed = -2.8;
+				is_wall_jumping = true;
+				wall_jump_time = 12;
+
+				y_speed = -3.5; // upward push
+				x_speed = wall_jump_x_speed * 0.8; // smoother horizontal push
+
+				last_wall = onWall;
+				jump_counter = 1; // allow double jump after wall jump
 			}
 		}
+
 	
 		else if (global.doubleJumpUnlock)
 		{
@@ -159,24 +161,32 @@ if(input_enabled)
 	}
 
 	// Wall Jumping
-	if(onWall != 0 && !onGround && !groundPounding)
+	if(onWall != 0 && !onGround && !groundPounding && !is_wall_jumping)
 	{
 		y_speed = min(y_speed, 0.25);
 		jump_counter = 0;
 	}
 
 	// Handle movement for wall-jumping
-	if (!beingFired)
+	// Smooth wall-jump movement
+	if (is_wall_jumping)
 	{
-		if(wall_jump_timer > 0)
-		{	
-			x_speed = wall_jump_x_speed;
-		}
-		
-		else
+		wall_jump_time -= 1;
+
+		// Blend back to normal control
+		var blend = wall_jump_time / 12;
+		x_speed = lerp(dir * 2, x_speed, blend);
+
+		if (wall_jump_time <= 0)
 		{
-			x_speed = dir * 2;
+			is_wall_jumping = false;
 		}
+	}
+	
+	else
+	{
+		// Normal movement
+		x_speed = dir * 2;
 	}
 
 
@@ -382,6 +392,15 @@ if(input_enabled)
 // Handle standard movement
 move_and_collide(x_speed, y_speed, O_Ground)
  
+ // Wall jump sprite lock
+if (is_wall_jumping)
+{
+    sprite_index = S_PlayerJump;
+}
+
+else
+{
+
 //Sprite Logic
 if (dashing || grappling || groundPounding)
 {
@@ -426,4 +445,5 @@ else if (place_meeting(x, y + 1, O_Ground) && dir != 0)
 else
 {
     sprite_index = S_Player	
+}
 }
