@@ -14,6 +14,7 @@ if(keyboard_check_pressed(vk_backspace))
     if(!pause) 
 	{
         pause = true;
+		current_room = room;
         instance_deactivate_all(true);
 
         // Capture current screen

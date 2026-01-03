@@ -17,11 +17,23 @@ if(pause && surface_exists(pause_surf))
     draw_set_alpha(0.5);
     draw_rectangle_colour(0, 0, gui_w, gui_h, c_black, c_black, c_black, c_black, false);
     draw_set_alpha(1);
+	
+	var collected_heart_pieces = 0;
+	
+	if(current_room == 17 || current_room = 18 || current_room = 19)
+	{
+		collected_heart_pieces = string(global.heart_pieces_to_collect[7]);
+	}
+	
+	else
+	{
+		collected_heart_pieces = string(global.heart_pieces_to_collect[current_room]);
+	}
 
     // Menu content
     var lines = [
         "PAUSED",
-        "Heart pieces collected: " + string(global.heart_pieces_collected) + "/" + string(global.heart_pieces_to_collect[room]),
+        "Heart pieces collected: " + string(global.heart_pieces_collected) + "/" + collected_heart_pieces,
         "Press R to Restart",
         "Press Q to Return to Menu"
     ];
