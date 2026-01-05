@@ -16,12 +16,14 @@ if(keyboard_check_pressed(vk_backspace))
         pause = true;
 		current_room = room;
 		
+		/*
 		if(BGMController.current_bgm != noone) 
 		{
 			audio_pause_sound(BGMController.current_bgm);
 		}
 		
 		pause_music =  audio_play_sound(Sketchbook_2025_12_03_LOOP, 1, true);
+		*/
 		
         instance_deactivate_all(true);
 
@@ -43,11 +45,13 @@ if(keyboard_check_pressed(vk_backspace))
         pause = false;
         instance_activate_all();
 		
+		/*
 		audio_stop_sound(pause_music);
 		pause_music = noone;
 		
 		audio_resume_sound(BGMController.current_bgm);
-
+		*/
+		
         if(surface_exists(pause_surf))
 		{
             surface_free(pause_surf);

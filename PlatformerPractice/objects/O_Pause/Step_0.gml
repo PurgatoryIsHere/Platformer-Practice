@@ -13,8 +13,10 @@ if(pause)
             surface_free(pause_surf);
         }
 		
+		/*
 		audio_stop_sound(pause_music);
 		pause_music = noone;
+		*/
 		
         room_restart();
     }
@@ -29,8 +31,10 @@ if(pause)
             surface_free(pause_surf);
         }
 		
+		/*
 		audio_stop_sound(pause_music);
 		pause_music = noone;
+		*/
 		
         room_goto(MainMenu);
     }

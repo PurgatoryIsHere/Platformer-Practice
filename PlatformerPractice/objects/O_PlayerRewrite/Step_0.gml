@@ -36,15 +36,24 @@ if(dash && dash_cooldown == 0)
 // --------------------------------------------
 // Condtion Checks
 // --------------------------------------------
-on_ground = place_meeting(x, y + 1, O_Ground);
-
+on_ground = place_meeting(x, y + 5, O_Ground);
+on_wall = place_meeting(x - 3, y, O_Ground) - place_meeting(x + 3, y, O_Ground);
 
 // --------------------------------------------
 // Constants (Factors that are checked/applied every frame, regardless of circumstance)
 // --------------------------------------------
 
-// Gravity
-y_speed += 0.2;
+// Wall Sliding Gravity
+if(on_wall != 0)
+{
+	y_speed = min(y_speed + 1, wall_slide_speed);
+}
+
+// Normal Gravity
+else
+{
+	y_speed += 0.2;
+}
 
 // Reset jump_counter
 if(on_ground)
@@ -52,8 +61,16 @@ if(on_ground)
 	jump_counter = 0;
 }
 
+// Disable movement lock if player starts sliding on another wall after wall-jumping
+if(on_wall != 0 && movement_lock_timer > 0)
+{
+	movement_lock_timer = 0;
+}
+
+// Timer & Cooldown Decrementation
 dash_timer = max(dash_timer - 1, 0);
 dash_cooldown = max(dash_cooldown - 1, 0);
+movement_lock_timer = max(movement_lock_timer - 1, 0);
 i_frame_timer = max(i_frame_timer - 1, 0);
 
 // --------------------------------------------
@@ -110,29 +127,38 @@ if(dashing || groundPounding || grappling)
 	
 }
 
-else if(!on_ground) 
-{ 
-	if(y_speed < 0) 
-	{ 
-		sprite_index = S_PlayerMidairRising; 
-	} 
-	
-	else 
-	{ 
-		sprite_index = S_PlayerMidairFalling; 
-	} 
-} 
+else if(wall_sliding)
+{
+	sprite_index = S_PlayerOnWallLeft;
+	image_xscale = facing / 2;
+}
 
-else if(dir != 0 && !dashing) 
-{ 
-	sprite_index = S_PlayerRun; 
-	image_xscale = facing / 2; 
-} 
 
 else if(dashing)
 {
 	sprite_index = S_PlayerDash;
 }
+
+else if(!on_ground) 
+{ 
+	if(y_speed < 0) 
+	{ 
+		sprite_index = S_PlayerMidairRising; 
+		image_xscale = facing / 2;
+	} 
+	
+	else 
+	{ 
+		sprite_index = S_PlayerMidairFalling; 
+		image_xscale = facing / 2;
+	} 
+} 
+
+else if(dir != 0) 
+{ 
+	sprite_index = S_PlayerRun; 
+	image_xscale = facing / 2; 
+} 
 
 else 
 { 

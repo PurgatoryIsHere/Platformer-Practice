@@ -40,12 +40,10 @@ ground_dashing = false;
 // --------------------------------------------
 // Wall-Jumping
 // --------------------------------------------
-wall_jumping = false;
-wall_jump_timer = 0;
-last_wall = 0;
+wall_sliding = false;
 on_wall = 0;
-wall_slide_speed = 0.25; 
-wall_jump_x_speed = 0;
+wall_slide_speed = 0.25;
+movement_lock_timer = 0;
 
 // --------------------------------------------
 // Ground Pounding
@@ -117,33 +115,61 @@ LifeReduction = function()
 // --------------------------------------------
 stateFree = function()
 {
-	// Horizontal Movement
-	x_speed = dir * movement_speed;
-	
-	
-	// Jumping
-	if(keyboard_check_pressed(global.jump_key) && jump_counter < max_jumps)
+	if(movement_lock_timer <= 0)
 	{
-		sprite_index = S_PlayerJump;
-		
-		if(global.doubleJumpUnlock)
-		{
-			y_speed = -3.5;
-			jump_counter += 1;
-		}
-		
-		else
-		{
-			y_speed -= 3.5;
-			jump_counter = max_jumps;
-		}
-		
-		dash_cooldown = 0;
-	}
+		// Horizontal Movement
+		x_speed = dir * movement_speed;
 	
-	if(dashing)
-	{
-		state = stateDash;
+	
+		// Jumping
+		if(keyboard_check_pressed(global.jump_key) && jump_counter < max_jumps)
+		{
+			sprite_index = S_PlayerJump;
+			image_xscale = facing / 2;
+		
+			if(on_wall != 0 && wall_sliding)
+			{
+				y_speed = -7;
+				x_speed += on_wall * 4;
+				movement_lock_timer = 10;
+			}
+		
+			if(global.doubleJumpUnlock)
+			{
+				y_speed = -3.5;
+				jump_counter += 1;
+			}
+		
+			else
+			{
+				y_speed -= 3.5;
+				jump_counter = max_jumps;
+			}
+		
+			dash_cooldown = 0;
+		}
+	
+		if(on_wall != 0)
+		{
+			wall_sliding = true;
+			jump_counter = 1;
+			facing = on_wall;
+			
+			sprite_index = S_PlayerOnWallLeft;
+			image_xscale = facing / 2;
+		}
+	
+		else 
+		{ 
+			wall_sliding = false;
+		}
+	
+	
+		// State Changes
+		if(dashing)
+		{
+			state = stateDash;
+		}
 	}
 }
 
