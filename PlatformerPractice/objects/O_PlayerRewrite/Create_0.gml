@@ -49,6 +49,7 @@ movement_lock_timer = 0;
 // Ground Pounding
 // --------------------------------------------
 groundPounding = false;
+ground_pound_speed = 10;
 
 // --------------------------------------------
 // Grappling
@@ -129,8 +130,8 @@ stateFree = function()
 		
 			if(on_wall != 0 && wall_sliding)
 			{
+				x_speed = on_wall * 4;
 				y_speed = -7;
-				x_speed += on_wall * 4;
 				movement_lock_timer = 10;
 			}
 		
@@ -149,11 +150,11 @@ stateFree = function()
 			dash_cooldown = 0;
 		}
 	
-		if(on_wall != 0)
+		if(on_wall != 0 && !on_ground)
 		{
 			wall_sliding = true;
-			jump_counter = 1;
 			facing = on_wall;
+			jump_counter = 1;
 			
 			sprite_index = S_PlayerOnWallLeft;
 			image_xscale = facing / 2;
@@ -164,11 +165,16 @@ stateFree = function()
 			wall_sliding = false;
 		}
 	
-	
 		// State Changes
 		if(dashing)
 		{
 			state = stateDash;
+		}
+		
+		
+		if(groundPounding)
+		{
+			state = stateGroundPound;
 		}
 	}
 }
@@ -176,6 +182,7 @@ stateFree = function()
 stateDash = function()
 {
 	sprite_index = S_PlayerDash;
+	image_xscale = facing / 2;
 	
 	if(on_ground && dir != 0)
 	{
@@ -217,6 +224,46 @@ stateDash = function()
 		ground_dashing = false
 		state = stateFree;
 	}
+}
+
+stateGroundPound = function()
+{	
+	if(keyboard_check_pressed(global.jump_key))
+	{
+		groundPounding = false;
+		y_speed = -3.5;
+		jump_counter = max_jumps;
+		state = stateFree;
+		exit;
+	}
+	
+	if(!on_ground)
+	{	
+		sprite_index = S_PlayerGroundPound;
+		image_xscale = facing / 2;
+		
+		x_speed = 0;
+		y_speed = ground_pound_speed;
+		
+		with(instance_create_depth(x, y, depth + 1, O_Trail))
+		{
+			sprite_index = S_PlayerGroundPoundFall;
+			image_xscale = other.facing;
+			image_blend = c_fuchsia;
+			image_alpha = 0.7;
+		}
+	}
+	
+	else
+	{
+		groundPounding = false;
+		state = stateFree;
+	}
+}
+
+stateGrapple = function()
+{
+	
 }
 
 state = stateFree;

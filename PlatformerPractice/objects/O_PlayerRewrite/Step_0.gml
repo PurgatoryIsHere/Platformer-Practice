@@ -16,6 +16,7 @@ camera_set_view_pos(view_camera[0], cam_x, cam_y);
 var left = keyboard_check(global.left_key);
 var right = keyboard_check(global.right_key);
 var dash = keyboard_check_pressed(global.dash_key);
+var ground_pound = keyboard_check_pressed(global.gp_key);
 
 dir = right - left;
 
@@ -33,6 +34,12 @@ if(dash && dash_cooldown == 0)
 }
 
 
+if(ground_pound && global.groundPoundUnlock)
+{
+	groundPounding = true;
+}
+
+
 // --------------------------------------------
 // Condtion Checks
 // --------------------------------------------
@@ -44,7 +51,7 @@ on_wall = place_meeting(x - 3, y, O_Ground) - place_meeting(x + 3, y, O_Ground);
 // --------------------------------------------
 
 // Wall Sliding Gravity
-if(on_wall != 0)
+if(on_wall != 0 && !on_ground && !groundPounding)
 {
 	y_speed = min(y_speed + 1, wall_slide_speed);
 }
@@ -56,7 +63,7 @@ else
 }
 
 // Reset jump_counter
-if(on_ground)
+if(on_ground && place_meeting(x, y + y_speed, O_Ground))
 {
 	jump_counter = 0;
 }
