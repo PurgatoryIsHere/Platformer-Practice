@@ -14,6 +14,7 @@ else if (target != noone && place_meeting(x, y, O_Player) && !fired)
         y = other.y;
         O_Player.x_speed = 0; 
         O_Player.y_speed = 0;
+		state = stateCannonball;
 		O_Player.input_enabled = false;
         gravity = 0; // disable gravity while in cannon
     }
@@ -87,8 +88,13 @@ var y2 = O_Player.y + O_Player.sprite_height * 0.6;
 //make sure Player stops moving once they hit the ground
 if (O_Player.beingFired && collision_rectangle(x1, y1, x2, y2, O_Ground, false, true))
 {
-    O_Player.beingFired = false;
-    O_Player.x_speed = 0;
-	O_Player.y_speed = 0;
-	O_Player.input_enabled = true;
+    with(O_Player)
+	{
+		beingFired = false;
+		dashing = false;
+		groundPounding = false;
+		grappling = false;
+		input_enabled = true;
+		state = stateFree;
+	}
 }

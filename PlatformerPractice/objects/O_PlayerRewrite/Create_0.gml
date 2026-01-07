@@ -176,6 +176,11 @@ stateFree = function()
 		{
 			state = stateGroundPound;
 		}
+		
+		if(grappling)
+		{
+			state = stateGrapple;
+		}
 	}
 }
 
@@ -263,7 +268,69 @@ stateGroundPound = function()
 
 stateGrapple = function()
 {
+	sprite_index = S_PlayerGrapple
+	image_xscale = facing / 2;
 	
+	var dir_to_target = point_direction(x, y, target_x, target_y)
+	var dist_to_target = point_distance(x, y, target_x, target_y)
+    
+	if (dist_to_target > grapple_speed)
+	{
+		// Move toward target
+		x_speed = lengthdir_x(grapple_speed, dir_to_target)
+		y_speed = lengthdir_y(grapple_speed, dir_to_target)
+			
+		sprite_index = S_PlayerGrappling
+		image_xscale = facing / 2;
+	} 
+	
+	else
+	{
+		// Reached target
+		x = target_x
+		y = target_y
+		y_speed = -2.5;
+		grappling = false
+		state = stateFree;
+	}
+}
+
+stateCannonball = function()
+{
+	// Calculate how far we've traveled this frame
+	var frame_distance = sqrt(x_speed * x_speed + y_speed * y_speed);
+	flight_traveled += frame_distance;
+    
+	// Check if we've reached the target distance
+	if (flight_traveled >= flight_distance) 
+	{
+		show_debug_message("Reached target distance, enabling gravity");
+        
+		// Optional: Give a small downward boost when gravity kicks in
+		input_enabled = true;
+		y_speed = 0;
+		x_speed = 0;
+		alarm[0] = 5;
+		
+		beingFired = false;
+		dashing = false;
+		groundPounding = false;
+		grappling = false;
+		input_enabled = true;
+		state = stateFree;
+	}
+    
+	// Also stop if we hit something during flight
+	if (place_meeting(x + sign(x_speed), y, O_Ground) || place_meeting(x, y + sign(y_speed), O_Ground))
+	{
+		show_debug_message("Hit obstacle during flight");
+		beingFired = false;
+		dashing = false;
+		groundPounding = false;
+		grappling = false;
+		input_enabled = true;
+		state = stateFree;
+	}
 }
 
 state = stateFree;
