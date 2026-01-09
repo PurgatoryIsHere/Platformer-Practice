@@ -90,7 +90,7 @@ LifeReduction = function()
 {
 	global.lives -= 1;
 		
-	if(global.lives == 0)
+	if(global.lives < 0)
 	{
 		room = MainMenu;
 		global.lives = 3;
@@ -99,16 +99,16 @@ LifeReduction = function()
 		
 	else
 	{
-		if (file_exists("checkpoint.ini"))
-		{
-			ini_open("checkpoint.ini");
-			x = ini_read_real("player", "x", x);
-			y = ini_read_real("player", "y", y);
-			ini_close();
-		}
-		
+		room_restart();
 		global.player_health = global.player_max_health;
 	}
+}
+
+// If checkpoint has been reached, spawn at checkpoint
+if (global.checkpoint_x != noone || global.checkpoint_y != noone)
+{
+    x = global.checkpoint_x;
+    y = global.checkpoint_y;
 }
 
 // --------------------------------------------

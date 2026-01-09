@@ -3,7 +3,5 @@
 
 sprite_index = S_Checkpoint_Active
 
-ini_open("checkpoint.ini");
-ini_write_real("player", "x", other.x);
-ini_write_real("player", "y", other.y);
-ini_close();
+global.checkpoint_x = other.x;
+global.checkpoint_y = other.y;

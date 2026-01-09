@@ -38,6 +38,7 @@
   "ResourceOrderSettings":[
     {"name":"A7PortalController","order":22,"path":"objects/A7PortalController/A7PortalController.yy",},
     {"name":"BGMController","order":24,"path":"objects/BGMController/BGMController.yy",},
+    {"name":"CheckpointManager","order":26,"path":"objects/CheckpointManager/CheckpointManager.yy",},
     {"name":"FlagObject_From_8_1","order":1,"path":"objects/FlagObject_From_8_1/FlagObject_From_8_1.yy",},
     {"name":"FlagObject_From_8_2","order":2,"path":"objects/FlagObject_From_8_2/FlagObject_From_8_2.yy",},
     {"name":"FlagObject_To_8_1","order":3,"path":"objects/FlagObject_To_8_1/FlagObject_To_8_1.yy",},
@@ -90,7 +91,6 @@
     {"name":"O_HiddenWall","order":13,"path":"objects/O_HiddenWall/O_HiddenWall.yy",},
     {"name":"O_Key","order":6,"path":"objects/O_Key/O_Key.yy",},
     {"name":"O_KeyPiece","order":7,"path":"objects/O_KeyPiece/O_KeyPiece.yy",},
-    {"name":"O_Pause","order":23,"path":"objects/O_Pause/O_Pause.yy",},
     {"name":"O_Pillar","order":15,"path":"objects/O_Pillar/O_Pillar.yy",},
     {"name":"O_PlayButton","order":2,"path":"objects/O_PlayButton/O_PlayButton.yy",},
     {"name":"O_PlayerRewrite","order":25,"path":"objects/O_PlayerRewrite/O_PlayerRewrite.yy",},
@@ -106,6 +106,7 @@
     {"name":"O_TimerGate","order":5,"path":"objects/O_TimerGate/O_TimerGate.yy",},
     {"name":"O_TopSpike","order":3,"path":"objects/O_TopSpike/O_TopSpike.yy",},
     {"name":"O_Trail","order":3,"path":"objects/O_Trail/O_Trail.yy",},
+    {"name":"PauseController","order":23,"path":"objects/PauseController/PauseController.yy",},
     {"name":"RespawnManager","order":20,"path":"objects/RespawnManager/RespawnManager.yy",},
     {"name":"Area1","order":9,"path":"rooms/Area1/Area1.yy",},
     {"name":"Area2","order":11,"path":"rooms/Area2/Area2.yy",},

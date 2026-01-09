@@ -1,4 +1,4 @@
-/// @description Damage calculation
+/// @description Damage Calculation
 // You can write your code in this editor
 
 // Damaging the player
