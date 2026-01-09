@@ -36,7 +36,9 @@ if(activated)
 		
 					if(!condition_unmet)
 					{
-						instance_create_layer(672, 80, "Instances", O_HeartPiece);
+						var heart_piece = instance_create_layer(672, 80, "Instances", O_HeartPiece);
+						heart_piece.area = 2;
+						heart_piece.key = 1;
 						
 						auto_gates = [instance_position(816, 80, O_AutoGate), instance_position(816, 96, O_AutoGate)];
 			
@@ -183,7 +185,9 @@ if(activated)
 					
 					if(!condition_unmet)
 					{
-						instance_create_layer(1920, 128, "Instances", O_A7HeartPiece);
+						var heart_piece = instance_create_layer(1920, 128, "Instances", O_A7HeartPiece);
+						heart_piece.area = 6;
+						heart_piece.key = 0;
 						
 						auto_gates = [
 						instance_position(1760, 112.099, O_AutoGate), 

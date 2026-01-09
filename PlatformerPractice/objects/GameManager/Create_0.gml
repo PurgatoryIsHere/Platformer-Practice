@@ -1,9 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-// Anything defined in the game manager will carry over across rooms
-persistent = true
-
 // Default font used in draw functions
 global.default_font = draw_get_font()
 global.default_halign = draw_get_halign()
@@ -16,6 +13,13 @@ global.player_health = 100
 global.heart_pieces_collected = 0;
 global.all_heart_pieces_collected = false;
 global.heart_pieces_to_collect = [0, 2, 3, 3, 2, 3, 3, 3]
+global.collected_heart_piece =[[false, false],
+							   [false, false, false],
+							   [false, false, false],
+							   [false, false],
+							   [false, false, false],
+							   [false, false, false],
+							   [false, false, false]];
 
 // Ability Unlocks
 global.doubleJumpUnlock = false
