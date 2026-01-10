@@ -29,10 +29,14 @@ if(fading_out)
 	{
         fade_alpha = 1;
         fading_out = false;
+		
+		// Teleport
+		with(O_Player)
+		{
+			x = other.other_side.x;
+			y = other.other_side.y;
+		}
 
-        // Teleport
-        player.x = other_side.x;
-        player.y = other_side.y;
         activated = false;
         other_side.activated = false;
         alarm[0] = 180;
