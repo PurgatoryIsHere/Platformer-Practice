@@ -18,6 +18,7 @@ if(pause)
 		pause_music = noone;
 		*/
 		
+		global.respawn_queue = [];
         room_restart();
     }
 	
@@ -36,6 +37,9 @@ if(pause)
 		pause_music = noone;
 		*/
 		
+		global.checkpoint_x = noone;
+		global.checkpoint_y = noone;
+		global.respawn_queue = [];
         room_goto(MainMenu);
     }
 }

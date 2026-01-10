@@ -19,21 +19,31 @@ if(pause && surface_exists(pause_surf))
     draw_set_alpha(1);
 	
 	var collected_heart_pieces = 0;
+	var heart_pieces_to_collect = 0;
 	
-	if(current_room == 17 || current_room = 18 || current_room = 19)
+	if(current_room == Area7_1 || current_room = Area7_2 || current_room = Area7_3)
 	{
-		collected_heart_pieces = string(global.heart_pieces_to_collect[7]);
+		collected_heart_pieces = string(global.heart_pieces_collected[7]);
+		heart_pieces_to_collect = string(global.heart_pieces_to_collect[7]);
+	}
+	
+	else if(current_room == Area8_1 || current_room = Area8_2 || current_room = Area8_3_1 || current_room = Area8_3_2 || current_room = Area8_3_3)
+	{
+		collected_heart_pieces = string(global.heart_pieces_collected[8]);
+		heart_pieces_to_collect = string(global.heart_pieces_to_collect[8]);
 	}
 	
 	else
 	{
-		collected_heart_pieces = string(global.heart_pieces_to_collect[current_room]);
+		collected_heart_pieces = string(global.heart_pieces_collected[current_room]);
+		heart_pieces_to_collect = string(global.heart_pieces_to_collect[current_room]);
+		
 	}
 
     // Menu content
     var lines = [
         "PAUSED",
-        "Heart pieces collected: " + string(global.heart_pieces_collected) + "/" + collected_heart_pieces,
+        "Heart pieces collected: " + collected_heart_pieces + "/" + heart_pieces_to_collect,
         "Press R to Restart",
         "Press Q to Return to Menu"
     ];

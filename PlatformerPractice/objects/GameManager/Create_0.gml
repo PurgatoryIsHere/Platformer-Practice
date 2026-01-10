@@ -10,9 +10,9 @@ global.default_valign = draw_get_valign()
 global.lives = 3
 global.player_max_health = 100;
 global.player_health = 100
-global.heart_pieces_collected = 0;
-global.all_heart_pieces_collected = false;
-global.heart_pieces_to_collect = [0, 2, 3, 3, 2, 3, 3, 3]
+
+global.heart_pieces_to_collect = [0, 2, 3, 3, 2, 3, 3, 3, 0]
+global.heart_pieces_collected = [0, 0, 0, 0, 0, 0, 0, 0, 0]
 global.collected_heart_piece =[[false, false],
 							   [false, false, false],
 							   [false, false, false],
@@ -31,7 +31,7 @@ global.isBossAlive = false
 global.drops_ability = false;
 global.ability_collected = false;
 
-//Interactions for Area7
+//Interactions for Area 7
 global.area7_key_pieces_collected = 0;
 
 //Interactions for Area8

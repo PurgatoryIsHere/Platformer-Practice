@@ -19,7 +19,6 @@ movement_speed = 2;
 max_falling_speed = 6;
 
 facing = 1;
-state_locked = false;
 
 // --------------------------------------------
 // Jumping
@@ -131,11 +130,11 @@ stateFree = function()
 			if(on_wall != 0 && wall_sliding)
 			{
 				x_speed = on_wall * 4;
-				y_speed = -7;
+				y_speed = -4;
 				movement_lock_timer = 10;
 			}
 		
-			if(global.doubleJumpUnlock)
+			else if(global.doubleJumpUnlock)
 			{
 				y_speed = -3.5;
 				jump_counter += 1;
@@ -186,7 +185,7 @@ stateFree = function()
 
 stateDash = function()
 {
-	sprite_index = S_PlayerDash;
+	sprite_index = S_PlayerDashing;
 	image_xscale = facing / 2;
 	
 	if(on_ground && dir != 0)

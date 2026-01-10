@@ -9,7 +9,7 @@ if(pause)
     }
 }
 
-if(keyboard_check_pressed(vk_backspace)) 
+if(keyboard_check_pressed(vk_backspace) && room != MainMenu) 
 {
     if(!pause) 
 	{

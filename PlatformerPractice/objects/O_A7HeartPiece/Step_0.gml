@@ -2,12 +2,12 @@
 // You can write your code in this editor
 if(!global.collected_heart_piece[area][key] && place_meeting(x, y, O_Player))
 {
-	global.heart_pieces_collected += 1;
+	global.heart_pieces_collected[7] += 1;
 	global.collected_heart_piece[area][key] = true;
 	
 	var required = global.heart_pieces_to_collect[7];
 	
-	if(global.heart_pieces_collected == required)
+	if(global.heart_pieces_collected[7] == required)
 	{
 		global.player_max_health += 10;
 		global.player_health += 10;

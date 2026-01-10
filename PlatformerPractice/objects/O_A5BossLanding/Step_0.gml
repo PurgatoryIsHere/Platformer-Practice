@@ -5,6 +5,7 @@ if (!instance_exists(O_A5Boss))
 {
 	instance_destroy(self)	
 }
+
 else if (O_A5Boss.phase = self.phase)
 {
 	O_A5Boss.next_site = self;	
