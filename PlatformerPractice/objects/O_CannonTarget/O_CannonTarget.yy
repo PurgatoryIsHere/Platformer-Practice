@@ -2,7 +2,7 @@
   "$GMObject":"",
   "%Name":"O_CannonTarget",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"O_PlayerRewrite","path":"objects/O_PlayerRewrite/O_PlayerRewrite.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"O_Player","path":"objects/O_Player/O_Player.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"O_CannonTarget",

@@ -124,7 +124,6 @@
     {"id":{"name":"O_Pillar","path":"objects/O_Pillar/O_Pillar.yy",},},
     {"id":{"name":"O_PlayButton","path":"objects/O_PlayButton/O_PlayButton.yy",},},
     {"id":{"name":"O_Player","path":"objects/O_Player/O_Player.yy",},},
-    {"id":{"name":"O_PlayerRewrite","path":"objects/O_PlayerRewrite/O_PlayerRewrite.yy",},},
     {"id":{"name":"O_Portal","path":"objects/O_Portal/O_Portal.yy",},},
     {"id":{"name":"O_QuitButton","path":"objects/O_QuitButton/O_QuitButton.yy",},},
     {"id":{"name":"O_RightSpike","path":"objects/O_RightSpike/O_RightSpike.yy",},},

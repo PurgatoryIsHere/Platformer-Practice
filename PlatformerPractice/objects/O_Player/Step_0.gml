@@ -1,439 +1,229 @@
-  /// @description Player Actions
+/// @description Player Actions
 // You can write your code in this editor
 
-// Ensure camera remains centered on player
-var cam_x = x - (camera_get_view_width(view_camera[0]) / 2)
-var cam_y = camera_get_view_y(view_camera[0])
+// --------------------------------------------
+// Camera
+// --------------------------------------------
+var cam_x = x - (camera_get_view_width(view_camera[0]) / 2);
+var cam_y = camera_get_view_y(view_camera[0]);
 
-camera_set_view_pos(view_camera[0], cam_x, cam_y)
+camera_set_view_pos(view_camera[0], cam_x, cam_y);
 
 
-if (!beingFired) 
-{
-	y_speed += 0.2 // Gravity
-	input_enabled = true;
-}
-
-if(place_meeting(x, y, O_Ground)) {
-	for(var i = 0; i < 1000; ++i) {
-		//Right
-		if(!place_meeting(x + i, y, O_Ground)) {
-			x += i;
-			break;
-		}
-		//Left
-		if(!place_meeting(x - i, y, O_Ground)) {
-			x -= i;
-			break;
-		}
-		//Up
-		if(!place_meeting(x, y - i, O_Ground)) {
-			y -= i;
-			break;
-		}
-		//Down
-		if(!place_meeting(x, y + i, O_Ground)) {
-			y += i;
-			break;
-		}
-		//Top Right
-		if(!place_meeting(x + i, y - i, O_Ground)) {
-			x += i;
-			y -= i;
-			break;
-		}
-		//Top Left
-		if(!place_meeting(x - i, y - i, O_Ground)) {
-			x -= i;
-			y -= i;
-			break;
-		}
-		//Bottom Right
-		if(!place_meeting(x + i, y + i, O_Ground)) {
-			x += i;
-			y += i;
-			break;
-		}
-		//Bottom Left
-		if(!place_meeting(x - i, y + i, O_Ground)) {
-			x -= i;
-			y += i;
-			break;
-		}
-	}
-}
-
+// --------------------------------------------
+// Input Reading
+// --------------------------------------------
 if(input_enabled)
 {
-	// Player Functionality
-	
 	var left = keyboard_check(global.left_key);
 	var right = keyboard_check(global.right_key);
-
-	dir = right - left; // Direction the player is facing
-
-	onGround = place_meeting(x, y + bbox_bottom, O_Ground);
-	onWall = place_meeting(x - 1.5, y, O_Ground) - place_meeting(x + 1.5, y, O_Ground)
-
-	if(onWall == 1)
-	{
-		wall_jump_x_speed = 8;
-	}
-	
-	else if(onWall == -1)
-	{
-		wall_jump_x_speed = -8;
-	}
-
-	else if(onWall == 0)
-	{
-		last_wall = 0;
-	}
-
-	var holdingLeft = keyboard_check(global.left_key)
-	var holdingRight = keyboard_check(global.right_key)
-	 
-	// Reduce timers and/or cooldowns, frame-by-frame
-	dash_timer = max(dash_timer - 1, 0)
-	wall_jump_timer = max(wall_jump_timer - 1, 0)
-	i_frame_timer = max(i_frame_timer - 1, 0)
-
-	grapple_cooldown = max(grapple_cooldown - 1, 0)
-	dash_cooldown = max(dash_cooldown - 1, 0)
-
- 
-		x_speed = dir * 2
-	}
-	
-	// Jumping
-	if(keyboard_check_pressed(global.jump_key) && jump_counter < 2)
-	{
-		sprite_index = S_PlayerJump
-		
-		// WALL JUMP
-		if (onWall != 0 && !onGround)
-		{
-			if (last_wall != onWall)  // prevents repeated jumps on same wall
-			{
-				is_wall_jumping = true;
-				wall_jump_time = 12;
-
-				y_speed = -3.5; // upward push
-				x_speed = wall_jump_x_speed * 0.8; // smoother horizontal push
-
-				last_wall = onWall;
-				jump_counter = 1; // allow double jump after wall jump
-			}
-		}
-
-	
-		else if (global.doubleJumpUnlock)
-		{
-			y_speed =  -3.5
-			jump_counter += 1
-			canDash = true
-		}
-		
-		else
-		{
-			y_speed = -3.5
-			jump_counter = 2
-			canDash = true
-		}
-	}
-	
-	if(place_meeting(x, y + y_speed, O_Ground))
-	{
-		// Normal ground collision for regular GroundObjects
-		while(!place_meeting(x, y + sign(y_speed), O_Ground))
-		{
-			y += sign(y_speed)
-		}
-        
-		if(y_speed > 0)
-		{
-			jump_counter = 0
-		}
-        
-		y_speed = 0
-		wall_jump_timer = 0; 
-		last_wall = 0;
-	}
-
-	// Wall Jumping
-	if(onWall != 0 && !onGround && !groundPounding && !is_wall_jumping)
-	{
-		y_speed = min(y_speed, 0.25);
-		jump_counter = 0;
-	}
-
-	// Handle movement for wall-jumping
-	// Smooth wall-jump movement
-	if (is_wall_jumping)
-	{
-		wall_jump_time -= 1;
-
-		// Blend back to normal control
-		var blend = wall_jump_time / 12;
-		x_speed = lerp(dir * 2, x_speed, blend);
-
-		if (wall_jump_time <= 0)
-		{
-			is_wall_jumping = false;
-		}
-	}
-	
-	else
-	{
-		// Normal movement
-		x_speed = dir * 2;
-	}
+	var dash = keyboard_check_pressed(global.dash_key);
+	var ground_pound = keyboard_check_pressed(global.gp_key);
+	var grapple = keyboard_check_pressed(global.grapple_key);
 
 
-	// Grappling
+	dir = right - left;
 
-	// Find closest target object within range
-	var detection_range = 100; // Adjust as needed
-	var closest_target = instance_nearest(x, y, O_GrapplePoint)
-
-	// Check if target is in range
-	if (closest_target != noone) 
-	{
-		var target_distance = point_distance(x, y, closest_target.x, closest_target.y)
-	
-		var collision_list = ds_list_create();
-		var collisions = collision_line_list(x, y, closest_target.x, closest_target.y, all, false, true, collision_list, false);
-    
-		var line_blocked = false;
-		for (var i = 0; i < collisions; i++) 
-		{
-			var obj = collision_list[| i];
-			// Only count it as blocking if it's not the player or the target
-			if (obj != self && obj != closest_target) 
-			{
-				line_blocked = true;
-				break;
-			}
-		}
-    
-		ds_list_destroy(collision_list);
-	
-		// Check if target is in range
-		if (target_distance <= detection_range && !line_blocked)
-		{
-			target_in_range = true
-			target_x = closest_target.x
-			target_y = closest_target.y
-		} 
-	
-		else
-		{
-			target_in_range = false
-		}
-	}
-
-	else 
-	{
-		// No target exists
-		target_in_range = false
-	}
-	
-	if (target_in_range && keyboard_check_pressed(global.grapple_key) && !grappling && grapple_cooldown == 0 && global.grappleUnlock)
-	{
-		sprite_index = S_PlayerGrapple
-		grappling = true
-		grapple_cooldown = 15
-	}
-
-	// Handle movement for grappling
-	if (grappling) 
-	{
-		var dir_to_target = point_direction(x, y, target_x, target_y)
-		var dist_to_target = point_distance(x, y, target_x, target_y)
-    
-		if (dist_to_target > grapple_speed)
-		{
-			// Move toward target
-			x_speed = lengthdir_x(grapple_speed, dir_to_target)
-			y_speed = lengthdir_y(grapple_speed, dir_to_target)
-			
-			sprite_index = S_PlayerGrappling
-		} 
-	
-		else
-		{
-			// Reached target
-			x = target_x
-			y = target_y
-			grappling = false
-			y_speed = -2.5
-		}
-	}
-	
-	// Dashing
-	
-	if(keyboard_check_pressed(global.dash_key) && !grappling && dash_cooldown == 0)
-	{
-		sprite_index = S_PlayerDash;
-		dash_timer = 10;
-		dash_speed = 5;
-		dashing = true;
-		i_frame_timer = 32;
-		dash_cooldown = 40;
-
-		if (onGround && dir != 0)
-		{
-			ground_dash = true;
-		}
-		
-		else if (!onGround)
-		{
-			ground_dash = false;
-		}
-	}
-
-
-	// Handle movement for dashing
-	if (dash_timer > 0) 
-	{
-		var new_x = dir * dash_speed
-	
-		if(ground_dash)
-		{
-			move_and_collide(new_x, 0, O_Ground)
-	
-		}
-	
-		else
-		{
-			move_and_collide(new_x, -1.5, O_Ground)
-		}
-	
-		// Dash visualization
-		with(instance_create_depth(x, y, depth + 1, O_Trail))
-		{
-			sprite_index = S_PlayerDashing
-			image_blend = c_fuchsia
-			image_alpha = 0.7
-		}
-	}
-
-	else
-	{
-		dashing = false
-		ground_dash = false
-	}
-
-
-	// Ground Pound
-	if(!onGround && keyboard_check_pressed(global.gp_key) && global.groundPoundUnlock)
-	{
-		sprite_index = S_PlayerGroundPound
-		
-		x_speed = 0
-		y_speed = 5
-		groundPounding = true
-	
-		with(instance_create_depth(x, y, depth + 1, O_Trail))
-		{
-			sprite_index = S_PlayerGroundPoundFall
-			image_blend = c_fuchsia
-			image_alpha = 0.7
-		}
-	}
-
-	if(onGround && groundPounding)
-	{
-		//Make sure player stops ground pounding after hitting the ground
-		groundPounding = false	
-	}
-
-	// Visualization for Invicibility Frames
-	if(i_frame_timer > 0)
-	{
-		image_alpha = 0.5 + 0.5 * sin(i_frame_timer * 0.5);
-	}
-
-	else
-	{
-		image_alpha = 1	
-	}
-
-	// Handle direct flight to target
-	if (beingFired)
-	{
-		// Calculate how far we've traveled this frame
-		var frame_distance = sqrt(x_speed * x_speed + y_speed * y_speed);
-		flight_traveled += frame_distance;
-    
-		// Check if we've reached the target distance
-		if (flight_traveled >= flight_distance) 
-		{
-			// We've reached the target, turn gravity back on
-			beingFired = false;
-			show_debug_message("Reached target distance, enabling gravity");
-        
-			// Optional: Give a small downward boost when gravity kicks in
-			input_enabled = true;
-			y_speed = 1;
-			x_speed = 0;
-		}
-    
-		// Also stop if we hit something during flight
-		if (place_meeting(x + sign(x_speed), y, O_Ground) || 
-			place_meeting(x, y + sign(y_speed), O_Ground))
-		{
-			beingFired = false;
-			show_debug_message("Hit obstacle during flight");
-		}
-	}
-
-
-// Handle standard movement
-move_and_collide(x_speed, y_speed, O_Ground)
-
-//Sprite Logic
-if (dashing || grappling || groundPounding)
-{
-    // Keep the special move sprite, exit sprite logic
-}
-//Ground Pounding
-else if (groundPounding)
-{
-	sprite_index = S_PlayerGroundPoundFall	
-}
-//Dashing
-else if (dashing)
-{
-	sprite_index = S_PlayerDashing	
-}
-//Wall slide (when on wall, in air, and falling)
-else if (onWall != 0 && !place_meeting(x, y + 1, O_Ground) && y_speed > 0)
-{
-	sprite_index = S_PlayerOnWallRight
-}
-//Falling
-else if (place_empty(x, y + 1, O_Ground) && y_speed > 0)
-{
-    sprite_index = S_PlayerMidairFalling
-}
-//Rising/jumping
-else if (place_empty(x, y + 1, O_Ground) && y_speed < 0)
-{
-    sprite_index = S_PlayerMidairRising
-}
-//Running
-else if (place_meeting(x, y + 1, O_Ground) && dir != 0)
-{
-    sprite_index = S_PlayerRun
-	
 	if(dir != 0)
 	{
-		image_xscale = sign(dir) / 2
+		facing = dir;
 	}
-} 
-//Idle
-else
+
+	if(dash && dash_cooldown == 0 && !target_in_range)
+	{
+		dashing = true;
+		dash_timer = 10;
+		dash_cooldown = 40;
+		i_frame_timer = 32;
+	}
+
+
+	if(ground_pound && global.groundPoundUnlock)
+	{
+		groundPounding = true;
+	}
+
+	if(grapple && global.grappleUnlock && target_in_range && grapple_cooldown == 0)
+	{
+		grappling = true;
+		grapple_cooldown = 15;
+	}
+}
+
+// --------------------------------------------
+// Condtion Checks
+// --------------------------------------------
+on_ground = place_meeting(x, y + 5, O_Ground);
+on_wall = place_meeting(x - 3, y, O_Ground) - place_meeting(x + 3, y, O_Ground);
+
+// --------------------------------------------
+// Constants (Factors that are checked/applied every frame, regardless of circumstance)
+// --------------------------------------------
+
+// Wall Sliding Gravity
+if(on_wall != 0 && !on_ground && !groundPounding && !beingFired)
 {
-    sprite_index = S_Player	
+	y_speed = min(y_speed + 1, wall_slide_speed);
+}
+
+// Normal Gravity
+else if(!beingFired)
+{
+	y_speed += 0.2;
+}
+
+// Reset jump_counter
+if(on_ground && place_meeting(x, y + y_speed, O_Ground))
+{
+	jump_counter = 0;
+}
+
+// Disable movement lock if player starts sliding on another wall after wall-jumping
+if(on_wall != 0 && movement_lock_timer > 0)
+{
+	movement_lock_timer = 0;
+}
+
+// Timer & Cooldown Decrementation
+dash_timer = max(dash_timer - 1, 0);
+dash_cooldown = max(dash_cooldown - 1, 0);
+movement_lock_timer = max(movement_lock_timer - 1, 0);
+grapple_cooldown = max(grapple_cooldown - 1, 0);
+i_frame_timer = max(i_frame_timer - 1, 0);
+
+// Grapple Point Detection
+var detection_range = 100;
+var closest_target = instance_nearest(x, y, O_GrapplePoint)
+
+// Check if target is in range
+if (closest_target != noone) 
+{
+	var target_distance = point_distance(x, y, closest_target.x, closest_target.y)
+	
+	var collision_list = ds_list_create();
+	var collisions = collision_line_list(x, y, closest_target.x, closest_target.y, all, false, true, collision_list, false);
+    
+	var line_blocked = false;
+	for (var i = 0; i < collisions; i++) 
+	{
+		var obj = collision_list[| i];
+		// Only count it as blocking if it's not the player or the target
+		if (obj != self && obj != closest_target) 
+		{
+			line_blocked = true;
+			break;
+		}
+	}
+    
+	ds_list_destroy(collision_list);
+	
+	// Check if target is in range
+	if (target_distance <= detection_range && !line_blocked)
+	{
+		target_in_range = true
+		target_x = closest_target.x
+		target_y = closest_target.y
+	} 
+	
+	else
+	{
+		target_in_range = false
+	}
+}
+
+else 
+{
+	// No target exists
+	target_in_range = false
+}
+
+// --------------------------------------------
+// Movement
+// --------------------------------------------
+if(input_enabled)
+{
+	state();
+}
+
+// --------------------------------------------
+// Collisions
+// --------------------------------------------
+if(place_meeting(x, y, O_Ground))
+{
+    for(var i = 0; i < 1000; i++)
+    {
+        if(!place_meeting(x + i, y, O_Ground)) { x += i; break; }
+        if(!place_meeting(x - i, y, O_Ground)) { x -= i; break; }
+        if(!place_meeting(x, y - i, O_Ground)) { y -= i; break; }
+        if(!place_meeting(x, y + i, O_Ground)) { y += i; break; }
+    }
+}
+
+if(place_meeting(x + x_speed, y, O_Ground))
+{
+    while(!place_meeting(x + sign(x_speed), y, O_Ground))
+    {
+        x += sign(x_speed);
+    }
+    
+	x_speed = 0;
+}
+
+if(place_meeting(x, y + y_speed, O_Ground))
+{
+    while (!place_meeting(x, y + sign(y_speed), O_Ground))
+    {
+        y += sign(y_speed);
+    }
+    
+	y_speed = 0;
+}
+
+x += x_speed;
+y += y_speed;
+
+// --------------------------------------------
+// Update Sprite
+// --------------------------------------------
+if(dashing || groundPounding || grappling || beingFired)
+{
+	
+}
+
+else if(wall_sliding)
+{
+	sprite_index = S_PlayerOnWallLeft;
+	image_xscale = facing / 2;
+}
+
+
+else if(dashing)
+{
+	sprite_index = S_PlayerDash;
+}
+
+else if(!on_ground) 
+{ 
+	if(y_speed < 0) 
+	{ 
+		sprite_index = S_PlayerMidairRising; 
+		image_xscale = facing / 2;
+	} 
+	
+	else 
+	{ 
+		sprite_index = S_PlayerMidairFalling; 
+		image_xscale = facing / 2;
+	} 
+} 
+
+else if(dir != 0) 
+{ 
+	sprite_index = S_PlayerRun; 
+	image_xscale = facing / 2; 
+} 
+
+else 
+{ 
+	sprite_index = S_Player; 
 }

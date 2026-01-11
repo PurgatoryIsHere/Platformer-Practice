@@ -1,23 +1,62 @@
 /// @description Movement & Damage
 // You can write your code in this editor
 
+y_speed += 0.2;
+
 if(instance_exists(O_Player))
 {
 	if(O_Player.x < x)
 	{
 		dir = -1;
+		image_xscale = -(dir / 2);
 	}
 	
 	else
 	{
 		dir = 1;
+		image_xscale = -(dir / 2);
 	}
 }
 
-if place_free(x + dir, y) && !place_free(x + (dir * 16), y + 9)
+if(place_meeting(x + 16 * dir, y + 16, O_Ground))
 {
-	hspeed = dir * 1
+	x_speed = dir * movement_speed;
 }
+
+// Collision
+if(place_meeting(x, y, O_Ground))
+{
+    for(var i = 0; i < 1000; i++)
+    {
+        if(!place_meeting(x + i, y, O_Ground)) { x += i; break; }
+        if(!place_meeting(x - i, y, O_Ground)) { x -= i; break; }
+        if(!place_meeting(x, y - i, O_Ground)) { y -= i; break; }
+        if(!place_meeting(x, y + i, O_Ground)) { y += i; break; }
+    }
+}
+
+if(place_meeting(x + x_speed, y, O_Ground))
+{
+    while(!place_meeting(x + sign(x_speed), y, O_Ground))
+    {
+        x += sign(x_speed);
+    }
+    
+	x_speed = 0;
+}
+
+if(place_meeting(x, y + y_speed, O_Ground))
+{
+    while (!place_meeting(x, y + sign(y_speed), O_Ground))
+    {
+        y += sign(y_speed);
+    }
+    
+	y_speed = 0;
+}
+
+x += x_speed;
+y += y_speed;
 
 // Damaging the player
 if(place_meeting(x, y, O_Player) && !O_Player.dashing && !O_Player.groundPounding)

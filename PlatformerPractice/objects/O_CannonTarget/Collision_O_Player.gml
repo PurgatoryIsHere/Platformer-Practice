@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description Return player to free state
 // You can write your code in this editor
 
 with(O_Player)

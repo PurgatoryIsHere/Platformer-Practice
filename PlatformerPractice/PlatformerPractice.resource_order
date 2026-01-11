@@ -93,7 +93,6 @@
     {"name":"O_KeyPiece","order":7,"path":"objects/O_KeyPiece/O_KeyPiece.yy",},
     {"name":"O_Pillar","order":15,"path":"objects/O_Pillar/O_Pillar.yy",},
     {"name":"O_PlayButton","order":2,"path":"objects/O_PlayButton/O_PlayButton.yy",},
-    {"name":"O_PlayerRewrite","order":14,"path":"objects/O_PlayerRewrite/O_PlayerRewrite.yy",},
     {"name":"O_Portal","order":9,"path":"objects/O_Portal/O_Portal.yy",},
     {"name":"O_QuitButton","order":3,"path":"objects/O_QuitButton/O_QuitButton.yy",},
     {"name":"O_RightSpike","order":1,"path":"objects/O_RightSpike/O_RightSpike.yy",},

@@ -1,1 +1,0 @@
-tag = "area_1_section_gauntlet_entrance";

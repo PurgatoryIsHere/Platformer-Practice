@@ -1,10 +1,7 @@
-/// @description Initial Save at Start of Room
+/// @description Set initial checkpoint
 // You can write your code in this editor
-
-if (!file_exists("checkpoint.ini"))
-		{
-			ini_open("checkpoint.ini");
-			ini_write_real("player", "x", other.x);
-			ini_write_real("player", "y", other.y);
-			ini_close();
-		}
+if(global.checkpoint_x == noone && global.checkpoint_y == noone)
+{
+	global.checkpoint_x = x;
+	global.checkpoint_y = y;
+}
