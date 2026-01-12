@@ -11,7 +11,10 @@
     "name":"Gates",
     "path":"folders/Objects/TileObjects/Gates.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"O_Gate",
+    "path":"objects/O_Gate/O_Gate.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

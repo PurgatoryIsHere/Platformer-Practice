@@ -11,7 +11,10 @@
     "name":"Gates",
     "path":"folders/Objects/TileObjects/Gates.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"O_Gate",
+    "path":"objects/O_Gate/O_Gate.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -28,7 +31,7 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":false,
+  "solid":true,
   "spriteId":{
     "name":"S_Gate",
     "path":"sprites/S_Gate/S_Gate.yy",

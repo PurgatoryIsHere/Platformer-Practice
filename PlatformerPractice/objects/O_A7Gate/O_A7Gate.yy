@@ -10,8 +10,8 @@
     "path":"folders/Objects/TileObjects/Gates.yy",
   },
   "parentObjectId":{
-    "name":"O_Ground",
-    "path":"objects/O_Ground/O_Ground.yy",
+    "name":"O_Gate",
+    "path":"objects/O_Gate/O_Gate.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

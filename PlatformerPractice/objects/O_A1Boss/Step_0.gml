@@ -1,10 +1,13 @@
-/// @description Insert description here
+/// @description Boss Mechanics
 // You can write your code in this editor
 
 y_speed += 0.2;
 boss_i_frame_timer = max(boss_i_frame_timer - 1, 0);
+move_timer = max(move_timer - 1, 0);
 
-// Damaging the player
+// --------------------------------------------
+// Dealing/Taking Damage
+// --------------------------------------------
 if(place_meeting(x, y, O_Player) && !O_Player.dashing && !O_Player.groundPounding)
 {
 	if(O_Player.i_frame_timer == 0)
@@ -14,7 +17,6 @@ if(place_meeting(x, y, O_Player) && !O_Player.dashing && !O_Player.groundPoundin
 	}
 }
 
-// Taking damage from player
 if(place_meeting(x, y, O_Player) && (O_Player.groundPounding || O_Player.dashing))
 {
 	if(boss_i_frame_timer == 0)
@@ -23,7 +25,9 @@ if(place_meeting(x, y, O_Player) && (O_Player.groundPounding || O_Player.dashing
 	}
 }
 
-// I-frames visualization (after being damaged by player)
+// --------------------------------------------
+// I-frame Visualization
+// --------------------------------------------
 if(boss_i_frame_timer > 0)
 {
 	image_alpha = 0.5 + 0.5 * sin(boss_i_frame_timer * 0.5);
@@ -34,26 +38,23 @@ else
 	image_alpha = 1	
 }
 
-// Move timer countdown
-move_timer = max(move_timer - 1, 0);
-
-//Movement Logic
-if (jump || doubleJump || groundPound)
+// --------------------------------------------
+// Movement Logic
+// --------------------------------------------
+if(!place_meeting(x + 16 * dir, y, O_Ground))
 {
-	hspeed = dir
-}
-else if place_free(x + dir, y) && !place_free(x + (dir * 24), y + 9)
-{
-	hspeed = dir
+	x_speed = dir
 }
 
-else if place_meeting(x, y + 1, O_Ground)
+else
 {
 	image_xscale = dir * -1.5;
 	dir *= -1
 }
 
-// Special move logic
+// --------------------------------------------
+// Special Move Logic
+// --------------------------------------------
 if(jump) 
 {
     if(move_timer == 0)
@@ -94,7 +95,7 @@ else if(groundPound)
         y_speed = 10;
         
         // Check for ground pound impact
-        if(point_distance(x, y + 1, O_Player.x, O_Player.y) < 80 && O_Player.onGround && place_meeting(x, y + sprite_height, O_Ground)) 
+        if(point_distance(x, y + 1, O_Player.x, O_Player.y) < 80 && O_Player.on_ground && place_meeting(x, y + sprite_height, O_Ground)) 
 		{
             O_Player.TakeDamage(20);
         }
@@ -109,5 +110,39 @@ else if(groundPound)
     }
 }
 
-// Apply movement with collision
-boss_move_and_collide(hspeed, y_speed, O_Ground);
+// --------------------------------------------
+// Collision Handling
+// --------------------------------------------
+if(place_meeting(x, y, O_Ground))
+{
+    for(var i = 0; i < 1000; i++)
+    {
+        if(!place_meeting(x + i, y, O_Ground)) { x += i; break; }
+        if(!place_meeting(x - i, y, O_Ground)) { x -= i; break; }
+        if(!place_meeting(x, y - i, O_Ground)) { y -= i; break; }
+        if(!place_meeting(x, y + i, O_Ground)) { y += i; break; }
+    }
+}
+
+if(place_meeting(x + x_speed, y, O_Ground))
+{
+    while(!place_meeting(x + sign(x_speed), y, O_Ground))
+    {
+        x += sign(x_speed);
+    }
+    
+	x_speed = 0;
+}
+
+if(place_meeting(x, y + y_speed, O_Ground))
+{
+    while (!place_meeting(x, y + sign(y_speed), O_Ground))
+    {
+        y += sign(y_speed);
+    }
+    
+	y_speed = 0;
+}
+
+x += x_speed;
+y += y_speed;
