@@ -8,8 +8,6 @@ phase = 1
 
 next_site = 0
 
-global.isBossAlive = true;
-
 
 DropKeyPiece = function()
 {

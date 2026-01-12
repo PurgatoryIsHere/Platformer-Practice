@@ -1,15 +1,25 @@
 /// @description Basic boss mechanics
 // You can write your code in this editor
 
-global.isBossAlive = true; // variable to unlock gate for the player once false
-boss_health = 90; // Health for boss; can be changed for each boss
-boss_i_frame_timer = 0; // I-frames the boss gets upon taking damage
+boss_health = 90;
+boss_battle_active = false;
+boss_i_frame_timer = 0;
 
-dir = 1; // Starting Direction; can be changed depending on where boss will spawn
+dir = 1;
 
-global.drops_ability = true; // Whether or not the boss drops an ability for the player
+phase = 0;
+wave_spawned = false;
+wave_respawning = false;
+pillars_dropped = false;
+pillar_timer = 0;
+pillar_timeout = 600; // time before pillars start collapsing
 
-TakeDamage = function(damage) // Basic damage calculation; aspects can be changed for each boss
+ground_pounding = false;
+destroy_platform_triggered = false;
+respawn_platform_triggered = false;
+jumping = false;
+
+TakeDamage = function(damage)
 {
 	boss_health -= damage;
 	
@@ -27,13 +37,8 @@ TakeDamage = function(damage) // Basic damage calculation; aspects can be change
 			self.shake_time = 30;
 		}
 		
-		global.isBossAlive = false; // Unlocks gate
 		instance_destroy(self);
-		
-		if(global.drops_ability)
-		{
-			DropAbility();
-		}
+		DropAbility();
 	}
 	
 	else if(boss_health <= 30 && phase == 2)
@@ -104,57 +109,13 @@ TakeDamage = function(damage) // Basic damage calculation; aspects can be change
 		alarm[1] = 110;
 	}
 	
-	boss_i_frame_timer = 32; // Standard amount of i-frames; can be changed for each boss
+	boss_i_frame_timer = 32;
 }
 
-DropAbility = function() // Spawns the ability that a boss would drop upon defeat
+DropAbility = function()
 {
-	// Have a place in the boss arena that the ability will spawn at; likely the center of the arena will do
-	instance_create_layer(320, 928, "Instances", O_GroundPoundUnlock); // Change x and y to the specified coordinates
+	instance_create_layer(320, 928, "Instances", O_GroundPoundUnlock);
 }
-
-function boss_move_and_collide(hsp, vsp, obj) 
-{
-    var steps = ceil(max(abs(hsp), abs(vsp)));
-    var step_x = hsp / steps;
-    var step_y = vsp / steps;
-
-    for (var i = 0; i < steps; i++)
-	{
-        if (place_free(x + step_x, y))
-		{
-			x += step_x;
-		}
-		
-        else 
-		{
-			hspeed = 0;
-		}
-
-        if (place_free(x, y + step_y))
-		{
-			y += step_y;
-		}
-		
-        else 
-		{
-			y_speed = 0;
-		}
-    }
-}
-
-// Unique Boss Mechanics
-boss_battle_active = false;
-phase = 0;
-wave_spawned = false;
-wave_respawning = false;
-pillars_dropped = false;
-pillar_timer = 0;
-pillar_timeout = 600; // time before pillars start collapsing
-ground_pounding = false;
-destroy_platform_triggered = false;
-respawn_platform_triggered = false;
-jumping = false;
 
 Spawn_Wave = function(enemy_count)
 {

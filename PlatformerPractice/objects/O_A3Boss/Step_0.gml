@@ -5,12 +5,10 @@ boss_i_frame_timer = max(boss_i_frame_timer - 1, 0);
 
 if(!boss_battle_active)
 {
-	var nearest_agd = instance_nearest(336, 944, O_AutoGateDetection);
-
-	if(nearest_agd.activated && !boss_battle_active)
+	if(O_Player.x > 64 && O_Player.x < 576 && O_Player.y < 944 && O_Player.y > 608)
 	{
-		phase = 1;
 		boss_battle_active = true;
+		phase = 1;
 	}
 }
 
@@ -83,8 +81,6 @@ else if(boss_battle_active)
 	}
 }
 
-
-
 // Taking damage from player
 if(place_meeting(x, y, O_Player) && (O_Player.groundPounding || O_Player.dashing))
 {
@@ -93,7 +89,6 @@ if(place_meeting(x, y, O_Player) && (O_Player.groundPounding || O_Player.dashing
 		TakeDamage(10);
 	}
 }
-
 
 // Invicibility frames
 if(boss_i_frame_timer > 0)
@@ -146,6 +141,7 @@ if(ground_pounding)
 	}
 }
 
+// Jumping back up to platform
 if(jumping)
 {
     y -= 8;
@@ -160,11 +156,4 @@ if(jumping)
 		respawn_platform_triggered = false;
 		alarm[1] = 60;
     }
-}
-
-
-else
-{
-    // normal movement/collision
-    boss_move_and_collide(hspeed, vspeed, O_Ground);
 }

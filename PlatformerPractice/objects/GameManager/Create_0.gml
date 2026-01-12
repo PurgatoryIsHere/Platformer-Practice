@@ -6,7 +6,7 @@ global.default_font = draw_get_font()
 global.default_halign = draw_get_halign()
 global.default_valign = draw_get_valign()
 
-// Player lives and health
+// Player Variables
 global.lives = 3
 global.player_max_health = 100;
 global.player_health = 100
@@ -26,15 +26,20 @@ global.doubleJumpUnlock = false
 global.groundPoundUnlock = false
 global.grappleUnlock = false
 
-//Check if boss is on level
-global.isBossAlive = false
-global.drops_ability = false;
+// Boss Variables
+global.a1_boss_defeated = false;
+global.a3_boss_defeated = false;
+global.a5_boss_defeated = false;
+global.a1_miniboss_defeated = false;
+global.a3_miniboss_defeated = false;
+global.a5_miniboss_defeated = false;
+
 global.ability_collected = false;
 
-//Interactions for Area 7
+// Area 7 Interactions
 global.area7_key_pieces_collected = 0;
 
-//Interactions for Area8
+// Area 8 Interactions
 global.returning_from_8_1 = false;
 global.returning_from_8_2 = false;
 global.area8_returnX = 0;

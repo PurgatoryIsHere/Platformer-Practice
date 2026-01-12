@@ -95,7 +95,6 @@ PhaseTwoDamage = function(damage) // Basic damage calculation; aspects can be ch
 			instance_destroy(self);
 		}
 		
-		global.isBossAlive = false; // Unlocks gate
 		instance_destroy(self);
 	}
 	

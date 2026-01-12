@@ -14,8 +14,8 @@
     "path":"folders/Objects/EnemyObjects/Area7Minibosses.yy",
   },
   "parentObjectId":{
-    "name":"O_AreaBossParent",
-    "path":"objects/O_AreaBossParent/O_AreaBossParent.yy",
+    "name":"O_A1Boss",
+    "path":"objects/O_A1Boss/O_A1Boss.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"S_GroundEnemy",
-    "path":"sprites/S_GroundEnemy/S_GroundEnemy.yy",
+    "name":"S_A1Boss",
+    "path":"sprites/S_A1Boss/S_A1Boss.yy",
   },
   "spriteMaskId":null,
   "visible":true,

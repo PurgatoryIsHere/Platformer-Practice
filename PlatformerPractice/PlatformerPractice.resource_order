@@ -63,7 +63,6 @@
     {"name":"O_A8Boss","order":5,"path":"objects/O_A8Boss/O_A8Boss.yy",},
     {"name":"O_A8BossProjectile_P4","order":9,"path":"objects/O_A8BossProjectile_P4/O_A8BossProjectile_P4.yy",},
     {"name":"O_A8BossProjectile","order":8,"path":"objects/O_A8BossProjectile/O_A8BossProjectile.yy",},
-    {"name":"O_AreaBossParent","order":4,"path":"objects/O_AreaBossParent/O_AreaBossParent.yy",},
     {"name":"O_AutoGate","order":3,"path":"objects/O_AutoGate/O_AutoGate.yy",},
     {"name":"O_AutoGateDetection","order":2,"path":"objects/O_AutoGateDetection/O_AutoGateDetection.yy",},
     {"name":"O_BottomlessPit","order":6,"path":"objects/O_BottomlessPit/O_BottomlessPit.yy",},

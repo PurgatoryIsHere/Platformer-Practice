@@ -4,7 +4,6 @@
 /// @description Basic boss mechanics
 // You can write your code in this editor
 
-global.isBossAlive = true; // variable to unlock gate for the player once false
 boss_health = 60; // Health for boss; can be changed for each boss
 boss_i_frame_timer = 0; // I-frames the boss gets upon taking damage
 
@@ -27,8 +26,6 @@ TakeDamage = function(damage) // Basic damage calculation; aspects can be change
 			self.alarm[0] = 30;
 			self.shake_time = 30;
 		}
-		
-		global.isBossAlive = false; // Unlocks gate
 		
 		DropKeyPiece();
 		OpenGates();

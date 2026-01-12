@@ -15,10 +15,7 @@
     "name":"AreaBosses",
     "path":"folders/Objects/EnemyObjects/AreaBosses.yy",
   },
-  "parentObjectId":{
-    "name":"O_AreaBossParent",
-    "path":"objects/O_AreaBossParent/O_AreaBossParent.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
