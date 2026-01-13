@@ -3,6 +3,5 @@
 
 if(O_Player.groundPounding) && place_meeting(x, y - sprite_height, O_Player)
 {
-	instance_destroy(self)	
-	O_Player.groundPounding = false
+	instance_destroy(self);
 }

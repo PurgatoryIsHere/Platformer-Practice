@@ -35,6 +35,7 @@ TakeDamage = function(damage) // Basic damage calculation; aspects can be change
 		instance_create_layer(1312, 384, "Instances", O_BreakableBlock);
 		instance_create_layer(1328, 384, "Instances", O_BreakableBlock);
 		
+		global.a3_miniboss_defeated = true;
 		instance_destroy(self);
 	}
 	

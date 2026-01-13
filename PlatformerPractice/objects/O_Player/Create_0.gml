@@ -137,13 +137,13 @@ stateFree = function()
 		
 			else if(global.doubleJumpUnlock)
 			{
-				y_speed = -3.5;
+				y_speed = -4;
 				jump_counter += 1;
 			}
 		
 			else
 			{
-				y_speed -= 3.5;
+				y_speed -= 4;
 				jump_counter = max_jumps;
 			}
 		
