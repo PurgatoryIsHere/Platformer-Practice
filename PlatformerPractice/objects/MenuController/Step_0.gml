@@ -15,7 +15,7 @@ if(_move != 0 && !waiting_for_input)
 	// Clamp values (ensure selection cycles through menu options)
 	var _size = array_length(menu[sub_menu]);
 	
-	if(sub_menu == 1 || sub_menu == 2)
+	if(sub_menu == 1 || sub_menu == 2 || sub_menu == 3)
 	{
 		if(index < 1)
 		{

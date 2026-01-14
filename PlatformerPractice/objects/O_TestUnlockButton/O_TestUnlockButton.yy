@@ -8,7 +8,9 @@
   ],
   "managed":true,
   "name":"O_TestUnlockButton",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"O_ButtonParent","path":"objects/O_ButtonParent/O_ButtonParent.yy",},"propertyId":{"name":"button_text","path":"objects/O_ButtonParent/O_ButtonParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"TestUnlock",},
+  ],
   "parent":{
     "name":"ButtonObjects",
     "path":"folders/Objects/ButtonObjects.yy",
