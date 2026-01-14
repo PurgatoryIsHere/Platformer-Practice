@@ -9,6 +9,7 @@ window_set_cursor(cr_none);
 menu[0][0] = O_PlayButton;
 menu[0][1] = O_HelpButton;
 menu[0][2] = O_QuitButton;
+menu[0][3] = O_TestUnlockButton; 
 
 
 /*
@@ -43,6 +44,18 @@ menu[2][5] = "Ground Pound: S";
 menu[2][6] = "Grapple: Space";
 menu[2][7] = "Pause: Backspace";
 menu[2][8] = "Back to Main Menu";
+
+// Test Unlock System Screen
+menu[3][0] = "Which area?"; // Title (non-selectable)
+menu[3][1] = "Tutorial";
+menu[3][2] = "Area 1";
+menu[3][3] = "Area 2";
+menu[3][4] = "Area 3";
+menu[3][5] = "Area 4";
+menu[3][6] = "Area 5";
+menu[3][7] = "Area 6";
+menu[3][8] = "Area 7";
+menu[3][9] = "Area 8";
 
 index = 0;
 sub_menu = 0;

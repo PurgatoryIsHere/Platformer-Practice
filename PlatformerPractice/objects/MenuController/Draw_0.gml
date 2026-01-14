@@ -3,7 +3,7 @@
 draw_set_halign(fa_center);
 draw_set_font(MainMenuFont);
 
-if(sub_menu == 1)
+if(sub_menu == 1 || sub_menu == 3)
 {
     // Draw "Which area?" title
     draw_set_colour(c_white);

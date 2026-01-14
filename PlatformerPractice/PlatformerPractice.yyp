@@ -131,6 +131,7 @@
     {"id":{"name":"O_SolidShelf","path":"objects/O_SolidShelf/O_SolidShelf.yy",},},
     {"id":{"name":"O_SpawnableEnemyParent","path":"objects/O_SpawnableEnemyParent/O_SpawnableEnemyParent.yy",},},
     {"id":{"name":"O_Spike","path":"objects/O_Spike/O_Spike.yy",},},
+    {"id":{"name":"O_TestUnlockButton","path":"objects/O_TestUnlockButton/O_TestUnlockButton.yy",},},
     {"id":{"name":"O_Timer","path":"objects/O_Timer/O_Timer.yy",},},
     {"id":{"name":"O_TimerGate","path":"objects/O_TimerGate/O_TimerGate.yy",},},
     {"id":{"name":"O_TopSpike","path":"objects/O_TopSpike/O_TopSpike.yy",},},
