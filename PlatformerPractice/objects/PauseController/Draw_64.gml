@@ -33,11 +33,16 @@ if(pause && surface_exists(pause_surf))
 		heart_pieces_to_collect = string(global.heart_pieces_to_collect[8]);
 	}
 	
-	else
+	else if(current_room < 9)
 	{
 		collected_heart_pieces = string(global.heart_pieces_collected[current_room]);
 		heart_pieces_to_collect = string(global.heart_pieces_to_collect[current_room]);
-		
+	}
+	
+	else
+	{
+		collected_heart_pieces = string(0);
+		heart_pieces_to_collect = string(0);
 	}
 
     // Menu content
