@@ -60,6 +60,8 @@ grapple_cooldown = 0;
 target_in_range = false;
 target_x = 0;
 target_y = 0;
+grapple_to_x = 0;
+grapple_to_y = 0;
 
 // --------------------------------------------
 // Cannon-Related
@@ -268,29 +270,32 @@ stateGroundPound = function()
 
 stateGrapple = function()
 {
-	sprite_index = S_PlayerGrapple
+	sprite_index = S_PlayerGrapple;
 	image_xscale = facing / 2;
 	
-	var dir_to_target = point_direction(x, y, target_x, target_y)
-	var dist_to_target = point_distance(x, y, target_x, target_y)
+	var dir_to_target = point_direction(x, y, grapple_to_x, grapple_to_y);
+	var dist_to_target = point_distance(x, y, grapple_to_x, grapple_to_y);
     
 	if (dist_to_target > grapple_speed)
 	{
 		// Move toward target
-		x_speed = lengthdir_x(grapple_speed, dir_to_target)
-		y_speed = lengthdir_y(grapple_speed, dir_to_target)
+		x_speed = lengthdir_x(grapple_speed, dir_to_target);
+		y_speed = lengthdir_y(grapple_speed, dir_to_target);
 			
-		sprite_index = S_PlayerGrappling
+		sprite_index = S_PlayerGrappling;
 		image_xscale = facing / 2;
 	} 
 	
 	else
 	{
 		// Reached target
-		x = target_x
-		y = target_y
+		x = grapple_to_x;
+		y = grapple_to_y;
+		grapple_to_x = 0;
+		grapple_to_y = 0;
 		y_speed = -2.5;
-		grappling = false
+		
+		grappling = false;
 		state = stateFree;
 	}
 }

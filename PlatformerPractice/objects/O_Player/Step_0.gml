@@ -47,6 +47,8 @@ if(input_enabled)
 	{
 		grappling = true;
 		grapple_cooldown = 15;
+		grapple_to_x = target_x;
+		grapple_to_y = target_y;
 	}
 }
 
