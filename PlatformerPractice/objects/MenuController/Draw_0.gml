@@ -3,6 +3,7 @@
 draw_set_halign(fa_center);
 draw_set_font(MainMenuFont);
 
+
 if(sub_menu == 1)
 {
     // Draw "Which area?" title
@@ -24,7 +25,14 @@ if(sub_menu == 1)
         var _x = _start_x + _col * _gap_x;
         var _y = _start_y + _row * _gap_y;
         
-        draw_set_colour(c_white);
+		if (global.levelUnlocked[i - 1])
+		{
+			draw_set_colour(c_white)
+		}
+		else
+		{
+			draw_set_colour(c_gray); 
+		}
         
         if(i == index)
         {
@@ -82,14 +90,7 @@ if(sub_menu == 3)
         var _x = _start_x + _col * _gap_x;
         var _y = _start_y + _row * _gap_y;
         
-		if (global.levelUnlocked[i - 1])
-		{
-			draw_set_colour(c_white)
-		}
-		else
-		{
-			draw_set_colour(c_gray); 
-		}
+        draw_set_colour(c_white);
         
         if(i == index)
         {

@@ -79,7 +79,76 @@ if(_select)
 			
 		case 1:
 		
-			/*
+			if (index = 1)
+			{
+				room_goto(Tutorial)
+			}
+			
+			else if(index == 2 && global.levelUnlocked[index - 1])
+			{
+				room_goto(Area1);
+			}
+			
+			else if(index == 3 && global.levelUnlocked[index - 1])
+			{
+				room_goto(Area2);
+			}
+			
+			else if(index == 4 && global.levelUnlocked[index - 1])
+			{
+				room_goto(Area3);
+			}
+			
+			else if(index == 5 && global.levelUnlocked[index - 1])
+			{
+				room_goto(Area4);
+			}
+			
+			else if(index == 6 && global.levelUnlocked[index - 1])
+			{
+				room_goto(Area5);
+			}
+			
+			else if(index == 7 && global.levelUnlocked[index - 1])
+			{
+				room_goto(Area6);
+			}
+			
+			else if(index == 8 && global.levelUnlocked[index - 1])
+			{
+				room_goto(Area7);
+			}
+			
+			else if(index == 9 && global.levelUnlocked[index - 1])
+			{
+				room_goto(Area8);
+			}
+			
+		break;
+		
+		case 2:
+		
+			if(!waiting_for_input)
+			{
+				if(index >= 1 && index <= 6)
+				{
+					waiting_for_input = true;
+					locked_index = index;
+				}
+		
+				if(index == 8)
+				{
+					sub_menu = 0;
+					layer_set_visible("MainMenu", true);
+					index = 1;
+				}
+			}
+			
+		break;
+		
+		case 3:
+		
+		/*
 			if(index == 1)
 			{
 				room_goto(Tutorial);
@@ -153,75 +222,6 @@ if(_select)
 			else if(index == 13)
 			{
 				room_goto(Area8_3_3);
-			}
-			
-		break;
-		
-		case 2:
-		
-			if(!waiting_for_input)
-			{
-				if(index >= 1 && index <= 6)
-				{
-					waiting_for_input = true;
-					locked_index = index;
-				}
-		
-				if(index == 8)
-				{
-					sub_menu = 0;
-					layer_set_visible("MainMenu", true);
-					index = 1;
-				}
-			}
-			
-		break;
-		
-		case 3:
-		
-			if (index = 1)
-			{
-				room_goto(Tutorial)
-			}
-			
-			else if(index == 2 && global.levelUnlocked[index - 1])
-			{
-				room_goto(Area1);
-			}
-			
-			else if(index == 3 && global.levelUnlocked[index - 1])
-			{
-				room_goto(Area2);
-			}
-			
-			else if(index == 4 && global.levelUnlocked[index - 1])
-			{
-				room_goto(Area3);
-			}
-			
-			else if(index == 5 && global.levelUnlocked[index - 1])
-			{
-				room_goto(Area4);
-			}
-			
-			else if(index == 6 && global.levelUnlocked[index - 1])
-			{
-				room_goto(Area5);
-			}
-			
-			else if(index == 7 && global.levelUnlocked[index - 1])
-			{
-				room_goto(Area6);
-			}
-			
-			else if(index == 8 && global.levelUnlocked[index - 1])
-			{
-				room_goto(Area7);
-			}
-			
-			else if(index == 9 && global.levelUnlocked[index - 1])
-			{
-				room_goto(Area8);
 			}
 			
 		break;
