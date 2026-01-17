@@ -1,4 +1,4 @@
-/// @description Insert description here
+ /// @description Insert description here
 // You can write your code in this editor
 if place_meeting(x, y - 1, O_Player) 
 {
@@ -8,4 +8,9 @@ if place_meeting(x, y - 1, O_Player)
 	global.ability_collected = false;
 	global.checkpoint_x = noone;
 	global.checkpoint_y = noone;
+	
+	if (room_number < 8)
+	{
+		global.levelUnlocked[room_number + 1] = true
+	}
 }

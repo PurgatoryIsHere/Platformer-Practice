@@ -248,6 +248,7 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"MainMenu","path":"rooms/MainMenu/MainMenu.yy",},},
+    {"roomId":{"name":"Tutorial","path":"rooms/Tutorial/Tutorial.yy",},},
     {"roomId":{"name":"Area1","path":"rooms/Area1/Area1.yy",},},
     {"roomId":{"name":"Area2","path":"rooms/Area2/Area2.yy",},},
     {"roomId":{"name":"Area3","path":"rooms/Area3/Area3.yy",},},
@@ -256,7 +257,6 @@
     {"roomId":{"name":"Area6","path":"rooms/Area6/Area6.yy",},},
     {"roomId":{"name":"Area7","path":"rooms/Area7/Area7.yy",},},
     {"roomId":{"name":"Area8","path":"rooms/Area8/Area8.yy",},},
-    {"roomId":{"name":"Tutorial","path":"rooms/Tutorial/Tutorial.yy",},},
     {"roomId":{"name":"StartRoom","path":"rooms/StartRoom/StartRoom.yy",},},
     {"roomId":{"name":"EnemyTest","path":"rooms/EnemyTest/EnemyTest.yy",},},
     {"roomId":{"name":"UnlockTest","path":"rooms/UnlockTest/UnlockTest.yy",},},

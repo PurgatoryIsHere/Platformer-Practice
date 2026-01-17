@@ -91,7 +91,7 @@ if(_select)
 			}*/
 		
 			if(index == 1)
-			{
+			{ 
 				room_goto(Area1);
 			}
 			
@@ -184,42 +184,42 @@ if(_select)
 				room_goto(Tutorial)
 			}
 			
-			else if(index == 2)
+			else if(index == 2 && global.levelUnlocked[index - 1])
 			{
 				room_goto(Area1);
 			}
 			
-			else if(index == 3)
+			else if(index == 3 && global.levelUnlocked[index - 1])
 			{
 				room_goto(Area2);
 			}
 			
-			else if(index == 4)
+			else if(index == 4 && global.levelUnlocked[index - 1])
 			{
 				room_goto(Area3);
 			}
 			
-			else if(index == 5)
+			else if(index == 5 && global.levelUnlocked[index - 1])
 			{
 				room_goto(Area4);
 			}
 			
-			else if(index == 6)
+			else if(index == 6 && global.levelUnlocked[index - 1])
 			{
 				room_goto(Area5);
 			}
 			
-			else if(index == 7)
+			else if(index == 7 && global.levelUnlocked[index - 1])
 			{
 				room_goto(Area6);
 			}
 			
-			else if(index == 8)
+			else if(index == 8 && global.levelUnlocked[index - 1])
 			{
 				room_goto(Area7);
 			}
 			
-			else if(index == 9)
+			else if(index == 9 && global.levelUnlocked[index - 1])
 			{
 				room_goto(Area8);
 			}
