@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"Three_Red_Hearts___Go__No_Vocal_",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":70.60109,
+  "exportDir":"",
+  "name":"Three_Red_Hearts___Go__No_Vocal_",
+  "parent":{
+    "name":"Sounds",
+    "path":"folders/Sounds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"Three_Red_Hearts___Go__No_Vocal_.ogg",
+  "volume":1.0,
+}

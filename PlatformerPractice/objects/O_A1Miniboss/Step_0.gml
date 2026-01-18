@@ -6,6 +6,7 @@ if(!boss_battle_active)
 	if(O_Player.x > 0 && O_Player.x < 560 && O_Player.y < 320 && O_Player.y > 0)
 	{
 		boss_battle_active = true;
+		BGMController.StartBossMusic("Area1");
 	}
 }
 

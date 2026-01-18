@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"Of_Far_Different_Nature___Windfish__CC_BY_4_0_",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":168.74998,
+  "exportDir":"",
+  "name":"Of_Far_Different_Nature___Windfish__CC_BY_4_0_",
+  "parent":{
+    "name":"Sounds",
+    "path":"folders/Sounds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"Of_Far_Different_Nature___Windfish__CC_BY_4_0_.ogg",
+  "volume":1.0,
+}

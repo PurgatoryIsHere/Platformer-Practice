@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"Of_Far_Different_Nature___Voltage__CC_BY_",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":23.04,
+  "exportDir":"",
+  "name":"Of_Far_Different_Nature___Voltage__CC_BY_",
+  "parent":{
+    "name":"Sounds",
+    "path":"folders/Sounds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"Of_Far_Different_Nature___Voltage__CC_BY_.ogg",
+  "volume":1.0,
+}
