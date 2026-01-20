@@ -11,5 +11,5 @@ next_site = 0
 
 DropKeyPiece = function()
 {
-	instance_create_layer(x, y, "Instances", O_A7KeyPiece);
+	instance_create_layer(1296, 1104, "Instances", O_A7KeyPiece);
 }

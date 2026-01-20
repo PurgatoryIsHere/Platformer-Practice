@@ -8,5 +8,5 @@ next_site = 0
 
 DropAbility = function()
 {
-	instance_create_layer(x, y, "Instances", O_GrappleUnlock);
+	instance_create_layer(2672, 448, "Instances", O_GrappleUnlock);
 }

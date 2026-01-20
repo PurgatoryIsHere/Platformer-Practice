@@ -1,10 +1,6 @@
  /// @description Controls menu events
 // You can write your code in this editor
 
-window_set_size(1280, 720);
-window_center();
-window_set_cursor(cr_none);
-
 // Main menu
 menu[0][0] = O_PlayButton;
 menu[0][1] = O_HelpButton;

@@ -96,6 +96,7 @@
     {"id":{"name":"O_Checkpoint","path":"objects/O_Checkpoint/O_Checkpoint.yy",},},
     {"id":{"name":"O_CheckpointHelper","path":"objects/O_CheckpointHelper/O_CheckpointHelper.yy",},},
     {"id":{"name":"O_CollapsibleGround","path":"objects/O_CollapsibleGround/O_CollapsibleGround.yy",},},
+    {"id":{"name":"O_CreditsButton","path":"objects/O_CreditsButton/O_CreditsButton.yy",},},
     {"id":{"name":"O_DashBreakBlock","path":"objects/O_DashBreakBlock/O_DashBreakBlock.yy",},},
     {"id":{"name":"O_DevMenuButton","path":"objects/O_DevMenuButton/O_DevMenuButton.yy",},},
     {"id":{"name":"O_DoubleJumpUnlock","path":"objects/O_DoubleJumpUnlock/O_DoubleJumpUnlock.yy",},},

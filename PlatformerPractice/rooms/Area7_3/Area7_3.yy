@@ -2404,6 +2404,7 @@
     {"name":"inst_7A35C2FB","path":"rooms/Area7_3/Area7_3.yy",},
     {"name":"inst_425A2BAE","path":"rooms/Area7_3/Area7_3.yy",},
     {"name":"inst_401D7331","path":"rooms/Area7_3/Area7_3.yy",},
+    {"name":"inst_7DF2D215","path":"rooms/Area7_3/Area7_3.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -4806,6 +4807,7 @@
         {"$GMRInstance":"v4","%Name":"inst_7A35C2FB","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7A35C2FB","objectId":{"name":"O_A5Gate","path":"objects/O_A5Gate/O_A5Gate.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1360.0,"y":1120.0,},
         {"$GMRInstance":"v4","%Name":"inst_425A2BAE","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_425A2BAE","objectId":{"name":"O_CheckpointHelper","path":"objects/O_CheckpointHelper/O_CheckpointHelper.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":3.0,"x":2000.0,"y":1088.0,},
         {"$GMRInstance":"v4","%Name":"inst_401D7331","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_401D7331","objectId":{"name":"O_Player","path":"objects/O_Player/O_Player.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.5,"scaleY":0.5,"x":2008.0,"y":1128.0,},
+        {"$GMRInstance":"v4","%Name":"inst_7DF2D215","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7DF2D215","objectId":{"name":"O_EventHandler","path":"objects/O_EventHandler/O_EventHandler.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1184.0,"y":1072.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4278190080,"depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],

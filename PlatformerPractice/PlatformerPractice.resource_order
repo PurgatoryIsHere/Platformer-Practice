@@ -72,6 +72,7 @@
     {"name":"O_Checkpoint","order":1,"path":"objects/O_Checkpoint/O_Checkpoint.yy",},
     {"name":"O_CheckpointHelper","order":18,"path":"objects/O_CheckpointHelper/O_CheckpointHelper.yy",},
     {"name":"O_CollapsibleGround","order":2,"path":"objects/O_CollapsibleGround/O_CollapsibleGround.yy",},
+    {"name":"O_CreditsButton","order":5,"path":"objects/O_CreditsButton/O_CreditsButton.yy",},
     {"name":"O_DashBreakBlock","order":3,"path":"objects/O_DashBreakBlock/O_DashBreakBlock.yy",},
     {"name":"O_DevMenuButton","order":4,"path":"objects/O_DevMenuButton/O_DevMenuButton.yy",},
     {"name":"O_DoubleJumpUnlock","order":2,"path":"objects/O_DoubleJumpUnlock/O_DoubleJumpUnlock.yy",},

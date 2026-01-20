@@ -6,7 +6,7 @@ if(!boss_battle_active)
 	if(O_Player.x > 0 && O_Player.x < 560 && O_Player.y < 320 && O_Player.y > 0)
 	{
 		boss_battle_active = true;
-		BGMController.StartBossMusic("Area1");
+		//BGMController.StartBossMusic("Area1");
 	}
 }
 
@@ -54,13 +54,13 @@ else
 	// --------------------------------------------
 	if(!place_meeting(x + 16 * dir, y, O_Ground))
 	{
-		x_speed = dir
+		x_speed = dir * 2;
 	}
 
 	else
 	{
-		image_xscale = dir * -1.5;
 		dir *= -1
+		image_xscale = dir * 2;
 	}
 
 	// --------------------------------------------
@@ -118,6 +118,31 @@ else
 				has_pounded = false;
 				move_timer = 0;
 			}
+		}
+	}
+	
+	else if(dash)
+	{
+		if(move_timer == 0 && has_dashed = false) 
+		{
+			move_timer = 15;
+			has_dashed = true;
+		}
+			
+		else if(move_timer == 0 && has_dashed = true) 
+		{
+			has_dashed = false;
+			dash = false;
+		}
+			
+		x_speed = dir * 10;
+		
+		// Dash visualization
+		with(instance_create_depth(x, y, depth + 1, O_Trail))
+		{
+			sprite_index = S_A1Boss;
+			image_blend = c_fuchsia;
+			image_alpha = 0.7;
 		}
 	}
 

@@ -24,7 +24,7 @@ TakeDamage = function(damage)
 	
 	if(boss_health == 0)
 	{
-		BGMController.StopBossMusic();
+		//BGMController.StopBossMusic();
 		instance_destroy(self);
 		DropAbility();
 	}

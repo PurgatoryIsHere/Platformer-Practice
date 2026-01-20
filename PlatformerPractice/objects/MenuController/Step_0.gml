@@ -79,7 +79,7 @@ if(_select)
 			
 		case 1:
 		
-			if (index = 1)
+			if (index == 1)
 			{
 				room_goto(Tutorial)
 			}
