@@ -1,9 +1,9 @@
-  /// @description Draw submenu
+/// @description Draw submenu
 // You can write your code in this editor
 draw_set_halign(fa_center);
 draw_set_font(MainMenuFont);
 
-
+ 
 if(sub_menu == 1)
 {
     // Draw "Which area?" title

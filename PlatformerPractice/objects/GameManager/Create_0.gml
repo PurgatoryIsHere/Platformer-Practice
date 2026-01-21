@@ -1,4 +1,4 @@
- /// @description Insert description here
+/// @description Insert description here
 // You can write your code in this editor
 
 // Default font used in draw functions
@@ -52,16 +52,5 @@ global.jump_key = ord("W");
 global.dash_key = vk_space;
 global.gp_key = ord("S");
 global.grapple_key = vk_space;
-
-//Level Unlock
-global.levelUnlocked[0] = true
-global.levelUnlocked[1] = false
-global.levelUnlocked[2] = false
-global.levelUnlocked[3] = false
-global.levelUnlocked[4] = false
-global.levelUnlocked[5] = false
-global.levelUnlocked[6] = false
-global.levelUnlocked[7] = false
-global.levelUnlocked [8] = false
 
 randomize()

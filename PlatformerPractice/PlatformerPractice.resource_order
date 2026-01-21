@@ -133,6 +133,8 @@
     {"name":"UnlockTest","order":5,"path":"rooms/UnlockTest/UnlockTest.yy",},
     {"name":"WallJumpTest","order":3,"path":"rooms/WallJumpTest/WallJumpTest.yy",},
     {"name":"draw_text_outline","order":1,"path":"scripts/draw_text_outline/draw_text_outline.yy",},
+    {"name":"load_game","order":3,"path":"scripts/load_game/load_game.yy",},
+    {"name":"save_game","order":2,"path":"scripts/save_game/save_game.yy",},
     {"name":"_8Bit_Tragic_Mistake_Loop","order":10,"path":"sounds/_8Bit_Tragic_Mistake_Loop/_8Bit_Tragic_Mistake_Loop.yy",},
     {"name":"bgm002_pop_80s_90s_dance_electro_happy_lofi_113966","order":9,"path":"sounds/bgm002_pop_80s_90s_dance_electro_happy_lofi_113966/bgm002_pop_80s_90s_dance_electro_happy_lofi_113966.yy",},
     {"name":"Of_Far_Different_Nature___Oldskool__v2___CC_BY_4_0_","order":13,"path":"sounds/Of_Far_Different_Nature___Oldskool__v2___CC_BY_4_0_/Of_Far_Different_Nature___Oldskool__v2___CC_BY_4_0_.yy",},

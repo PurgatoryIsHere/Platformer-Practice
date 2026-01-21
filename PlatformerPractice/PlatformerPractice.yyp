@@ -167,6 +167,8 @@
     {"id":{"name":"WallJumpTest","path":"rooms/WallJumpTest/WallJumpTest.yy",},},
     {"id":{"name":"collapse_tile","path":"scripts/collapse_tile/collapse_tile.yy",},},
     {"id":{"name":"draw_text_outline","path":"scripts/draw_text_outline/draw_text_outline.yy",},},
+    {"id":{"name":"load_game","path":"scripts/load_game/load_game.yy",},},
+    {"id":{"name":"save_game","path":"scripts/save_game/save_game.yy",},},
     {"id":{"name":"_8Bit_Tragic_Mistake_Loop","path":"sounds/_8Bit_Tragic_Mistake_Loop/_8Bit_Tragic_Mistake_Loop.yy",},},
     {"id":{"name":"bgm002_pop_80s_90s_dance_electro_happy_lofi_113966","path":"sounds/bgm002_pop_80s_90s_dance_electro_happy_lofi_113966/bgm002_pop_80s_90s_dance_electro_happy_lofi_113966.yy",},},
     {"id":{"name":"Of_Far_Different_Nature___Oldskool__v2___CC_BY_4_0_","path":"sounds/Of_Far_Different_Nature___Oldskool__v2___CC_BY_4_0_/Of_Far_Different_Nature___Oldskool__v2___CC_BY_4_0_.yy",},},

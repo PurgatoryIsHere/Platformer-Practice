@@ -1,4 +1,4 @@
- /// @description Controls menu events
+  /// @description Controls menu events
 // You can write your code in this editor
 
 // Main menu

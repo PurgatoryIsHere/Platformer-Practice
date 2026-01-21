@@ -11,6 +11,8 @@ if place_meeting(x, y - 1, O_Player)
 	
 	if (room_number < 8)
 	{
-		global.levelUnlocked[room_number + 1] = true
+		global.levelUnlocked[room_number + 1] = true;
 	}
+	
+	save_game()
 }
