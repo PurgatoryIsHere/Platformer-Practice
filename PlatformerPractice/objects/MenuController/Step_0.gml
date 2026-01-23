@@ -148,6 +148,21 @@ if(_select)
 		
 		case 3:
 		
+			if(index == 1)
+			{
+				file_delete("save.dat");
+				load_game();
+				room_goto(MainMenu);
+			}
+			else if(index == 2)
+			{
+				room_goto(MainMenu);
+			}
+		
+		break;
+		
+		case 4:
+		
 		/*
 			if(index == 1)
 			{

@@ -127,6 +127,7 @@
     {"id":{"name":"O_Player","path":"objects/O_Player/O_Player.yy",},},
     {"id":{"name":"O_Portal","path":"objects/O_Portal/O_Portal.yy",},},
     {"id":{"name":"O_QuitButton","path":"objects/O_QuitButton/O_QuitButton.yy",},},
+    {"id":{"name":"O_ResetButton","path":"objects/O_ResetButton/O_ResetButton.yy",},},
     {"id":{"name":"O_RightSpike","path":"objects/O_RightSpike/O_RightSpike.yy",},},
     {"id":{"name":"O_Shelf","path":"objects/O_Shelf/O_Shelf.yy",},},
     {"id":{"name":"O_ShieldCore","path":"objects/O_ShieldCore/O_ShieldCore.yy",},},

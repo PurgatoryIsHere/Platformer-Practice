@@ -96,6 +96,7 @@
     {"name":"O_PlayButton","order":2,"path":"objects/O_PlayButton/O_PlayButton.yy",},
     {"name":"O_Portal","order":9,"path":"objects/O_Portal/O_Portal.yy",},
     {"name":"O_QuitButton","order":3,"path":"objects/O_QuitButton/O_QuitButton.yy",},
+    {"name":"O_ResetButton","order":6,"path":"objects/O_ResetButton/O_ResetButton.yy",},
     {"name":"O_RightSpike","order":1,"path":"objects/O_RightSpike/O_RightSpike.yy",},
     {"name":"O_Shelf","order":7,"path":"objects/O_Shelf/O_Shelf.yy",},
     {"name":"O_ShieldCore","order":12,"path":"objects/O_ShieldCore/O_ShieldCore.yy",},

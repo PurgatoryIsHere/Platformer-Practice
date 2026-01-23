@@ -5,7 +5,8 @@
 menu[0][0] = O_PlayButton;
 menu[0][1] = O_HelpButton;
 menu[0][2] = O_QuitButton;
-menu[0][3] = O_DevMenuButton; 
+menu[0][3] = O_ResetButton;
+menu[0][4] = O_DevMenuButton; 
 
 
 /*
@@ -37,21 +38,26 @@ menu[2][6] = "Grapple: Space";
 menu[2][7] = "Pause: Backspace";
 menu[2][8] = "Back to Main Menu";
 
+//Reset Progress Menu
+menu[3][0] = "Are you sure you would to reset your progress?"
+menu[3][1] = "Yes"
+menu[3][2] = "No"
+
 // Test Unlock System Screen
-menu[3][0] = "Which area?"; // Title (non-selectable)
-menu[3][1] = "Area 1";
-menu[3][2] = "Area 2";
-menu[3][3] = "Area 3";
-menu[3][4] = "Area 4";
-menu[3][5] = "Area 5";
-menu[3][6] = "Area 6";
-menu[3][7] = "Area 7";
-menu[3][8] = "Area 8";
-menu[3][9] = "Area 8.1";
-menu[3][10] = "Area 8.2";
-menu[3][11] = "Area 8.3.1";
-menu[3][12] = "Area 8.3.2";
-menu[3][13] = "Area 8.3.3";
+menu[4][0] = "Which area?"; // Title (non-selectable)
+menu[4][1] = "Area 1";
+menu[4][2] = "Area 2";
+menu[4][3] = "Area 3";
+menu[4][4] = "Area 4";
+menu[4][5] = "Area 5";
+menu[4][6] = "Area 6";
+menu[4][7] = "Area 7";
+menu[4][8] = "Area 8";
+menu[4][9] = "Area 8.1";
+menu[4][10] = "Area 8.2";
+menu[4][11] = "Area 8.3.1";
+menu[4][12] = "Area 8.3.2";
+menu[4][13] = "Area 8.3.3";
 
 index = 0;
 sub_menu = 0;
