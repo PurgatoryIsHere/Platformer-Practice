@@ -15,4 +15,4 @@ if (target_distance <= detection_range)
 	}
 }
 
-alarm[0] = 60 * 2;
+alarm[0] = 60 * 1;

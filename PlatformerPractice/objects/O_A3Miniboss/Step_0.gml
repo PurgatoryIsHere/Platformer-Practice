@@ -37,7 +37,12 @@ else if(boss_battle_active)
 		
 			if(!wave_spawned && !wave_respawning)
 			{
-				Spawn_Wave(6);
+				var num_ground_enemies = irandom_range(3, 5);
+				Spawn_Wave(num_ground_enemies, "ground");
+				
+				var num_flying_enemies = 8 - num_ground_enemies;
+				Spawn_Wave(num_flying_enemies, "flying");
+				
 				wave_spawned = true;
 			}
 			
@@ -51,7 +56,12 @@ else if(boss_battle_active)
 		
 			if(!wave_spawned && !wave_respawning)
 			{
-				Spawn_Wave(8);
+				var num_ground_enemies = irandom_range(4, 8);
+				Spawn_Wave(num_ground_enemies, "ground");
+				
+				var num_flying_enemies = 12 - num_ground_enemies;
+				Spawn_Wave(num_flying_enemies, "flying");
+				
 				wave_spawned = true;
 			}
 			

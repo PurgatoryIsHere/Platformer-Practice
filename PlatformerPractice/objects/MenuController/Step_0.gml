@@ -15,20 +15,7 @@ if(_move != 0 && !waiting_for_input)
 	// Clamp values (ensure selection cycles through menu options)
 	var _size = array_length(menu[sub_menu]);
 	
-	if(sub_menu == 1 || sub_menu == 2 || sub_menu == 3)
-	{
-		if(index < 1)
-		{
-			index = _size - 1; // At start, so loop to last menu option
-		}
-	
-		else if(index > _size - 1)
-		{
-			index = 1; // At end, so loop to first menu option
-		}
-	}
-	
-	else
+	if(sub_menu == 0)
 	{
 		if(index < 0)
 		{
@@ -38,6 +25,19 @@ if(_move != 0 && !waiting_for_input)
 		else if(index > _size - 1)
 		{
 			index = 0; // At end, so loop to first menu option
+		}
+	}
+	
+	else
+	{
+		if(index < 1)
+		{
+			index = _size - 1; // At start, so loop to last menu option
+		}
+	
+		else if(index > _size - 1)
+		{
+			index = 1; // At end, so loop to first menu option
 		}
 	}
 }
@@ -51,7 +51,7 @@ if(_select)
 			if(index == 0)
 			{
 				sub_menu = 1; // Go to Play menu
-				layer_set_visible("MainMenu", false)
+				instance_deactivate_object(O_ButtonParent);
 				index = 1;
 
 			}
@@ -59,7 +59,7 @@ if(_select)
 			else if(index == 1)
 			{
 				sub_menu = 2; // Go to Controls menu
-				layer_set_visible("MainMenu", false);
+				instance_deactivate_object(O_ButtonParent);
 				index = 1;
 			}
 	
@@ -71,7 +71,7 @@ if(_select)
 			else if(index == 3)
 			{
 				sub_menu = 3;
-				layer_set_visible("MainMenu", false)
+				instance_deactivate_object(O_ButtonParent);
 				index = 1;
 			}
 			
@@ -139,7 +139,7 @@ if(_select)
 				if(index == 8)
 				{
 					sub_menu = 0;
-					layer_set_visible("MainMenu", true);
+					instance_activate_object(O_ButtonParent);
 					index = 1;
 				}
 			}
@@ -147,21 +147,6 @@ if(_select)
 		break;
 		
 		case 3:
-		
-			if(index == 1)
-			{
-				file_delete("save.dat");
-				load_game();
-				room_goto(MainMenu);
-			}
-			else if(index == 2)
-			{
-				room_goto(MainMenu);
-			}
-		
-		break;
-		
-		case 4:
 		
 		/*
 			if(index == 1)
@@ -216,12 +201,12 @@ if(_select)
 			
 			else if(index == 9)
 			{
-				room_goto(Area8_1);
+				room_goto(AreaEX_1);
 			}
 			
 			else if(index == 10)
 			{
-				room_goto(Area8_2);
+				room_goto(AreaEX_2);
 			}
 			
 			else if(index == 11)
@@ -240,10 +225,28 @@ if(_select)
 			}
 			
 		break;
+		
+		case 4:
+		
+			if(index == 1)
+			{
+				file_delete("save.dat");
+				load_game();
+				sub_menu = 2;
+				index = 1;
+			}
+			
+			else if(index == 2)
+			{
+				sub_menu = 2;
+				index = 1;
+			}
+		
+		break;
 	}
 }
 
-// Step event
+// Keybind menu
 if(waiting_for_input)
 {
     var new_keybind = keyboard_lastkey;

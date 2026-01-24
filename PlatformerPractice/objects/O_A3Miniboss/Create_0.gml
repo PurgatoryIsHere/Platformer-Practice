@@ -1,15 +1,25 @@
-/// @description Initialize
+/// @description Boss Mechanics
 // You can write your code in this editor
 
-/// @description Basic boss mechanics
-// You can write your code in this editor
+boss_health = 60;
+boss_battle_active = false;
+boss_i_frame_timer = 0;
 
-boss_health = 60; // Health for boss; can be changed for each boss
-boss_i_frame_timer = 0; // I-frames the boss gets upon taking damage
+dir = 1;
 
-dir = 1; // Starting Direction; can be changed depending on where boss will spawn
+phase = 0;
+wave_spawned = false;
+wave_respawning = false;
+pillars_dropped = false;
+pillar_timer = 0;
+pillar_timeout = 600; // time before pillars start collapsing
 
-TakeDamage = function(damage) // Basic damage calculation; aspects can be changed for each boss
+ground_pounding = false;
+destroy_platform_triggered = false;
+respawn_platform_triggered = false;
+jumping = false;
+
+TakeDamage = function(damage)
 {
 	boss_health -= damage;
 	
@@ -27,7 +37,12 @@ TakeDamage = function(damage) // Basic damage calculation; aspects can be change
 			self.shake_time = 30;
 		}
 		
-		DropKeyPiece();
+		if(!global.area7_collected_key_piece[1])
+		{
+			var spawned_keypiece = instance_create_layer(1040, 352, "Instances", O_A7KeyPiece);
+			spawned_keypiece.key = 1;
+		}
+	
 		OpenGates();
 		
 		instance_destroy(instance_position(1312, 384, O_Ground));
@@ -70,15 +85,10 @@ TakeDamage = function(damage) // Basic damage calculation; aspects can be change
 		pillars_dropped = false;
 		pillar_timer = 0;
 		
-		alarm[1] = 60;
+		alarm[1] = 110;
 	}
 	
 	boss_i_frame_timer = 32; // Standard amount of i-frames; can be changed for each boss
-}
-
-DropKeyPiece = function() // Spawns a keypiece
-{
-	instance_create_layer(1040, 352, "Instances", O_A7KeyPiece);
 }
 
 function boss_move_and_collide(hsp, vsp, obj) 
@@ -111,24 +121,19 @@ function boss_move_and_collide(hsp, vsp, obj)
     }
 }
 
-// Unique Boss Mechanics
-boss_battle_active = false;
-phase = 0;
-wave_spawned = false;
-wave_respawning = false;
-pillars_dropped = false;
-pillar_timer = 0;
-pillar_timeout = 600; // time before pillars start collapsing
-ground_pounding = false;
-destroy_platform_triggered = false;
-respawn_platform_triggered = false;
-jumping = false;
-
-Spawn_Wave = function(enemy_count)
+Spawn_Wave = function(enemy_count, enemy_type)
 {
 	for (var i = 0; i < enemy_count; i++)
     {	
-		instance_create_layer(irandom_range(816, 1248), 384, "Instances", O_GroundEnemy_ES);
+		if(enemy_type == "flying")
+		{
+			instance_create_layer(irandom_range(816, 1248), 336, "Instances", O_FlyingEnemy_ES);
+		}
+		
+		else
+		{
+			instance_create_layer(irandom_range(816, 1248), 384, "Instances", O_GroundEnemy_ES);
+		}
     }
 }
 

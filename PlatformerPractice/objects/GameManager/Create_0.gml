@@ -27,23 +27,15 @@ global.groundPoundUnlock = false
 global.grappleUnlock = false
 
 // Boss Variables
-global.a1_boss_defeated = false;
-global.a3_boss_defeated = false;
-global.a5_boss_defeated = false;
 global.a1_miniboss_defeated = false;
 global.a3_miniboss_defeated = false;
 global.a5_miniboss_defeated = false;
 
 global.ability_collected = false;
 
-// Area 7 Interactions
+// Area 7 Variables
 global.area7_key_pieces_collected = 0;
-
-// Area 8 Interactions
-global.returning_from_8_1 = false;
-global.returning_from_8_2 = false;
-global.area8_returnX = 0;
-global.area8_returnY = 0;
+global.area7_collected_key_piece = [false, false, false];
 
 // Keybinds
 global.left_key = ord("A");

@@ -35,7 +35,12 @@ TakeDamage = function(damage) // Basic damage calculation; aspects can be change
 			instance_destroy(tiles_to_destroy[i]);
 		}
 		
-		instance_create_layer(112, 288, "Instances", O_A7KeyPiece);
+		if(!global.area7_collected_key_piece[0])
+		{
+			var spawned_keypiece = instance_create_layer(112, 288, "Instances", O_A7KeyPiece);
+			spawned_keypiece.key = 0;
+		}
+		
 		instance_destroy(self);
 	}
 	

@@ -13,8 +13,13 @@ if (place_meeting(x, y, O_Player) && O_Player.beingFired)
 	//if this was the last phase, die
 	if(phase >= 4)
 	{
-		instance_destroy(self)
-		DropKeyPiece()
+		instance_destroy(self);
+		
+		if(!global.area7_collected_key_piece[2])
+		{
+			var spawned_keypiece = instance_create_layer(1296, 1104, "Instances", O_A7KeyPiece);
+			spawned_keypiece.key = 2;
+		}
 	}
 }
 

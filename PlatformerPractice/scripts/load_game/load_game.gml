@@ -8,6 +8,7 @@ function load_game()
 		var buffer = buffer_load("save.dat");
 		buffer_seek(buffer, buffer_seek_start, 0);
 		
+		// Level Unlcok zzzz
 		global.levelUnlocked[0] = buffer_read(buffer, buffer_bool);
 		global.levelUnlocked[1] = buffer_read(buffer, buffer_bool);
 		global.levelUnlocked[2] = buffer_read(buffer, buffer_bool);
@@ -20,6 +21,7 @@ function load_game()
 		
 		buffer_delete(buffer)
 	}
+	
 	else
 	{
 		global.levelUnlocked[0] = true;
