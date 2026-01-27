@@ -28,12 +28,12 @@ menu[1][9] = "Area 8";
 
 // Help Menu
 menu[2][0] = "Controls"; // Title (non-selectable)
-menu[2][1] = "Move Left: A";
-menu[2][2] = "Move Right: D";
-menu[2][3] = "Jump: W";
-menu[2][4] = "Dash: Space";
-menu[2][5] = "Ground Pound: S";
-menu[2][6] = "Grapple: Space";
+menu[2][1] = global.left_keybind_text;
+menu[2][2] = global.right_keybind_text;
+menu[2][3] = global.jump_keybind_text;
+menu[2][4] = global.dash_keybind_text;
+menu[2][5] = global.gp_keybind_text;
+menu[2][6] = global.grapple_keybind_text;
 menu[2][7] = "Pause: Backspace";
 menu[2][8] = "Back to Main Menu";
 

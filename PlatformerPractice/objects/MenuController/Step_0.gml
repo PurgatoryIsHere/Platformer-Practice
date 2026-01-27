@@ -259,38 +259,48 @@ if(waiting_for_input)
             case 1: 
 			
                 global.left_key = new_keybind;
-                menu[2][1] = "Move Left: " + keycode_to_string(new_keybind);
+                global.left_keybind_text = "Move Left: " + keycode_to_string(new_keybind);
+				menu[2][1] = global.left_keybind_text;
+				
             break;
 			
 			case 2: 
 			
                 global.right_key = new_keybind;
-                menu[2][2] = "Move Right: " + keycode_to_string(new_keybind);
+                global.right_keybind_text = "Move Right: " + keycode_to_string(new_keybind);
+				menu[2][2] = global.right_keybind_text;
+				
             break;
 			
 			case 3: 
 			
                 global.jump_key = new_keybind;
-                menu[2][3] = "Jump: " + keycode_to_string(new_keybind);
+                global.jump_keybind_text = "Jump: " + keycode_to_string(new_keybind);
+				menu[2][3] = global.jump_keybind_text;
+				
             break;
 			
 			case 4: 
 			
                 global.dash_key = new_keybind;
-                menu[2][4] = "Dash: " + keycode_to_string(new_keybind);
+                global.dash_keybind_text = "Dash: " + keycode_to_string(new_keybind);
+				menu[2][4] = global.dash_keybind_text;
+				
             break;
 			
 			case 5: 
 			
                 global.gp_key = new_keybind;
-                menu[2][5] = "Ground Pound: " + keycode_to_string(new_keybind);
+                global.gp_keybind_text = "Ground Pound: " + keycode_to_string(new_keybind);
+				menu[2][5] = global.gp_keybind_text;
 				
             break;
 			
 			case 6: 
 	
                 global.grapple_key = new_keybind;
-                menu[2][6] = "Grapple: " + keycode_to_string(new_keybind);
+                global.grapple_keybind_text = "Grapple: " + keycode_to_string(new_keybind);
+				menu[2][6] = global.grapple_keybind_text;
 				
             break;
         }

@@ -63,7 +63,7 @@ on_wall = place_meeting(x - 3, y, O_Ground) - place_meeting(x + 3, y, O_Ground);
 // --------------------------------------------
 
 // Wall Sliding Gravity
-if(on_wall != 0 && !on_ground && !groundPounding && !beingFired)
+if(wall_sliding && !groundPounding && !beingFired)
 {
 	y_speed = min(y_speed + 1, wall_slide_speed);
 }

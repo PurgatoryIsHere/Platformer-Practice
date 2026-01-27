@@ -152,7 +152,7 @@ stateFree = function()
 			dash_cooldown = 0;
 		}
 	
-		if(on_wall != 0 && !on_ground)
+		if(on_wall != 0 && !on_ground && y_speed >= 0)
 		{
 			wall_sliding = true;
 			facing = on_wall;

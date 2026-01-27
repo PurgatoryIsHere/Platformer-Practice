@@ -27,10 +27,6 @@ global.groundPoundUnlock = false
 global.grappleUnlock = false
 
 // Boss Variables
-global.a1_miniboss_defeated = false;
-global.a3_miniboss_defeated = false;
-global.a5_miniboss_defeated = false;
-
 global.ability_collected = false;
 
 // Area 7 Variables
@@ -44,5 +40,12 @@ global.jump_key = ord("W");
 global.dash_key = vk_space;
 global.gp_key = ord("S");
 global.grapple_key = vk_space;
+
+global.left_keybind_text = "Move Left: A";
+global.right_keybind_text = "Move Right: D";
+global.jump_keybind_text = "Jump: W";
+global.dash_keybind_text = "Dash: Space";
+global.gp_keybind_text = "Ground Pound: S";
+global.grapple_keybind_text = "Grapple: Space";
 
 randomize()
