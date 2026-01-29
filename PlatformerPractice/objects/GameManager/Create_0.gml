@@ -9,10 +9,10 @@ global.default_valign = draw_get_valign()
 // Player Variables
 global.lives = 3
 global.player_max_health = 100;
-global.player_health = 100
+global.player_health = 100;
 
-global.heart_pieces_to_collect = [0, 2, 3, 3, 2, 3, 3, 3, 0]
-global.heart_pieces_collected = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+global.heart_pieces_to_collect = [0, 0, 2, 3, 3, 2, 3, 3, 3, 0]
+global.heart_pieces_collected = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 global.collected_heart_piece =[[false, false],
 							   [false, false, false],
 							   [false, false, false],

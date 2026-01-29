@@ -84,6 +84,7 @@ if(on_ground && place_meeting(x, y + y_speed, O_Ground))
 if(on_wall != 0 && movement_lock_timer > 0)
 {
 	movement_lock_timer = 0;
+	y_speed = 0;
 }
 
 // Timer & Cooldown Decrementation

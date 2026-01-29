@@ -8,7 +8,7 @@ function load_game()
 		var buffer = buffer_load("save.dat");
 		buffer_seek(buffer, buffer_seek_start, 0);
 		
-		// Level Unlcok zzzz
+		// Levels Unlocked
 		global.levelUnlocked[0] = buffer_read(buffer, buffer_bool);
 		global.levelUnlocked[1] = buffer_read(buffer, buffer_bool);
 		global.levelUnlocked[2] = buffer_read(buffer, buffer_bool);
@@ -18,6 +18,44 @@ function load_game()
 		global.levelUnlocked[6] = buffer_read(buffer, buffer_bool);
 		global.levelUnlocked[7] = buffer_read(buffer, buffer_bool);
 		global.levelUnlocked[8] = buffer_read(buffer, buffer_bool);
+		
+		// Heart Piece Collection Status (Per Area)
+		global.heart_pieces_collected[2] = buffer_read(buffer, buffer_u32)
+		global.heart_pieces_collected[3] = buffer_read(buffer, buffer_u32)
+		global.heart_pieces_collected[4] = buffer_read(buffer, buffer_u32)
+		global.heart_pieces_collected[5] = buffer_read(buffer, buffer_u32)
+		global.heart_pieces_collected[6] = buffer_read(buffer, buffer_u32)
+		global.heart_pieces_collected[7] = buffer_read(buffer, buffer_u32)
+		global.heart_pieces_collected[8] = buffer_read(buffer, buffer_u32)
+		
+		// Heart Piece Collection Status (Per Area)
+		global.collected_heart_piece[0][0] = buffer_read(buffer, buffer_bool);
+		global.collected_heart_piece[0][1] = buffer_read(buffer, buffer_bool);
+		global.collected_heart_piece[1][0] = buffer_read(buffer, buffer_bool);
+		global.collected_heart_piece[1][1] = buffer_read(buffer, buffer_bool);
+		global.collected_heart_piece[1][2] = buffer_read(buffer, buffer_bool);
+		global.collected_heart_piece[2][0] = buffer_read(buffer, buffer_bool);
+		global.collected_heart_piece[2][1] = buffer_read(buffer, buffer_bool);
+		global.collected_heart_piece[2][2] = buffer_read(buffer, buffer_bool);
+		global.collected_heart_piece[3][0] = buffer_read(buffer, buffer_bool);
+		global.collected_heart_piece[3][1] = buffer_read(buffer, buffer_bool);
+		global.collected_heart_piece[4][0] = buffer_read(buffer, buffer_bool);
+		global.collected_heart_piece[4][1] = buffer_read(buffer, buffer_bool);
+		global.collected_heart_piece[4][2] = buffer_read(buffer, buffer_bool);
+		global.collected_heart_piece[5][0] = buffer_read(buffer, buffer_bool);
+		global.collected_heart_piece[5][1] = buffer_read(buffer, buffer_bool);
+		global.collected_heart_piece[5][2] = buffer_read(buffer, buffer_bool);
+		global.collected_heart_piece[6][0] = buffer_read(buffer, buffer_bool);
+		global.collected_heart_piece[6][1] = buffer_read(buffer, buffer_bool);
+		global.collected_heart_piece[6][2] = buffer_read(buffer, buffer_bool);
+		
+		// Player Max Health
+		global.player_max_health = buffer_read(buffer, buffer_u32);
+		
+		// Unlocked Abilities
+		global.doubleJumpUnlock = buffer_read(buffer, buffer_bool);
+		global.groundPoundUnlock = buffer_read(buffer, buffer_bool);
+		global.grappleUnlock = buffer_read(buffer, buffer_bool);
 		
 		buffer_delete(buffer)
 	}

@@ -75,6 +75,7 @@ flight_traveled = 0;
 // --------------------------------------------
 // Damage & Life System
 // --------------------------------------------
+global.player_health = global.player_max_health;
 i_frame_timer = 0;
 
 TakeDamage = function(damage)
