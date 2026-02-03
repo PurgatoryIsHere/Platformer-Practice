@@ -9,5 +9,6 @@ if(place_meeting(x, y, O_Player) && !passed)
 	}
 	
 	O_Player.input_enabled = false;
+	O_Player.x_speed = 0;
 	alarm[0] = 60; // Triggers after 1 second (60 frames)
 }

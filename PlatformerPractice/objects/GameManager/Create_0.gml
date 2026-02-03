@@ -1,6 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+// Window & Mouse
+window_set_size(1280, 720);
+window_center();
+window_set_cursor(cr_none);
+
 // Default font used in draw functions
 global.default_font = draw_get_font()
 global.default_halign = draw_get_halign()
@@ -34,7 +39,7 @@ global.ability_collected = false;
 global.area7_key_pieces_collected = 0;
 global.area7_collected_key_piece = [false, false, false];
 
-// Keybinds
+// Default Keybinds
 global.left_key = ord("A");
 global.right_key = ord("D");
 global.jump_key = ord("W");
@@ -49,4 +54,7 @@ global.dash_keybind_text = "Dash: Space";
 global.gp_keybind_text = "Ground Pound: S";
 global.grapple_keybind_text = "Grapple: Space";
 
-randomize()
+// Load save file (if it exists)
+load_game();
+
+randomize();

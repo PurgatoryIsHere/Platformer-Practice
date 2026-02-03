@@ -138,6 +138,7 @@ if(_select)
 		
 				if(index == 8)
 				{
+					save_game();
 					sub_menu = 0;
 					instance_activate_object(O_ButtonParent);
 					index = 1;

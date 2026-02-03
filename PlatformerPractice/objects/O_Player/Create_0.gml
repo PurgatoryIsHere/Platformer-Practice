@@ -94,9 +94,8 @@ LifeReduction = function()
 		
 	if(global.lives < 0)
 	{
-		room = MainMenu;
-		global.lives = 3;
-		global.player_health = global.player_max_health;
+		input_enabled = false;
+		instance_create_layer(x, y, "Instances", GameOverController);
 	}
 		
 	else

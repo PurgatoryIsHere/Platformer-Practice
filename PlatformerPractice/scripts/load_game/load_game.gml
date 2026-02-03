@@ -57,6 +57,21 @@ function load_game()
 		global.groundPoundUnlock = buffer_read(buffer, buffer_bool);
 		global.grappleUnlock = buffer_read(buffer, buffer_bool);
 		
+		// Keybinds
+		global.left_key = buffer_read(buffer, buffer_u32);
+		global.right_key = buffer_read(buffer, buffer_u32);
+		global.jump_key = buffer_read(buffer, buffer_u32);
+		global.dash_key = buffer_read(buffer, buffer_u32);
+		global.gp_key = buffer_read(buffer, buffer_u32);
+		global.grapple_key = buffer_read(buffer, buffer_u32);
+		
+		global.left_keybind_text = buffer_read(buffer, buffer_string);
+		global.right_keybind_text = buffer_read(buffer, buffer_string);
+		global.jump_keybind_text = buffer_read(buffer, buffer_string);
+		global.dash_keybind_text = buffer_read(buffer, buffer_string);
+		global.gp_keybind_text = buffer_read(buffer, buffer_string);
+		global.grapple_keybind_text = buffer_read(buffer, buffer_string);
+		
 		buffer_delete(buffer)
 	}
 	

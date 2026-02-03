@@ -53,6 +53,21 @@ function save_game()
 	buffer_write(buffer, buffer_bool, global.groundPoundUnlock);
 	buffer_write(buffer, buffer_bool, global.grappleUnlock);
 	
+	// Keybinds
+	buffer_write(buffer, buffer_u32, global.left_key);
+	buffer_write(buffer, buffer_u32, global.right_key);
+	buffer_write(buffer, buffer_u32, global.jump_key);
+	buffer_write(buffer, buffer_u32, global.dash_key);
+	buffer_write(buffer, buffer_u32, global.gp_key);
+	buffer_write(buffer, buffer_u32, global.grapple_key);
+	
+	buffer_write(buffer, buffer_string, global.left_keybind_text);
+	buffer_write(buffer, buffer_string, global.right_keybind_text);
+	buffer_write(buffer, buffer_string, global.jump_keybind_text);
+	buffer_write(buffer, buffer_string, global.dash_keybind_text);
+	buffer_write(buffer, buffer_string, global.gp_keybind_text);
+	buffer_write(buffer, buffer_string, global.grapple_keybind_text);
+	
 	buffer_save(buffer, "save.dat");
 	
 	buffer_delete(buffer);
