@@ -19,7 +19,8 @@ global.collected_heart_piece =[[false, false],
 							   [false, false],
 							   [false, false, false],
 							   [false, false, false],
-							   [false, false, false]];
+							   [false, false, false],
+							   [false, false]];
 
 // Ability Unlocks
 global.doubleJumpUnlock = false

@@ -1,1 +1,1 @@
-target = instance_nearest(x, y, O_HeartPiece)
+target = instance_nearest(x, y, O_HeartPieceFragment)

@@ -20,5 +20,5 @@ if(!global.collected_heart_piece[area][key] && place_meeting(x, y, O_Player))
 
 else if(global.collected_heart_piece[area][key])
 {
-	sprite_index = S_HeartPiece_Inactive;
+	sprite_index = S_HeartPieceFragment_Inactive;
 }

@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"O_A7HeartPiece",
+  "%Name":"O_HeartPieceFull",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"O_A7HeartPiece",
+  "name":"O_HeartPieceFull",
   "overriddenProperties":[],
   "parent":{
     "name":"InteractiveObjects",
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"S_HeartPieceFragment_Active",
-    "path":"sprites/S_HeartPieceFragment_Active/S_HeartPieceFragment_Active.yy",
+    "name":"S_HeartPieceFull",
+    "path":"sprites/S_HeartPieceFull/S_HeartPieceFull.yy",
   },
   "spriteMaskId":null,
   "visible":true,

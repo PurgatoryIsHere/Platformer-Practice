@@ -36,7 +36,7 @@ if(activated)
 		
 					if(!condition_unmet)
 					{
-						var heart_piece = instance_create_layer(672, 80, "Instances", O_HeartPiece);
+						var heart_piece = instance_create_layer(672, 80, "Instances", O_HeartPieceFragment);
 						heart_piece.area = 2;
 						heart_piece.key = 1;
 						
