@@ -5,13 +5,21 @@ global.checkpoint_x = noone;
 global.checkpoint_y = noone;
 global.respawn_queue = [];
 
-room_goto_next()
+if(dest == noone)
+{
+	room_goto_next()
+}
+
+else
+{
+	room_goto(dest);
+}
 
 global.player_health = global.player_max_health;
 global.lives = 3;
 global.ability_collected = false;
 	
-if (room_number < 8)
+if (room_number < 8 && room_number != noone)
 {
 	global.levelUnlocked[room_number + 1] = true;
 }

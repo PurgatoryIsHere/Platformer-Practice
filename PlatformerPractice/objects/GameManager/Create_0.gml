@@ -39,6 +39,10 @@ global.ability_collected = false;
 global.area7_key_pieces_collected = 0;
 global.area7_collected_key_piece = [false, false, false];
 
+// Area EX Variables
+global.returning_from_EX_1 = false;
+global.returning_from_EX_2 = false;
+
 // Default Keybinds
 global.left_key = ord("A");
 global.right_key = ord("D");

@@ -202,12 +202,12 @@ if(_select)
 			
 			else if(index == 9)
 			{
-				room_goto(AreaEX_1);
+				room_goto(AreaEX_2);
 			}
 			
 			else if(index == 10)
 			{
-				room_goto(AreaEX_2);
+				room_goto(AreaEX_1);
 			}
 			
 			else if(index == 11)

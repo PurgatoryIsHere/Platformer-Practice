@@ -44,6 +44,8 @@ function save_game()
 	buffer_write(buffer, buffer_bool, global.collected_heart_piece[6][0]);
 	buffer_write(buffer, buffer_bool, global.collected_heart_piece[6][1]);
 	buffer_write(buffer, buffer_bool, global.collected_heart_piece[6][2]);
+	buffer_write(buffer, buffer_bool, global.collected_heart_piece[7][0]);
+	buffer_write(buffer, buffer_bool, global.collected_heart_piece[7][1]);
 	
 	// Player Max Health
 	buffer_write(buffer, buffer_u32, global.player_max_health);

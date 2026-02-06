@@ -27,7 +27,7 @@ if(pause && surface_exists(pause_surf))
 		heart_pieces_to_collect = string(global.heart_pieces_to_collect[7]);
 	}
 	
-	else if(current_room == AreaEX_1 || current_room = AreaEX_2 || current_room = Area8_3_1 || current_room = Area8_3_2 || current_room = Area8_3_3)
+	else if(current_room == AreaEX_2 || current_room = AreaEX_1 || current_room = Area8_3_1 || current_room = Area8_3_2 || current_room = Area8_3_3)
 	{
 		collected_heart_pieces = string(global.heart_pieces_collected[8]);
 		heart_pieces_to_collect = string(global.heart_pieces_to_collect[8]);

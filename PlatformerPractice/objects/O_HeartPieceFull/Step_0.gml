@@ -7,7 +7,7 @@ if(!global.collected_heart_piece[area][key] && place_meeting(x, y, O_Player))
 	instance_destroy(self);
 }
 
-else
+else if(global.collected_heart_piece[area][key])
 {
 	instance_destroy(self);
 }

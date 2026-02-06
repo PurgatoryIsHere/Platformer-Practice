@@ -48,6 +48,8 @@ function load_game()
 		global.collected_heart_piece[6][0] = buffer_read(buffer, buffer_bool);
 		global.collected_heart_piece[6][1] = buffer_read(buffer, buffer_bool);
 		global.collected_heart_piece[6][2] = buffer_read(buffer, buffer_bool);
+		global.collected_heart_piece[7][0] = buffer_read(buffer, buffer_bool);
+		global.collected_heart_piece[7][1] = buffer_read(buffer, buffer_bool);
 		
 		// Player Max Health
 		global.player_max_health = buffer_read(buffer, buffer_u32);
@@ -86,5 +88,21 @@ function load_game()
 		global.levelUnlocked[6] = false;
 		global.levelUnlocked[7] = false;
 		global.levelUnlocked[8] = false;
+		
+		global.player_max_health = 100;
+		
+		global.left_key = ord("A");
+		global.right_key = ord("D");
+		global.jump_key = ord("W");
+		global.dash_key = vk_space;
+		global.gp_key = ord("S");
+		global.grapple_key = vk_space;
+
+		global.left_keybind_text = "Move Left: A";
+		global.right_keybind_text = "Move Right: D";
+		global.jump_keybind_text = "Jump: W";
+		global.dash_keybind_text = "Dash: Space";
+		global.gp_keybind_text = "Ground Pound: S";
+		global.grapple_keybind_text = "Grapple: Space";
 	}
 }
