@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"nojisuma_white_breath_114103",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":206.28899,
+  "exportDir":"",
+  "name":"nojisuma_white_breath_114103",
+  "parent":{
+    "name":"Sounds",
+    "path":"folders/Sounds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"nojisuma_white_breath_114103.mp3",
+  "volume":1.0,
+}
