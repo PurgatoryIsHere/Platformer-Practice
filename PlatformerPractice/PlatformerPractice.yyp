@@ -159,6 +159,7 @@
     {"id":{"name":"EnemyTest","path":"rooms/EnemyTest/EnemyTest.yy",},},
     {"id":{"name":"GrappleTest","path":"rooms/GrappleTest/GrappleTest.yy",},},
     {"id":{"name":"Intermission1","path":"rooms/Intermission1/Intermission1.yy",},},
+    {"id":{"name":"Intermission2","path":"rooms/Intermission2/Intermission2.yy",},},
     {"id":{"name":"MainMenu","path":"rooms/MainMenu/MainMenu.yy",},},
     {"id":{"name":"StartRoom","path":"rooms/StartRoom/StartRoom.yy",},},
     {"id":{"name":"Tutorial","path":"rooms/Tutorial/Tutorial.yy",},},
@@ -284,6 +285,7 @@
     {"roomId":{"name":"Area8_3_2","path":"rooms/Area8_3_2/Area8_3_2.yy",},},
     {"roomId":{"name":"Area8_3_3","path":"rooms/Area8_3_3/Area8_3_3.yy",},},
     {"roomId":{"name":"Intermission1","path":"rooms/Intermission1/Intermission1.yy",},},
+    {"roomId":{"name":"Intermission2","path":"rooms/Intermission2/Intermission2.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

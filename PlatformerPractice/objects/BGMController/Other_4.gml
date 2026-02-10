@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description Play BGM functionality
 // You can write your code in this editor
 
 /*

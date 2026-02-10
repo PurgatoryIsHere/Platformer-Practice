@@ -91,6 +91,16 @@ function load_game()
 		
 		global.player_max_health = 100;
 		
+		global.heart_pieces_collected = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+		global.collected_heart_piece =[[false, false],
+									   [false, false, false],
+									   [false, false, false],
+									   [false, false],
+									   [false, false, false],
+									   [false, false, false],
+									   [false, false, false],
+									   [false, false]];
+		
 		global.left_key = ord("A");
 		global.right_key = ord("D");
 		global.jump_key = ord("W");

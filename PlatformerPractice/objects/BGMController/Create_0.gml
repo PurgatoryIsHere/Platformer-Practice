@@ -1,6 +1,5 @@
-/// @description Insert description here
+/// @description DS Map entries for bgm
 // You can write your code in this editor
-
 
 bgm_map = ds_map_create();
 
@@ -10,14 +9,14 @@ ds_map_add(bgm_map, Area1, Three_Red_Hearts___Go__No_Vocal_);
 ds_map_add(bgm_map, Area2, Sketchbook_2024_10_23);
 ds_map_add(bgm_map, Area3, Sketchbook_2024_09_04_LOOP);
 ds_map_add(bgm_map, Intermission1, nojisuma_black_box_153858);
-//2024-12-21 Area 3 Boss Music
 ds_map_add(bgm_map, Area4, Of_Far_Different_Nature___Windfish__CC_BY_4_0_);
-ds_map_add(bgm_map, Area5, Sketchbook_2024_07_04);
+ds_map_add(bgm_map, Area5, Sketchbook_2024_12_21);
+ds_map_add(bgm_map, Intermission2, nojisuma_black_box_153858);
 ds_map_add(bgm_map, Area6, nojisuma_white_breath_114103);
 ds_map_add(bgm_map, Area7, Sketchbook_2024_10_26);
 ds_map_add(bgm_map, Area7_1, nojisuma_the_oldest_144980);
 ds_map_add(bgm_map, Area7_2, Sketchbook_2025_11_13);
-ds_map_add(bgm_map, Area7_3,Of_Far_Different_Nature___Oldskool__v2___CC_BY_4_0_);
+ds_map_add(bgm_map, Area7_3, Sketchbook_2024_07_04);
 
 current_bgm = noone;
 previous_bgm = noone;

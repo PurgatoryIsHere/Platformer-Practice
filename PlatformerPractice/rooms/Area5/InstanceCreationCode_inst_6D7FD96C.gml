@@ -1,1 +1,2 @@
-room_number = 5
+room_number = 5;
+dest = Intermission2;
