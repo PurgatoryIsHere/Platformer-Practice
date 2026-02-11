@@ -7,5 +7,5 @@ waves = [
 	];
 	
 spawn_x_min = 384;
-spawn_x_max = 480;
+spawn_x_max = 464;
 spawn_y = 1216;
