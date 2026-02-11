@@ -65,7 +65,8 @@ if(_select)
 	
 			else if(index == 2)
 			{
-				game_end();
+				//game_end();
+				room_goto(CreditsScreen);
 			}
 			
 			else if(index == 3)
