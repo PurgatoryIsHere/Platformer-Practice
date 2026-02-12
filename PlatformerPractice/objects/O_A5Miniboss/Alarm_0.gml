@@ -13,6 +13,8 @@ if (target_distance <= detection_range)
 	{
 		direction = point_direction(x, y, target.x, target.y);
 	}
+	
+	audio_play_sound(_554022__dodrio__pop, 1, false)
 }
 
 alarm[0] = 60 * 1;

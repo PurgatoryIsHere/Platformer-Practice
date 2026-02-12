@@ -70,6 +70,8 @@ else if (target != noone && place_meeting(x, y, O_Player) && !fired)
 		
 		O_Player.x_speed = launch_x;
 		O_Player.y_speed = launch_y;
+		
+		audio_play_sound(_184649__isaac200000__cannon2, 1, false)
 	}
 }
 

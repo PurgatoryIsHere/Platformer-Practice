@@ -20,6 +20,8 @@ if (target != noone) // Check if player exists
             direction = point_direction(x, y, target_x, target_y);
         }
     }
+	
+	audio_play_sound(_554022__dodrio__pop, 1, false)
 }
 
 alarm[0] = 60 * 2;

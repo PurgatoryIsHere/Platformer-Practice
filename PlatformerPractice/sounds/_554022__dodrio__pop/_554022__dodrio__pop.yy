@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"_554022__dodrio__pop",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":0.20421769,
+  "exportDir":"",
+  "name":"_554022__dodrio__pop",
+  "parent":{
+    "name":"Sound Effects",
+    "path":"folders/Sounds/Sound Effects.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"_554022__dodrio__pop.wav",
+  "volume":0.75,
+}
