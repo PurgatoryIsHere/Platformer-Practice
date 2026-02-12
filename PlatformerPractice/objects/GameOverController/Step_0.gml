@@ -15,13 +15,19 @@ else
 {
 	if(keyboard_check_pressed(ord("R")))
 	{
+		audio_stop_sound(_8Bit_Tragic_Mistake_Loop);
 		global.lives = 3;
 		global.respawn_queue = [];
+		instance_activate_all();
 		room_restart();
 	}
 	
 	else if(keyboard_check_pressed(ord("Q")))
 	{
+		audio_stop_sound(_8Bit_Tragic_Mistake_Loop);
+		global.lives = 3;
+		global.respawn_queue = [];
+		instance_activate_all();
 		room_goto(MainMenu);
 	}
 }

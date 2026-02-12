@@ -47,10 +47,10 @@ TakeDamage = function(damage)
 		//push player off platform
 		with (O_Player)
 		{
-			if (x > 208 && x < 432)
+			if (x > 224 && x < 416)
 			{
 				hspeed = (x < other.x) ? -4 : 4;
-				alarm[0] = 60;
+				alarm[0] = 75;
 			}
 		}
 		
@@ -81,10 +81,10 @@ TakeDamage = function(damage)
 		//push player off platform
 		with (O_Player)
 		{
-			if (x > 208 && x < 432)
+			if (x > 224 && x < 416)
 			{
 				hspeed = (x < other.x) ? -4 : 4;
-				alarm[0] = 60;
+				alarm[0] = 75;
 			}
 		}
 
@@ -182,9 +182,9 @@ GroundPoundAOE = function()
 
 DestroyPlatform = function()
 {
-	var starting_x = 224;
+	var starting_x = 240;
 	
-	while(starting_x <= 416)
+	while(starting_x <= 400)
     {
 		var tile = instance_position(starting_x, 688, O_BreakableBlock);
 		instance_destroy(tile);
@@ -197,9 +197,9 @@ DestroyPlatform = function()
 
 RespawnPlatform = function()
 {
-	var starting_x = 224;
+	var starting_x = 240;
 	
-	while(starting_x <= 416)
+	while(starting_x <= 400)
     {
 		instance_create_layer(starting_x, 688, "Instances", O_BreakableBlock);
 		starting_x += 16;

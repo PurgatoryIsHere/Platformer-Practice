@@ -12,6 +12,14 @@ if(fade_alpha > 0)
 
 if(fade_alpha >= 1)
 {
+	if(!game_over_bgm_started)
+	{
+		audio_stop_all();
+		audio_play_sound(_8Bit_Tragic_Mistake_Loop, 1, true);
+		instance_deactivate_all(true);
+		game_over_bgm_started = true;
+	}
+	
 	draw_set_font(global.default_font);
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_middle);

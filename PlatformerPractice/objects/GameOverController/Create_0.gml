@@ -6,4 +6,6 @@ global.checkpoint_y = noone;
 
 fading_out = true;
 fade_alpha = 0;
-fade_speed = 0.01;
+fade_speed = 0.05;
+
+game_over_bgm_started = false;

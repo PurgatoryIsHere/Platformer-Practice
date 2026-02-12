@@ -25,5 +25,6 @@ if sees_player
 // Damaged by the player
 if(place_meeting(x, y, O_Player) && (O_Player.groundPounding || O_Player.dashing))
 {
+	audio_play_sound(_629664__stumpbutt__retro_taking_damage_sfx2, 1, false)
 	instance_destroy(self)
 }

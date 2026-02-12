@@ -60,10 +60,10 @@ TakeDamage = function(damage)
 		//push player off platform
 		with (O_Player)
 		{
-			if (x > 960 && x < 1104)
+			if (x > 976 && x < 1088)
 			{
 				hspeed = (x < other.x) ? -4 : 4;
-				alarm[0] = 60;
+				alarm[0] = 75;
 			}
 		}
 		
