@@ -80,6 +80,7 @@ i_frame_timer = 0;
 
 TakeDamage = function(damage)
 {
+	audio_play_sound(_501104__evretro__8_bit_damage_sound, 1, false)
 	global.player_health -= damage;
 	
 	if(global.player_health <= 0)
@@ -127,6 +128,7 @@ stateFree = function()
 		// Jumping
 		if(keyboard_check_pressed(global.jump_key) && jump_counter < max_jumps)
 		{
+			audio_play_sound(_269303__kwahmah_02__swoosh34_edited, 1, false)
 			sprite_index = S_PlayerJump;
 			image_xscale = facing / 2;
 		

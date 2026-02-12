@@ -13,6 +13,7 @@ if (place_meeting(x, y, O_Player) && O_Player.beingFired)
 	//if this was the last phase, die
 	if(phase >= 4)
 	{
+		audio_play_sound(_629664__stumpbutt__retro_taking_damage_sfx2_boss, 1, false)
 		instance_destroy(self);
 		
 		if(!global.area7_collected_key_piece[2])

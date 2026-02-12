@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"_629664__stumpbutt__retro_taking_damage_sfx2",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":0.24292517,
+  "exportDir":"",
+  "name":"_629664__stumpbutt__retro_taking_damage_sfx2",
+  "parent":{
+    "name":"Sound Effects",
+    "path":"folders/Sounds/Sound Effects.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"_629664__stumpbutt__retro_taking_damage_sfx2.wav",
+  "volume":0.25,
+}

@@ -9,6 +9,7 @@ var _move = _down - _up;
 
 if(_move != 0 && !waiting_for_input)
 {
+	audio_play_sound(_268108__nenadsimic__button_tick, 1, false)
 	// Move the index
 	index += _move;
 	
@@ -44,6 +45,8 @@ if(_move != 0 && !waiting_for_input)
 
 if(_select)
 {
+	audio_play_sound(_269303__kwahmah_02__swoosh34_edited, 1, false)
+	
 	switch(sub_menu)
 	{
 		case 0:

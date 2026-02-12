@@ -14,8 +14,8 @@
   "exportDir":"",
   "name":"_8Bit_Tragic_Mistake_Loop",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"Music",
+    "path":"folders/Sounds/Music.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

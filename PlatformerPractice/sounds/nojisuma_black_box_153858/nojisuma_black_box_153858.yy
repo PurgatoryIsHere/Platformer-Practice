@@ -14,8 +14,8 @@
   "exportDir":"",
   "name":"nojisuma_black_box_153858",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"Music",
+    "path":"folders/Sounds/Music.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

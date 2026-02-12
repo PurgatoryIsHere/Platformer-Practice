@@ -14,8 +14,8 @@
   "exportDir":"",
   "name":"Of_Far_Different_Nature___Voltage__CC_BY_",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"Music",
+    "path":"folders/Sounds/Music.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"_126041__mhtaylor67__gate_latch",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":0.3055102,
+  "exportDir":"",
+  "name":"_126041__mhtaylor67__gate_latch",
+  "parent":{
+    "name":"Sound Effects",
+    "path":"folders/Sounds/Sound Effects.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"_126041__mhtaylor67__gate_latch.wav",
+  "volume":0.5,
+}

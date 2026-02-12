@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"_585256__lesaucisson__swoosh_2",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":0.38312924,
+  "exportDir":"",
+  "name":"_585256__lesaucisson__swoosh_2",
+  "parent":{
+    "name":"Sound Effects",
+    "path":"folders/Sounds/Sound Effects.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"_585256__lesaucisson__swoosh_2.mp3",
+  "volume":0.5,
+}

@@ -5,6 +5,7 @@ if(type = "")
 {
 	if (place_meeting(x, y, O_Player) && timer_going == false)
 	{
+		audio_play_sound(_759501__gammagool__tick_tock_dry, 1, true)
 		sprite_index = S_Timer_On
 		timer_going = true
 		alarm[0] = room_speed * set_timer
@@ -18,6 +19,7 @@ else if(type = "enemy")
 {
 	if(place_meeting(x, y, O_Player) && !timer_going)
 	{
+		audio_play_sound(_759501__gammagool__tick_tock_dry, 1, true)
 		sprite_index = S_Timer_On;
 		timer_going = true;
 		alarm[1] = room_speed * set_timer;

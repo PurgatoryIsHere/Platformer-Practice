@@ -14,8 +14,8 @@
   "exportDir":"",
   "name":"Sketchbook_2024_12_21",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"Music",
+    "path":"folders/Sounds/Music.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

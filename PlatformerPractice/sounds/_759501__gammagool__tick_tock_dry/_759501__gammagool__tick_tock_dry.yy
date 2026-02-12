@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"_759501__gammagool__tick_tock_dry",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":10.824875,
+  "exportDir":"",
+  "name":"_759501__gammagool__tick_tock_dry",
+  "parent":{
+    "name":"Sound Effects",
+    "path":"folders/Sounds/Sound Effects.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"_759501__gammagool__tick_tock_dry.wav",
+  "volume":1.0,
+}

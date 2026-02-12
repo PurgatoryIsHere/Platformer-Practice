@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"_670185__robinhood76__11342_breath_ghost_vanish",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":1.1192063,
+  "exportDir":"",
+  "name":"_670185__robinhood76__11342_breath_ghost_vanish",
+  "parent":{
+    "name":"Sound Effects",
+    "path":"folders/Sounds/Sound Effects.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"_670185__robinhood76__11342_breath_ghost_vanish.wav",
+  "volume":0.01,
+}

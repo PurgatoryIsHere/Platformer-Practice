@@ -1,4 +1,4 @@
- /// @description Check if being hit
+/// @description Check if being hit
 // You can write your code in this editor
 
 if (place_meeting(x, y, O_Player) && O_Player.beingFired)
@@ -13,6 +13,7 @@ if (place_meeting(x, y, O_Player) && O_Player.beingFired)
 	//if this was the last phase, die
 	if(phase >= 8)
 	{
+		audio_play_sound(_629664__stumpbutt__retro_taking_damage_sfx2_boss, 1, false)
 		instance_destroy(self)
 		DropAbility()
 	}

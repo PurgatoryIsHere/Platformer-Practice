@@ -14,8 +14,8 @@
   "exportDir":"",
   "name":"_180128_piano_ennui_nostalgic_emotional_lofi_96266",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"Music",
+    "path":"folders/Sounds/Music.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"_269303__kwahmah_02__swoosh34_edited",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":0.18351474,
+  "exportDir":"",
+  "name":"_269303__kwahmah_02__swoosh34_edited",
+  "parent":{
+    "name":"Sound Effects",
+    "path":"folders/Sounds/Sound Effects.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"_269303__kwahmah_02__swoosh34_edited.wav",
+  "volume":0.5,
+}

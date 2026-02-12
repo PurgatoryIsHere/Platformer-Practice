@@ -14,8 +14,8 @@
   "exportDir":"",
   "name":"Three_Red_Hearts___Go__No_Vocal_",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"Music",
+    "path":"folders/Sounds/Music.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

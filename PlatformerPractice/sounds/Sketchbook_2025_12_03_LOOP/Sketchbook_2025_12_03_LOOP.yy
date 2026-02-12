@@ -14,8 +14,8 @@
   "exportDir":"",
   "name":"Sketchbook_2025_12_03_LOOP",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"Music",
+    "path":"folders/Sounds/Music.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

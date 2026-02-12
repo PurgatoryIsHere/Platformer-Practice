@@ -37,6 +37,7 @@ TakeDamage = function(damage)
 			self.shake_time = 30;
 		}
 		
+		audio_play_sound(_629664__stumpbutt__retro_taking_damage_sfx2_boss, 1, false)
 		instance_destroy(self);
 		DropAbility();
 	}
@@ -132,6 +133,8 @@ Pillar_Drop_1 = function()
 	instance_create_layer(400, 864, "Instances", O_Warning);
 	instance_create_layer(480, 864, "Instances", O_Warning);
 	
+	audio_play_sound(_630529__mykiscool__earth_shaking_bones_rumbling, 1, false)
+	
 	alarm[0] = 90;
 }
 
@@ -144,6 +147,7 @@ Pillar_Drop_2 = function()
 	instance_create_layer(416, 864, "Instances", O_Warning);
 	instance_create_layer(496, 864, "Instances", O_Warning);
 
+	audio_play_sound(_630529__mykiscool__earth_shaking_bones_rumbling, 1, false)
 	
 	alarm[0] = 90;
 }
@@ -165,6 +169,8 @@ Pillar_Drop_3 = function()
 	instance_create_layer(464, 864, "Instances", O_Warning);
 	instance_create_layer(496, 864, "Instances", O_Warning);
 	instance_create_layer(528, 864, "Instances", O_Warning);
+	
+	audio_play_sound(_630529__mykiscool__earth_shaking_bones_rumbling, 1, false)
 	
 	alarm[0] = 120;
 }

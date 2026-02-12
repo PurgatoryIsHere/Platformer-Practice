@@ -11,6 +11,7 @@ if(place_meeting(x, y, O_Player) && !discovered)
 	{
 		if(tag == this_tag)
 		{
+			audio_play_sound(_670185__robinhood76__11342_breath_ghost_vanish, 1, false)
 			is_fading = true;
 		}
 	}

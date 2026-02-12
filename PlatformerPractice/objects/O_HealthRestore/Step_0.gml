@@ -12,5 +12,6 @@ if(place_meeting(x, y, O_Player))
 		global.player_health += 10;
 	}
 	
+	audio_play_sound(_243701__ertfelda__correct, 1, false)
 	instance_destroy(self);
 }

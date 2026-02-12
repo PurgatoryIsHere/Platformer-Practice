@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"_630529__mykiscool__earth_shaking_bones_rumbling",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":2.0421088,
+  "exportDir":"",
+  "name":"_630529__mykiscool__earth_shaking_bones_rumbling",
+  "parent":{
+    "name":"Sound Effects",
+    "path":"folders/Sounds/Sound Effects.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"_630529__mykiscool__earth_shaking_bones_rumbling.wav",
+  "volume":0.75,
+}

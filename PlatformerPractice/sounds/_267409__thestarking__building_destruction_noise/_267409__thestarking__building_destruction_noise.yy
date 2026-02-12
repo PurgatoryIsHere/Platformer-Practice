@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"_267409__thestarking__building_destruction_noise",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":0.8888889,
+  "exportDir":"",
+  "name":"_267409__thestarking__building_destruction_noise",
+  "parent":{
+    "name":"Sound Effects",
+    "path":"folders/Sounds/Sound Effects.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"_267409__thestarking__building_destruction_noise.wav",
+  "volume":0.75,
+}

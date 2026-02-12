@@ -51,6 +51,7 @@ TakeDamage = function(damage)
 		instance_create_layer(1328, 384, "Instances", O_BreakableBlock);
 		
 		global.a3_miniboss_defeated = true;
+		audio_play_sound(_629664__stumpbutt__retro_taking_damage_sfx2_boss, 1, false)
 		instance_destroy(self);
 	}
 	
@@ -144,6 +145,8 @@ Pillar_Drop_1 = function()
 	instance_create_layer(1152, 304, "Instances", O_Warning);
 	instance_create_layer(1232, 304, "Instances", O_Warning);
 	
+	audio_play_sound(_630529__mykiscool__earth_shaking_bones_rumbling, 1, false)
+	
 	alarm[0] = 90;
 }
 
@@ -161,7 +164,8 @@ Pillar_Drop_2 = function()
 	instance_create_layer(1184, 304, "Instances", O_Warning);
 	instance_create_layer(1216, 304, "Instances", O_Warning);
 	instance_create_layer(1248, 304, "Instances", O_Warning);
-
+	
+	audio_play_sound(_630529__mykiscool__earth_shaking_bones_rumbling, 1, false)
 	
 	alarm[0] = 120;
 }

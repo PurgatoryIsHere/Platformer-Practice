@@ -70,6 +70,7 @@ else
 	{
 		if(move_timer == 0)
 		{
+			audio_play_sound(_706679__sadiquecat__low_whoosh_bamboo_4, 1, false)
 			move_timer = 32;
 			y_speed = -5;
 			jump = false;
@@ -80,12 +81,14 @@ else
 	{
 		if(move_timer == 0)
 		{
+			audio_play_sound(_706679__sadiquecat__low_whoosh_bamboo_4, 1, false)
 			move_timer = 60;
 			y_speed = -5;
 		}
 	
 		else if(move_timer == 30) 
 		{
+			audio_play_sound(_706679__sadiquecat__low_whoosh_bamboo_4, 1, false)
 			y_speed = -5;
 			doubleJump = false;
 		}
@@ -96,6 +99,7 @@ else
 	
 		if(move_timer == 0) 
 		{
+			audio_play_sound(_706679__sadiquecat__low_whoosh_bamboo_4, 1, false)
 			move_timer = 60;
 			y_speed = -7;
 			has_pounded = true;
@@ -114,6 +118,7 @@ else
 			// End ground pound when hitting ground
 			if(place_meeting(x, y + sprite_height, O_Ground))
 			{
+				audio_play_sound(_706679__sadiquecat__low_whoosh_bamboo_4, 1, false)
 				groundPound = false;
 				has_pounded = false;
 				move_timer = 0;

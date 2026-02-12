@@ -1,4 +1,4 @@
- /// @description Initialize variables
+  /// @description Initialize variables
 // You can write your code in this editor
 
 boss_health = 90;
@@ -47,6 +47,14 @@ PhaseChange = function()
 			shield_cores = 3;
 			shield_active = true;
 			break;
+			
+		case 3:
+		
+			phase = 3;
+			boss_health = 90;
+			shield_cores = 3;
+			shield_active = true;
+			break;
 	}	
 }
 
@@ -56,6 +64,7 @@ CoreDestruction = function()
 	
 	if(shield_cores == 0)
 	{
+		audio_play_sound(_702515__robinhood76__11762_quick_air_pop_and_vanish , 1, false)
 		shield_active = false;
 	}
 }
@@ -112,6 +121,7 @@ TakeDamage_Phase3 = function()
 	if(boss_health == 0)
 	{
 		// Trigger death animation
+		audio_play_sound(_629664__stumpbutt__retro_taking_damage_sfx2_boss, 1, false)
 	}
 	
 	else if(boss_health == 30)

@@ -5,6 +5,8 @@ var player = instance_place(x, y, O_Player);
 
 if (player != noone && instance_exists(other_side) && activated && !fading_out && !fading_in) 
 {
+	audio_play_sound(_683096__florianreichelt__woosh, 2, false)
+	
 	if(player.beingFired)
 	{
 		player.beingFired = false;

@@ -7,4 +7,5 @@ if(!checkpoint_reached)
 	sprite_index = S_Checkpoint_Active;
 	global.checkpoint_x = other.x;
 	global.checkpoint_y = other.y;
+	audio_play_sound(_243701__ertfelda__correct, 1, false)
 }

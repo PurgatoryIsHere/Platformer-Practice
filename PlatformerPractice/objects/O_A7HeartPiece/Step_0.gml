@@ -13,6 +13,7 @@ if(!global.collected_heart_piece[area][key] && place_meeting(x, y, O_Player))
 		global.player_health += 10;
 	}
 		
+	audio_play_sound(_243701__ertfelda__correct, 1, false)
 	instance_destroy(self);
 
 	// Include draw event saying something along the lines of "Maximum Health Increased!"

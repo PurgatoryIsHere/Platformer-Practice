@@ -14,8 +14,8 @@
   "exportDir":"",
   "name":"nojisuma_the_oldest_144980",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"Music",
+    "path":"folders/Sounds/Music.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

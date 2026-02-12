@@ -31,6 +31,7 @@ if(input_enabled)
 
 	if(dash && dash_cooldown == 0 && !target_in_range)
 	{
+		audio_play_sound(_585256__lesaucisson__swoosh_2, 1, false)
 		dashing = true;
 		dash_timer = 10;
 		dash_cooldown = 40;
@@ -40,15 +41,17 @@ if(input_enabled)
 
 	if(ground_pound && global.groundPoundUnlock)
 	{
+		audio_play_sound(_585256__lesaucisson__swoosh_2, 1, false)
 		groundPounding = true;
 	}
 
 	if(grapple && global.grappleUnlock && target_in_range && grapple_cooldown == 0)
 	{
+		audio_play_sound(_541975__16bitstudios__grappling_hook, 1, false)
 		grappling = true;
 		grapple_cooldown = 15;
 		grapple_to_x = target_x;
-		grapple_to_y = target_y;
+		grapple_to_y = target_y; 
 	}
 }
 

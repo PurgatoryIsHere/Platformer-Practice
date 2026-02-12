@@ -41,6 +41,7 @@ TakeDamage = function(damage) // Basic damage calculation; aspects can be change
 			spawned_keypiece.key = 0;
 		}
 		
+		audio_play_sound(_629664__stumpbutt__retro_taking_damage_sfx2_boss, 1, false)
 		instance_destroy(self);
 	}
 	

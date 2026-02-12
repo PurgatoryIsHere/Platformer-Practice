@@ -14,8 +14,8 @@
   "exportDir":"",
   "name":"Of_Far_Different_Nature___Windfish__CC_BY_4_0_",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"Music",
+    "path":"folders/Sounds/Music.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
