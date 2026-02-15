@@ -1,0 +1,13 @@
+/// @description Insert description here
+// You can write your code in this editor
+
+layer_x(fourthLayer, lerp(0, camera_get_view_x(view_camera[0]), 0.1))
+layer_x(thirdLayer, lerp(0, camera_get_view_x(view_camera[0]), 0.1))
+layer_x(secondLayer, lerp(0, camera_get_view_x(view_camera[0]), 0.1))
+layer_x(firstLayer, lerp(0, camera_get_view_x(view_camera[0]), 0.1))
+
+layer_y(fourthLayer, lerp(camera_get_view_y(view_camera[0]) / 2, camera_get_view_y(view_camera[0]), 0.75))
+layer_y(thirdLayer, lerp(camera_get_view_y(view_camera[0]) / 2, camera_get_view_y(view_camera[0]), 0.75))
+layer_y(secondLayer, lerp(camera_get_view_y(view_camera[0]) / 2, camera_get_view_y(view_camera[0]), 0.75))
+layer_y(firstLayer, lerp(camera_get_view_y(view_camera[0]) / 2, camera_get_view_y(view_camera[0]), 0.75))
+
