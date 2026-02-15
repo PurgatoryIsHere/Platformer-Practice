@@ -17,7 +17,10 @@ ds_map_add(bgm_map, Area7, Sketchbook_2024_10_26);
 ds_map_add(bgm_map, Area7_1, nojisuma_the_oldest_144980);
 ds_map_add(bgm_map, Area7_2, Sketchbook_2025_11_13);
 ds_map_add(bgm_map, Area7_3, Sketchbook_2024_07_04);
-ds_map_add(bgm_map, CreditsScreen, _180128_piano_ennui_nostalgic_emotional_lofi_96266);
+ds_map_add(bgm_map, AreaEX_1, Sketchbook_2024_08_07);
+ds_map_add(bgm_map, AreaEX_2, Sketchbook_2024_08_07);
+ds_map_add(bgm_map, Area8_3_1, Sketchbook_2025_12_11_bothbreak);
+ds_map_add(bgm_map, CreditsScreen, _3_CoffeeBeans);
 
 current_bgm = noone;
 previous_bgm = noone;
