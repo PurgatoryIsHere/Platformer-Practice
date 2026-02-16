@@ -2,9 +2,9 @@
   "$GMSprite":"v2",
   "%Name":"sky_1",
   "bboxMode":0,
-  "bbox_bottom":239,
+  "bbox_bottom":479,
   "bbox_left":0,
-  "bbox_right":319,
+  "bbox_right":639,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -16,7 +16,7 @@
   ],
   "gridX":0,
   "gridY":0,
-  "height":240,
+  "height":480,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"05a824d3-5efd-46be-a2d6-b1e8e1747d2c","blendMode":0,"displayName":"default","isLocked":false,"name":"05a824d3-5efd-46be-a2d6-b1e8e1747d2c","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":320,
+  "width":640,
 }

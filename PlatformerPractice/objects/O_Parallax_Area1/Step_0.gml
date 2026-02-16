@@ -4,7 +4,7 @@
 layer_x(fourthLayer, lerp(camera_get_view_x(view_camera[0]) / 1.5, camera_get_view_x(view_camera[0]), 0.6))
 layer_x(thirdLayer, lerp(camera_get_view_x(view_camera[0]) / 1.5, camera_get_view_x(view_camera[0]), 0.8))
 layer_x(secondLayer, lerp(camera_get_view_x(view_camera[0]) / 1.5, camera_get_view_x(view_camera[0]), 0.9))
-layer_x(firstLayer, lerp(camera_get_view_x(view_camera[0]) / 1.5, camera_get_view_y(view_camera[0]), 0.95))
+layer_x(firstLayer, lerp(camera_get_view_x(view_camera[0]) / 1.5, camera_get_view_x(view_camera[0]), 0.95))
 
 layer_y(fourthLayer, lerp(camera_get_view_y(view_camera[0]) / 1.5, camera_get_view_y(view_camera[0]), 0.6))
 layer_y(thirdLayer, lerp(camera_get_view_y(view_camera[0]) / 1.5, camera_get_view_y(view_camera[0]), 0.8))
