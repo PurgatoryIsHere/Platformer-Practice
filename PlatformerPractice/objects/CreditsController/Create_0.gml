@@ -10,14 +10,17 @@ category2 = "Music by:";
 musician1 = "Abstraction (sourced from itch.io)";
 musician2 = "Tim Beek (sourced from itch.io)";
 musician3 = "Of Far Different Nature (sourced from itch.io)";
-musician4 = "WELC0MEN0 (sourced from Pixabay)";
+musician4 = "Redlight Chill (sourced from itch.io)";
 musician5 = "nojisuma (sourced from Pixabay)";
 
 category3 = "Art by:";
-artist = "arty mcmosutache man";
+artist1 = "ansimuz (sourced from itch.io)";
+artist2 = "craftpix (sourced from itch.io)";
+artist3 = "forest_elfs (sourced from itch.io)";
+
 
 category4 = "Credits theme:";
-credits_theme = "theme themofferston";
+credits_theme = "Coffee Beans by Redlight Chill";
 
 category5 = "Play-testers:";
 play_testing = "play tester #7654321";

@@ -28,6 +28,7 @@ else if(type = "enemy")
 	if(timer_going && !instance_exists(O_EnemyParent))
 	{
 		instance_deactivate_object(O_TimerGate);
+		audio_stop_sound(_759501__gammagool__tick_tock_dry);
 		instance_deactivate_object(self);
 	}
 }

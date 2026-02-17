@@ -1,7 +1,7 @@
  /// @description Insert description here
 // You can write your code in this editor
 
-if (place_meeting(x, y - 1, O_Player))
+if (O_Player.bbox_top > self.bbox_bottom)
 {
-	alarm[0] = 10	
+    instance_change(O_Shelf, true);
 }
