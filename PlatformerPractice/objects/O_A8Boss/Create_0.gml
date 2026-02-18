@@ -8,7 +8,7 @@ randomise()
 pattern = 0;
 
 //Circle Burst
-circle_count = 12;
+circle_count = 8;
 burst_wave = 1;
 
 //Spiral Spray
@@ -16,7 +16,7 @@ spiral_count = 0;
 spiral_direction = 0;
 
 //Chunk Shot
-chunk_count = 7;
+chunk_count = 6;
 chunk_wave = 1;
 chunk_direction = -45;
 

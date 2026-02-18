@@ -14,12 +14,12 @@ if (chunk_wave <= 3)
 		chunk_direction += 15;
 	}
 	
-	alarm[3] = 30;
+	alarm[3] = 45;
 	chunk_wave += 1;
 	chunk_direction -= 9105
 }
 else
 {
 	chunk_wave = 1;
-	alarm[0] = 60;
+	alarm[0] = 120;
 }

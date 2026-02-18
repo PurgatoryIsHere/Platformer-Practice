@@ -110,7 +110,7 @@ else
 			y_speed = 10;
         
 			// Check for ground pound impact
-			if(point_distance(x, y + 1, O_Player.x, O_Player.y) < 80 && O_Player.on_ground && place_meeting(x, y + sprite_height, O_Ground)) 
+			if(point_distance(x, y + 1, O_Player.x, O_Player.y) < 64 && O_Player.on_ground && place_meeting(x, y + sprite_height, O_Ground)) 
 			{
 				O_Player.TakeDamage(20);
 			}

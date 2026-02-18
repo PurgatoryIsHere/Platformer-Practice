@@ -1,4 +1,4 @@
-/// @description Circle Burst
+ /// @description Circle Burst
 // You can write your code in this editor
 
 //Circle burst
@@ -13,7 +13,7 @@ if (burst_wave == 1)
 		_bullet.direction = _direction;
 	}
 	
-	alarm[1] = 20
+	alarm[1] = 30
 	burst_wave = 2
 }
 
@@ -28,7 +28,7 @@ else if (burst_wave == 2)
 		_bullet.direction = _direction;
 	}
 	
-	alarm[1] = 20
+	alarm[1] = 30
 	burst_wave = 3
 }
 
@@ -43,7 +43,7 @@ else if (burst_wave == 3)
 		_bullet.direction = _direction;
 	}
 	
-	alarm[1] = 20
+	alarm[1] = 30
 	burst_wave = 4
 }
 
@@ -58,6 +58,6 @@ else if (burst_wave == 4)
 		_bullet.direction = _direction;
 	}
 	
-	alarm[0] = 60
+	alarm[0] = 120
 	burst_wave = 1
 }

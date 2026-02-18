@@ -7,16 +7,16 @@ switch (pattern)
 {
 	case 1:
 		//Circle burst
-		alarm[1] = 20
+		alarm[1] = 30
 	break;
 	
 	case 2:
 		//Spiral Spray
-		alarm[2] = 20
+		alarm[2] = 30
 	break;
 	
 	case 3:
 		//Chunk Shot
-		alarm[3] = 20
+		alarm[3] = 30
 	break;
 }
