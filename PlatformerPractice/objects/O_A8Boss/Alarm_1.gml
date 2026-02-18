@@ -1,94 +1,63 @@
-/// @description Area 3 Boss Pillar Drop
+/// @description Circle Burst
 // You can write your code in this editor
 
-with(O_Warning)
+//Circle burst
+if (burst_wave == 1)
 {
-	instance_destroy();
+	for (var i = 0; i < circle_count; i++) 
+	{
+		var _direction = ((360 / circle_count) * i);
+    
+		var _bullet = instance_create_layer(x, y, "Instances", O_A8BossProjectile);
+    
+		_bullet.direction = _direction;
+	}
+	
+	alarm[1] = 20
+	burst_wave = 2
 }
 
-if(wave == 1)
+else if (burst_wave == 2)
 {
-	var pillar_x = [32, 48, 112, 128, 192, 208, 480, 496, 560, 576, 640, 656];
-	var pillar_y = [1120, 1104, 1088, 1072, 1056, 1040, 1024, 1008, 992, 976, 960, 944, 928, 912, 896];
-	
-	for (var i = 0; i < array_length(pillar_x); i++)
-    {
-        for (var j = 0; j < array_length(pillar_y); j++)
-        {
-            instance_create_layer(pillar_x[i], pillar_y[j], "Instances", O_Pillar);
-        }
-    }
-	
-	// slanted pillar
-	var slant_y = 912;
-	var slant_x = 224;
-	
-	while(slant_y <= 1120)
+	for (var j = 0; j < circle_count; j++) 
 	{
-		instance_create_layer(slant_x, slant_y, "Instances", O_Pillar);
-		instance_create_layer(slant_x + 16, slant_y, "Instances", O_Pillar);
-		
-		slant_x += 16;
-		slant_y += 16;
+		var _direction = ((360 / circle_count) * j) + 15;
+    
+		var _bullet = instance_create_layer(x, y, "Instances", O_A8BossProjectile);
+    
+		_bullet.direction = _direction;
 	}
 	
-	instance_create_layer(224, 800, "Instances", O_FlyingEnemy);
-	instance_create_layer(448, 800, "Instances", O_FlyingEnemy);
+	alarm[1] = 20
+	burst_wave = 3
 }
 
-else if(wave == 2)
+else if (burst_wave == 3)
 {
-	var pillar_x = [32, 48, 112, 128, 192, 208, 480, 496, 560, 576, 640, 656];
-	var pillar_y = [1120, 1104, 1088, 1072, 1056, 1040, 1024, 1008, 992, 976, 960, 944, 928, 912, 896, 880, 864, 848, 832, 816, 800, 784, 768];
-	
-	for (var i = 0; i < array_length(pillar_x); i++)
-    {
-        for (var j = 0; j < array_length(pillar_y); j++)
-        {
-            instance_create_layer(pillar_x[i], pillar_y[j], "Instances", O_Pillar);
-        }
-    }
-	
-	pillar_x = [112, 128, 192, 208, 480, 496, 560, 576];
-	pillar_y = [784, 800];
-	
-	for (var i = 0; i < array_length(pillar_x); i++)
-    {
-        for (var j = 0; j < array_length(pillar_y); j++)
-        {
-			var tile = instance_position(pillar_x[i], pillar_y[j], O_Pillar);
-            instance_destroy(tile);
-			
-			instance_create_layer(pillar_x[i], pillar_y[j], "Instances", O_DashBreakBlock);
-        }
-    }
-	
-	var slant_y = 912;
-	var slant_x = 224;
-	
-	while(slant_y <= 1120)
+	for (var k = 0; k < circle_count; k++) 
 	{
-		instance_create_layer(slant_x, slant_y, "Instances", O_Pillar);
-		instance_create_layer(slant_x + 16, slant_y, "Instances", O_Pillar);
-		
-		slant_x += 16;
-		slant_y += 16;
+		var _direction = ((360 / circle_count) * k);
+    
+		var _bullet = instance_create_layer(x, y, "Instances", O_A8BossProjectile);
+    
+		_bullet.direction = _direction;
 	}
 	
-	slant_y = 912;
-	slant_x = 464;
-	
-	while(slant_y <= 1120)
+	alarm[1] = 20
+	burst_wave = 4
+}
+
+else if (burst_wave == 4)
+{
+	for (var m = 0; m < circle_count; m++) 
 	{
-		instance_create_layer(slant_x, slant_y, "Instances", O_Pillar);
-		instance_create_layer(slant_x - 16, slant_y, "Instances", O_Pillar);
-		
-		slant_x -= 16;
-		slant_y += 16;
+		var _direction = ((360 / circle_count) * m) + 15;
+    
+		var _bullet = instance_create_layer(x, y, "Instances", O_A8BossProjectile);
+    
+		_bullet.direction = _direction;
 	}
 	
-	instance_create_layer(64, 784, "Instances", O_FlyingEnemy);
-	instance_create_layer(160, 784, "Instances", O_FlyingEnemy);
-	instance_create_layer(512, 784, "Instances", O_FlyingEnemy);
-	instance_create_layer(608, 784, "Instances", O_FlyingEnemy);
+	alarm[0] = 60
+	burst_wave = 1
 }

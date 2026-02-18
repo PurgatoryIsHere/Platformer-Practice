@@ -37,6 +37,7 @@ if(pause)
 		pause_music = noone;
 		*/
 		
+		global.area_index = noone;
 		global.checkpoint_x = noone;
 		global.checkpoint_y = noone;
 		global.respawn_queue = [];

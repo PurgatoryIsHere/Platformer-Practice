@@ -3,12 +3,12 @@
 
 if(!global.collected_heart_piece[area][key] && place_meeting(x, y, O_Player))
 {
-	global.heart_pieces_collected[room] += 1;
+	global.heart_pieces_collected[global.area_index] += 1;
 	global.collected_heart_piece[area][key] = true;
 	
-	var required = global.heart_pieces_to_collect[room];
+	var required = global.heart_pieces_to_collect[global.area_index];
 	
-	if(global.heart_pieces_collected[room] == required)
+	if(global.heart_pieces_collected[global.area_index] == required)
 	{
 		global.player_max_health += 10;
 		global.player_health += 10;

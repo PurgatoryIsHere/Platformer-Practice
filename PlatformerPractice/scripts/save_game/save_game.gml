@@ -15,14 +15,14 @@ function save_game()
 	buffer_write(buffer, buffer_bool, global.levelUnlocked[7]);
 	buffer_write(buffer, buffer_bool, global.levelUnlocked[8]);
 	
-	// Heart Piece Collection Status (Per Area)
+	// Heart Piece Collection Status (Indiviually)
+	buffer_write(buffer, buffer_u32, global.heart_pieces_collected[1]);
 	buffer_write(buffer, buffer_u32, global.heart_pieces_collected[2]);
 	buffer_write(buffer, buffer_u32, global.heart_pieces_collected[3]);
 	buffer_write(buffer, buffer_u32, global.heart_pieces_collected[4]);
 	buffer_write(buffer, buffer_u32, global.heart_pieces_collected[5]);
 	buffer_write(buffer, buffer_u32, global.heart_pieces_collected[6]);
 	buffer_write(buffer, buffer_u32, global.heart_pieces_collected[7]);
-	buffer_write(buffer, buffer_u32, global.heart_pieces_collected[8]);
 	
 	// Heart Piece Collection Status (Individually)
 	buffer_write(buffer, buffer_bool, global.collected_heart_piece[0][0]);

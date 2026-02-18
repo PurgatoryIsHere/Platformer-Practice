@@ -1,1 +1,0 @@
-target = instance_nearest(x, y, O_A8Boss)

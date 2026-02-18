@@ -20,15 +20,15 @@ function load_game()
 		global.levelUnlocked[8] = buffer_read(buffer, buffer_bool);
 		
 		// Heart Piece Collection Status (Per Area)
+		global.heart_pieces_collected[1] = buffer_read(buffer, buffer_u32)
 		global.heart_pieces_collected[2] = buffer_read(buffer, buffer_u32)
 		global.heart_pieces_collected[3] = buffer_read(buffer, buffer_u32)
 		global.heart_pieces_collected[4] = buffer_read(buffer, buffer_u32)
 		global.heart_pieces_collected[5] = buffer_read(buffer, buffer_u32)
 		global.heart_pieces_collected[6] = buffer_read(buffer, buffer_u32)
 		global.heart_pieces_collected[7] = buffer_read(buffer, buffer_u32)
-		global.heart_pieces_collected[8] = buffer_read(buffer, buffer_u32)
 		
-		// Heart Piece Collection Status (Per Area)
+		// Heart Piece Collection Status (Individually)
 		global.collected_heart_piece[0][0] = buffer_read(buffer, buffer_bool);
 		global.collected_heart_piece[0][1] = buffer_read(buffer, buffer_bool);
 		global.collected_heart_piece[1][0] = buffer_read(buffer, buffer_bool);
@@ -91,7 +91,7 @@ function load_game()
 		
 		global.player_max_health = 100;
 		
-		global.heart_pieces_collected = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+		global.heart_pieces_collected = [0, 0, 0, 0, 0, 0, 0, 0]
 		global.collected_heart_piece =[[false, false],
 									   [false, false, false],
 									   [false, false, false],

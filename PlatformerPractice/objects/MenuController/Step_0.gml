@@ -125,7 +125,7 @@ if(_select)
 			
 			else if(index == 9 && global.levelUnlocked[index - 1])
 			{
-				room_goto(Area8);
+				room_goto(Area8_1);
 			}
 			
 		break;
@@ -201,32 +201,27 @@ if(_select)
 			
 			else if(index == 8)
 			{
-				room_goto(Area8);
+				room_goto(Area8_1);
 			}
 			
 			else if(index == 9)
 			{
-				room_goto(AreaEX_2);
+				room_goto(Area8_2);
 			}
 			
 			else if(index == 10)
 			{
-				room_goto(AreaEX_1);
+				room_goto(Area8_3);
 			}
 			
 			else if(index == 11)
 			{
-				room_goto(Area8_3_1);
+				room_goto(AreaEX_1);
 			}
 			
 			else if(index == 12)
 			{
-				room_goto(Area8_3_2);
-			}
-			
-			else if(index == 13)
-			{
-				room_goto(Area8_3_3);
+				room_goto(AreaEX_2);
 			}
 			
 		break;

@@ -46,12 +46,11 @@ menu[3][4] = "Area 4";
 menu[3][5] = "Area 5";
 menu[3][6] = "Area 6";
 menu[3][7] = "Area 7";
-menu[3][8] = "Area 8";
-menu[3][9] = "Area 8.1";
-menu[3][10] = "Area 8.2";
-menu[3][11] = "Area 8.3.1";
-menu[3][12] = "Area 8.3.2";
-menu[3][13] = "Area 8.3.3";
+menu[3][8] = "Area 8.1";
+menu[3][9] = "Area 8.2";
+menu[3][10] = "Area 8.3";
+menu[3][11] = "Area EX-1";
+menu[3][12] = "Area EX-2";
 
 // Clear Save Data Propmt
 menu[4][0] = "Are you sure?"

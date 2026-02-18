@@ -3,9 +3,9 @@
 
 if(place_meeting(x, y, O_Player) && (O_Player.dashing || O_Player.groundPounding))
 {
-	if(instance_exists(O_A8Boss_P4))
+	if(instance_exists(O_A8Boss))
 	{
-		O_A8Boss_P4.CoreDestruction();
+		O_A8Boss.CoreDestruction();
 		audio_play_sound(_267409__thestarking__building_destruction_noise, 1, false)
 		instance_destroy(self);
 	}

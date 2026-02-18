@@ -1,0 +1,1 @@
+global.area_index = 6;

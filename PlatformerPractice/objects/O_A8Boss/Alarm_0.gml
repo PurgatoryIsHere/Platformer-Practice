@@ -1,29 +1,22 @@
-/// @description Area 1 Boss Alarm
+/// @description Spawn Bullets
 // You can write your code in this editor
 
-var move_type = 4;
+pattern = irandom_range(1,3)
 
-if (move_type = 0) 
+switch (pattern)
 {
-	jump = true;
+	case 1:
+		//Circle burst
+		alarm[1] = 20
+	break;
+	
+	case 2:
+		//Spiral Spray
+		alarm[2] = 20
+	break;
+	
+	case 3:
+		//Chunk Shot
+		alarm[3] = 20
+	break;
 }
-
-else if (move_type = 1) 
-{
-	doubleJump = true;
-}
-
-else if (move_type = 2) 
-{
-	groundPound = true;
-}
-else if (move_type = 3) 
-{
-	dash = true;
-}
-else if (move_type = 4) 
-{
-	shoot = true;
-}
-
-alarm[0] = 60 * 3;

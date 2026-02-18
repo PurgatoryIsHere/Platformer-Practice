@@ -1,19 +1,25 @@
-/// @description Area 5 Boss Projectile
+/// @description Chunk Shot
 // You can write your code in this editor
 
-var target = instance_nearest(x, y, O_Player);
-
-var detection_range = 500;
-var target_distance = point_distance(x, y, target.x, target.y)
-
-if (target_distance <= detection_range)
+if (chunk_wave <= 3)
 {
-	with (instance_create_layer(x, y, "Instances", O_A8BossProjectile))
+	for (var i = 0; i < chunk_count; i++) 
 	{
-		direction = point_direction(x, y, target.x, target.y);
+		var _direction = (round(point_direction(x, y, O_Player.x, O_Player.y)) + chunk_direction) % 360;
+    
+		var _bullet = instance_create_layer(x, y, "Instances", O_A8BossProjectile);
+    
+		_bullet.direction = _direction;
+		
+		chunk_direction += 15;
 	}
+	
+	alarm[3] = 30;
+	chunk_wave += 1;
+	chunk_direction -= 9105
 }
-
-show_debug_message("Shoot projectile")
-
-alarm[3] = 60 * 1
+else
+{
+	chunk_wave = 1;
+	alarm[0] = 60;
+}
