@@ -1,12 +1,25 @@
   /// @description Initialize variables
 // You can write your code in this editor
 
+// --------------------------------------------
+// Main Variables
+// --------------------------------------------
 boss_health = 90;
+boss_battle_active = true;
 boss_i_frame_timer = 0;
+
+y_speed = 0;
+
+phase = 1;
+shield_cores = 1;
+shield_active = true;
 
 randomise()
 pattern = 0;
 
+// --------------------------------------------
+// Shot Patterns
+// --------------------------------------------
 //Circle Burst
 circle_count = 8;
 burst_wave = 1;
@@ -23,34 +36,17 @@ chunk_direction = -45;
 // Start the first alarm
 alarm[0] = 30;
 
-y_speed = 0;
+// --------------------------------------------
+// White-out Variables for PhaseChange()
+// --------------------------------------------
+fade_alpha = 0;
+fading_out = false;
+fade_speed = 0.05;
+whited_out = false;
 
-phase = 1;
-shield_cores = 1;
-shield_active = true;
-
-PhaseChange = function()
-{
-	switch(phase)
-	{
-		case 1:
-		
-			phase = 2;
-			boss_health = 90;
-			shield_cores = 2;
-			shield_active = true;
-		break;
-			
-		case 2:
-		
-			phase = 3;
-			boss_health = 90;
-			shield_cores = 3;
-			shield_active = true;
-		break;
-	}	
-}
-
+// --------------------------------------------
+// Damage-Related Functions
+// --------------------------------------------
 CoreDestruction = function()
 {
 	shield_cores -= 1;
@@ -104,6 +100,8 @@ TakeDamage_Phase2 = function()
 	else if(boss_health == 45)
 	{
 		// Push player back, reactivate shield, regenerate cores
+		instance_create_layer(624, 64, "Instances", O_ShieldCore);
+		instance_create_layer(48, 416, "Instances", O_ShieldCore);
 		shield_cores = 2;
 		shield_active = true;
 	}
@@ -132,5 +130,31 @@ TakeDamage_Phase3 = function()
 		// Push player back, reactivate shield, regenerate cores
 		shield_cores = 3;
 		shield_active = true;
+	}
+}
+
+PhaseChange = function()
+{
+	fading_out = true;
+	boss_battle_active = false;
+	
+	if(whited_out)
+	{
+		switch(phase)
+		{
+			case 1:
+				phase = 2;
+				shield_cores = 2;
+				shield_active = true;
+				room_goto(Area8_2);
+			break;
+			
+			case 2:
+				phase = 3;
+				shield_cores = 3;
+				shield_active = true;
+				room_goto(Area8_3);
+			break;
+		}
 	}
 }

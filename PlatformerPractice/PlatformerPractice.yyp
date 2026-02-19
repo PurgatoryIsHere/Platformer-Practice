@@ -309,7 +309,7 @@
     {"id":{"name":"S_A8Boss","path":"sprites/S_A8Boss/S_A8Boss.yy",},},
     {"id":{"name":"S_A8BossPhase4","path":"sprites/S_A8BossPhase4/S_A8BossPhase4.yy",},},
     {"id":{"name":"S_A8BossPhase4Shielded","path":"sprites/S_A8BossPhase4Shielded/S_A8BossPhase4Shielded.yy",},},
-    {"id":{"name":"S_A8BossSheilded","path":"sprites/S_A8BossSheilded/S_A8BossSheilded.yy",},},
+    {"id":{"name":"S_A8BossShielded","path":"sprites/S_A8BossShielded/S_A8BossShielded.yy",},},
     {"id":{"name":"S_AutoGate","path":"sprites/S_AutoGate/S_AutoGate.yy",},},
     {"id":{"name":"S_AutoGateDetection","path":"sprites/S_AutoGateDetection/S_AutoGateDetection.yy",},},
     {"id":{"name":"S_BottomlessPit","path":"sprites/S_BottomlessPit/S_BottomlessPit.yy",},},

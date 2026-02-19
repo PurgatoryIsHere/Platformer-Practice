@@ -4,3 +4,5 @@ if(other_side == id)
 {
 	other_side = noone;
 }
+
+portal_cooldown = 60;

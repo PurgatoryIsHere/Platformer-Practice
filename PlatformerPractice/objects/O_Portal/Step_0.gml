@@ -41,7 +41,7 @@ if(fading_out)
 
         activated = false;
         other_side.activated = false;
-        alarm[0] = 180;
+        alarm[0] = portal_cooldown;
 
         fading_in = true;
     }

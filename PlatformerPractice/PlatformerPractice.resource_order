@@ -233,7 +233,7 @@
     {"name":"S_A8Boss","order":7,"path":"sprites/S_A8Boss/S_A8Boss.yy",},
     {"name":"S_A8BossPhase4","order":13,"path":"sprites/S_A8BossPhase4/S_A8BossPhase4.yy",},
     {"name":"S_A8BossPhase4Shielded","order":10,"path":"sprites/S_A8BossPhase4Shielded/S_A8BossPhase4Shielded.yy",},
-    {"name":"S_A8BossSheilded","order":15,"path":"sprites/S_A8BossSheilded/S_A8BossSheilded.yy",},
+    {"name":"S_A8BossShielded","order":15,"path":"sprites/S_A8BossShielded/S_A8BossShielded.yy",},
     {"name":"S_AutoGate","order":1,"path":"sprites/S_AutoGate/S_AutoGate.yy",},
     {"name":"S_BottomlessPit","order":6,"path":"sprites/S_BottomlessPit/S_BottomlessPit.yy",},
     {"name":"S_Button","order":10,"path":"sprites/S_Button/S_Button.yy",},

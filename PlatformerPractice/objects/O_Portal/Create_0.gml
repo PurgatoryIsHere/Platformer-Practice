@@ -11,3 +11,5 @@ fading_in = false;
 fade_speed = 0.1;
 
 disappear = false; // Whether or not the portal disappears after use
+
+portal_cooldown = 180;
