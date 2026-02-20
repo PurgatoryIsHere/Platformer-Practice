@@ -14,6 +14,12 @@ if (place_meeting(x, y, O_Player) && O_Player.beingFired)
 	if(phase >= 8)
 	{
 		audio_play_sound(_629664__stumpbutt__retro_taking_damage_sfx2_boss, 1, false)
+		
+		with(O_A5PhaseGate)
+		{
+			instance_destroy(self);
+		}
+		
 		instance_destroy(self)
 		DropAbility()
 	}

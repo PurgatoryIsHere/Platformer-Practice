@@ -44,6 +44,9 @@ global.tutorialGrappleUnlock = false;
 // Boss Variables
 global.ability_collected = false;
 
+// Area 5 Boss Variable
+global.respawn_check = true;
+
 // Area 7 Variables
 global.area7_key_pieces_collected = 0;
 global.area7_collected_key_piece = [false, false, false];
