@@ -15,6 +15,7 @@ global.default_valign = draw_get_valign()
 global.lives = 3
 global.player_max_health = 100;
 global.player_health = 100;
+global.health_persist = false;
 
 global.area_index = noone;
 

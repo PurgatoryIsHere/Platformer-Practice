@@ -7,6 +7,7 @@
 boss_health = 90;
 boss_battle_active = true;
 boss_i_frame_timer = 0;
+current_player_health = 0;
 
 y_speed = 0;
 
@@ -99,7 +100,6 @@ TakeDamage_Phase2 = function()
 	
 	else if(boss_health == 45)
 	{
-		// Push player back, reactivate shield, regenerate cores
 		instance_create_layer(624, 64, "Instances", O_ShieldCore);
 		instance_create_layer(48, 416, "Instances", O_ShieldCore);
 		shield_cores = 2;
@@ -116,20 +116,8 @@ TakeDamage_Phase3 = function()
 	{
 		// Trigger death animation
 		audio_play_sound(_629664__stumpbutt__retro_taking_damage_sfx2_boss, 1, false)
-	}
-	
-	else if(boss_health == 30)
-	{
-		// Push player back, reactivate shield, regenerate cores
-		shield_cores = 3;
-		shield_active = true;
-	}
-	
-	else if(boss_health == 60)
-	{
-		// Push player back, reactivate shield, regenerate cores
-		shield_cores = 3;
-		shield_active = true;
+		instance_destroy(self);
+		instance_create_layer(x, y, "Instances", CreditsController);
 	}
 }
 
@@ -146,6 +134,8 @@ PhaseChange = function()
 				phase = 2;
 				shield_cores = 2;
 				shield_active = true;
+				global.checkpoint_x = noone;
+				global.checkpoint_y = noone;
 				room_goto(Area8_2);
 			break;
 			
@@ -153,6 +143,8 @@ PhaseChange = function()
 				phase = 3;
 				shield_cores = 3;
 				shield_active = true;
+				global.checkpoint_x = noone;
+				global.checkpoint_y = noone;
 				room_goto(Area8_3);
 			break;
 		}

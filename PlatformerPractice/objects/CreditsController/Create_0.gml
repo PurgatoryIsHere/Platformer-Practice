@@ -1,6 +1,9 @@
 /// @description Variables and such
 // You can write your code in this editor
 
+fade_alpha = 0;
+fade_speed = 0.025;
+
 game_title = "game";
 
 category1 = "Development:";
