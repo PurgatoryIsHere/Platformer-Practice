@@ -69,6 +69,7 @@ function save_game()
 	buffer_write(buffer, buffer_string, global.dash_keybind_text);
 	buffer_write(buffer, buffer_string, global.gp_keybind_text);
 	buffer_write(buffer, buffer_string, global.grapple_keybind_text);
+
 	
 	buffer_save(buffer, "save.dat");
 	

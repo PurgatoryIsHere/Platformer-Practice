@@ -199,6 +199,7 @@
     {"id":{"name":"O_TimerGate","path":"objects/O_TimerGate/O_TimerGate.yy",},},
     {"id":{"name":"O_TopSpike","path":"objects/O_TopSpike/O_TopSpike.yy",},},
     {"id":{"name":"O_Trail","path":"objects/O_Trail/O_Trail.yy",},},
+    {"id":{"name":"O_TutorialFlag","path":"objects/O_TutorialFlag/O_TutorialFlag.yy",},},
     {"id":{"name":"O_Warning","path":"objects/O_Warning/O_Warning.yy",},},
     {"id":{"name":"PauseController","path":"objects/PauseController/PauseController.yy",},},
     {"id":{"name":"RespawnManager","path":"objects/RespawnManager/RespawnManager.yy",},},

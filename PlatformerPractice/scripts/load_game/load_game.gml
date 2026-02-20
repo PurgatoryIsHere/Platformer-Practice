@@ -91,6 +91,10 @@ function load_game()
 		
 		global.player_max_health = 100;
 		
+		global.doubleJumpUnlock = false;
+		global.groundPoundUnlock = false;
+		global.grappleUnlock = false;
+		
 		global.heart_pieces_collected = [0, 0, 0, 0, 0, 0, 0, 0]
 		global.collected_heart_piece =[[false, false],
 									   [false, false, false],

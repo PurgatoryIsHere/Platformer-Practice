@@ -3,8 +3,14 @@
 
 if place_meeting(x, y, O_Player)
 {
-	global.grappleUnlock = true
-	global.ability_collected = true;
+	if(room = Tutorial) {
+		global.tutorialGrappleUnlock = true;
+	}
+	else {
+		global.grappleUnlock = true;
+		global.ability_collected = true;
+	}
+	
 	audio_play_sound(_243701__ertfelda__correct, 1, false)
 	instance_destroy(self)
 }

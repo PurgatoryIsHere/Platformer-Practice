@@ -35,6 +35,11 @@ global.doubleJumpUnlock = false
 global.groundPoundUnlock = false
 global.grappleUnlock = false
 
+// Abilities only used in tutorial
+global.tutorialDoubleJumpUnlock = false;
+global.tutorialGroundPoundUnlock = false;
+global.tutorialGrappleUnlock = false;
+
 // Boss Variables
 global.ability_collected = false;
 

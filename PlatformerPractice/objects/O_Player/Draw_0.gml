@@ -3,7 +3,7 @@
 draw_self()
 
 //Draw dotted ine to grapple point if valid grapple
-if (target_in_range && global.grappleUnlock) {
+if (target_in_range && (global.grappleUnlock || global.tutorialGrappleUnlock)) {
     var line_segments = 20; // Number of dots
     var segment_length = point_distance(x, y, target_x, target_y) / line_segments;
     var line_direction = point_direction(x, y, target_x, target_y);

@@ -139,7 +139,7 @@ stateFree = function()
 				movement_lock_timer = 10;
 			}
 		
-			else if(global.doubleJumpUnlock)
+			else if(global.doubleJumpUnlock || global.tutorialDoubleJumpUnlock)
 			{
 				y_speed = -4;
 				jump_counter += 1;

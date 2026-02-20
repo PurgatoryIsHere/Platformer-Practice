@@ -39,13 +39,13 @@ if(input_enabled)
 	}
 
 
-	if(ground_pound && global.groundPoundUnlock)
+	if(ground_pound && (global.groundPoundUnlock || global.tutorialGroundPoundUnlock))
 	{
 		audio_play_sound(_585256__lesaucisson__swoosh_2, 1, false)
 		groundPounding = true;
 	}
 
-	if(grapple && global.grappleUnlock && target_in_range && grapple_cooldown == 0)
+	if(grapple && (global.grappleUnlock || global.tutorialGrappleUnlock) && target_in_range && grapple_cooldown == 0)
 	{
 		audio_play_sound(_541975__16bitstudios__grappling_hook, 1, false)
 		grappling = true;

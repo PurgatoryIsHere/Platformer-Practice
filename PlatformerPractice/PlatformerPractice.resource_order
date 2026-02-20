@@ -129,6 +129,7 @@
     {"name":"O_TimerGate","order":5,"path":"objects/O_TimerGate/O_TimerGate.yy",},
     {"name":"O_TopSpike","order":3,"path":"objects/O_TopSpike/O_TopSpike.yy",},
     {"name":"O_Trail","order":1,"path":"objects/O_Trail/O_Trail.yy",},
+    {"name":"O_TutorialFlag","order":21,"path":"objects/O_TutorialFlag/O_TutorialFlag.yy",},
     {"name":"PauseController","order":4,"path":"objects/PauseController/PauseController.yy",},
     {"name":"RespawnManager","order":8,"path":"objects/RespawnManager/RespawnManager.yy",},
     {"name":"Area1","order":9,"path":"rooms/Area1/Area1.yy",},
