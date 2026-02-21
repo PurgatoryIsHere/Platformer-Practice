@@ -4,26 +4,49 @@
 fade_alpha = 0;
 fade_speed = 0.025;
 
-game_title = "game";
+credits = [
+    {
+        title: "Credits",
+        scale: 1,
+        entries: []
+    },
 
-category1 = "Development:";
-game_development = "Purgatory, Myr";
+    {
+        title: "Development:",
+        scale: 0.75,
+        entries: [
+            "Purgatory, Myr"
+        ]
+    },
 
-category2 = "Music by:";
-musician1 = "Abstraction (sourced from itch.io)";
-musician2 = "Tim Beek (sourced from itch.io)";
-musician3 = "Of Far Different Nature (sourced from itch.io)";
-musician4 = "Redlight Chill (sourced from itch.io)";
-musician5 = "nojisuma (sourced from Pixabay)";
+    {
+        title: "Music by:",
+        scale: 0.75,
+        entries: [
+            "Abstraction (itch.io)",
+            "Tim Beek (itch.io)",
+            "Of Far Different Nature (itch.io)",
+            "Redlight Chill (itch.io)",
+            "nojisuma (Pixabay)"
+        ]
+    },
 
-category3 = "Art by:";
-artist1 = "ansimuz (sourced from itch.io)";
-artist2 = "craftpix (sourced from itch.io)";
-artist3 = "forest_elfs (sourced from itch.io)";
+    {
+        title: "Art by:",
+        scale: 0.75,
+        entries: [
+            "ansimuz (itch.io)",
+            "craftpix (itch.io)",
+            "forest_elfs (itch.io)"
+        ]
+    },
 
+    {
+        title: "Credits theme:",
+        scale: 0.75,
+        entries: [
+            "Coffee Beans by Redlight Chill"
+        ]
+    }
+];
 
-category4 = "Credits theme:";
-credits_theme = "Coffee Beans by Redlight Chill";
-
-category5 = "Play-testers:";
-play_testing = "play tester #7654321";

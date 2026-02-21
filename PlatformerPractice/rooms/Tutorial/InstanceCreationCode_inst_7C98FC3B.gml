@@ -1,1 +1,1 @@
-text = "Use the Spacebar to dash."
+text = "Use " + key_to_string(global.dash_key) + " to dash."

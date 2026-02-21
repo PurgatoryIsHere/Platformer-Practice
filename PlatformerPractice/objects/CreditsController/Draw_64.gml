@@ -1,24 +1,34 @@
 /// @description Credits Text
 // You can write your code in this editor
-if(room == CreditsScreen)
+if (room == CreditsScreen)
 {
-	draw_set_halign(fa_left);
-	draw_set_colour(c_white);
-	draw_set_font(MainMenuFont);
+    draw_set_halign(fa_left);
+    draw_set_colour(c_white);
+    draw_set_font(MainMenuFont);
 
-	draw_text_transformed(16, 50, "Credits", 1, 1, 0);
+    var x_pos = 16;
+    var y_pos = 40;
 
-	draw_text_transformed(16, 150, game_title, 0.65, 0.65, 0);
+    var section_spacing = 40;
+    var entry_spacing = 30;
 
-	draw_text_transformed(16, 250, category1, 0.75, 0.75, 0);
-	draw_text_transformed(16, 300, game_development, 0.65, 0.65, 0);
+    for (var i = 0; i < array_length(credits); i++)
+    {
+        var sec = credits[i];
 
-	draw_text_transformed(16, 400, category2, 0.75, 0.75, 0);
-	draw_text_transformed(16, 450, musician1, 0.65, 0.65, 0);
-	draw_text_transformed(16, 500, musician2, 0.65, 0.65, 0);
-	draw_text_transformed(16, 550, musician3, 0.65, 0.65, 0);
-	draw_text_transformed(16, 600, musician4, 0.65, 0.65, 0);
-	draw_text_transformed(16, 650, musician5, 0.65, 0.65, 0);
+        // Draw section title
+        draw_text_transformed(x_pos, y_pos, sec.title, sec.scale, sec.scale, 0);
+        y_pos += section_spacing;
+
+        // Draw entries
+        for (var j = 0; j < array_length(sec.entries); j++)
+        {
+            draw_text_transformed(x_pos + 12, y_pos, sec.entries[j], 0.65, 0.65, 0);
+            y_pos += entry_spacing;
+        }
+
+        y_pos += 20;
+    }
 }
 
 else

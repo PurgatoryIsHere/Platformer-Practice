@@ -1,1 +1,1 @@
-text = "After unlocking Double Jump, use W mid-air to jump again."
+text = "After unlocking Double Jump, use " + key_to_string(global.jump_key) + " mid-air to jump again."

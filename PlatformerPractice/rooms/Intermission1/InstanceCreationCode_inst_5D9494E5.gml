@@ -1,0 +1,1 @@
+text = "Welcome to the intermission zone. Here you are able to choose to progress to the next area, or complete a special area for a reward."

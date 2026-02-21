@@ -1,1 +1,1 @@
-text = "Use A and D to move left and right and W to jump."
+text = "Use " + key_to_string(global.left_key) + " and " + key_to_string(global.right_key) + " to move left and right and " + key_to_string(global.jump_key) + " to jump."

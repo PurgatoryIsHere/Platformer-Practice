@@ -236,6 +236,7 @@
     {"id":{"name":"WallJumpTest","path":"rooms/WallJumpTest/WallJumpTest.yy",},},
     {"id":{"name":"collapse_tile","path":"scripts/collapse_tile/collapse_tile.yy",},},
     {"id":{"name":"draw_text_outline","path":"scripts/draw_text_outline/draw_text_outline.yy",},},
+    {"id":{"name":"key_to_string","path":"scripts/key_to_string/key_to_string.yy",},},
     {"id":{"name":"load_game","path":"scripts/load_game/load_game.yy",},},
     {"id":{"name":"save_game","path":"scripts/save_game/save_game.yy",},},
     {"id":{"name":"_126041__mhtaylor67__gate_latch","path":"sounds/_126041__mhtaylor67__gate_latch/_126041__mhtaylor67__gate_latch.yy",},},

@@ -1,1 +1,1 @@
-text = "After unlocking the Grapple, press the Spacebar when the grapple indicator appears to fly towards that target."
+text = "After unlocking the Grapple, press " + key_to_string(global.grapple_key) + " when the grapple indicator appears to fly towards that target."

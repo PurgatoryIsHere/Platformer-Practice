@@ -1,1 +1,1 @@
-text = "Use W while on a wall to launch off of it."
+text = "Use " + key_to_string(global.jump_key) + " while on a wall to launch off of it."

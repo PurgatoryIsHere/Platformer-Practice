@@ -1,0 +1,1 @@
+text = "Area EX-1"

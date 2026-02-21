@@ -161,6 +161,7 @@
     {"name":"UnlockTest","order":5,"path":"rooms/UnlockTest/UnlockTest.yy",},
     {"name":"WallJumpTest","order":3,"path":"rooms/WallJumpTest/WallJumpTest.yy",},
     {"name":"draw_text_outline","order":1,"path":"scripts/draw_text_outline/draw_text_outline.yy",},
+    {"name":"key_to_string","order":4,"path":"scripts/key_to_string/key_to_string.yy",},
     {"name":"load_game","order":3,"path":"scripts/load_game/load_game.yy",},
     {"name":"save_game","order":2,"path":"scripts/save_game/save_game.yy",},
     {"name":"_126041__mhtaylor67__gate_latch","order":35,"path":"sounds/_126041__mhtaylor67__gate_latch/_126041__mhtaylor67__gate_latch.yy",},
