@@ -1,0 +1,1 @@
+text = "You can keep track of your health and lives for a level by checking the top left corner of the screen. Make sure not to run out or you will have to start the level from the beginning."

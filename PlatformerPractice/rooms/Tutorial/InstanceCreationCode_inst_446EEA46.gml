@@ -1,0 +1,1 @@
+text = "Some enemies can be grappled to be defeated as well."

@@ -1,0 +1,1 @@
+text = "After unlocking Double Jump, use W mid-air to jump again."

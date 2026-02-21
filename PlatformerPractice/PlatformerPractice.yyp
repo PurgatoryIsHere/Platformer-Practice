@@ -56,6 +56,7 @@
   ],
   "ForcedPrefabProjectReferences":[
     {"link":"io.gamemaker.gm_filter_parallax-1.0.0","name":"io.gamemaker.gm_filter_parallax-1.0.0","path":"io.gamemaker.gm_filter_parallax-1.0.0.yyp",},
+    {"link":"io.gamemaker.sdfshaders-1.0.0","name":"io.gamemaker.sdfshaders-1.0.0","path":"io.gamemaker.sdfshaders-1.0.0.yyp",},
   ],
   "IncludedFiles":[
     {"$GMIncludedFile":"","%Name":"126041__mhtaylor67__gate-latch.wav","CopyToMask":-1,"filePath":"datafiles","name":"126041__mhtaylor67__gate-latch.wav","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
@@ -88,6 +89,7 @@
     {"$GMIncludedFile":"","%Name":"832157__lematt__oniondestroy_030.wav","CopyToMask":-1,"filePath":"datafiles","name":"832157__lematt__oniondestroy_030.wav","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"835880__matustrm__completed.wav","CopyToMask":-1,"filePath":"datafiles","name":"835880__matustrm__completed.wav","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"841172__mlaudio__magic_ding.wav","CopyToMask":-1,"filePath":"datafiles","name":"841172__mlaudio__magic_ding.wav","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"alagard_by_pix3m-d6awiwp.ttf","CopyToMask":-1,"filePath":"datafiles","name":"alagard_by_pix3m-d6awiwp.ttf","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"BackGround.aseprite","CopyToMask":-1,"filePath":"datafiles","name":"BackGround.aseprite","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"parallax-forest-back-trees.png","CopyToMask":-1,"filePath":"datafiles/layers","name":"parallax-forest-back-trees.png","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"parallax-forest-front-trees.png","CopyToMask":-1,"filePath":"datafiles/layers","name":"parallax-forest-front-trees.png","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
@@ -102,6 +104,7 @@
   "name":"PlatformerPractice",
   "resources":[
     {"id":{"name":"MainMenuFont","path":"fonts/MainMenuFont/MainMenuFont.yy",},},
+    {"id":{"name":"TutorialSignFont","path":"fonts/TutorialSignFont/TutorialSignFont.yy",},},
     {"id":{"name":"A7PortalController","path":"objects/A7PortalController/A7PortalController.yy",},},
     {"id":{"name":"BGMController","path":"objects/BGMController/BGMController.yy",},},
     {"id":{"name":"CheckpointManager","path":"objects/CheckpointManager/CheckpointManager.yy",},},
@@ -192,6 +195,7 @@
     {"id":{"name":"O_RightSpike","path":"objects/O_RightSpike/O_RightSpike.yy",},},
     {"id":{"name":"O_Shelf","path":"objects/O_Shelf/O_Shelf.yy",},},
     {"id":{"name":"O_ShieldCore","path":"objects/O_ShieldCore/O_ShieldCore.yy",},},
+    {"id":{"name":"O_Sign","path":"objects/O_Sign/O_Sign.yy",},},
     {"id":{"name":"O_SolidShelf","path":"objects/O_SolidShelf/O_SolidShelf.yy",},},
     {"id":{"name":"O_SpawnableEnemyParent","path":"objects/O_SpawnableEnemyParent/O_SpawnableEnemyParent.yy",},},
     {"id":{"name":"O_Spike","path":"objects/O_Spike/O_Spike.yy",},},
@@ -362,6 +366,7 @@
     {"id":{"name":"S_RightSpike","path":"sprites/S_RightSpike/S_RightSpike.yy",},},
     {"id":{"name":"S_Shelf","path":"sprites/S_Shelf/S_Shelf.yy",},},
     {"id":{"name":"S_ShieldCore","path":"sprites/S_ShieldCore/S_ShieldCore.yy",},},
+    {"id":{"name":"S_Sign","path":"sprites/S_Sign/S_Sign.yy",},},
     {"id":{"name":"S_Spike","path":"sprites/S_Spike/S_Spike.yy",},},
     {"id":{"name":"S_Timer_Off","path":"sprites/S_Timer_Off/S_Timer_Off.yy",},},
     {"id":{"name":"S_Timer_On","path":"sprites/S_Timer_On/S_Timer_On.yy",},},

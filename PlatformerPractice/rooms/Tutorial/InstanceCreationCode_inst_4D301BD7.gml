@@ -1,0 +1,1 @@
+text = "Use A and D to move left and right and W to jump."

@@ -1,0 +1,1 @@
+text = "After unlocking the Ground Pound, use S in mid-air to do so. You can break grey blocks by ground pounding them."

@@ -1,0 +1,1 @@
+text = "You can use Backspace to pause the game in case you need to step away for a few minutes."

@@ -1,0 +1,1 @@
+text = "Most enemies can be dashed into or ground pounded to defeat them."

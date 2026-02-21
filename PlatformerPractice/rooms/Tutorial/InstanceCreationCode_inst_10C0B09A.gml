@@ -1,0 +1,1 @@
+text = "After unlocking the Grapple, press the Spacebar when the grapple indicator appears to fly towards that target."

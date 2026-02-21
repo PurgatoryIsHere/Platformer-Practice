@@ -1,0 +1,1 @@
+text = "Dash into yellow blocks to break them."

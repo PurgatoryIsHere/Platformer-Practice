@@ -44,6 +44,7 @@
     {"name":"Timelines","order":7,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings":[
+    {"name":"TutorialSignFont","order":1,"path":"fonts/TutorialSignFont/TutorialSignFont.yy",},
     {"name":"BGMController","order":1,"path":"objects/BGMController/BGMController.yy",},
     {"name":"CheckpointManager","order":13,"path":"objects/CheckpointManager/CheckpointManager.yy",},
     {"name":"CreditsController","order":5,"path":"objects/CreditsController/CreditsController.yy",},
@@ -122,6 +123,7 @@
     {"name":"O_RightSpike","order":1,"path":"objects/O_RightSpike/O_RightSpike.yy",},
     {"name":"O_Shelf","order":5,"path":"objects/O_Shelf/O_Shelf.yy",},
     {"name":"O_ShieldCore","order":12,"path":"objects/O_ShieldCore/O_ShieldCore.yy",},
+    {"name":"O_Sign","order":22,"path":"objects/O_Sign/O_Sign.yy",},
     {"name":"O_SolidShelf","order":11,"path":"objects/O_SolidShelf/O_SolidShelf.yy",},
     {"name":"O_SpawnableEnemyParent","order":3,"path":"objects/O_SpawnableEnemyParent/O_SpawnableEnemyParent.yy",},
     {"name":"O_Spike","order":2,"path":"objects/O_Spike/O_Spike.yy",},
@@ -280,6 +282,7 @@
     {"name":"S_RightSpike","order":1,"path":"sprites/S_RightSpike/S_RightSpike.yy",},
     {"name":"S_Shelf","order":7,"path":"sprites/S_Shelf/S_Shelf.yy",},
     {"name":"S_ShieldCore","order":18,"path":"sprites/S_ShieldCore/S_ShieldCore.yy",},
+    {"name":"S_Sign","order":21,"path":"sprites/S_Sign/S_Sign.yy",},
     {"name":"S_Spike","order":2,"path":"sprites/S_Spike/S_Spike.yy",},
     {"name":"S_Timer_Off","order":16,"path":"sprites/S_Timer_Off/S_Timer_Off.yy",},
     {"name":"S_Timer_On","order":17,"path":"sprites/S_Timer_On/S_Timer_On.yy",},

@@ -1,0 +1,1 @@
+text = "And that's all you need to know to play this game! We'll be taking those abilities back from you, but don't worry, you'll see them again soon."

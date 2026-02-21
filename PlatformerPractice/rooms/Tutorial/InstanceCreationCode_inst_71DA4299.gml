@@ -1,0 +1,1 @@
+text = "Use W while on a wall to launch off of it."

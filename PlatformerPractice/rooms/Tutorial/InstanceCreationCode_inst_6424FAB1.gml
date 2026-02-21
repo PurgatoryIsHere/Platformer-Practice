@@ -1,0 +1,1 @@
+text = "All levels have hidden health upgrades. Find all upgrade pieces in a level and boost your health!"

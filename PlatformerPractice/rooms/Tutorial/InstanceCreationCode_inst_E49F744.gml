@@ -1,0 +1,1 @@
+text = "This is a checkpoint flag. It saves your place in case you die."
