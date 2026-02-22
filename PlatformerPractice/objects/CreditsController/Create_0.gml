@@ -3,6 +3,8 @@
 
 fade_alpha = 0;
 fade_speed = 0.025;
+return_to_menu = false;
+alarm[0] = 180;
 
 credits = [
     {

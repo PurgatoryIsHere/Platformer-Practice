@@ -41,7 +41,7 @@ ground_dashing = false;
 // --------------------------------------------
 wall_sliding = false;
 on_wall = 0;
-wall_slide_speed = 0.25;
+wall_slide_speed = 0.75;
 movement_lock_timer = 0;
 
 // --------------------------------------------

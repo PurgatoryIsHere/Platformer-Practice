@@ -29,6 +29,11 @@ if (room == CreditsScreen)
 
         y_pos += 20;
     }
+	
+	if(return_to_menu)
+	{
+		draw_text_transformed(16, 745, "Press any key to return to the main menu...", 0.65, 0.65, 0);
+	}
 }
 
 else
