@@ -20,6 +20,8 @@ ds_map_add(bgm_map, Area7_3, Sketchbook_2024_07_04);
 ds_map_add(bgm_map, AreaEX_1, Sketchbook_2024_08_07);
 ds_map_add(bgm_map, AreaEX_2, Sketchbook_2024_08_07);
 ds_map_add(bgm_map, Area8_1, Sketchbook_2025_12_11_bothbreak);
+ds_map_add(bgm_map, Area8_2, Sketchbook_2025_12_11_bothbreak);
+ds_map_add(bgm_map, Area8_3, Sketchbook_2025_12_11_bothbreak);
 ds_map_add(bgm_map, CreditsScreen, _3_CoffeeBeans);
 
 current_bgm = noone;

@@ -13,10 +13,10 @@ if(pause)
             surface_free(pause_surf);
         }
 		
-		/*
+		
 		audio_stop_sound(pause_music);
 		pause_music = noone;
-		*/
+		
 		
 		global.respawn_queue = [];
         room_restart();
@@ -32,10 +32,10 @@ if(pause)
             surface_free(pause_surf);
         }
 		
-		/*
+		
 		audio_stop_sound(pause_music);
 		pause_music = noone;
-		*/
+		
 		
 		global.area_index = noone;
 		global.checkpoint_x = noone;

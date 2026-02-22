@@ -1,7 +1,7 @@
 /// @description Play BGM functionality
 // You can write your code in this editor
 
-/*
+
 var new_sound;
 
 // Get the sound for the current room
@@ -22,4 +22,3 @@ current_bgm = audio_play_sound(new_sound, 1, true);
 
 // Fade in the new track
 audio_sound_gain(current_bgm, 1, 1000); // fade to full volume over 1 second
-*/
