@@ -26,7 +26,7 @@ TakeDamage = function(damage) // Basic damage calculation; aspects can be change
 	
 	if(boss_health == 0)
 	{	
-		//BGMController.StopBossMusic();
+		BGMController.StopBossMusic();
 		
 		var tiles_to_destroy = [instance_position(64, 320.099, O_Ground), instance_position(80, 320.099, O_Ground), instance_position(96, 320.099, O_Ground)];
 		

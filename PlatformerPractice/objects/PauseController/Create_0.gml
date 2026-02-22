@@ -6,3 +6,4 @@ pause_surf = -1;
 current_room = 0;
 
 pause_music = noone;
+timer_active = false;

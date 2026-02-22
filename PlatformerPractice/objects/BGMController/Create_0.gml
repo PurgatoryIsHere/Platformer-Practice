@@ -46,7 +46,7 @@ StartBossMusic = function(boss)
 		audio_stop_sound(current_bgm);
 				
 		previous_bgm = bgm_map[? room];
-		current_bgm = audio_play_sound(nojisuma_the_oldest_144980, 1, true);
+		current_bgm = audio_play_sound(nojisuma_the_land_110956, 1, true);
 				
 		audio_sound_gain(current_bgm, 1, true);
 	}

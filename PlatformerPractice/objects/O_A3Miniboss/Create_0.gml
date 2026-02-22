@@ -25,6 +25,8 @@ TakeDamage = function(damage)
 	
 	if(boss_health <= 0)
 	{
+		BGMController.StopBossMusic();
+		
 		with(O_SpawnableEnemyParent)
 		{
 			instance_destroy(self)
@@ -63,6 +65,7 @@ TakeDamage = function(damage)
 			if (x > 976 && x < 1088)
 			{
 				hspeed = (x < other.x) ? -4 : 4;
+				input_enabled = false;
 				alarm[0] = 75;
 			}
 		}

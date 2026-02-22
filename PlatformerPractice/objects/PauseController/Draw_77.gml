@@ -22,6 +22,12 @@ if(keyboard_check_pressed(vk_backspace) && room != MainMenu && room != CreditsSc
 			audio_pause_sound(BGMController.current_bgm);
 		}
 		
+		if(audio_is_playing(_759501__gammagool__tick_tock_dry))
+		{
+			audio_pause_sound(_759501__gammagool__tick_tock_dry);
+			timer_active = true;
+		}
+		
 		pause_music =  audio_play_sound(Sketchbook_2025_12_03_LOOP, 1, true);
 		
 		
@@ -51,6 +57,11 @@ if(keyboard_check_pressed(vk_backspace) && room != MainMenu && room != CreditsSc
 		
 		audio_resume_sound(BGMController.current_bgm);
 		
+		if(timer_active)
+		{
+			audio_resume_sound(_759501__gammagool__tick_tock_dry);
+			timer_active = false;
+		}
 		
         if(surface_exists(pause_surf))
 		{

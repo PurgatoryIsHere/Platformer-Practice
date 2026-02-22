@@ -9,6 +9,7 @@ if(!boss_battle_active)
 	{
 		boss_battle_active = true;
 		phase = 1;
+		BGMController.StartBossMusic("Area3");
 	}
 }
 

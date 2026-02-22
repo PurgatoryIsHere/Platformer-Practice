@@ -1,0 +1,1 @@
+text = "To proceed, you will need to collect 3 keys.";
