@@ -16,7 +16,7 @@ if (chunk_wave <= 3)
 	
 	alarm[3] = 45;
 	chunk_wave += 1;
-	chunk_direction -= 9105
+	chunk_direction -= 105
 }
 else
 {

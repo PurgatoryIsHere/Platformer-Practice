@@ -128,6 +128,13 @@ if(_select)
 				room_goto(Area8_1);
 			}
 			
+			else if(index == 10)
+			{
+				sub_menu = 0;
+				instance_activate_object(O_ButtonParent);
+				index = 1;
+			}
+			
 		break;
 		
 		case 2:

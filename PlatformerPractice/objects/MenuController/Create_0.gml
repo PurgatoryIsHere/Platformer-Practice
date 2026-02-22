@@ -25,6 +25,7 @@ menu[1][6] = "Area 5";
 menu[1][7] = "Area 6";
 menu[1][8] = "Area 7";
 menu[1][9] = "Area 8";
+menu[1][10] = "Back to Main Menu";
 
 // Help Menu
 menu[2][0] = "Controls"; // Title (non-selectable)

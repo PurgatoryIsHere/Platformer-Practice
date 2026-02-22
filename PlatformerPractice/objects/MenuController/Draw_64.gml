@@ -31,7 +31,10 @@ if (sub_menu == 1)
         var xx = _start_x + col * _gap_x;
         var yy = _start_y + row * _gap_y;
 
-        if (global.levelUnlocked[i - 1])
+		if (i = 10) {
+			draw_set_colour(c_white);
+		}
+        else if (global.levelUnlocked[i - 1])
             draw_set_colour(c_white);
         else
             draw_set_colour(c_gray);
