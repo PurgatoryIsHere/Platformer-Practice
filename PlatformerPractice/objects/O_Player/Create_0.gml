@@ -81,6 +81,9 @@ if(!global.health_persist)
 }
 
 i_frame_timer = 0;
+justDied = false;
+fade_alpha = 0;
+fade_speed = 0.05;
 
 TakeDamage = function(damage)
 {
@@ -105,9 +108,8 @@ LifeReduction = function()
 		
 	else
 	{
-		room_restart();
-		global.player_health = global.player_max_health;
-		global.respawn_queue = [];
+		justDied = true;
+		input_enabled = false;
 	}
 }
 

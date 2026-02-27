@@ -143,6 +143,19 @@ else
 	target_in_range = false
 }
 
+if(justDied)
+{
+	fade_alpha += fade_speed;
+	
+    if (fade_alpha >= 1) 
+	{
+        fade_alpha = 1;
+        room_restart();
+		global.player_health = global.player_max_health;
+		global.respawn_queue = [];
+    }
+}
+
 // --------------------------------------------
 // Movement
 // --------------------------------------------
