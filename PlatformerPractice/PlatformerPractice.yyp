@@ -175,6 +175,7 @@
     {"id":{"name":"O_Warning","path":"objects/O_Warning/O_Warning.yy",},},
     {"id":{"name":"PauseController","path":"objects/PauseController/PauseController.yy",},},
     {"id":{"name":"RespawnManager","path":"objects/RespawnManager/RespawnManager.yy",},},
+    {"id":{"name":"SplashController","path":"objects/SplashController/SplashController.yy",},},
     {"id":{"name":"Area1","path":"rooms/Area1/Area1.yy",},},
     {"id":{"name":"Area2","path":"rooms/Area2/Area2.yy",},},
     {"id":{"name":"Area3","path":"rooms/Area3/Area3.yy",},},
@@ -198,6 +199,7 @@
     {"id":{"name":"Intermission1","path":"rooms/Intermission1/Intermission1.yy",},},
     {"id":{"name":"Intermission2","path":"rooms/Intermission2/Intermission2.yy",},},
     {"id":{"name":"MainMenu","path":"rooms/MainMenu/MainMenu.yy",},},
+    {"id":{"name":"SplashScreen","path":"rooms/SplashScreen/SplashScreen.yy",},},
     {"id":{"name":"StartRoom","path":"rooms/StartRoom/StartRoom.yy",},},
     {"id":{"name":"Tutorial","path":"rooms/Tutorial/Tutorial.yy",},},
     {"id":{"name":"UnlockTest","path":"rooms/UnlockTest/UnlockTest.yy",},},
@@ -348,6 +350,7 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"SplashScreen","path":"rooms/SplashScreen/SplashScreen.yy",},},
     {"roomId":{"name":"MainMenu","path":"rooms/MainMenu/MainMenu.yy",},},
     {"roomId":{"name":"Tutorial","path":"rooms/Tutorial/Tutorial.yy",},},
     {"roomId":{"name":"Area1","path":"rooms/Area1/Area1.yy",},},

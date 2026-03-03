@@ -33,6 +33,7 @@ if (sub_menu == 1)
 
 		if (i = 10) {
 			draw_set_colour(c_white);
+			xx = gw * 0.5;
 		}
         else if (global.levelUnlocked[i - 1])
             draw_set_colour(c_white);
