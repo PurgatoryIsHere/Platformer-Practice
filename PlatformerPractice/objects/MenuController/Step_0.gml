@@ -54,7 +54,6 @@ if(_select)
 			if(index == 0)
 			{
 				sub_menu = 1; // Go to Play menu
-				instance_deactivate_object(O_ButtonParent);
 				index = 1;
 
 			}
@@ -62,7 +61,6 @@ if(_select)
 			else if(index == 1)
 			{
 				sub_menu = 2; // Go to Controls menu
-				instance_deactivate_object(O_ButtonParent);
 				index = 1;
 			}
 	
@@ -75,7 +73,6 @@ if(_select)
 			else if(index == 3)
 			{
 				sub_menu = 3;
-				instance_deactivate_object(O_ButtonParent);
 				index = 1;
 			}
 			
@@ -131,8 +128,7 @@ if(_select)
 			else if(index == 10)
 			{
 				sub_menu = 0;
-				instance_activate_object(O_ButtonParent);
-				index = 1;
+				index = 0;
 			}
 			
 		break;
@@ -151,7 +147,6 @@ if(_select)
 				{
 					save_game();
 					sub_menu = 0;
-					instance_activate_object(O_ButtonParent);
 					index = 1;
 				}
 			}
@@ -159,17 +154,6 @@ if(_select)
 		break;
 		
 		case 3:
-		
-		/*
-			if(index == 1)
-			{
-				room_goto(Tutorial);
-			}
-			
-			else if(index == 2)
-			{
-				room_goto(Area1);
-			}*/
 		
 			if(index == 1)
 			{ 

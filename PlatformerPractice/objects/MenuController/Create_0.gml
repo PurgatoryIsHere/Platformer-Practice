@@ -15,7 +15,7 @@ menu[0][2] = "QUIT";
 menu[0][3] = "DEV MENU";
 
 // Area selection menu - using a different structure
-menu[1][0] = "Which area?"; // Title (non-selectable)
+menu[1][0] = "Area Select"; // Title (non-selectable)
 menu[1][1] = "Tutorial";
 menu[1][2] = "Area 1";
 menu[1][3] = "Area 2";
@@ -25,7 +25,7 @@ menu[1][6] = "Area 5";
 menu[1][7] = "Area 6";
 menu[1][8] = "Area 7";
 menu[1][9] = "Area 8";
-menu[1][10] = "Back to Main Menu";
+menu[1][10] = "Back";
 
 // Help Menu
 menu[2][0] = "Controls"; // Title (non-selectable)
