@@ -44,6 +44,8 @@
     {"name":"Timelines","order":7,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings":[
+    {"name":"GameTitleFont","order":3,"path":"fonts/GameTitleFont/GameTitleFont.yy",},
+    {"name":"MenuFont","order":4,"path":"fonts/MenuFont/MenuFont.yy",},
     {"name":"TutorialSignFont","order":1,"path":"fonts/TutorialSignFont/TutorialSignFont.yy",},
     {"name":"BGMController","order":1,"path":"objects/BGMController/BGMController.yy",},
     {"name":"CheckpointManager","order":13,"path":"objects/CheckpointManager/CheckpointManager.yy",},

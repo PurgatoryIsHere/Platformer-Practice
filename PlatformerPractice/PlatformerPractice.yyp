@@ -63,6 +63,8 @@
     {"$GMIncludedFile":"","%Name":"parallax-forest-front-trees.png","CopyToMask":-1,"filePath":"datafiles/layers","name":"parallax-forest-front-trees.png","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"parallax-forest-lights.png","CopyToMask":-1,"filePath":"datafiles/layers","name":"parallax-forest-lights.png","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"parallax-forest-middle-trees.png","CopyToMask":-1,"filePath":"datafiles/layers","name":"parallax-forest-middle-trees.png","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"PixelOperator-Bold.ttf","CopyToMask":-1,"filePath":"datafiles","name":"PixelOperator-Bold.ttf","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"VT323-Regular.ttf","CopyToMask":-1,"filePath":"datafiles","name":"VT323-Regular.ttf","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
   ],
   "isEcma":false,
   "LibraryEmitters":[],
@@ -71,7 +73,9 @@
   },
   "name":"PlatformerPractice",
   "resources":[
+    {"id":{"name":"GameTitleFont","path":"fonts/GameTitleFont/GameTitleFont.yy",},},
     {"id":{"name":"MainMenuFont","path":"fonts/MainMenuFont/MainMenuFont.yy",},},
+    {"id":{"name":"MenuFont","path":"fonts/MenuFont/MenuFont.yy",},},
     {"id":{"name":"TutorialSignFont","path":"fonts/TutorialSignFont/TutorialSignFont.yy",},},
     {"id":{"name":"A7PortalController","path":"objects/A7PortalController/A7PortalController.yy",},},
     {"id":{"name":"BGMController","path":"objects/BGMController/BGMController.yy",},},

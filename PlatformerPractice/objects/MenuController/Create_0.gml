@@ -2,18 +2,18 @@
 // You can write your code in this editor
 
 // Main menu
+/*
 menu[0][0] = O_PlayButton;
 menu[0][1] = O_HelpButton;
 menu[0][2] = O_QuitButton;
 menu[0][3] = O_DevMenuButton; 
-
-
-/*
-// Play menu (yes or no to tutorial)
-menu[1][0] = "Would you like to play a tutorial?"; // Title (non-selectable)
-menu[1][1] = "Yes";
-menu[1][2] = "No";
 */
+
+menu[0][0] = "PLAY";
+menu[0][1] = "HELP";
+menu[0][2] = "QUIT"; 
+menu[0][3] = "DEV MENU";
+
 // Area selection menu - using a different structure
 menu[1][0] = "Which area?"; // Title (non-selectable)
 menu[1][1] = "Tutorial";

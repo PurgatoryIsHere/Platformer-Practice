@@ -1,7 +1,94 @@
 /// @description Draw Submenus
 // You can write your code in this editor
 
-draw_set_font(MainMenuFont);
+draw_set_font(MenuFont);
+
+// -------------------------------
+// SUBMENU 0 — Main Menu (Stylized)
+// -------------------------------
+if (sub_menu == 0)
+{
+    var gw = display_get_gui_width();
+    var gh = display_get_gui_height();
+
+    // -------------------------------
+    // TITLE (VT323)
+    // -------------------------------
+    draw_set_halign(fa_center);
+    draw_set_valign(fa_middle);
+
+    var title_x = gw * 0.5;
+    var title_y = gh * 0.16;
+
+    // Soft glow behind title (sun-colored)
+    draw_set_alpha(0.18);
+    draw_set_color(make_color_rgb(255, 200, 80));
+    draw_circle(title_x, title_y, 120, false);
+    draw_set_alpha(1);
+	
+	draw_set_font(GameTitleFont);
+
+    // Title outline
+    draw_set_color(c_black);
+    draw_text(title_x + 2, title_y,     "GAME TITLE");
+    draw_text(title_x - 2, title_y,     "GAME TITLE");
+    draw_text(title_x,     title_y + 2, "GAME TITLE");
+    draw_text(title_x,     title_y - 2, "GAME TITLE");
+
+    // Title main text
+    draw_set_color(c_white);
+    draw_text(title_x, title_y, "GAME TITLE");
+
+
+    // -------------------------------
+    // PANEL
+    // -------------------------------
+    var panel_w = 380;
+    var panel_h = 240;
+    var panel_x = gw * 0.5 - panel_w * 0.5;
+    var panel_y = gh * 0.63 - panel_h * 0.5; // lowered panel
+
+    // Panel background
+    draw_set_alpha(0.65);
+    draw_set_color(c_black);
+    draw_rectangle(panel_x, panel_y, panel_x + panel_w, panel_y + panel_h, false);
+
+    // Panel border
+    draw_set_alpha(1);
+    draw_set_color(make_color_rgb(60, 60, 60));
+    draw_rectangle(panel_x, panel_y, panel_x + panel_w, panel_y + panel_h, true);
+
+
+    // -------------------------------
+    // MENU OPTIONS (Pixel Operator Bold)
+    // -------------------------------
+    draw_set_halign(fa_center);
+    draw_set_valign(fa_middle);
+	
+	draw_set_font(MenuFont);
+
+    var item_y = panel_y + 35;
+    var gap = 45;
+
+    for (var i = 0; i < array_length(menu[0]); i++)
+    {
+        var yy = item_y + i * gap;
+
+        // Highlight bar behind selected item
+        if (i == index)
+        {
+            draw_set_alpha(0.35);
+            draw_set_color(make_color_rgb(255, 200, 80)); // warm gold
+            draw_rectangle(gw*0.5 - 140, yy - 18, gw*0.5 + 140, yy + 18, false);
+            draw_set_alpha(1);
+        }
+
+        // Menu text
+        draw_set_color(i == index ? make_color_rgb(255, 220, 120) : c_white);
+        draw_text(gw * 0.5, yy, menu[0][i]);
+    }
+}
+
 
 // -------------------------------
 // SUBMENU 1 — Area Select Grid
@@ -41,7 +128,9 @@ if (sub_menu == 1)
             draw_set_colour(c_gray);
 
         if (i == index)
-            draw_set_colour(c_teal);
+		{
+			draw_set_color(make_color_rgb(255, 220, 120));
+		}
 
         draw_text(xx, yy, menu[sub_menu][i]);
     }
@@ -68,7 +157,7 @@ else if (sub_menu == 2)
     {
         var yy = _start_y + (i - 1) * _gap_y;
 
-        draw_set_colour(i == index ? c_teal : c_white);
+        draw_set_color(i == index ? make_color_rgb(255, 220, 120) : c_white);
         draw_text(gw * 0.5, yy, menu[2][i]);
     }
 
@@ -121,7 +210,7 @@ else if (sub_menu == 3)
 
         if (i == index)
 		{
-			 draw_set_colour(c_teal);
+			draw_set_color(make_color_rgb(255, 220, 120));
 		}
 
         draw_text(xx, yy, menu[sub_menu][i]);
@@ -147,8 +236,8 @@ else if (sub_menu == 4)
     for (var i = 1; i < array_length(menu[4]); i++)
     {
         var yy = cy + (i - 1) * gap;
-
-        draw_set_colour(i == index ? c_teal : c_white);
+		
+		draw_set_color(i == index ? make_color_rgb(255, 220, 120) : c_white);
         draw_text(cx, yy, menu[4][i]);
     }
 }
