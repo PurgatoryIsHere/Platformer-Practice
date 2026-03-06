@@ -4,7 +4,7 @@
 draw_set_font(MenuFont);
 
 // -------------------------------
-// SUBMENU 0 — Main Menu (Stylized)
+// SUBMENU 0 — Main Menu
 // -------------------------------
 if (sub_menu == 0)
 {
@@ -89,7 +89,7 @@ if (sub_menu == 0)
 
 
 // -------------------------------
-// SUBMENU 1 — Area Select Grid (Stylized)
+// SUBMENU 1 — Area Select Grid
 // -------------------------------
 if (sub_menu == 1)
 {
@@ -192,9 +192,29 @@ else if (sub_menu == 2)
 
     var gw = display_get_gui_width();
     var gh = display_get_gui_height();
+	
+	// PANEL
+	var panel_w = 650;
+	var panel_h = 420;
+	var panel_x = gw * 0.5 - panel_w * 0.5;
+	var panel_y = gh * 0.55 - panel_h * 0.5;
 
-    draw_set_colour(c_white);
-    draw_text(gw * 0.5, gh * 0.2, menu[2][0]);
+	// Background
+	draw_set_alpha(0.65);
+	draw_set_color(c_black);
+	draw_rectangle(panel_x, panel_y + 25, panel_x + panel_w, panel_y + panel_h + 25, false);
+
+	// Border
+	draw_set_alpha(1);
+	draw_set_color(make_color_rgb(60, 60, 60));
+	draw_rectangle(panel_x, panel_y + 25, panel_x + panel_w, panel_y + panel_h + 25, true);
+
+    // Title
+	draw_set_font(GameTitleFont);
+    draw_set_color(c_white);
+    draw_text_outline(gw * 0.5, gh * 0.2, menu[2][0], 0.75, 0.75, c_white, c_black);
+	
+	draw_set_font(MenuFont);
 
     var _start_y = gh * 0.35;
     var _gap_y = 50;
@@ -202,6 +222,20 @@ else if (sub_menu == 2)
     for (var i = 1; i < array_length(menu[2]); i++)
     {
         var yy = _start_y + (i - 1) * _gap_y;
+		
+		if (i == index)
+		{
+			// Pulse value
+			var pulse = 0.25 + 0.10 * sin(current_time / 200);
+
+			// Highlight bar with pulse
+			draw_set_alpha(pulse);
+			draw_set_color(make_color_rgb(255, 200, 80));
+			draw_rectangle(gw*0.5 - 250, yy - 18, gw*0.5 + 250, yy + 18, false);
+
+			// Reset alpha
+			draw_set_alpha(1);
+		}
 
         draw_set_color(i == index ? make_color_rgb(255, 220, 120) : c_white);
         draw_text(gw * 0.5, yy, menu[2][i]);
@@ -210,18 +244,13 @@ else if (sub_menu == 2)
     if (waiting_for_input)
     {
         draw_set_colour(c_white);
-        draw_text_transformed(
-            gw * 0.5,
-            gh * 0.9,
-            "Press a key to rebind...",
-            0.8, 0.8, 0
-        );
+		draw_text_outline(gw * 0.5, gh * 0.9, "Press a key to rebind...", 0.8, 0.8, c_white, c_black);
     }
 	
 	// "Clear save data {C}" text
 	var margin = 16;
     draw_set_halign(fa_left);
-    draw_text_outline(margin, display_get_gui_height() - 48, "Clear save data {C}", 0.5, 0.5, c_white, c_black);
+    draw_text_outline(margin, display_get_gui_height() - 48, "Clear save data {C}", 0.75, 0.75, c_white, c_black);
 }
 
 // -------------------------------
@@ -271,19 +300,35 @@ else if (sub_menu == 4)
     draw_set_halign(fa_center);
     draw_set_valign(fa_middle);
 
-    var cx = display_get_gui_width()  * 0.5;
-    var cy = display_get_gui_height() * 0.5;
+    var gw = display_get_gui_width();
+    var gh = display_get_gui_height();
+	
+	// PANEL
+	var panel_w = 500;
+	var panel_h = 300;
+	var panel_x = gw * 0.5 - panel_w * 0.5;
+	var panel_y = gh * 0.55 - panel_h * 0.5;
+
+	// Background
+	draw_set_alpha(0.65);
+	draw_set_color(c_black);
+	draw_rectangle(panel_x, panel_y - 25, panel_x + panel_w, panel_y + panel_h - 25, false);
+
+	// Border
+	draw_set_alpha(1);
+	draw_set_color(make_color_rgb(60, 60, 60));
+	draw_rectangle(panel_x, panel_y - 25, panel_x + panel_w, panel_y + panel_h - 25, true);
 
     draw_set_colour(c_white);
-    draw_text(cx, cy - 80, menu[4][0]);   // Title
+    draw_text(gw * 0.5, gh * 0.5 - 80, menu[4][0]);   // Title
 
     var gap = 60;
 
     for (var i = 1; i < array_length(menu[4]); i++)
     {
-        var yy = cy + (i - 1) * gap;
+        var yy = gh * 0.5 + (i - 1) * gap;
 		
 		draw_set_color(i == index ? make_color_rgb(255, 220, 120) : c_white);
-        draw_text(cx, yy, menu[4][i]);
+        draw_text(gw * 0.5, yy, menu[4][i]);
     }
 }

@@ -36,7 +36,7 @@ menu[2][4] = global.dash_keybind_text;
 menu[2][5] = global.gp_keybind_text;
 menu[2][6] = global.grapple_keybind_text;
 menu[2][7] = "Pause: Backspace";
-menu[2][8] = "Back to Main Menu";
+menu[2][8] = "Back";
 
 // Test Unlock System Screen
 menu[3][0] = "Which area?"; // Title (non-selectable)
