@@ -24,7 +24,9 @@ ds_map_add(bgm_map, Area8_2, Sketchbook_2025_12_11_bothbreak);
 ds_map_add(bgm_map, Area8_3, Sketchbook_2025_12_11_bothbreak);
 ds_map_add(bgm_map, CreditsScreen, _3_CoffeeBeans);
 
+previous_room = noone;
 current_bgm = noone;
+current_bgm_sound = noone;
 previous_bgm = noone;
 
 StartBossMusic = function(boss)
