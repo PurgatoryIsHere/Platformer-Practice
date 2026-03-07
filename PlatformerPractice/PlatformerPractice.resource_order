@@ -214,6 +214,7 @@
     {"name":"back_trees_2","order":2,"path":"sprites/back_trees_2/back_trees_2.yy",},
     {"name":"far_mountains_2","order":1,"path":"sprites/far_mountains_2/far_mountains_2.yy",},
     {"name":"far_trees_4","order":2,"path":"sprites/far_trees_4/far_trees_4.yy",},
+    {"name":"Forest_2_blurred","order":8,"path":"sprites/Forest_2_blurred/Forest_2_blurred.yy",},
     {"name":"Forest_2","order":7,"path":"sprites/Forest_2/Forest_2.yy",},
     {"name":"forest_back_trees_1","order":1,"path":"sprites/forest_back_trees_1/forest_back_trees_1.yy",},
     {"name":"forest_front_trees_4","order":2,"path":"sprites/forest_front_trees_4/forest_front_trees_4.yy",},

@@ -22,7 +22,7 @@ credits = [
     },
 
     {
-        title: "Music by:",
+        title: "Music:",
         scale: 0.75,
         entries: [
             "Abstraction (itch.io)",
@@ -34,7 +34,7 @@ credits = [
     },
 
     {
-        title: "Art by:",
+        title: "Art:",
         scale: 0.75,
         entries: [
             "ansimuz (itch.io)",

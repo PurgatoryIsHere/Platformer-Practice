@@ -3,8 +3,15 @@
 if (room == CreditsScreen)
 {
     draw_set_halign(fa_left);
-    draw_set_colour(c_white);
-    draw_set_font(MainMenuFont);
+    draw_set_font(global.menu_options_font);
+	
+	// Black transparent overlay
+	draw_set_alpha(0.4);
+	draw_set_color(c_black);
+	draw_rectangle(0, 0, display_get_gui_width(), display_get_gui_height(), false);
+	draw_set_alpha(1);
+	draw_set_colour(c_white);
+
 
     var x_pos = 16;
     var y_pos = 40;
