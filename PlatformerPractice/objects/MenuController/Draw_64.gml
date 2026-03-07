@@ -1,7 +1,7 @@
 /// @description Draw Submenus
 // You can write your code in this editor
 
-draw_set_font(MenuFont);
+draw_set_font(global.menu_options_font);
 
 // -------------------------------
 // SUBMENU 0 — Main Menu
@@ -20,7 +20,7 @@ if (sub_menu == 0)
     var title_x = gw * 0.5;
     var title_y = gh * 0.16;
 	
-	draw_set_font(GameTitleFont);
+	draw_set_font(global.title_font);
 
     // Title outline
     draw_set_color(c_black);
@@ -58,7 +58,7 @@ if (sub_menu == 0)
     draw_set_halign(fa_center);
     draw_set_valign(fa_middle);
 	
-	draw_set_font(MenuFont);
+	draw_set_font(global.menu_options_font);
 
     var item_y = panel_y + 45;
     var gap = 45;
@@ -117,11 +117,11 @@ if (sub_menu == 1)
 
 
     // Title
-	draw_set_font(GameTitleFont);
+	draw_set_font(global.title_font);
     draw_set_color(c_white);
     draw_text_outline(gw * 0.5, gh * 0.2, menu[1][0], 0.75, 0.75, c_white, c_black);
 	
-	draw_set_font(MenuFont);
+	draw_set_font(global.menu_options_font);
 	
     // Grid layout
     var _start_x = gw * 0.5 - 200;
@@ -210,11 +210,11 @@ else if (sub_menu == 2)
 	draw_rectangle(panel_x, panel_y + 25, panel_x + panel_w, panel_y + panel_h + 25, true);
 
     // Title
-	draw_set_font(GameTitleFont);
+	draw_set_font(global.title_font);
     draw_set_color(c_white);
     draw_text_outline(gw * 0.5, gh * 0.2, menu[2][0], 0.75, 0.75, c_white, c_black);
 	
-	draw_set_font(MenuFont);
+	draw_set_font(global.menu_options_font);
 
     var _start_y = gh * 0.35;
     var _gap_y = 50;

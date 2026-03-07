@@ -6,13 +6,14 @@ window_set_size(1280, 720);
 window_center();
 window_set_cursor(cr_none);
 
-// Default font used in draw functions
-global.default_font = draw_get_font()
+// Fonts
+global.title_font = font_add(working_directory+"imported_fonts/VT323-Regular.ttf", 64, false, false, 0, 255);
+global.menu_options_font = font_add(working_directory+"imported_fonts/PixelOperator-Bold.ttf", 32, false, false, 0 ,255);
 global.default_halign = draw_get_halign()
 global.default_valign = draw_get_valign()
 
 // Player Variables
-global.lives = 3
+global.lives = 3;
 global.player_max_health = 100;
 global.player_health = 100;
 global.health_persist = false;

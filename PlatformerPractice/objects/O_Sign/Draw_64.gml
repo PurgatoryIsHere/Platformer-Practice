@@ -18,7 +18,7 @@ if (show_text) {
     
     // Draw background box
     draw_set_color(c_black);
-    draw_set_alpha(0.8);
+    draw_set_alpha(0.65);
     draw_rectangle(
         box_x - txt_w / 2 - padding,
         box_y - txt_h / 2 - padding,

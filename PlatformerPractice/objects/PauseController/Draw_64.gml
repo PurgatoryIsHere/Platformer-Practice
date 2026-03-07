@@ -1,7 +1,7 @@
 /// @description Pause Screen Text
 // You can write your code in this editor
 
-draw_set_font(global.default_font);
+draw_set_font(global.menu_options_font);
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 
@@ -42,8 +42,8 @@ if(pause && surface_exists(pause_surf))
         "Press Q to Return to Menu"
     ];
 
-    var title_scale = 2;   // bigger for "PAUSED"
-    var text_scale  = 1.5; // slightly larger than default
+    var title_scale = 1;   // bigger for "PAUSED"
+    var text_scale  = .625; // slightly larger than default
     var line_spacing = 50; // vertical spacing between lines
 
     // Calculate total block height
