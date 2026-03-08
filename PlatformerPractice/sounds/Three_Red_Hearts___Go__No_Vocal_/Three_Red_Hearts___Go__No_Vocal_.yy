@@ -2,8 +2,8 @@
   "$GMSound":"v2",
   "%Name":"Three_Red_Hearts___Go__No_Vocal_",
   "audioGroupId":{
-    "name":"audiogroup_default",
-    "path":"audiogroups/audiogroup_default",
+    "name":"audiogroup_bgm",
+    "path":"audiogroups/audiogroup_bgm",
   },
   "bitDepth":1,
   "channelFormat":0,

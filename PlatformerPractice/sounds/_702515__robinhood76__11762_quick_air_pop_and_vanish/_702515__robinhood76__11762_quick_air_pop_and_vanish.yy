@@ -2,8 +2,8 @@
   "$GMSound":"v2",
   "%Name":"_702515__robinhood76__11762_quick_air_pop_and_vanish",
   "audioGroupId":{
-    "name":"audiogroup_default",
-    "path":"audiogroups/audiogroup_default",
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
   },
   "bitDepth":1,
   "channelFormat":0,

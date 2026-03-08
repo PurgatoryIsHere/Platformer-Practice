@@ -2,8 +2,8 @@
   "$GMSound":"v2",
   "%Name":"_501104__evretro__8_bit_damage_sound",
   "audioGroupId":{
-    "name":"audiogroup_default",
-    "path":"audiogroups/audiogroup_default",
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
   },
   "bitDepth":1,
   "channelFormat":0,

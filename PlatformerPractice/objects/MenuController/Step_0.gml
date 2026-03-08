@@ -57,22 +57,32 @@ if(_select)
 				index = 1;
 
 			}
-	
+			
 			else if(index == 1)
 			{
-				sub_menu = 2; // Go to Controls menu
+				sub_menu = 2; // Go to Settings menu
 				index = 1;
 			}
 	
 			else if(index == 2)
 			{
-				//game_end();
+				sub_menu = 3; // Go to Controls menu
+				index = 1;
+			}
+	
+			else if(index == 3)
+			{
 				room_goto(CreditsScreen);
 			}
 			
-			else if(index == 3)
+			else if(index == 4)
 			{
-				sub_menu = 3;
+				game_end();
+			}
+			
+			else if(index == 5)
+			{
+				sub_menu = 4;
 				index = 1;
 			}
 			
@@ -134,6 +144,25 @@ if(_select)
 		break;
 		
 		case 2:
+
+			// Display
+			if (index == 1)
+			{
+				global.fullscreen = !global.fullscreen;
+				window_set_fullscreen(global.fullscreen);
+			}
+
+			// Back
+			if (index == 5)
+			{
+				sub_menu = 0;
+				index = 1;
+			}
+
+		break;
+
+		
+		case 3:
 		
 			if(!waiting_for_input)
 			{
@@ -147,13 +176,13 @@ if(_select)
 				{
 					save_game();
 					sub_menu = 0;
-					index = 1;
+					index = 2;
 				}
 			}
 			
 		break;
 		
-		case 3:
+		case 4:
 		
 			if(index == 1)
 			{ 
@@ -217,24 +246,53 @@ if(_select)
 			
 		break;
 		
-		case 4:
+		case 5:
 		
 			if(index == 1)
 			{
 				file_delete("save.dat");
 				load_game();
-				sub_menu = 2;
+				sub_menu = 3;
 				index = 1;
 			}
 			
 			else if(index == 2)
 			{
-				sub_menu = 2;
+				sub_menu = 3;
 				index = 1;
 			}
 		
 		break;
 	}
+}
+
+// Slider Logic
+if(sub_menu == 2)
+{
+    // Master Volume
+    if(index == 2)
+    {
+        if (keyboard_check(vk_left))  global.master_volume = clamp(global.master_volume - 0.01, 0, 1);
+        if (keyboard_check(vk_right)) global.master_volume = clamp(global.master_volume + 0.01, 0, 1);
+    }
+
+    // BGM Volume
+    if(index == 3)
+    {
+        if (keyboard_check(vk_left))  global.bgm_volume = clamp(global.bgm_volume - 0.01, 0, 1);
+        if (keyboard_check(vk_right)) global.bgm_volume = clamp(global.bgm_volume + 0.01, 0, 1);
+    }
+
+    // SFX Volume
+    if (index == 4)
+    {
+        if (keyboard_check(vk_left))  global.sfx_volume = clamp(global.sfx_volume - 0.01, 0, 1);
+        if (keyboard_check(vk_right)) global.sfx_volume = clamp(global.sfx_volume + 0.01, 0, 1);
+    }
+
+    // Apply Changes
+    audio_group_set_gain(audiogroup_bgm, global.master_volume * global.bgm_volume, 0);
+    audio_group_set_gain(audiogroup_sfx, global.master_volume * global.sfx_volume, 0);
 }
 
 // Keybind menu
@@ -251,7 +309,7 @@ if(waiting_for_input)
 			
                 global.left_key = new_keybind;
                 global.left_keybind_text = "Move Left: " + keycode_to_string(new_keybind);
-				menu[2][1] = global.left_keybind_text;
+				menu[3][1] = global.left_keybind_text;
 				
             break;
 			
@@ -259,7 +317,7 @@ if(waiting_for_input)
 			
                 global.right_key = new_keybind;
                 global.right_keybind_text = "Move Right: " + keycode_to_string(new_keybind);
-				menu[2][2] = global.right_keybind_text;
+				menu[3][2] = global.right_keybind_text;
 				
             break;
 			
@@ -267,7 +325,7 @@ if(waiting_for_input)
 			
                 global.jump_key = new_keybind;
                 global.jump_keybind_text = "Jump: " + keycode_to_string(new_keybind);
-				menu[2][3] = global.jump_keybind_text;
+				menu[3][3] = global.jump_keybind_text;
 				
             break;
 			
@@ -275,7 +333,7 @@ if(waiting_for_input)
 			
                 global.dash_key = new_keybind;
                 global.dash_keybind_text = "Dash: " + keycode_to_string(new_keybind);
-				menu[2][4] = global.dash_keybind_text;
+				menu[3][4] = global.dash_keybind_text;
 				
             break;
 			
@@ -283,7 +341,7 @@ if(waiting_for_input)
 			
                 global.gp_key = new_keybind;
                 global.gp_keybind_text = "Ground Pound: " + keycode_to_string(new_keybind);
-				menu[2][5] = global.gp_keybind_text;
+				menu[3][5] = global.gp_keybind_text;
 				
             break;
 			
@@ -291,7 +349,7 @@ if(waiting_for_input)
 	
                 global.grapple_key = new_keybind;
                 global.grapple_keybind_text = "Grapple: " + keycode_to_string(new_keybind);
-				menu[2][6] = global.grapple_keybind_text;
+				menu[3][6] = global.grapple_keybind_text;
 				
             break;
         }

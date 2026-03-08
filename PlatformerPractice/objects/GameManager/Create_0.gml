@@ -1,16 +1,30 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-// Window & Mouse
-window_set_size(1280, 720);
-window_center();
+// Display Settings
 window_set_cursor(cr_none);
+window_center();
+
+global.fullscreen = true;
+window_set_fullscreen(global.fullscreen);
+
+// Volume settings
+audio_group_load(audiogroup_bgm);
+audio_group_load(audiogroup_sfx);
+
+global.master_volume = 1;
+global.bgm_volume = 1;
+global.sfx_volume = 1;
+
+// Initial audio levels
+audio_group_set_gain(audiogroup_bgm, global.master_volume * global.bgm_volume, 0);
+audio_group_set_gain(audiogroup_sfx, global.master_volume * global.sfx_volume, 0);
 
 // Fonts
 global.title_font = font_add(working_directory+"imported_fonts/VT323-Regular.ttf", 64, false, false, 0, 255);
 global.menu_options_font = font_add(working_directory+"imported_fonts/PixelOperator-Bold.ttf", 32, false, false, 0 ,255);
-global.default_halign = draw_get_halign()
-global.default_valign = draw_get_valign()
+global.default_halign = draw_get_halign();
+global.default_valign = draw_get_valign();
 
 // Player Variables
 global.lives = 3;

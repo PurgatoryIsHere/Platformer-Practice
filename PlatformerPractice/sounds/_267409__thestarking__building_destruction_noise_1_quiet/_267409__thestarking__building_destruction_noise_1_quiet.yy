@@ -2,8 +2,8 @@
   "$GMSound":"v2",
   "%Name":"_267409__thestarking__building_destruction_noise_1_quiet",
   "audioGroupId":{
-    "name":"audiogroup_default",
-    "path":"audiogroups/audiogroup_default",
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
   },
   "bitDepth":1,
   "channelFormat":0,

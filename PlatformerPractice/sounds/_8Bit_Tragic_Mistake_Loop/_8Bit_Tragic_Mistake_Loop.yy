@@ -2,8 +2,8 @@
   "$GMSound":"v2",
   "%Name":"_8Bit_Tragic_Mistake_Loop",
   "audioGroupId":{
-    "name":"audiogroup_default",
-    "path":"audiogroups/audiogroup_default",
+    "name":"audiogroup_bgm",
+    "path":"audiogroups/audiogroup_bgm",
   },
   "bitDepth":1,
   "channelFormat":0,

@@ -1,9 +1,6 @@
-/// @description Variables
+/// @description Initial Game Settings & Variables
 // You can write your code in this editor
 
-window_set_size(1280, 720);
-window_center();
-window_set_cursor(cr_none);
-
+// Splash Art Stuff
 image_alpha = 0;
 timer = 0;

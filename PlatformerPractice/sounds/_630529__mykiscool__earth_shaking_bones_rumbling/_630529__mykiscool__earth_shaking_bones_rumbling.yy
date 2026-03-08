@@ -2,8 +2,8 @@
   "$GMSound":"v2",
   "%Name":"_630529__mykiscool__earth_shaking_bones_rumbling",
   "audioGroupId":{
-    "name":"audiogroup_default",
-    "path":"audiogroups/audiogroup_default",
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
   },
   "bitDepth":1,
   "channelFormat":0,

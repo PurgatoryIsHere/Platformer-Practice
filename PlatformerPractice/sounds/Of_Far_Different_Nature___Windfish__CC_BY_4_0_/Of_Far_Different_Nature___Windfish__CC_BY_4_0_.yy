@@ -2,8 +2,8 @@
   "$GMSound":"v2",
   "%Name":"Of_Far_Different_Nature___Windfish__CC_BY_4_0_",
   "audioGroupId":{
-    "name":"audiogroup_default",
-    "path":"audiogroups/audiogroup_default",
+    "name":"audiogroup_bgm",
+    "path":"audiogroups/audiogroup_bgm",
   },
   "bitDepth":1,
   "channelFormat":0,

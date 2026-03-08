@@ -2,8 +2,8 @@
   "$GMSound":"v2",
   "%Name":"_706679__sadiquecat__low_whoosh_bamboo_4",
   "audioGroupId":{
-    "name":"audiogroup_default",
-    "path":"audiogroups/audiogroup_default",
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
   },
   "bitDepth":1,
   "channelFormat":0,

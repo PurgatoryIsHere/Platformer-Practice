@@ -2,17 +2,13 @@
 // You can write your code in this editor
 
 // Main menu
-/*
-menu[0][0] = O_PlayButton;
-menu[0][1] = O_HelpButton;
-menu[0][2] = O_QuitButton;
-menu[0][3] = O_DevMenuButton; 
-*/
 
 menu[0][0] = "PLAY";
-menu[0][1] = "HELP";
-menu[0][2] = "QUIT"; 
-menu[0][3] = "DEV MENU";
+menu[0][1] = "SETTINGS";
+menu[0][2] = "CONTROLS";
+menu[0][3] = "CREDITS";
+menu[0][4] = "QUIT"; 
+menu[0][5] = "DEV MENU";
 
 // Area selection menu - using a different structure
 menu[1][0] = "Area Select"; // Title (non-selectable)
@@ -27,36 +23,44 @@ menu[1][8] = "Area 7";
 menu[1][9] = "Area 8";
 menu[1][10] = "Back";
 
-// Help Menu
-menu[2][0] = "Controls"; // Title (non-selectable)
-menu[2][1] = global.left_keybind_text;
-menu[2][2] = global.right_keybind_text;
-menu[2][3] = global.jump_keybind_text;
-menu[2][4] = global.dash_keybind_text;
-menu[2][5] = global.gp_keybind_text;
-menu[2][6] = global.grapple_keybind_text;
-menu[2][7] = "Pause: Backspace";
-menu[2][8] = "Back";
+// Settings Menu
+menu[2][0] = "Settings";
+menu[2][1] = "Display: ";
+menu[2][2] = "Master Volume: ";
+menu[2][3] = "BGM Volume: ";
+menu[2][4] = "SFX Volume: ";
+menu[2][5] = "Back";
+
+// Controls Menu
+menu[3][0] = "Controls"; // Title (non-selectable)
+menu[3][1] = global.left_keybind_text;
+menu[3][2] = global.right_keybind_text;
+menu[3][3] = global.jump_keybind_text;
+menu[3][4] = global.dash_keybind_text;
+menu[3][5] = global.gp_keybind_text;
+menu[3][6] = global.grapple_keybind_text;
+menu[3][7] = "Pause: Backspace";
+menu[3][8] = "Back";
 
 // Test Unlock System Screen
-menu[3][0] = "Which area?"; // Title (non-selectable)
-menu[3][1] = "Area 1";
-menu[3][2] = "Area 2";
-menu[3][3] = "Area 3";
-menu[3][4] = "Area 4";
-menu[3][5] = "Area 5";
-menu[3][6] = "Area 6";
-menu[3][7] = "Area 7";
-menu[3][8] = "Area 8.1";
-menu[3][9] = "Area 8.2";
-menu[3][10] = "Area 8.3";
-menu[3][11] = "Area EX-1";
-menu[3][12] = "Area EX-2";
+menu[4][0] = "Which area?"; // Title (non-selectable)
+menu[4][1] = "Area 1";
+menu[4][2] = "Area 2";
+menu[4][3] = "Area 3";
+menu[4][4] = "Area 4";
+menu[4][5] = "Area 5";
+menu[4][6] = "Area 6";
+menu[4][7] = "Area 7";
+menu[4][8] = "Area 8.1";
+menu[4][9] = "Area 8.2";
+menu[4][10] = "Area 8.3";
+menu[4][11] = "Area EX-1";
+menu[4][12] = "Area EX-2";
 
 // Clear Save Data Propmt
-menu[4][0] = "Are you sure?"
-menu[4][1] = "Yes"
-menu[4][2] = "No"
+menu[5][0] = "Are you sure?"
+menu[5][1] = "Yes"
+menu[5][2] = "No"
 
 index = 0;
 sub_menu = 0;

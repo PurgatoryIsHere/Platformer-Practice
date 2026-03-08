@@ -2,8 +2,8 @@
   "$GMSound":"v2",
   "%Name":"Sketchbook_2024_08_21",
   "audioGroupId":{
-    "name":"audiogroup_default",
-    "path":"audiogroups/audiogroup_default",
+    "name":"audiogroup_bgm",
+    "path":"audiogroups/audiogroup_bgm",
   },
   "bitDepth":1,
   "channelFormat":0,

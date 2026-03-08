@@ -2,15 +2,15 @@
   "$GMSound":"v2",
   "%Name":"_759501__gammagool__tick_tock_dry",
   "audioGroupId":{
-    "name":"audiogroup_default",
-    "path":"audiogroups/audiogroup_default",
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
   },
   "bitDepth":1,
   "channelFormat":0,
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":10.824875,
+  "duration":5.412449,
   "exportDir":"",
   "name":"_759501__gammagool__tick_tock_dry",
   "parent":{

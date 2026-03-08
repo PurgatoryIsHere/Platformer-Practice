@@ -2,8 +2,8 @@
   "$GMSound":"v2",
   "%Name":"_629664__stumpbutt__retro_taking_damage_sfx2",
   "audioGroupId":{
-    "name":"audiogroup_default",
-    "path":"audiogroups/audiogroup_default",
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
   },
   "bitDepth":1,
   "channelFormat":0,
