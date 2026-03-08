@@ -24,14 +24,14 @@ if (sub_menu == 0)
 
     // Title outline
     draw_set_color(c_black);
-    draw_text(title_x + 2, title_y, "GAME TITLE");
-    draw_text(title_x - 2, title_y, "GAME TITLE");
-    draw_text(title_x, title_y + 2, "GAME TITLE");
-    draw_text(title_x, title_y - 2, "GAME TITLE");
+    draw_text(title_x + 2, title_y, "Mousebound");
+    draw_text(title_x - 2, title_y, "Mousebound");
+    draw_text(title_x, title_y + 2, "Mousebound");
+    draw_text(title_x, title_y - 2, "Mousebound");
 
     // Title main text
     draw_set_color(c_white);
-    draw_text(title_x, title_y, "GAME TITLE");
+    draw_text(title_x, title_y, "Mousebound");
 
     // -------------------------------
     // PANEL
