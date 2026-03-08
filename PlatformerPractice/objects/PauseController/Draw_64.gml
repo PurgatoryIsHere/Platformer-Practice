@@ -58,7 +58,7 @@ if(pause && surface_exists(pause_surf))
         if(i == 0) 
 		{
             // PAUSED
-            draw_text_transformed_colour(gui_w / 2, y_pos, lines[i], title_scale, title_scale, 0, c_aqua, c_aqua, c_aqua, c_aqua, 1);
+            draw_text_transformed_colour(gui_w / 2, y_pos, lines[i], title_scale, title_scale, 0, make_color_rgb(255, 200, 80), make_color_rgb(255, 200, 80), make_color_rgb(255, 200, 80), make_color_rgb(255, 200, 80), 1);
         } 
 		
 		else 

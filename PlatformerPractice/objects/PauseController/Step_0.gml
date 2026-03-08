@@ -14,7 +14,7 @@ if(pause)
         }
 		
 		
-		audio_stop_sound(pause_music);
+		audio_stop_all();
 		pause_music = noone;
 		
 		
@@ -33,7 +33,7 @@ if(pause)
         }
 		
 		
-		audio_stop_sound(pause_music);
+		audio_stop_all();
 		pause_music = noone;
 		
 		
