@@ -161,7 +161,7 @@ stateFree = function()
 		}
 	
 	
-		var spike_on_wall = instance_place(x + (facing * sprite_width / 2 + 10), y, O_Spike) != noone;
+		var spike_on_wall = instance_place(x, y, O_Spike);
 
 		if (on_wall != 0 && !on_ground && y_speed >= 0 && !spike_on_wall)
 		{
