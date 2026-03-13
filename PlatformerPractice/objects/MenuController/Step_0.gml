@@ -146,14 +146,32 @@ if(_select)
 		case 2:
 
 			// Display
-			if (index == 1)
+			if(index == 1)
 			{
 				global.fullscreen = !global.fullscreen;
-				window_set_fullscreen(global.fullscreen);
+
+				if(global.fullscreen)
+				{
+					// BORDERLESS FULLSCREEN
+					window_set_fullscreen(false);
+					window_set_size(display_get_width(), display_get_height());
+					window_set_position(0, 0);
+					surface_resize(application_surface, display_get_gui_width(), display_get_gui_height());
+
+				}
+				
+				else
+				{
+					// WINDOWED MODE
+					window_set_fullscreen(false);
+					window_set_size(1280, 720);
+					window_center();
+					surface_resize(application_surface, display_get_gui_width(), display_get_gui_height());
+				}
 			}
 
 			// Back
-			if (index == 5)
+			if(index == 5)
 			{
 				sub_menu = 0;
 				index = 1;

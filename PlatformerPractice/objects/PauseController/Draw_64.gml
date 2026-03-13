@@ -10,8 +10,7 @@ if(pause && surface_exists(pause_surf))
     var gui_w = display_get_gui_width();
     var gui_h = display_get_gui_height();
 
-    // Draw frozen screen
-    draw_surface(pause_surf, 0, 0);
+    draw_surface_stretched(pause_surf, 0, 0, gui_w, gui_h);
 
     // Dim overlay
     draw_set_alpha(0.5);

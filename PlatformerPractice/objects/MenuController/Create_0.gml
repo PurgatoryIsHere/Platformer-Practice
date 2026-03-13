@@ -2,7 +2,6 @@
 // You can write your code in this editor
 
 // Main menu
-
 menu[0][0] = "PLAY";
 menu[0][1] = "SETTINGS";
 menu[0][2] = "CONTROLS";

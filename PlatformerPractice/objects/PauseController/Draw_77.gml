@@ -1,15 +1,7 @@
 /// @description Surface Capturing
 // You can write your code in this editor
 
-if(pause) 
-{
-    if(surface_exists(pause_surf)) 
-	{
-        draw_surface(pause_surf, 0, 0);
-    }
-}
-
-if(keyboard_check_pressed(vk_backspace) && room != MainMenu && room != CreditsScreen) 
+if(keyboard_check_pressed(vk_backspace) && room != SplashScreen && room != MainMenu && room != CreditsScreen) 
 {
     if(!pause) 
 	{

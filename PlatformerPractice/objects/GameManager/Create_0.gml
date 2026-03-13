@@ -1,13 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-// Display Settings
-window_set_cursor(cr_none);
-window_center();
-
-global.fullscreen = true;
-window_set_fullscreen(global.fullscreen);
-
 // Volume settings
 audio_group_load(audiogroup_bgm);
 audio_group_load(audiogroup_sfx);
