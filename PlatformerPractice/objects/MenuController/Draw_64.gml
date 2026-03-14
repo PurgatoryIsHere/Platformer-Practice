@@ -308,6 +308,11 @@ else if(sub_menu == 2)
             draw_text(gw * 0.5, yy, menu[2][i]);
         }
     }
+	
+	// "Clear save data {C}" text
+	var margin = 16;
+    draw_set_halign(fa_left);
+    draw_text_outline(margin, display_get_gui_height() - 48, "Clear save data {C}", 0.75, 0.75, c_white, c_black);
 }
 
 // -------------------------------
@@ -374,11 +379,6 @@ else if(sub_menu == 3)
         draw_set_colour(c_white);
 		draw_text_outline(gw * 0.5, gh * 0.9, "Press a key to rebind...", 0.8, 0.8, c_white, c_black);
     }
-	
-	// "Clear save data {C}" text
-	var margin = 16;
-    draw_set_halign(fa_left);
-    draw_text_outline(margin, display_get_gui_height() - 48, "Clear save data {C}", 0.75, 0.75, c_white, c_black);
 }
 
 // -------------------------------

@@ -10,7 +10,7 @@ if(pause && surface_exists(pause_surf))
     var gui_w = display_get_gui_width();
     var gui_h = display_get_gui_height();
 
-    draw_surface_stretched(pause_surf, 0, 0, gui_w, gui_h);
+    draw_surface_stretched(pause_surf, 0, 0, gui_w, gui_h + 0.1);
 
     // Dim overlay
     draw_set_alpha(0.5);

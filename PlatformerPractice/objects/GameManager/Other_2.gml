@@ -5,8 +5,6 @@ window_set_cursor(cr_none);
 
 global.fullscreen = true;
 
-window_set_fullscreen(false);
-window_set_size(display_get_width(), display_get_height());
-window_set_position(0, 0);
-
+window_enable_borderless_fullscreen(true);
+window_set_fullscreen(true);
 surface_resize(application_surface, display_get_gui_width(), display_get_gui_height());

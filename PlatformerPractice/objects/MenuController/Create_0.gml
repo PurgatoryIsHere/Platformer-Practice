@@ -56,7 +56,7 @@ menu[4][10] = "Area 8.3";
 menu[4][11] = "Area EX-1";
 menu[4][12] = "Area EX-2";
 
-// Clear Save Data Propmt
+// Clear Save Data Prompt
 menu[5][0] = "Are you sure?"
 menu[5][1] = "Yes"
 menu[5][2] = "No"

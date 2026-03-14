@@ -152,18 +152,18 @@ if(_select)
 
 				if(global.fullscreen)
 				{
-					// BORDERLESS FULLSCREEN
-					window_set_fullscreen(false);
-					window_set_size(display_get_width(), display_get_height());
-					window_set_position(0, 0);
+					// Fullscreen
+					window_enable_borderless_fullscreen(true);
+					window_set_fullscreen(true);
 					surface_resize(application_surface, display_get_gui_width(), display_get_gui_height());
 
 				}
 				
 				else
 				{
-					// WINDOWED MODE
+					// Windowed
 					window_set_fullscreen(false);
+					window_enable_borderless_fullscreen(false);
 					window_set_size(1280, 720);
 					window_center();
 					surface_resize(application_surface, display_get_gui_width(), display_get_gui_height());
@@ -270,13 +270,13 @@ if(_select)
 			{
 				file_delete("save.dat");
 				load_game();
-				sub_menu = 3;
+				sub_menu = 2;
 				index = 1;
 			}
 			
 			else if(index == 2)
 			{
-				sub_menu = 3;
+				sub_menu = 2;
 				index = 1;
 			}
 		
